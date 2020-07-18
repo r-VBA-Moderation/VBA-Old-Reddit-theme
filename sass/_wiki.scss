@@ -1,0 +1,85 @@
+@import 'variables';
+
+.wiki-page {
+    .wiki-page-content {
+        margin: 16px 0;
+        background: getColor('theme', 'background');
+        padding: 8px 0;
+
+        .discussionlink {
+            margin: 16px 0 0;
+            padding: 0;
+
+            a {
+                padding: 0 16px;
+            }
+        }
+
+        .wiki {
+            &>.toc {
+                &>ul {
+                    border: none;
+                }
+            }
+
+            &.md {
+                color: #292f34;
+
+                h2 {
+                    color: #292f34;
+                }
+            }
+        }
+
+        hr {
+            border-style: solid;
+            border-color: #edf1f3;
+        }
+
+        em {
+            color: #98abba;
+        }
+
+        .wikirevisionlisting {
+            table {
+                tr {
+                    &:hover {
+                        background-color: rgba(0, 0, 0, 0.1) !important;
+                    }
+                }
+            }
+        }
+    }
+
+    .wikititle {
+        background: getColor('theme', 'background');
+        padding: 9px 16px 10px;
+        border-radius: 2px;
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.16);
+        font: 16px Lato, Arial, sans-serif;
+        margin: 0;
+    }
+
+    .pageactions {
+        background: getColor('theme', 'background');
+        margin-left: 16px;
+        border-radius: 2px;
+        padding: 0 16px;
+        border: none;
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.16);
+
+        .wikiaction {
+            margin: 0;
+            background: transparent;
+            border-radius: 0;
+            padding: 10px 16px 11px;
+            color: #98abba;
+        }
+
+        .wikiaction-current {
+            padding: 10px 16px 9px;
+            border-bottom: 2px solid $link;
+            color: $link;
+        }
+    }
+}

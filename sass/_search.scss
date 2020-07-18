@@ -1,0 +1,221 @@
+@import 'variables';
+
+.search-page #search,
+.res .search-page #search {
+    position: absolute;
+    top: -146px;
+    transform: translateX(-50%);
+    left: 50%;
+}
+
+.search-page #search input[type=text],
+.res .search-page #search input[type=text] {
+    min-width: 320px;
+    width: 320px;
+}
+
+.combined-search-page {
+    .search-submit-button {
+        position: relative;
+        left: -42px;
+        width: 32px;
+        height: 32px;
+        margin: 0;
+        padding: 0;
+        background: getImage('spritesheet') -64px -97px;
+        box-shadow: none;
+        border: none;
+        transition: background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+
+        &:hover {
+            background-color: rgba(158, 158, 158, 0.2);
+        }
+
+        .search-icon {
+            display: none;
+        }
+    }
+
+    .search-result-group {
+        .search-menu {
+            margin-right: 16px;
+        }
+
+        footer {
+            .nav-buttons {
+                margin: 0;
+            }
+        }
+    }
+
+    .search-result {
+        .search-result-header {
+            .search-title {
+                color: $link;
+            }
+        }
+
+        .search-result-meta {
+            color: #738491;
+        }
+
+        .search-comments {
+            color: $link;
+        }
+    }
+
+    .search-result-subreddit {
+        .search-subscribe-button {
+            border-radius: 2px;
+        }
+    }
+}
+
+#previoussearch {
+    #moresearchinfo {
+        margin: 0;
+        max-width: none;
+        border: none;
+    }
+}
+
+.search-result-group {
+    max-width: none;
+    min-width: 0;
+    padding: 0;
+}
+
+.search-result-group-header {
+    height: 36px;
+    line-height: 38px;
+    margin: 0 0 8px;
+    border: none;
+}
+
+.search-header-label {
+    text-transform: capitalize;
+    color: #738491;
+    font: 24px/38px Lato, Arial, sans-serif;
+}
+
+.search-result {
+    overflow: hidden;
+    width: 100%;
+    margin: 0;
+    padding: 16px;
+
+    &.search-result-subreddit {
+        display: inline-block;
+        width: calc(33% - 8px);
+        max-width: 360px;
+        height: 184px;
+        margin: 0 16px 16px 0;
+        border-radius: 2px;
+        vertical-align: top;
+        overflow: hidden;
+
+        &:nth-of-type(3n) {
+            margin-right: 0;
+        }
+    }
+
+    &.has-thumbnail {
+        &>.thumbnail {
+            margin-right: 16px;
+            flex: 0 0 80px;
+        }
+    }
+}
+
+.search-result-subreddit {
+    .search-result-body {
+        padding: 0;
+    }
+
+    .search-result-meta {
+        padding: 4px 0;
+    }
+}
+
+.combined-search-page .search-result a,
+.combined-search-page .search-result a>mark {
+    color: $link;
+}
+
+.combined-search-page .search-result-subreddit .search-subscribe-button .add,
+.combined-search-page .search-result-subreddit .search-subscribe-button .add:active {
+    background: $selected;
+    border: none;
+    border-radius: 2px;
+}
+
+.combined-search-page .search-result-subreddit .search-subscribe-button .remove,
+.combined-search-page .search-result-subreddit .search-subscribe-button .remove:active {
+    background: transparent;
+    border: 1px solid #98abba;
+    color: #738491;
+}
+
+.search-result.has-thumbnail>.thumbnail.self,
+.search-result.has-thumbnail>.thumbnail.default,
+.search-result.has-thumbnail>.thumbnail.nsfw,
+.search-result.has-thumbnail>.thumbnail.image,
+.search-result.has-thumbnail>.thumbnail.spoiler {
+    margin-right: 28px;
+    flex: 0 0 56px;
+}
+
+.nextprev,
+.next-suggestions {
+    color: #738491;
+}
+
+[class] {
+    .searchfacets {
+        border: none;
+        margin: 0 0 8px;
+        width: 100%;
+        max-width: initial;
+    }
+}
+
+.searchfacets {
+    .title {
+        margin: 0;
+    }
+
+    h4 {
+        &.title {
+            color: #738491;
+            margin: 0 0 8px;
+
+            &:first-letter {
+                text-transform: capitalize;
+            }
+        }
+    }
+
+    .list {
+        margin: 0;
+    }
+
+    .facet {
+        &.count {
+            color: #98abba;
+            font-weight: 400;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.search-summary {
+    display: none;
+}
+
+div#previoussearch>form#search>input,
+div#previoussearch>form#search>label {
+    margin-left: 160px;
+}

@@ -1,0 +1,16 @@
+{
+  "name": "reddit",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch": "sass --watch ./sass/main.scss stylesheet.css",
+    "build": "sass ./sass/main.scss stylesheet.css",
+    "minify": "npm run build && node ./scripts/minify.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "clean-css": "^4.2.3"
+  }
+}

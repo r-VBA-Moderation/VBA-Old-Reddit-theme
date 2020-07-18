@@ -1,0 +1,299 @@
+@import 'variables';
+
+.linkflair {
+    .flair-points {
+        font-weight: bold;
+        color: $light-text;
+        border-width: 1px;
+        border-color: getColor('theme', 'background');
+        background: getColor('linkflair', 'clippy');
+        text-indent: 0;
+        border-radius: 3px;
+        top: 0;
+        left: 0;
+        border-style: solid;
+        padding-left: 3px;
+        padding-right: 3px;
+        text-shadow: 1px 1px 2px gray;
+        font-size: 80%;
+
+        &:hover {
+            &:before {
+                content: "ClippyPoints Awarded:  " !important;
+                position: relative !important;
+                margin: 0em 0 0 !important;
+                color: $light-text !important;
+                background: getColor('linkflair', 'clippy');
+                border: 0px solid !important;
+                padding: 0px 0px !important;
+                text-shadow: 0px 0px 0px #808080, 0px 0px 0px #aaa, 0px 0px 0px #eee !important;
+                font-size: 110%;
+            }
+        }
+    }
+
+    .res-nightmode {
+        .flair-points {
+            &:hover {
+                &:before {
+                    content: "ClippyPoints Awarded:  " !important;
+                    position: relative !important;
+                    margin: 0em 0 0 !important;
+                    color: $light-text !important;
+                    background: getColor('linkflair', 'clippy') !important;
+                    border: 0px solid !important;
+                    padding: 0px 0px !important;
+                    text-shadow: 0px 0px 0px #808080, 0px 0px 0px #aaa, 0px 0px 0px #eee !important;
+                    font-size: 110%;
+                }
+            }
+        }
+    }
+}
+
+
+.linkflair-unsolved {
+    .linkflairlabel {
+        background-color: getColor('linkflair', 'unsolved')
+    }
+}
+
+.linkflair-solved {
+    .linkflairlabel {
+        background-color: getColor('linkflair', 'solved');
+    }
+}
+
+.linkflair-discussion .linkflairlabel,
+.linkflair-challenge .linkflairlabel {
+    background-color: getColor('linkflair', 'discussion');
+}
+
+.linkflair-protip {
+    .linkflairlabel {
+        background-color: getColor('linkflair', 'protip');
+    }
+}
+
+.linkflair-codereview {
+    .linkflairlabel {
+        background-color: getColor('linkflair', 'codereview');
+    }
+}
+
+.linkflair-modpost {
+    .linkflairlabel {
+        background-color: getColor('linkflair', 'modpost');
+    }
+}
+
+.linkflair-advertisement {
+    .linkflairlabel {
+        background-color: getColor('linkflair', 'advertisement');
+    }
+}
+
+.linkflair-showntell {
+    .linkflairlabel {
+        background-color: getColor('linkflair', 'showntell');
+    }
+}
+
+
+.linkflairlabel {
+    padding: 1px 6px;
+    height: 18px;
+    border-radius: 1px;
+    border: 0 solid;
+    color: $light-text;
+    font: normal normal bold 13px Lato, Arial, sans-serif;
+    cursor: default;
+    vertical-align: middle;
+    position: relative;
+    top: -2px;
+    background: #738491;
+}
+
+.linkflair-mod {
+    .linkflairlabel {
+        background: $mod-green;
+        color: $light-text;
+    }
+}
+
+.linkflair-mod .thumbnail.default,
+.linkflair-mod .thumbnail.self {
+    background: $mod-green getImage('spritesheet') -208px -104px;
+}
+
+
+.flairselector {
+    position: fixed;
+    top: 20% !important;
+    left: 50% !important;
+    margin-left: -125px;
+    padding: 16px !important;
+    width: 250px !important;
+    border: none;
+    border-radius: 2px;
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.12);
+
+    &.drop-choices {
+        &.active {
+            border: none;
+        }
+    }
+
+    h2 {
+        margin-bottom: 4px;
+        background: none;
+        color: $link;
+        text-align: left;
+        text-transform: capitalize;
+        font-weight: 400;
+        font-size: 18px;
+    }
+
+    .flairoptionpane {
+        ul {
+            li {
+                padding: 0 !important;
+                margin: 4px 0;
+
+                &.flairsample-right {
+                    padding: 5px 0 !important;
+                    border: none;
+                }
+            }
+        }
+    }
+
+    form {
+        padding-top: 12px;
+        border-top: 1px solid #F7F7F7;
+
+        .flairselection {
+            text-align: left;
+
+            &:before {
+                display: block;
+                content: "Selected Flair:";
+                color: #738491;
+            }
+
+            .linkflair {
+                a {
+                    &.title {
+                        font-size: 18px !important;
+                        opacity: 100 !important;
+                        color: $link !important;
+                        cursor: default;
+                    }
+                }
+            }
+
+            .flairremove {
+                padding: 4px 0;
+                margin-bottom: 8px;
+                visibility: hidden;
+                display: block !important;
+
+                a {
+                    visibility: visible;
+                    opacity: 100 !important;
+                    color: $link !important;
+                    margin-left: -4px;
+                    text-transform: capitalize;
+
+                    &:first-letter {
+                        text-transform: capitalize;
+                    }
+
+                    &:hover {
+                        text-decoration: underline !important;
+                    }
+                }
+            }
+        }
+
+        button {
+            display: block;
+            float: right;
+            margin: 0;
+        }
+    }
+
+    .customizer {
+        display: block;
+        margin: 8px 0;
+        width: 100%;
+
+        input[type=text] {
+            width: 100%;
+        }
+    }
+
+    .error {
+        text-align: left;
+
+        &:first-letter {
+            text-transform: capitalize;
+        }
+    }
+
+    img {
+        position: relative;
+        left: 50%;
+        margin-left: -9px;
+        opacity: 0.5;
+    }
+
+    li {
+        &.selected {
+            border: none;
+            background-color: transparent;
+        }
+    }
+}
+
+.flairoptionpane {
+    max-height: 250px;
+    text-align: left;
+
+    ul {
+        li {
+            .linkflair {
+                text-align: left;
+                padding: 0;
+
+                span {
+                    &.linkflairlabel {
+                        margin: 8px 0;
+                        line-height: 1.35;
+                        margin-right: 6px;
+                    }
+                }
+
+                a {
+                    &.title {
+                        font-size: 18px !important;
+                        opacity: 100 !important;
+                        color: $link !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.flairoptionpane ul li .linkflair:hover,
+.flairselector li:hover {
+    background-color: #F5F8F9;
+    border: 0 solid;
+}
+
+.flairselector li a,
+.flairselector form .flairselection a.author {
+    color: #738491 !important;
+    font-size: 11px;
+}

@@ -1,0 +1,44 @@
+@use "sass:map";
+@use "sass:string";
+
+$orange-red: #f50;
+$mod-green: #27b062;
+$light-text: #fff;
+$link: #24a0ed;
+$selected: #0079d3;
+
+
+$colors: ('selection': ('background': #0079d3,
+        'color': #fff),
+    'body': ('background': #eee),
+    'content': ('background': #fff),
+    'a': ('color': #24a0ed),
+    'input': ('background': #fff,
+        'border': #c3cfd6,
+        'color': #738491),
+    'font': ('primary': #fff),
+    'linkflair': ('unsolved': $orange-red,
+        'solved': #738491,
+        'discussion': #007acc,
+        'protip': #e0d400,
+        'codereview': #800080,
+        'modpost': $mod-green,
+        'advertisement': #333333,
+        'showntell': #000,
+        'clippy': #008E00),
+    'code': ('background': #1e1e1e, 'color': #858585, 'border': #404040, 'line-nums': #d4d4d4),
+    'theme': ('primary': $orange-red, 'font-color': #292f34, 'background': #fff, 'secondary': #667df0),
+    'dark-theme':('primary': $orange-red, 'font-color': #fff, 'background': #212121, 'secondary': #667df0));
+
+@function getColor($keys...) {
+    $result: map-deep-get($colors, $keys...);
+    @return $result;
+}
+
+@function map-deep-get($map, $keys...) {
+    @each $key in $keys {
+        $map: map.get($map, $key);
+    }
+
+    @return $map;
+}

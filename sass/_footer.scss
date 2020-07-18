@@ -1,0 +1,36 @@
+@import 'variables';
+
+
+.footer-parent {
+    height: 800px;
+    margin-top: 192px;
+    padding: 528px 0 64px;
+    background: getImage('footer')50% 0/cover no-repeat;
+}
+
+.footer {
+    border: 0 solid;
+    border-radius: 2px;
+    background: rgba(43, 51, 58, 0.64);
+    padding: 16px;
+    max-width: 640px;
+
+    .col {
+        padding: 0 24px;
+        border: none;
+    }
+}
+
+.flat-vert.title,
+.bottommenu a {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.bottommenu {
+    color: rgba(255, 255, 255, 0.42);
+}
+
+.debuginfo,
+#hsts_pixel {
+    display: none;
+}
