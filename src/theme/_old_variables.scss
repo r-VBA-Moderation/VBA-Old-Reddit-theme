@@ -1,0 +1,174 @@
+// @use "sass:map";
+// // @use "sass:string";
+
+// $orange-red: #f50;
+// $mod-green: #27b062;
+
+// $primary-color-dark: #303f9f;
+// $primary-color: #0079d3;
+// $primary-color-light: #dfdff1;
+// $primary-color-text: #ffffff;
+// $accent-color: #0f67ff;
+
+// $link: #24a0ed;
+// $selected: #0079d3;
+// $res-background: #516ae8;
+// $res-border: #4258ca;
+
+// $colors: (
+//   'selection': (
+//     'background': #0079d3,
+//     'color': #fff,
+//   ),
+//   'role': (
+//     'moderator': #27b062,
+//     'admin': #f44336,
+//     'submitter': #24a0ed,
+//     'friend': #ff4500,
+//   ),
+//   'type': (
+//     'default': #d2dbe0,
+//     'nsfw': #e85881,
+//     'link': #24a0ed,
+//     'stickied': #2db747,
+//     'spoiler': #f44336,
+//   ),
+//   'body': (
+//     'background': #eee,
+//   ),
+//   'content': (
+//     'background': #fff,
+//   ),
+//   'input': (
+//     'background': #fff,
+//     'border': #c3cfd6,
+//     'color': #738491,
+//   ),
+//   'font': (
+//     'primary': #fff,
+//   ),
+//   'linkflair': (
+//     'unsolved': $orange-red,
+//     'solved': #738491,
+//     'discussion': #007acc,
+//     'protip': #e0d400,
+//     'codereview': #800080,
+//     'modpost': $mod-green,
+//     'advertisement': #333333,
+//     'showntell': #000,
+//     'clippy': #008e00,
+//   ),
+//   'code': (
+//     'background': #1e1e1e,
+//     'color': #858585,
+//     'border': #404040,
+//     'line-nums': #d4d4d4,
+//   ),
+// );
+
+// @function getColor($keys...) {
+//   $result: map-deep-get($colors, $keys...);
+//   @return $result;
+// }
+
+// @function map-deep-get($map, $keys...) {
+//   @each $key in $keys {
+//     $map: map.get($map, $key);
+//   }
+
+//   @return $map;
+// }
+
+// $dark-theme: 'dark-theme';
+// $light-theme: 'light-theme';
+
+// $primary-text-color: 'primary-text-color';
+// $secondary-text-color: 'secondary-text-color';
+// $divider-color: 'divider-color';
+// $general-background: 'general-background';
+// $general-background-light: 'general-background-light';
+// $previous-search-label: 'previous-search-label';
+// $link-text: 'link-text';
+// $selection-background: 'selection-background';
+// /* ...other color keys... */
+
+// $themes: (
+//   $light-theme: (
+//     $primary-text-color: #151515,
+//     $secondary-text-color: #738491,
+//     $divider-color: #bdbdbd,
+//     $general-background: #eee,
+//     $general-background-light: #ffffff,
+//     $previous-search-label: #f9f9f9,
+//   ),
+//   $dark-theme: (
+//     $primary-text-color: #d7d7d8,
+//     $secondary-text-color: #a6a6a6,
+//     $divider-color: #575757,
+//     $general-background: #181918,
+//     $general-background-light: #363636,
+//     $previous-search-label: #060606,
+//   ),
+// );
+
+// @mixin themeProperty(
+//   $theme,
+//   $property,
+//   $color,
+//   $additionalPropertiesPositionIsFront,
+//   $additionalProperties
+// ) {
+//   @if $additionalPropertiesPositionIsFront {
+//     #{$property}: unquote(
+//       $additionalProperties + ' ' + map-get($theme, $color)
+//     );
+//   } @else {
+//     #{$property}: unquote(
+//       map-get($theme, $color) + ' ' + $additionalProperties
+//     );
+//   }
+// }
+
+// @mixin theme(
+//   $property,
+//   $color,
+//   $forceDark: false,
+//   $additionalPropertiesPositionIsFront: false,
+//   $additionalProperties: ''
+// ) {
+//   $map: map-get($themes, $light-theme);
+//   $dark: map-get($themes, $dark-theme);
+
+//   @if $forceDark {
+//     $map: map-get($themes, $dark-theme);
+//     @include themeProperty(
+//       $map,
+//       $property,
+//       $color,
+//       $additionalPropertiesPositionIsFront,
+//       $additionalProperties
+//     );
+//   } @else {
+//     $map: map-get($themes, $light-theme);
+//     @include themeProperty(
+//       $map,
+//       $property,
+//       $color,
+//       $additionalPropertiesPositionIsFront,
+//       $additionalProperties
+//     );
+
+//     @media (prefers-color-scheme: dark) {
+//       $map: map-get($themes, $dark-theme);
+//       @include themeProperty(
+//         $map,
+//         $property,
+//         $color,
+//         $additionalPropertiesPositionIsFront,
+//         $additionalProperties
+//       );
+//     }
+//   }
+// }
+
+// // @include theme('color', $secondary-text-color);

@@ -1,0 +1,171 @@
+@use "sass:map";
+
+@import "reddit-dark";
+@import "reddit-light";
+
+$moderator: #27b062;
+
+$colors: (
+  "selection": (
+    "background": #7dbcff99,
+    // #0079d3,
+      "color": #fff,
+  ),
+  "role": (
+    "moderator": $moderator,
+    "admin": #f44336,
+    "submitter": #24a0ed,
+    "friend": #ff4500,
+  ),
+  "type": (
+    "default": #d2dbe0,
+    "nsfw": #e85881,
+    "link": #24a0ed,
+    "stickied": #2db747,
+    "spoiler": #f44336,
+  ),
+  "linkflair": (
+    "unsolved": #f50,
+    "solved": #738491,
+    "discussion": #007acc,
+    "protip": #e0d400,
+    "codereview": #800080,
+    "modpost": $moderator,
+    "advertisement": #333333,
+    "showntell": #000,
+    "clippy": #008e00,
+  ),
+  "code": (
+    "background": #1e1e1e,
+    "color": #858585,
+    "border": #404040,
+    "line-nums": #d4d4d4,
+  ),
+);
+
+@function getColor($keys...) {
+  $result: map-deep-get($colors, $keys...);
+  @return $result;
+}
+
+@function map-deep-get($map, $keys...) {
+  @each $key in $keys {
+    $map: map.get($map, $key);
+  }
+
+  @return $map;
+}
+
+// use like: @include theme('color', $secondary-text-color);
+
+@mixin themeProperty(
+  $theme,
+  $property,
+  $color,
+  $additionalPropertiesPositionIsFront,
+  $additionalProperties
+) {
+  @if $additionalPropertiesPositionIsFront {
+    #{$property}: unquote(
+      $additionalProperties + " " + map-get($theme, $color)
+    );
+  } @else {
+    #{$property}: unquote(
+      map-get($theme, $color) + " " + $additionalProperties
+    );
+  }
+}
+
+@mixin theme(
+  $property,
+  $color,
+  $forceDark: false,
+  $additionalPropertiesPositionIsFront: false,
+  $additionalProperties: ""
+) {
+  @if $forceDark {
+    @include themeProperty(
+      $dark-theme,
+      $property,
+      $color,
+      $additionalPropertiesPositionIsFront,
+      $additionalProperties
+    );
+  } @else {
+    @include themeProperty(
+      $light-theme,
+      $property,
+      $color,
+      $additionalPropertiesPositionIsFront,
+      $additionalProperties
+    );
+
+    @media (prefers-color-scheme: dark) {
+      @include themeProperty(
+        $dark-theme,
+        $property,
+        $color,
+        $additionalPropertiesPositionIsFront,
+        $additionalProperties
+      );
+    }
+  }
+}
+
+// Keys for intellisense
+$actionIcon: "actionIcon";
+$active: "active";
+$banner-backgroundColor: "banner-backgroundColor";
+$banner-iconColor: "banner-iconColor";
+$blackoutSnooFace: "blackoutSnooFace";
+$body: "body";
+$bodyFade: "bodyFade";
+$bodyText: "bodyText";
+$button: "button";
+$buttonTinted50: "buttonTinted50";
+$buttonShaded80: "buttonShaded80";
+$canvas: "canvas";
+$errorText: "errorText";
+$field: "field";
+$fieldFade: "fieldFade";
+$flair: "flair";
+$highlight: "highlight";
+$inactive: "inactive";
+$inactiveText: "inactiveText";
+$lightText: "lightText";
+$line: "line";
+$linkText: "linkText";
+$menu: "menu";
+$menuActiveText: "menuActiveText";
+$menuInactiveText: "menuInactiveText";
+$metaText: "metaText";
+$monospaceColor: "monospaceColor";
+$navBar-activeLink: "navBar-activeLink";
+$navBar-activeSubmenuCaret: "navBar-activeSubmenuCaret";
+$navBar-activeSubmenuLink: "navBar-activeSubmenuLink";
+$navBar-backgroundColor: "navBar-backgroundColor";
+$navBar-hoverLink: "navBar-hoverLink";
+$navBar-inactiveLink: "navBar-inactiveLink";
+$navBar-inactiveSubmenuCaret: "navBar-inactiveSubmenuCaret";
+$navBar-inactiveSubmenuLink: "navBar-inactiveSubmenuLink";
+$navBar-submenuBackgroundColor: "navBar-submenuBackgroundColor";
+$navIcon: "navIcon";
+$pageHeader: "pageHeader";
+$placeholder: "placeholder";
+$post: "post";
+$postError: "postError";
+$postFlairText: "postFlairText";
+$postIcon: "postIcon";
+$postLine: "postLine";
+$report: "report";
+$secondary-text: "secondary-text";
+$titleText: "titleText";
+$voteText-base: "voteText-base";
+$voteText-downvote: "voteText-downvote";
+$voteText-upvote: "voteText-upvote";
+$widgetColors-lineColor: "widgetColors-lineColor";
+$widgetColors-sidebarWidgetBackgroundColor: "widgetColors-sidebarWidgetBackgroundColor";
+$widgetColors-sidebarWidgetBorderColor: "widgetColors-sidebarWidgetBorderColor";
+$widgetColors-sidebarWidgetHeaderColor: "widgetColors-sidebarWidgetHeaderColor";
+$widgetColors-sidebarWidgetTextColor: "widgetColors-sidebarWidgetTextColor";
+$widgetColors-sidebarWidgetTitleColor: "widgetColors-sidebarWidgetTitleColor";

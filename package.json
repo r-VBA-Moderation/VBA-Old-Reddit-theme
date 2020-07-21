@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "watch": "sass --watch ./sass/main.scss stylesheet.css",
-    "build": "sass ./sass/main.scss stylesheet.css",
+    "watch": "sass --watch ./src/main.scss stylesheet.css",
+    "build": "sass ./src/main.scss stylesheet.css",
     "minify": "npm run build && node ./scripts/minify.js"
   },
   "author": "",
