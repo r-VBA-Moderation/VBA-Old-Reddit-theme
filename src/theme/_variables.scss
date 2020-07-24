@@ -1,11 +1,27 @@
 @use "sass:map";
 
-@import "reddit-dark";
-@import "reddit-light";
+@use "reddit-dark" as dark;
+@use "reddit-light" as light;
+
+@mixin google-font($family) {
+  @import url("http://fonts.googleapis.com/css?family=#{$family}");
+}
+
+$base-font: Roboto, Arial, sans-serif;
+$mono-font: Roboto Mono, Menlo, Monaco, Consolas, monospace;
 
 $moderator: #27b062;
+$orangered: #f50;
+$title-case: uppercase;
 
 $colors: (
+  "mail": (
+    "background": $orangered,
+    "text": #fff,
+    "havemail": #ea4848,
+    "havemail-hover": #ec5b5b,
+    "havemail-active": #c73d3d,
+  ),
   "selection": (
     "background": #7dbcff99,
     // #0079d3,
@@ -17,7 +33,7 @@ $colors: (
     "submitter": #24a0ed,
     "friend": #ff4500,
   ),
-  "type": (
+  "thumbnail": (
     "default": #d2dbe0,
     "nsfw": #e85881,
     "link": #24a0ed,
@@ -25,7 +41,7 @@ $colors: (
     "spoiler": #f44336,
   ),
   "linkflair": (
-    "unsolved": #f50,
+    "unsolved": $orangered,
     "solved": #738491,
     "discussion": #007acc,
     "protip": #e0d400,
@@ -37,9 +53,10 @@ $colors: (
   ),
   "code": (
     "background": #1e1e1e,
-    "color": #858585,
-    "border": #404040,
-    "line-nums": #d4d4d4,
+    "color": #d4d4d4,
+    "border": #007acc,
+    "line-nums": #858585,
+    "separator": #404040,
   ),
 );
 
@@ -85,7 +102,7 @@ $colors: (
 ) {
   @if $forceDark {
     @include themeProperty(
-      $dark-theme,
+      dark.$theme,
       $property,
       $color,
       $additionalPropertiesPositionIsFront,
@@ -93,7 +110,7 @@ $colors: (
     );
   } @else {
     @include themeProperty(
-      $light-theme,
+      light.$theme,
       $property,
       $color,
       $additionalPropertiesPositionIsFront,
@@ -102,7 +119,7 @@ $colors: (
 
     @media (prefers-color-scheme: dark) {
       @include themeProperty(
-        $dark-theme,
+        dark.$theme,
         $property,
         $color,
         $additionalPropertiesPositionIsFront,
@@ -121,6 +138,7 @@ $blackoutSnooFace: "blackoutSnooFace";
 $body: "body";
 $bodyFade: "bodyFade";
 $bodyText: "bodyText";
+$bodyTextAlpha20: "bodyTextAlpha20";
 $button: "button";
 $buttonTinted50: "buttonTinted50";
 $buttonShaded80: "buttonShaded80";
@@ -157,6 +175,8 @@ $postError: "postError";
 $postFlairText: "postFlairText";
 $postIcon: "postIcon";
 $postLine: "postLine";
+$posttitletextcolor: "posttitletextcolor";
+$postTitleLink-VisitedLinkColor: "postTitleLink-VisitedLinkColor";
 $report: "report";
 $secondary-text: "secondary-text";
 $titleText: "titleText";
@@ -169,3 +189,18 @@ $widgetColors-sidebarWidgetBorderColor: "widgetColors-sidebarWidgetBorderColor";
 $widgetColors-sidebarWidgetHeaderColor: "widgetColors-sidebarWidgetHeaderColor";
 $widgetColors-sidebarWidgetTextColor: "widgetColors-sidebarWidgetTextColor";
 $widgetColors-sidebarWidgetTitleColor: "widgetColors-sidebarWidgetTitleColor";
+
+@mixin stroke($color, $shadow: 0px) {
+  $val: map-get(light.$theme, $color);
+  $size: 1px;
+  $blur: 0;
+  text-shadow: $shadow $shadow $blur $val, $size * -1 $size * -1 $blur $val,
+    $size $size * -1 $blur $val, $size * -1 $size $blur $val,
+    $size $size $blur $val;
+  @media (prefers-color-scheme: dark) {
+    $val: map-get(dark.$theme, $color);
+    text-shadow: $shadow $shadow $blur $val, $size * -1 $size * -1 $blur $val,
+      $size $size * -1 $blur $val, $size * -1 $size $blur $val,
+      $size $size $blur $val;
+  }
+}

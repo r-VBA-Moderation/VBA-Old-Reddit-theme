@@ -1,1 +1,4 @@
-@import '_naut';
+@use "_base";
+@use "components/naut/naut-components.scss";
+@use "components/RES";
+@use "components/custom/custom-components.scss";

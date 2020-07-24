@@ -1,21 +1,21 @@
 // @use "sass:map";
 // // @use "sass:string";
 
-// $orange-red: #f50;
-// $mod-green: #27b062;
+// v.$orange-red: #f50;
+// v.$mod-green: #27b062;
 
-// $primary-color-dark: #303f9f;
-// $primary-color: #0079d3;
-// $primary-color-light: #dfdff1;
-// $primary-color-text: #ffffff;
-// $accent-color: #0f67ff;
+// v.$primary-color-dark: #303f9f;
+// v.$primary-color: #0079d3;
+// v.$primary-color-light: #dfdff1;
+// v.$primary-color-text: #ffffff;
+// v.$accent-color: #0f67ff;
 
-// $link: #24a0ed;
-// $selected: #0079d3;
-// $res-background: #516ae8;
-// $res-border: #4258ca;
+// v.$link: #24a0ed;
+// v.$selected: #0079d3;
+// v.$res-background: #516ae8;
+// v.$res-border: #4258ca;
 
-// $colors: (
+// v.$colors: (
 //   'selection': (
 //     'background': #0079d3,
 //     'color': #fff,
@@ -48,12 +48,12 @@
 //     'primary': #fff,
 //   ),
 //   'linkflair': (
-//     'unsolved': $orange-red,
+//     'unsolved': v.$orange-red,
 //     'solved': #738491,
 //     'discussion': #007acc,
 //     'protip': #e0d400,
 //     'codereview': #800080,
-//     'modpost': $mod-green,
+//     'modpost': v.$mod-green,
 //     'advertisement': #333333,
 //     'showntell': #000,
 //     'clippy': #008e00,
@@ -66,109 +66,109 @@
 //   ),
 // );
 
-// @function getColor($keys...) {
-//   $result: map-deep-get($colors, $keys...);
-//   @return $result;
+// @function getColor(v.$keys...) {
+//   v.$result: map-deep-get(v.$colors, v.$keys...);
+//   @return v.$result;
 // }
 
-// @function map-deep-get($map, $keys...) {
-//   @each $key in $keys {
-//     $map: map.get($map, $key);
+// @function map-deep-get(v.$map, v.$keys...) {
+//   @each v.$key in v.$keys {
+//     v.$map: map.get(v.$map, v.$key);
 //   }
 
-//   @return $map;
+//   @return v.$map;
 // }
 
-// $dark-theme: 'dark-theme';
-// $light-theme: 'light-theme';
+// v.$dark-theme: 'dark-theme';
+// v.$light-theme: 'light-theme';
 
-// $primary-text-color: 'primary-text-color';
-// $secondary-text-color: 'secondary-text-color';
-// $divider-color: 'divider-color';
-// $general-background: 'general-background';
-// $general-background-light: 'general-background-light';
-// $previous-search-label: 'previous-search-label';
-// $link-text: 'link-text';
-// $selection-background: 'selection-background';
+// v.$primary-text-color: 'primary-text-color';
+// v.$secondary-text-color: 'secondary-text-color';
+// v.$divider-color: 'divider-color';
+// v.$general-background: 'general-background';
+// v.$general-background-light: 'general-background-light';
+// v.$previous-search-label: 'previous-search-label';
+// v.$link-text: 'link-text';
+// v.$selection-background: 'selection-background';
 // /* ...other color keys... */
 
-// $themes: (
-//   $light-theme: (
-//     $primary-text-color: #151515,
-//     $secondary-text-color: #738491,
-//     $divider-color: #bdbdbd,
-//     $general-background: #eee,
-//     $general-background-light: #ffffff,
-//     $previous-search-label: #f9f9f9,
+// v.$themes: (
+//   v.$light-theme: (
+//     v.$primary-text-color: #151515,
+//     v.$secondary-text-color: #738491,
+//     v.$divider-color: #bdbdbd,
+//     v.$general-background: #eee,
+//     v.$general-background-light: #ffffff,
+//     v.$previous-search-label: #f9f9f9,
 //   ),
-//   $dark-theme: (
-//     $primary-text-color: #d7d7d8,
-//     $secondary-text-color: #a6a6a6,
-//     $divider-color: #575757,
-//     $general-background: #181918,
-//     $general-background-light: #363636,
-//     $previous-search-label: #060606,
+//   v.$dark-theme: (
+//     v.$primary-text-color: #d7d7d8,
+//     v.$secondary-text-color: #a6a6a6,
+//     v.$divider-color: #575757,
+//     v.$general-background: #181918,
+//     v.$general-background-light: #363636,
+//     v.$previous-search-label: #060606,
 //   ),
 // );
 
 // @mixin themeProperty(
-//   $theme,
-//   $property,
-//   $color,
-//   $additionalPropertiesPositionIsFront,
-//   $additionalProperties
+//   v.$theme,
+//   v.$property,
+//   v.$color,
+//   v.$additionalPropertiesPositionIsFront,
+//   v.$additionalProperties
 // ) {
-//   @if $additionalPropertiesPositionIsFront {
-//     #{$property}: unquote(
-//       $additionalProperties + ' ' + map-get($theme, $color)
+//   @if v.$additionalPropertiesPositionIsFront {
+//     #{v.$property}: unquote(
+//       v.$additionalProperties + ' ' + map-get(v.$theme, v.$color)
 //     );
 //   } @else {
-//     #{$property}: unquote(
-//       map-get($theme, $color) + ' ' + $additionalProperties
+//     #{v.$property}: unquote(
+//       map-get(v.$theme, v.$color) + ' ' + v.$additionalProperties
 //     );
 //   }
 // }
 
 // @mixin theme(
-//   $property,
-//   $color,
-//   $forceDark: false,
-//   $additionalPropertiesPositionIsFront: false,
-//   $additionalProperties: ''
+//   v.$property,
+//   v.$color,
+//   v.$forceDark: false,
+//   v.$additionalPropertiesPositionIsFront: false,
+//   v.$additionalProperties: ''
 // ) {
-//   $map: map-get($themes, $light-theme);
-//   $dark: map-get($themes, $dark-theme);
+//   v.$map: map-get(v.$themes, v.$light-theme);
+//   v.$dark: map-get(v.$themes, v.$dark-theme);
 
-//   @if $forceDark {
-//     $map: map-get($themes, $dark-theme);
+//   @if v.$forceDark {
+//     v.$map: map-get(v.$themes, v.$dark-theme);
 //     @include themeProperty(
-//       $map,
-//       $property,
-//       $color,
-//       $additionalPropertiesPositionIsFront,
-//       $additionalProperties
+//       v.$map,
+//       v.$property,
+//       v.$color,
+//       v.$additionalPropertiesPositionIsFront,
+//       v.$additionalProperties
 //     );
 //   } @else {
-//     $map: map-get($themes, $light-theme);
+//     v.$map: map-get(v.$themes, v.$light-theme);
 //     @include themeProperty(
-//       $map,
-//       $property,
-//       $color,
-//       $additionalPropertiesPositionIsFront,
-//       $additionalProperties
+//       v.$map,
+//       v.$property,
+//       v.$color,
+//       v.$additionalPropertiesPositionIsFront,
+//       v.$additionalProperties
 //     );
 
 //     @media (prefers-color-scheme: dark) {
-//       $map: map-get($themes, $dark-theme);
+//       v.$map: map-get(v.$themes, v.$dark-theme);
 //       @include themeProperty(
-//         $map,
-//         $property,
-//         $color,
-//         $additionalPropertiesPositionIsFront,
-//         $additionalProperties
+//         v.$map,
+//         v.$property,
+//         v.$color,
+//         v.$additionalPropertiesPositionIsFront,
+//         v.$additionalProperties
 //       );
 //     }
 //   }
 // }
 
-// // @include theme('color', $secondary-text-color);
+// // @include v.theme('color', v.$secondary-text-color);

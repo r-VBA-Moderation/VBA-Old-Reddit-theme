@@ -1,14 +1,15 @@
 $_primary: #f50;
 
-$dark-theme: (
+$theme: (
   "actionIcon": #818384,
-  "active": #0079d3,
-  "banner-backgroundColor": #e25130,
+  "active": $_primary,
+  "banner-backgroundColor": $_primary,
   "banner-iconColor": $_primary,
   "blackoutSnooFace": #d7dadc,
   "body": #1a1a1b,
   "bodyFade": #1a1a1b00,
   "bodyText": #d7dadc,
+  "bodyTextAlpha20": transparentize(#d7dadc, 0.8),
   "button": #d7dadc,
   "buttonTinted50": darken(#d7dadc, 50%),
   "buttonShaded80": lighten(#d7dadc, 80%),
@@ -45,6 +46,8 @@ $dark-theme: (
   "postFlairText": #ffffff,
   "postIcon": #818384,
   "postLine": #343536,
+  "posttitletextcolor": #d7dadc,
+  "postTitleLink-VisitedLinkColor": #6f7071,
   "report": #1c1402,
   "secondary-text": #828282,
   "titleText": #d7dadc,

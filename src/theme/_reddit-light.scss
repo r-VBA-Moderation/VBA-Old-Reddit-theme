@@ -1,14 +1,15 @@
 $_primary: #f50;
 
-$light-theme: (
+$theme: (
   "actionIcon": #878a8c,
   "active": $_primary,
-  "banner-backgroundColor": #fc5a36,
+  "banner-backgroundColor": $_primary,
   "banner-iconColor": $_primary,
   "blackoutSnooFace": #fff,
   "body": #ffffff,
   "bodyFade": #ffffff00,
   "bodyText": #1b1b1c,
+  "bodyTextAlpha20": transparentize(#1b1b1c, 0.8),
   "button": $_primary,
   "buttonTinted50": lighten($_primary, 50%),
   "buttonShaded80": darken($_primary, 80%),
@@ -32,7 +33,7 @@ $light-theme: (
   "navBar-activeSubmenuCaret": $_primary,
   "navBar-activeSubmenuLink": $_primary,
   "navBar-backgroundColor": $_primary,
-  "navBar-hoverLink": #fbcb44,
+  "navBar-hoverLink": $_primary,
   "navBar-inactiveLink": #ffffff,
   "navBar-inactiveSubmenuCaret": #fc5a36,
   "navBar-inactiveSubmenuLink": #fc5a36,
@@ -45,6 +46,8 @@ $light-theme: (
   "postFlairText": #1a1a1b,
   "postIcon": #878589,
   "postLine": #c8c6cc,
+  "posttitletextcolor": #434450,
+  "postTitleLink-VisitedLinkColor": #aaaab0,
   "report": #fbf0e5,
   "secondary-text": #98abba,
   "titleText": #434450,

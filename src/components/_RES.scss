@@ -1,0 +1,27 @@
+@use "../theme/variables" as v;
+
+.RESHover,
+.RESDialogSmall {
+  @include v.theme("color", v.$bodyText);
+  @include v.theme("background", v.$body);
+}
+
+#RESStyleSheetTipPane-header {
+  @include v.theme("color", v.$bodyText);
+  @include v.theme("background", v.$body);
+  @include v.theme(
+    "border-bottom",
+    v.$widgetColors-sidebarWidgetBorderColor,
+    false,
+    true,
+    "1px solid"
+  );
+  cursor: pointer;
+  font-size: 20px;
+  padding: 10px;
+}
+
+.entry.res-selected,
+.entry.res-selected .md-container {
+  @include v.theme("background", v.$body);
+}

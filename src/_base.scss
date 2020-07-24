@@ -1,0 +1,10 @@
+@use "theme/variables" as v;
+
+@include v.google-font("Roboto");
+@include v.google-font("Roboto Mono");
+
+* {
+  @include v.theme("color", v.$bodyText);
+  font-family: v.$base-font;
+  // @include theme("background", $body);
+}
