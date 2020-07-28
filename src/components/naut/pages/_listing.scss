@@ -1,0 +1,44 @@
+/* Body Content - Frontpage */
+
+body {
+  &[class] > .content,
+  &.listing-page[class] > .content {
+    border-radius: 4px;
+    margin: 16px 352px 64px 16px;
+    padding: 0;
+  }
+}
+
+.link {
+  @include v.theme("border", v.$postLine, false, true, "thin solid");
+  margin: 0;
+  padding: 16px;
+  position: relative;
+}
+
+/* Link Objects - From Left to Right */
+
+body > .content .link .rank,
+.rank-spacer {
+  display: none;
+}
+
+/* Sticky Post */
+
+.thing.link.stickied {
+  a.title,
+  li a,
+  .entry li .comments {
+    color: v.$moderator !important;
+  }
+
+  .expando-button:hover {
+    background-color: v.$moderator !important;
+    border-color: v.$moderator !important;
+  }
+}
+
+.tagline .stickied-tagline {
+  @include v.theme("color", v.$placeholder);
+  cursor: help;
+}

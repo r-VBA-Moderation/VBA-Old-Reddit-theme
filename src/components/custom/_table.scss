@@ -1,0 +1,28 @@
+@use "../../theme/variables" as v;
+
+table {
+  thead {
+    background-color: v.getColor("table", "header-background");
+    color: v.getColor("table", "header-background");
+    tr {
+      th {
+        border: 1px solid v.getColor("table", "header-background") !important;
+      }
+    }
+  }
+  tbody {
+    tr {
+      background-color: v.getColor("table", "even-row");
+      &:nth-child(odd) {
+        background-color: v.getColor("table", "odd-row");
+      }
+      td {
+        color: #000;
+        border: 1px solid v.getColor("table", "border") !important;
+        a {
+          color: v.getColor("table", "link") !important;
+        }
+      }
+    }
+  }
+}

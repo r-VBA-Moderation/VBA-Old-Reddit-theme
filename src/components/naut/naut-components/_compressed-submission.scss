@@ -1,0 +1,24 @@
+/* Compressed Submission */
+
+.link.compressed {
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+
+  .score {
+    margin: 0 3px 0 0;
+  }
+
+  .entry {
+    padding: 9px 32px 9px 0;
+  }
+
+  .title {
+    margin: 0;
+  }
+}
+
+body > .content .link.compressed .midcol {
+  height: auto;
+  margin: 8px 4px 0 0;
+}

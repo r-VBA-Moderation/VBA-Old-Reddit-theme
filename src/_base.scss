@@ -1,10 +1,21 @@
 @use "theme/variables" as v;
 
-@include v.google-font("Roboto");
-@include v.google-font("Roboto Mono");
-
 * {
   @include v.theme("color", v.$bodyText);
   font-family: v.$base-font;
   // @include theme("background", $body);
+}
+
+*,
+:before,
+:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  @include v.theme("background", v.$canvas);
+  min-width: 920px;
 }

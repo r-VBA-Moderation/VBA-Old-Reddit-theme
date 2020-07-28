@@ -1,0 +1,91 @@
+body {
+  .content input[type="url"]:focus {
+    @include v.theme("border-color", v.$active);
+    @include v.theme("color", v.$bodyText);
+  }
+}
+
+body .content {
+  .text,
+  textarea {
+    @include v.theme("background", v.$body);
+    @include v.theme("border", v.$line, false, true, "1px solid");
+    @include v.theme("color", v.$inactiveText);
+    box-shadow: none;
+    transition: border-color 0.15s ease, color 0.15s ease;
+    padding: 6px 12px;
+  }
+
+  input {
+    &[type="text"],
+    &[type="password"] {
+      @include v.theme("background", v.$body);
+      @include v.theme("border", v.$line, false, true, "1px solid");
+      @include v.theme("color", v.$inactiveText);
+      box-shadow: none;
+      transition: border-color 0.15s ease, color 0.15s ease;
+      padding: 6px 12px;
+    }
+  }
+}
+
+.side .spacer input {
+  @include v.theme("background", v.$body);
+  @include v.theme("border", v.$line, false, true, "1px solid");
+  @include v.theme("color", v.$inactiveText);
+  box-shadow: none;
+  transition: border-color 0.15s ease, color 0.15s ease;
+  padding: 6px 12px;
+}
+
+body .content {
+  input[type="url"] {
+    @include v.theme("background", v.$body);
+    @include v.theme("border", v.$line, false, true, "1px solid");
+    @include v.theme("color", v.$inactiveText);
+    box-shadow: none;
+    transition: border-color 0.15s ease, color 0.15s ease;
+    padding: 6px 12px;
+  }
+
+  .text:hover,
+  textarea:hover {
+    @include v.theme("border-color", v.$bodyText);
+  }
+
+  input {
+    &[type="text"]:hover,
+    &[type="password"]:hover {
+      @include v.theme("border-color", v.$bodyText);
+    }
+  }
+}
+
+.side .spacer input:hover {
+  @include v.theme("border-color", v.$bodyText);
+}
+
+body .content {
+  input[type="url"]:hover {
+    @include v.theme("border-color", v.$bodyText);
+  }
+
+  .text:focus,
+  textarea:focus {
+    @include v.theme("border-color", v.$active);
+    @include v.theme("color", v.$bodyText);
+  }
+
+  input {
+    &[type="text"]:focus,
+    &[type="password"]:focus {
+      @include v.theme("border-color", v.$active);
+      @include v.theme("color", v.$bodyText);
+    }
+  }
+}
+
+.side .spacer input:active {
+  @include v.theme("border-color", v.$active);
+  @include v.theme("color", v.$bodyText);
+}

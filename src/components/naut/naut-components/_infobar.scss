@@ -1,0 +1,82 @@
+/* Infobar (Default yellow announcement bar) */
+
+.content .infobar {
+  margin: 0 0 16px;
+  padding: 16px;
+  // line-height: 26px;
+  height: auto;
+  border: none;
+  @include v.theme("background-color", v.$navBar-backgroundColor);
+  @include v.theme("color", v.$lightText);
+  border-radius: 2px;
+
+  &.listingsignupbar,
+  .listingsignupbar__title,
+  a.listingsignupbar__container {
+    @include v.theme("background", v.$body, false, false, "!important");
+    @include v.theme("color", v.$bodyText, false, false, "!important");
+  }
+}
+
+.infobar .md {
+  @include v.theme("color", v.$body);
+}
+
+.content .infobar {
+  &:first-letter {
+    text-transform: capitalize;
+  }
+
+  &.welcome {
+    line-height: inherit;
+    height: 86px;
+
+    h1 {
+      @include v.theme("color", v.$metaText);
+    }
+  }
+}
+
+/* Welcome Infobar */
+
+.commentarea .infobar {
+  line-height: 18px;
+  margin: 0 0 16px;
+
+  a {
+    color: rgba(0, 0, 0, 0.64);
+    font-weight: 700;
+  }
+}
+
+/* Updated Reddit Infobar */
+
+.reddit-infobar.with-icon {
+  border: none;
+  @include v.theme("background", v.$body);
+  box-shadow: 0 2px 1.5px 0 rgba(0, 0, 0, 0.12), 0 0 4px 0 rgba(0, 0, 0, 0.12);
+  margin: 0 0 16px;
+  border-radius: 2px;
+
+  .md {
+    @include v.theme("color", v.$bodyText);
+    font-size: 14px;
+  }
+
+  &.locked-infobar {
+    background: v.$moderator;
+
+    .md {
+      @include v.theme("color", v.$lightText);
+    }
+
+    p:after {
+      content: " Sort comments by new to find out more.";
+    }
+
+    &:before {
+      background-color: v.$moderator;
+      border-right: 1px solid rgba(0, 0, 0, 0.08);
+    }
+  }
+}

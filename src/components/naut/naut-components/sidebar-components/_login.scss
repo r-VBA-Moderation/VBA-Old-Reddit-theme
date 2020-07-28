@@ -1,0 +1,34 @@
+/* Login Form */
+
+.login-form-side {
+  border: none;
+  @include v.theme(
+    "border-bottom",
+    v.$widgetColors-sidebarWidgetBorderColor,
+    false,
+    true,
+    "1px solid"
+  );
+  padding-bottom: 8px;
+
+  label {
+    @include v.theme("color", v.$widgetColors-sidebarWidgetTextColor);
+  }
+
+  input {
+    &[type="text"],
+    &[type="password"] {
+      width: 136px;
+      margin: 0;
+    }
+
+    &[type="text"] {
+      margin-left: 0;
+      margin-right: 16px;
+    }
+  }
+
+  button.btn {
+    margin-right: -3px;
+  }
+}

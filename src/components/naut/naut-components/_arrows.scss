@@ -1,0 +1,124 @@
+/* Voting Arrows */
+
+.link {
+  .midcol {
+    width: 32px !important;
+    margin: 0 16px 0 0;
+    overflow: visible;
+    height: 56px;
+  }
+
+  .score {
+    line-height: 16px;
+    font-size: 12px;
+    text-align: center;
+    margin: 1px -100%;
+
+    &.likes {
+      @include v.theme("color", v.$voteText-upvote);
+    }
+
+    &.dislikes {
+      @include v.theme("color", v.$voteText-downvote);
+    }
+  }
+}
+
+.arrow {
+  margin: 0;
+  background-image: img.getImage("spritesheet") !important;
+  width: 32px;
+  border-radius: 2px;
+  transition: background-color 0.25s ease;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+
+  &.up {
+    height: 20px;
+    background-position: 0 -80px;
+    transition: background-color 0.25s ease;
+  }
+
+  &.upmod {
+    height: 20px;
+    background-position: -32px -80px;
+    position: relative;
+
+    &:focus:after {
+      position: absolute;
+      left: 2px;
+      bottom: -3px;
+      width: 28px;
+      height: 28px;
+      opacity: 1;
+      z-index: 100;
+      content: " ";
+      @include v.theme("background", v.$voteText-upvote);
+      border-radius: 28px;
+      animation: upvote 0.35s ease-out forwards;
+      -webkit-animation: upvote 0.35s ease-out forwards;
+    }
+  }
+
+  &.down {
+    height: 20px;
+    background-position: -64px -80px;
+    transition: background-color 0.25s ease;
+  }
+
+  &.downmod {
+    height: 20px;
+    background-position: 0 -100px;
+  }
+
+  &.down {
+    &:after {
+      display: block;
+      visibility: hidden;
+      position: absolute;
+      z-index: 1000;
+      margin: -6px 0 0 32px;
+      padding: 12px;
+      @include v.theme("background", v.$voteText-base);
+      border-radius: 2px;
+      @include v.theme("color", v.$bodyText);
+      content: "Consider posting constructive criticism / an explanation when you downvote something.";
+      text-align: center;
+      letter-spacing: 1px;
+      font-weight: 400;
+      font-size: 13px;
+      transition: all 0.25s ease;
+      pointer-events: none;
+    }
+
+    &:hover:after {
+      visibility: visible;
+      @include v.theme("background", v.$voteText-downvote);
+      @include v.theme("color", v.$menuActiveText);
+      margin-left: 48px;
+    }
+  }
+}
+
+/* Voting Arrows */
+
+.green {
+  color: v.$moderator !important;
+  font-weight: 700;
+}
+
+/* Archived Post Voting Arrows */
+
+.thing .arrow.archived {
+  pointer-events: none;
+
+  &.up {
+    opacity: 0.1;
+  }
+
+  &.down {
+    opacity: 0.2;
+  }
+}

@@ -3,18 +3,27 @@
 @use "reddit-dark" as dark;
 @use "reddit-light" as light;
 
-@mixin google-font($family) {
-  @import url("http://fonts.googleapis.com/css?family=#{$family}");
-}
+$base-font: Arial, Helvetica, sans-serif;
+$mono-font: Consolas, "Lucida Console", "DejaVu Sans Mono", monospace;
 
-$base-font: Roboto, Arial, sans-serif;
-$mono-font: Roboto Mono, Menlo, Monaco, Consolas, monospace;
+$readers: "readers";
+$users: "users currently online";
 
 $moderator: #27b062;
 $orangered: #f50;
+$gold: #ffd54f;
 $title-case: uppercase;
 
 $colors: (
+  "table": (
+    "header-background": #4472c4,
+    "header-color": #fff,
+    "odd-row": #d9e1f2,
+    "even-row": #fff,
+    "cell-color": #000,
+    "border": #8ea9db,
+    "link": #0563c1,
+  ),
   "mail": (
     "background": $orangered,
     "text": #fff,
@@ -41,6 +50,7 @@ $colors: (
     "spoiler": #f44336,
   ),
   "linkflair": (
+    "default": #738491,
     "unsolved": $orangered,
     "solved": #738491,
     "discussion": #007acc,
@@ -136,6 +146,7 @@ $banner-backgroundColor: "banner-backgroundColor";
 $banner-iconColor: "banner-iconColor";
 $blackoutSnooFace: "blackoutSnooFace";
 $body: "body";
+$bodySecondary: "bodySecondary";
 $bodyFade: "bodyFade";
 $bodyText: "bodyText";
 $bodyTextAlpha20: "bodyTextAlpha20";

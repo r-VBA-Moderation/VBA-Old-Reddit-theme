@@ -1,0 +1,51 @@
+/* Next Post / Preview */
+
+.read-next {
+  width: 320px;
+  height: 128px;
+  @include v.theme("border", v.$bodySecondary, false, true, "1px solid");
+  border-radius: 2px 2px 0 0;
+
+  .read-next-header {
+    @include v.theme(
+      "border-bottom",
+      v.$bodySecondary,
+      false,
+      true,
+      "1px solid"
+    );
+    @include v.theme("color", v.$secondary-text);
+    padding: 8px 16px;
+    background-color: #f2f7fa;
+  }
+
+  .read-next-nav {
+    top: 8px;
+  }
+
+  .read-next-button {
+    @include v.theme("background-color", v.$button);
+    @include v.theme("color", v.$body);
+    font: 10px/16px monospace;
+    height: 16px;
+    width: 16px;
+  }
+
+  .read-next-link {
+    height: inherit;
+  }
+
+  .read-next-header-title {
+    top: 0;
+    line-height: inherit;
+  }
+
+  .read-next-list {
+    padding: 8px 16px;
+  }
+
+  .read-next-meta {
+    @include v.theme("color", v.$secondary-text);
+    line-height: 2;
+  }
+}

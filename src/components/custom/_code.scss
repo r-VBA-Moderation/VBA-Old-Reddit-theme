@@ -9,11 +9,11 @@
 }
 
 .md pre {
-  background: getColor("code", "background") !important;
+  background: v.getColor("code", "background") !important;
   padding-top: 3px;
   padding-bottom: 3px;
   overflow: hidden;
-  border: 2px solid getColor("code", "border");
+  border: 2px solid v.getColor("code", "border");
   position: relative;
   padding-left: 10px;
   font-family: v.$mono-font;
@@ -21,12 +21,12 @@
   -moz-border-radius: 2px;
   border-radius: 2px;
   > code {
-    background: getColor("code", "background");
-    color: getColor("code", "color");
+    background: v.getColor("code", "background");
+    color: v.getColor("code", "color");
     overflow: auto;
     display: block;
     margin-left: 45px;
-    border-left: 1px solid getColor("code", "separator");
+    border-left: 1px solid v.getColor("code", "separator");
     padding-left: 10px;
     font-family: v.$mono-font;
     &:before {
@@ -34,9 +34,9 @@
       overflow-wrap: normal;
       /* word-wrap: normal; */
       /* End Chrome Fix */
-      background: getColor("code", "background");
+      background: v.getColor("code", "background");
       height: 100%;
-      color: getColor("code", "line-nums");
+      color: v.getColor("code", "line-nums");
       position: absolute;
       left: 2px;
       width: 30px;
@@ -55,9 +55,9 @@
 
 /*Inline code formatting*/
 .md p > code {
-  background: getColor("code", "background") !important;
-  color: getColor("code", "color");
-  border-color: getColor("code", "border");
+  background: v.getColor("code", "background") !important;
+  color: v.getColor("code", "color");
+  border-color: v.getColor("code", "border");
   font-family: v.$mono-font;
 }
 

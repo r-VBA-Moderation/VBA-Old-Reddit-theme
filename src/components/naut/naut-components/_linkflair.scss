@@ -1,0 +1,36 @@
+/* Link Flairs */
+
+.linkflairlabel {
+  padding: 2px 8px;
+  height: 18px;
+  border-radius: 20px;
+  border: 0 solid;
+  @include v.theme("color", v.$body);
+
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  margin-right: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  cursor: default;
+  vertical-align: middle;
+  position: relative;
+  top: -2px;
+  background: v.getColor("linkflair", "default");
+}
+
+.linkflair-mod {
+  .linkflairlabel {
+    background: v.$moderator;
+    @include v.theme("color", v.$body);
+  }
+
+  .thumbnail {
+    &.default,
+    &.self {
+      background: v.$moderator img.getImage("spritesheet") -208px -104px;
+    }
+  }
+}

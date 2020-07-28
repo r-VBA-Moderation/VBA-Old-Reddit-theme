@@ -1,0 +1,69 @@
+/* Ads */
+
+#ad-frame,
+#ad_main,
+#ad_main_top {
+  box-sizing: initial;
+  padding: 10px;
+}
+
+.sponsorshipbox {
+  max-width: 320px;
+  padding: 0;
+}
+
+#ad_sponsorship {
+  margin: 10px;
+}
+
+/* Promoted */
+
+.content .spacer {
+  margin: 0;
+}
+
+.link.promotedlink.promoted {
+  @include v.theme("background-color", v.$body);
+  @include v.theme("color", v.$bodyText);
+  @include v.theme("border", v.$postLine, false, false, "1px solid");
+  padding: 16px;
+
+  .thumbnail {
+    height: auto;
+
+    img {
+      max-height: none;
+      max-width: none;
+      min-width: 0;
+      min-height: 0;
+      transform: none;
+    }
+  }
+}
+
+.organic-listing {
+  @include v.theme("background", v.$body, false, false, "important");
+  padding: 0;
+  position: relative;
+  margin-bottom: 0;
+  border: none;
+  border-radius: 2px 2px 0 0;
+
+  .link {
+    padding: 16px;
+    @include v.theme("background", v.$body);
+
+    &.compressed,
+    &.promotedlink {
+      padding: 16px;
+      @include v.theme("background", v.$body);
+    }
+  }
+
+  .help,
+  .sponsored-tagline {
+    margin-bottom: 20px;
+    margin-right: 16px;
+    @include v.theme("color", v.$secondary-text);
+  }
+}

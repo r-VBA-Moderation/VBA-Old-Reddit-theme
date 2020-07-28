@@ -28,7 +28,7 @@ ul.image-preview-list {
         padding-left: 0;
       }
       pre {
-        color: getColor("code", "color");
+        color: v.getColor("code", "color");
         margin: 0.25rem;
       }
     }

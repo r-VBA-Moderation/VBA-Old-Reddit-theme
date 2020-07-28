@@ -1,0 +1,96 @@
+/* Reported & Spam / Remove / Approved */
+
+body .content .thing.spam {
+  @include v.theme("background", v.$canvas);
+}
+
+.entry .buttons li.reported-stamp {
+  background-color: transparent;
+  border: none !important;
+  text-transform: uppercase;
+  color: #f44336;
+}
+
+a.pretty-button {
+  &[class] {
+    background-image: none;
+    border: none;
+    @include v.theme("color", v.$body);
+    line-height: 16px;
+    transition: background-color 0.25s ease;
+    border-radius: 0;
+    text-transform: uppercase;
+  }
+
+  &.negative {
+    background: #fb797e;
+
+    &:hover {
+      background: #ef5350;
+    }
+
+    &.pressed {
+      background: #b71c1c;
+    }
+  }
+
+  &.neutral {
+    background: #bdbdbd;
+    color: #212121;
+
+    &:hover {
+      background: #e0e0e0;
+    }
+
+    &.pressed {
+      background: #9e9e9e;
+    }
+  }
+
+  &.positive {
+    background: #4caf50;
+
+    &:hover {
+      background: #43a047;
+    }
+
+    &.pressed {
+      background: #1b5e20;
+      background-image: none;
+    }
+  }
+
+  &.neutral.pressed,
+  &.negative.pressed {
+    background-image: none;
+  }
+}
+
+.big-mod-buttons {
+  display: inline-block;
+  overflow: hidden;
+  border-radius: 3px;
+  vertical-align: top;
+  margin-top: -1px;
+
+  a {
+    margin: 0;
+  }
+}
+
+.buttons > .pretty-button {
+  border-radius: 3px;
+}
+
+ul.report-reasons {
+  border-radius: 2px;
+  @include v.theme("background", v.$body);
+  border: none;
+  padding: 8px;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+b {
+  padding-left: 5px;
+}
