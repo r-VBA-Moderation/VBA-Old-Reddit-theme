@@ -1,0 +1,49 @@
+@use '../abstracts/variables' as v;
+
+/* Stylesheet Page */
+
+.stylesheet-customize-container {
+  .pretty-form {
+    padding: 8px 0;
+    margin-bottom: 16px;
+
+    .sheets {
+      margin-right: 0;
+    }
+  }
+
+  h2 {
+    display: none;
+  }
+}
+
+.sheets .btn.right {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+}
+
+pre {
+  overflow: hidden;
+}
+
+#images {
+  padding: 8px 0;
+  @include v.theme("background", v.$body);
+  position: relative;
+  overflow: auto;
+  height: inherit;
+
+  #image-upload {
+    margin: 0 0 16px;
+  }
+}
+
+ul.image-preview-list {
+  margin: 16px 0 0;
+
+  li {
+    width: 33.33%;
+  }
+}

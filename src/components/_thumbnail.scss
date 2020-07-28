@@ -1,0 +1,63 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/images' as img;
+
+/* Thumbnails */
+
+.thumbnail {
+  width: 80px;
+  height: 56px;
+  margin: 0 16px 0 0;
+
+  img {
+    min-height: 56px;
+    min-width: 80px;
+    max-width: none;
+    position: relative;
+    transform: translateY(-50%);
+    top: 50%;
+  }
+
+  &.default,
+  &.self,
+  &.nsfw,
+  &.image,
+  &.spoiler,
+  &[data-href-url*="reddit.com"] {
+    width: 56px;
+    height: 56px;
+    margin: 0 28px 0 12px;
+    border-radius: 28px;
+  }
+
+  &.default {
+    background: v.getColor("thumbnail", "default") img.getImage("spritesheet") -152px -48px;
+  }
+
+  &.self {
+    background: v.getColor("thumbnail", "default") img.getImage("spritesheet") -96px -48px;
+  }
+
+  &.image {
+    background: v.getColor("thumbnail", "default") img.getImage("spritesheet") -208px -48px;
+  }
+
+  &.nsfw {
+    background: v.getColor("thumbnail", "nsfw") img.getImage("spritesheet") -96px -104px;
+  }
+
+  &[data-href-url*="reddit.com"] {
+    background: v.getColor("thumbnail", "link") img.getImage("spritesheet") -152px -104px;
+
+    img {
+      display: none;
+    }
+  }
+}
+
+.stickied .thumbnail {
+  background-color: v.getColor("thumbnail", "stickied");
+}
+
+.thumbnail.spoiler {
+  background: v.getColor("thumbnail", "spoiler") img.getImage("spritesheet") -208px -148px;
+}

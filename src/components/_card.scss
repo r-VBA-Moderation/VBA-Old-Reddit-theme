@@ -1,0 +1,44 @@
+@use '../abstracts/variables' as v;
+
+/* Shadows and Cards */
+
+body {
+  &.listing-page > .content,
+  &.other-discussions-page > .content {
+    @include v.theme("background", v.$body);
+    padding: 16px;
+    border-radius: 2px;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
+  }
+}
+
+.comments-page .link,
+.commentarea > .sitetable > .comment,
+#bottom-comments:not(.child) > .sitetable > .comment,
+#images,
+.sponsorshipbox,
+.stylesheet-customize-container .pretty-form,
+.side .sidecontentbox,
+.account-activity-box,
+.side .titlebox,
+#previoussearch #moresearchinfo,
+#ad-frame,
+#ad_main,
+.wiki-page .wiki-page-content,
+.linefield,
+.submit-page .roundfield,
+.login-form-side,
+#ad_main_top,
+.search-result-subreddit,
+.search-result-listing + .search-result-listing .contents,
+[class] .searchfacets {
+  @include v.theme("background", v.$body);
+  padding: 16px;
+  border-radius: 2px;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
+}
+
+.commentarea > .sitetable > .comment,
+#bottom-comments > .sitetable > .comment {
+  padding-left: 10px;
+}

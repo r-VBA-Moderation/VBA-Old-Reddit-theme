@@ -1,0 +1,77 @@
+@use '../abstracts/variables' as v;
+
+.subreddit-rules-page {
+  .subreddit-rule-buttons button,
+  .subreddit-rule-add-form-buttons button,
+  .form-buttons button {
+    padding: 0 16px;
+    @include v.theme("background", v.$button);
+    border: none;
+    border-radius: 2px;
+    @include v.theme("color", v.$body);
+    text-transform: uppercase;
+    font-weight: 700;
+    height: 36px;
+    font-size: 14px;
+    font-family: Lato, Arial, sans-serif;
+    box-shadow: 0 2px 1.5px 0 rgba(0, 0, 0, 0.12), 0 0 4px 0 rgba(0, 0, 0, 0.12);
+    transition: box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1),
+      background 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+      color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+.subreddit-rule-delete-confirmation button {
+  padding: 0 16px;
+  @include v.theme("background", v.$button);
+  border: none;
+  border-radius: 2px;
+  @include v.theme("color", v.$body);
+  text-transform: uppercase;
+  font-weight: 700;
+  height: 36px;
+  font-size: 14px;
+  font-family: Lato, Arial, sans-serif;
+  box-shadow: 0 2px 1.5px 0 rgba(0, 0, 0, 0.12), 0 0 4px 0 rgba(0, 0, 0, 0.12);
+  transition: box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1),
+    background 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+    color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.subreddit-rules-page {
+  .subreddit-rule-buttons button:hover,
+  .subreddit-rule-add-form-buttons button:hover,
+  .form-buttons button:hover {
+    @include v.theme("color", v.$body);
+    @include v.theme("background", v.$buttonTinted50);
+    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14),
+      0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.subreddit-rule-delete-confirmation button:hover {
+  @include v.theme("color", v.$body);
+  @include v.theme("background", v.$buttonTinted50);
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12),
+    0 2px 4px -1px rgba(0, 0, 0, 0.2);
+}
+
+.subreddit-rules-page {
+  .subreddit-rule-buttons button:active,
+  .subreddit-rule-add-form-buttons button:active,
+  .form-buttons button:active {
+    @include v.theme("color", v.$body);
+    @include v.theme("background", v.$buttonShaded80);
+    box-shadow: 0 2px 1.5px 0 rgba(0, 0, 0, 0.12), 0 0 4px 0 rgba(0, 0, 0, 0.12);
+  }
+}
+
+.subreddit-rule-delete-confirmation button:active {
+  @include v.theme("color", v.$body);
+  @include v.theme("background", v.$buttonShaded80);
+  box-shadow: 0 2px 1.5px 0 rgba(0, 0, 0, 0.12), 0 0 4px 0 rgba(0, 0, 0, 0.12);
+}
+
+.subreddit-rule-item:hover {
+  background-color: transparent;
+}

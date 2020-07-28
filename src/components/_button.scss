@@ -1,0 +1,66 @@
+@use '../abstracts/variables' as v;
+
+body {
+  .btn,
+  button {
+    margin: 4px 16px 4px 0;
+    padding: 0 16px;
+    @include v.theme("background", v.$button);
+    border: none;
+    border-radius: 2px;
+    @include v.theme("color", v.$body);
+    text-transform: uppercase;
+    font-weight: 700;
+    height: 36px;
+    line-height: 36px;
+    font-size: 14px;
+    font-family: Lato, Arial, sans-serif;
+    box-shadow: 0 2px 1.5px 0 rgba(0, 0, 0, 0.12), 0 0 4px 0 rgba(0, 0, 0, 0.12);
+    transition: box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1),
+      background 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+      color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+.c-btn-primary,
+.wiki-page .wiki-page-content .wiki_button {
+  margin: 4px 16px 4px 0;
+  padding: 0 16px;
+  @include v.theme("background", v.$button);
+  border: none;
+  border-radius: 2px;
+  @include v.theme("color", v.$body);
+  text-transform: uppercase;
+  font-weight: 700;
+  height: 36px;
+  line-height: 36px;
+  font-size: 14px;
+  font-family: Lato, Arial, sans-serif;
+  box-shadow: 0 2px 1.5px 0 rgba(0, 0, 0, 0.12), 0 0 4px 0 rgba(0, 0, 0, 0.12);
+  transition: box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1),
+    background 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+    color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn:hover,
+button:hover,
+.c-btn-primary:hover,
+.wiki-page .wiki-page-content .wiki_button {
+  @include v.theme("color", v.$button);
+  @include v.theme("background", v.$buttonTinted50);
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12),
+    0 2px 4px -1px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active,
+button:active,
+.c-btn-primary:active,
+.wiki-page .wiki-page-content .wiki_button {
+  @include v.theme("color", v.$body);
+  @include v.theme("background", v.$buttonShaded80);
+  box-shadow: 0 2px 1.5px 0 rgba(0, 0, 0, 0.12), 0 0 4px 0 rgba(0, 0, 0, 0.12);
+}
+
+.c-btn-primary:active {
+  margin-top: 4px;
+}

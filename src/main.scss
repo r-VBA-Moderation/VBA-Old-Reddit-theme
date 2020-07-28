@@ -1,4 +1,18 @@
-@use "_base";
-@use "components/naut/naut-components.scss";
-// @use "components/RES-colors";
-@use "components/custom/custom-components.scss";
+@charset "UTF-8";
+
+// Base stuff
+@use "base/base";
+
+// Layout-related sections
+@use "layout/header";
+@use "layout/footer";
+@use "layout/sidebar";
+
+// Components
+@use "components/all" as components;
+
+// Page-specific styles
+@use "pages/all" as pages;
+
+// Extensions
+@use "extensions/all" as extensions;

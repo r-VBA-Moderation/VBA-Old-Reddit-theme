@@ -1,0 +1,79 @@
+@use '../abstracts/variables' as v;
+
+/* Inner Post Area */
+
+.link {
+  .entry {
+    padding: 0;
+    margin: 0;
+    max-width: 960px;
+  }
+
+  .title {
+    margin: 0;
+    font: 13.5pt Lato, Arial, sans-serif;
+    transition: all 0.15s ease;
+    overflow: visible;
+  }
+}
+
+/* Submission Title */
+
+body .content .sitetable .link .title a:hover {
+  @include v.theme("color", v.$active);
+}
+
+/* Unvisited*/
+
+.thing .title {
+  &.loggedin.click,
+  &.click,
+  &.loggedin {
+    @include v.theme("color", v.$posttitletextcolor);
+  }
+
+  @include v.theme("color", v.$posttitletextcolor);
+}
+
+/* Visited  */
+
+.content .thing {
+  .title:visited,
+  &.visited .title {
+    @include v.theme("color", v.$postTitleLink-VisitedLinkColor);
+  }
+}
+
+/* Clicking */
+
+.thing .title {
+  &.loggedin.click:visited,
+  &.click:visited {
+    @include v.theme("color", v.$linkText);
+  }
+}
+
+/* Domain */
+
+.link .domain {
+  visibility: hidden;
+
+  a {
+    visibility: visible;
+    position: relative;
+    top: -1px;
+    @include v.theme("color", v.$secondary-text);
+    transition: all 0.15s ease;
+
+    &:hover {
+      @include v.theme("color", v.$active);
+      text-decoration: none;
+    }
+  }
+}
+
+.approval-checkmark,
+.oc-tag {
+  cursor: default;
+  margin-left: 4px;
+}

@@ -1,0 +1,57 @@
+@use '../../abstracts/images' as img;
+@use '../../abstracts/variables' as v;
+
+/* User Bar */
+
+#header-bottom-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: auto;
+  max-width: 340px;
+  height: 24px;
+  background: none;
+  font-size: 11px;
+  padding: 5px 8px 4px 2px;
+}
+
+body:not(.loggedin) #header-bottom-right {
+  max-width: 340px;
+}
+
+#header-bottom-right a {
+  color: rgba(255, 255, 255, 0.7);
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.beta-hint a {
+  margin-left: -16px;
+  width: 16px;
+  height: 16px;
+  background: img.getImage("spritesheet") -48px -32px no-repeat;
+}
+
+.user {
+  a {
+    max-width: 120px;
+    overflow: hidden;
+    display: inline-block;
+    text-overflow: ellipsis;
+  }
+
+  .userkarma {
+    font-weight: 400;
+    @include v.theme("color", v.$inactiveText);
+    border: none;
+    font-size: 9px;
+    transition: all 0.15s ease;
+  }
+}
+
+.separator,
+.user {
+  @include v.theme("color", v.$inactiveText);
+}

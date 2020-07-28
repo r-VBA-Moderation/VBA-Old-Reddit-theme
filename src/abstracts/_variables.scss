@@ -1,0 +1,217 @@
+@use "sass:map";
+
+@use "../theme/reddit-dark" as dark;
+@use "../theme/reddit-light" as light;
+
+$base-font: Arial, Helvetica, sans-serif;
+$mono-font: Consolas, "Lucida Console", "DejaVu Sans Mono", monospace;
+
+$readers: "readers";
+$users: "users currently online";
+
+$moderator: #27b062;
+$orangered: #f50;
+$gold: #ffd54f;
+$title-case: uppercase;
+
+$colors: (
+  "table": (
+    "header-background": #4472c4,
+    "header-color": #fff,
+    "odd-row": #d9e1f2,
+    "even-row": #fff,
+    "cell-color": #000,
+    "border": #8ea9db,
+    "link": #0563c1,
+  ),
+  "mail": (
+    "background": $orangered,
+    "text": #fff,
+    "havemail": #ea4848,
+    "havemail-hover": #ec5b5b,
+    "havemail-active": #c73d3d,
+  ),
+  "selection": (
+    "background": #7dbcff99,
+    // #0079d3,
+      "color": #fff,
+  ),
+  "role": (
+    "moderator": $moderator,
+    "admin": #f44336,
+    "submitter": #24a0ed,
+    "friend": #ff4500,
+  ),
+  "thumbnail": (
+    "default": #d2dbe0,
+    "nsfw": #e85881,
+    "link": #24a0ed,
+    "stickied": #2db747,
+    "spoiler": #f44336,
+  ),
+  "linkflair": (
+    "default": #738491,
+    "unsolved": $orangered,
+    "solved": #738491,
+    "discussion": #007acc,
+    "protip": #e0d400,
+    "codereview": #800080,
+    "modpost": $moderator,
+    "advertisement": #333333,
+    "showntell": #000,
+    "clippy": #008e00,
+  ),
+  "code": (
+    "background": #1e1e1e,
+    "color": #d4d4d4,
+    "border": #007acc,
+    "line-nums": #858585,
+    "separator": #404040,
+  ),
+);
+
+@function getColor($keys...) {
+  $result: map-deep-get($colors, $keys...);
+  @return $result;
+}
+
+@function map-deep-get($map, $keys...) {
+  @each $key in $keys {
+    $map: map.get($map, $key);
+  }
+
+  @return $map;
+}
+
+// use like: @include theme('color', $secondary-text-color);
+
+@mixin themeProperty(
+  $theme,
+  $property,
+  $color,
+  $additionalPropertiesPositionIsFront,
+  $additionalProperties
+) {
+  @if $additionalPropertiesPositionIsFront {
+    #{$property}: unquote(
+      $additionalProperties + " " + map-get($theme, $color)
+    );
+  } @else {
+    #{$property}: unquote(
+      map-get($theme, $color) + " " + $additionalProperties
+    );
+  }
+}
+
+@mixin theme(
+  $property,
+  $color,
+  $forceDark: false,
+  $additionalPropertiesPositionIsFront: false,
+  $additionalProperties: ""
+) {
+  @if $forceDark {
+    @include themeProperty(
+      dark.$theme,
+      $property,
+      $color,
+      $additionalPropertiesPositionIsFront,
+      $additionalProperties
+    );
+  } @else {
+    @include themeProperty(
+      light.$theme,
+      $property,
+      $color,
+      $additionalPropertiesPositionIsFront,
+      $additionalProperties
+    );
+
+    @media (prefers-color-scheme: dark) {
+      @include themeProperty(
+        dark.$theme,
+        $property,
+        $color,
+        $additionalPropertiesPositionIsFront,
+        $additionalProperties
+      );
+    }
+  }
+}
+
+// Keys for intellisense
+$actionIcon: "actionIcon";
+$active: "active";
+$banner-backgroundColor: "banner-backgroundColor";
+$banner-iconColor: "banner-iconColor";
+$blackoutSnooFace: "blackoutSnooFace";
+$body: "body";
+$bodySecondary: "bodySecondary";
+$bodyFade: "bodyFade";
+$bodyText: "bodyText";
+$bodyTextAlpha20: "bodyTextAlpha20";
+$button: "button";
+$buttonTinted50: "buttonTinted50";
+$buttonShaded80: "buttonShaded80";
+$canvas: "canvas";
+$errorText: "errorText";
+$field: "field";
+$fieldFade: "fieldFade";
+$flair: "flair";
+$highlight: "highlight";
+$inactive: "inactive";
+$inactiveText: "inactiveText";
+$lightText: "lightText";
+$line: "line";
+$linkText: "linkText";
+$menu: "menu";
+$menuActiveText: "menuActiveText";
+$menuInactiveText: "menuInactiveText";
+$metaText: "metaText";
+$monospaceColor: "monospaceColor";
+$navBar-activeLink: "navBar-activeLink";
+$navBar-activeSubmenuCaret: "navBar-activeSubmenuCaret";
+$navBar-activeSubmenuLink: "navBar-activeSubmenuLink";
+$navBar-backgroundColor: "navBar-backgroundColor";
+$navBar-hoverLink: "navBar-hoverLink";
+$navBar-inactiveLink: "navBar-inactiveLink";
+$navBar-inactiveSubmenuCaret: "navBar-inactiveSubmenuCaret";
+$navBar-inactiveSubmenuLink: "navBar-inactiveSubmenuLink";
+$navBar-submenuBackgroundColor: "navBar-submenuBackgroundColor";
+$navIcon: "navIcon";
+$pageHeader: "pageHeader";
+$placeholder: "placeholder";
+$post: "post";
+$postError: "postError";
+$postFlairText: "postFlairText";
+$postIcon: "postIcon";
+$postLine: "postLine";
+$posttitletextcolor: "posttitletextcolor";
+$postTitleLink-VisitedLinkColor: "postTitleLink-VisitedLinkColor";
+$report: "report";
+$secondary-text: "secondary-text";
+$titleText: "titleText";
+$voteText-base: "voteText-base";
+$voteText-downvote: "voteText-downvote";
+$voteText-upvote: "voteText-upvote";
+$widgetColors-lineColor: "widgetColors-lineColor";
+$widgetColors-sidebarWidgetBackgroundColor: "widgetColors-sidebarWidgetBackgroundColor";
+$widgetColors-sidebarWidgetBorderColor: "widgetColors-sidebarWidgetBorderColor";
+$widgetColors-sidebarWidgetHeaderColor: "widgetColors-sidebarWidgetHeaderColor";
+$widgetColors-sidebarWidgetTextColor: "widgetColors-sidebarWidgetTextColor";
+$widgetColors-sidebarWidgetTitleColor: "widgetColors-sidebarWidgetTitleColor";
+
+@mixin stroke($color, $shadow: 0px) {
+  $val: map-get(light.$theme, $color);
+  $size: 1px;
+  $blur: 0;
+  text-shadow: $shadow $shadow $blur $val, $size * -1 $size * -1 $blur $val,
+    $size $size * -1 $blur $val, $size * -1 $size $blur $val,
+    $size $size $blur $val;
+  @media (prefers-color-scheme: dark) {
+    $val: map-get(dark.$theme, $color);
+    text-shadow: $shadow $shadow $blur $val, $size * -1 $size * -1 $blur $val,
+      $size $size * -1 $blur $val, $size * -1 $size $blur $val,
+      $size $size $blur $val;
+  }
+}

@@ -1,0 +1,157 @@
+@use '../abstracts/variables' as v;
+
+/* Submission Page */
+
+.submit-page {
+  #header {
+    height: 144px;
+  }
+
+  #header-bottom-left {
+    top: 86px;
+    left: 50%;
+    margin-left: -262px;
+  }
+
+  &[class] .content {
+    margin: 32px auto 0;
+  }
+
+  .side,
+  .content h1 {
+    display: none;
+  }
+}
+
+#suggested-reddits {
+  display: none;
+}
+
+.submit-page {
+  #newlink.submit.content {
+    width: 524px;
+    margin: 0 auto;
+
+    form .spacer + .spacer {
+      margin: 0;
+    }
+
+    ul.tabmenu.formtab {
+      position: relative;
+      padding: 0;
+      border: none;
+      @include v.theme("background", v.$button);
+      border-radius: 2px;
+      box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
+    }
+
+    .tabmenu.formtab {
+      a {
+        padding: 16px;
+        width: 262px;
+        display: inline-block;
+        text-align: center;
+        color: rgba(255, 255, 255, 0.7);
+        text-transform: uppercase;
+        font-weight: 700;
+        transition: all 0.15s ease;
+        font-size: 16px;
+        border: none;
+        border-bottom: 4px solid transparent;
+      }
+
+      .selected a {
+        font-size: 16px;
+        background: none;
+        @include v.theme("color", v.$body);
+        border-bottom: 4px solid;
+      }
+
+      a:hover {
+        @include v.theme("color", v.$body);
+      }
+    }
+  }
+
+  .formtabs-content {
+    border-top: 0;
+    padding-top: 0;
+  }
+
+  .roundfield {
+    padding: 16px;
+    width: 524px;
+    border: none;
+
+    span.title {
+      @include v.theme("color", v.$bodyText);
+      text-transform: capitalize;
+    }
+  }
+
+  #url-field button {
+    background: #c3cfd6;
+  }
+}
+
+.submit_text {
+  &.enabled.roundfield {
+    @include v.theme("background", v.$button);
+
+    .md {
+      @include v.theme("color", v.$body);
+    }
+  }
+
+  ol,
+  ul {
+    margin-left: -1em;
+  }
+}
+
+.submit-page .infobar {
+  display: none !important;
+}
+
+.content.submit .info-notice {
+  @include v.theme("background", v.$bodySecondary);
+  padding: 16px;
+  border: none;
+  margin-bottom: 0;
+}
+
+#items-required {
+  padding-bottom: 0 !important;
+  padding-top: 15px;
+}
+
+.submit-page {
+  #newlink.submit.content .btn {
+    width: 100%;
+    height: auto;
+    margin-top: 16px;
+    cursor: pointer;
+    text-transform: capitalize;
+    font: 17px Lato, Arial, sans-serif;
+    padding: 16px;
+    margin-bottom: 48px;
+
+    &:hover {
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.48);
+    }
+  }
+
+  .footer-parent {
+    display: none;
+  }
+}
+
+body #newlink-with-image-upload .file-upload-button {
+  padding-right: 18px;
+  line-height: 37px;
+}
+
+#new-link-image-input > div:first-of-type {
+  display: inline-block;
+  padding-right: 16px;
+}

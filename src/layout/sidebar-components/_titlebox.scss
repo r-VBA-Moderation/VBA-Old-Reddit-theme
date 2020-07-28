@@ -1,0 +1,42 @@
+@use '../../abstracts/variables' as v;
+
+/* Titlebox Info */
+
+.titlebox {
+  &:before {
+    content: "Subreddit Info";
+    display: block;
+    @include v.theme("color", v.$bodyText);
+    font: 18px/24px Lato, Arial, sans-serif;
+    margin: 8px 0;
+  }
+
+  .tagline {
+    margin: 0;
+
+    &:after {
+      content: "";
+      height: 2px;
+      background: #f2f2f2;
+      display: block;
+      margin-top: 16px;
+    }
+  }
+
+  form {
+    &.flairtoggle {
+      line-height: 2;
+    }
+
+    &.toggle.sr_style_toggle {
+      padding-bottom: 0;
+      display: block;
+      background-color: transparent;
+
+      label {
+        position: relative;
+        top: -3px;
+      }
+    }
+  }
+}

@@ -1,0 +1,163 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/images' as img;
+
+/* Expando Button */
+
+.expando-button {
+  position: relative;
+  top: -1px;
+  margin: 2px 6px 2px 0 !important;
+  width: 16px !important;
+  height: 16px !important;
+  border-radius: 2px;
+  background-color: transparent;
+  background-image: img.getImage("spritesheet") !important;
+  background-size: 264px 264px !important;
+  @include v.theme("border", v.$postLine, false, true, "1px solid");
+  cursor: pointer;
+
+  &.image,
+  &.video-muted {
+    position: relative;
+    top: -1px;
+    margin: 2px 6px 2px 0 !important;
+    width: 16px !important;
+    height: 16px !important;
+    border-radius: 2px;
+    background-color: transparent;
+    background-image: img.getImage("spritesheet") !important;
+    background-size: 264px 264px !important;
+    @include v.theme("border", v.$postLine, false, true, "1px solid");
+    cursor: pointer;
+  }
+
+  &:hover {
+    @include v.theme("background-color", v.$button);
+    @include v.theme("border-color", v.$button);
+  }
+
+  &.selftext.collapsed,
+  &.crosspost.collapsed {
+    background-position: 0 -48px !important;
+  }
+
+  &.selftext.collapsed:hover,
+  &.crosspost.collapsed:hover {
+    background-position: -16px -48px !important;
+  }
+
+  &.selftext.expanded,
+  &.crosspost.expanded {
+    background-position: -32px -48px !important;
+  }
+
+  &.selftext.expanded:hover,
+  &.crosspost.expanded:hover {
+    background-position: -48px -48px !important;
+  }
+
+  &.video {
+    &.collapsed {
+      background-position: -64px -48px !important;
+
+      &:hover {
+        background-position: -80px -48px !important;
+      }
+    }
+
+    &.expanded {
+      background-position: -32px -48px !important;
+
+      &:hover {
+        background-position: -48px -48px !important;
+      }
+    }
+  }
+
+  &.image {
+    &.collapsedExpando {
+      background-position: -32px -64px !important;
+
+      &:hover {
+        background-position: -48px -64px !important;
+      }
+    }
+
+    &.expanded {
+      background-position: -32px -48px !important;
+
+      &:hover {
+        background-position: -48px -48px !important;
+      }
+    }
+
+    &.gallery {
+      &.collapsedExpando {
+        background-position: 0 -64px !important;
+
+        &:hover {
+          background-position: -16px -64px !important;
+        }
+      }
+
+      &.expanded {
+        background-position: -32px -48px !important;
+
+        &:hover {
+          background-position: -48px -48px !important;
+        }
+      }
+    }
+  }
+
+  &.video-muted {
+    &.collapsed {
+      background-position: -64px -64px !important;
+
+      &:hover {
+        background-position: -80px -64px !important;
+      }
+    }
+
+    &.expanded {
+      background-position: -32px -48px !important;
+
+      &:hover {
+        background-position: -48px -48px !important;
+      }
+    }
+  }
+}
+
+.expando-gate {
+  .expando-gate__show-once {
+    padding: 0 16px 0px 16px;
+  }
+
+  &.expando-gate--interstitial {
+    background-color: #424242;
+  }
+}
+
+.link.self .expando-gate {
+  border-radius: 2px;
+}
+
+.expando-gate.expando-gate--overlay {
+  border-radius: 2px;
+  background-color: rgba(66, 66, 66, 0.54);
+}
+
+/* Expando Text */
+
+.link .usertext .md {
+  margin-top: 12px;
+  margin-bottom: -12px;
+  padding-top: 12px;
+  padding-left: 0;
+  background-color: transparent;
+  border: 0 solid;
+  @include v.theme("border-top", v.$bodySecondary, false, true, "1px solid");
+  border-radius: 0;
+  @include v.theme("color", v.$bodyText);
+}

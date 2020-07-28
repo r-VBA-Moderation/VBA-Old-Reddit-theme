@@ -1,0 +1,12 @@
+@use '../abstracts/variables' as v;
+
+/* Unvotable Message */
+
+.unvotable-message {
+  border: 0 solid;
+  @include v.theme("color", v.$secondary-text);
+
+  &:first-letter {
+    text-transform: capitalize;
+  }
+}

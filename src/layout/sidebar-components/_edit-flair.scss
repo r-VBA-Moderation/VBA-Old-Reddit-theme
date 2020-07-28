@@ -1,0 +1,26 @@
+@use '../../abstracts/variables' as v;
+
+/* Edit Flair */
+
+.side .titlebox .tagline a.flairselectbtn,
+.leavemoderator a {
+  @include v.theme("background", v.$body);
+  border-radius: 2px;
+  @include v.theme("color", v.$secondary-text);
+  font: bold 11px Lato, Arial, sans-serif;
+  padding: 2px 8px;
+  position: absolute;
+  right: 32px;
+  text-transform: capitalize;
+  transition: opacity 0.09s ease-in-out;
+}
+
+.side .titlebox .tagline a.flairselectbtn:hover,
+.leavemoderator a:hover {
+  opacity: 0.7;
+  text-decoration: none;
+}
+
+.titlebox .tagline {
+  font-size: 0;
+}
