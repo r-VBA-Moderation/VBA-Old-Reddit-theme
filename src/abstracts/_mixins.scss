@@ -2,33 +2,76 @@
 // This file contains all application-wide Sass mixins.
 // -----------------------------------------------------------------------------
 
-/// Event wrapper
-/// @author Harry Roberts
-/// @param {Bool} $self [false] - Whether or not to include current selector
-/// @link https://twitter.com/csswizardry/status/478938530342006784 Original tweet from Harry Roberts
-@mixin on-event($self: false) {
-  @if $self {
-    &,
-    &:hover,
-    &:active,
-    &:focus {
-      @content;
-    }
+@use "../theme/reddit-dark" as dark;
+@use "../theme/reddit-light" as light;
+
+@mixin themeProperty(
+  $theme,
+  $property,
+  $color,
+  $additionalPropertiesPositionIsFront,
+  $additionalProperties
+) {
+  @if $additionalPropertiesPositionIsFront {
+    #{$property}: unquote(
+      $additionalProperties + " " + map-get($theme, $color)
+    );
   } @else {
-    &:hover,
-    &:active,
-    &:focus {
-      @content;
+    #{$property}: unquote(
+      map-get($theme, $color) + " " + $additionalProperties
+    );
+  }
+}
+
+// use like: @include theme('color', $secondary-text-color);
+
+@mixin theme(
+  $property,
+  $color,
+  $forceDark: false,
+  $additionalPropertiesPositionIsFront: false,
+  $additionalProperties: ""
+) {
+  @if $forceDark {
+    @include themeProperty(
+      dark.$theme,
+      $property,
+      $color,
+      $additionalPropertiesPositionIsFront,
+      $additionalProperties
+    );
+  } @else {
+    @include themeProperty(
+      light.$theme,
+      $property,
+      $color,
+      $additionalPropertiesPositionIsFront,
+      $additionalProperties
+    );
+
+    @media (prefers-color-scheme: dark) {
+      @include themeProperty(
+        dark.$theme,
+        $property,
+        $color,
+        $additionalPropertiesPositionIsFront,
+        $additionalProperties
+      );
     }
   }
 }
 
-/// Make a context based selector a little more friendly
-/// @author Hugo Giraudel
-/// @param {String} $context
-@mixin when-inside($context) {
-  #{$context} & {
-    @content;
+@mixin stroke($color, $shadow: 0px) {
+  $val: map-get(light.$theme, $color);
+  $size: 1px;
+  $blur: 0;
+  text-shadow: $shadow $shadow $blur $val, $size * -1 $size * -1 $blur $val,
+    $size $size * -1 $blur $val, $size * -1 $size $blur $val,
+    $size $size $blur $val;
+  @media (prefers-color-scheme: dark) {
+    $val: map-get(dark.$theme, $color);
+    text-shadow: $shadow $shadow $blur $val, $size * -1 $size * -1 $blur $val,
+      $size $size * -1 $blur $val, $size * -1 $size $blur $val,
+      $size $size $blur $val;
   }
 }
-

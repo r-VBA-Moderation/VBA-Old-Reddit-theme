@@ -1,5 +1,4 @@
 @use '../abstracts/variables' as v;
-@use '../abstracts/images' as img;
 
 /* Comments Page */
 
@@ -98,7 +97,7 @@
   }
 
   > .usertext textarea:not(:focus) {
-    background: img.getImage("commentboxbg") no-repeat 50% 50%;
+    background: v.getImage("commentboxbg") no-repeat 50% 50%;
   }
 }
 
@@ -124,9 +123,10 @@
   @include v.theme("color", v.$bodyText);
   max-width: initial;
 
-  select {
-    margin: 8px 0 8px 6px;
-  }
+  // select {
+  //   margin: 8px 0 8px 6px;
+  //   @include v.theme("background", v.$canvas);
+  // }
 }
 
 .reddit-infobar.gold-accent {
@@ -145,7 +145,7 @@
 /* Gilding */
 
 .gilded-icon:before {
-  background: img.getImage("spritesheet") -112px -160px;
+  background: v.getImage("spritesheet") -112px -160px;
   height: 16px;
   width: 16px;
 }

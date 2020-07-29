@@ -1,4 +1,3 @@
-@use '../../abstracts/images' as img;
 @use '../../abstracts/variables' as v;
 
 /* User Bar */
@@ -31,7 +30,7 @@ body:not(.loggedin) #header-bottom-right {
   margin-left: -16px;
   width: 16px;
   height: 16px;
-  background: img.getImage("spritesheet") -48px -32px no-repeat;
+  background: v.getImage("spritesheet") -48px -32px no-repeat;
 }
 
 .user {

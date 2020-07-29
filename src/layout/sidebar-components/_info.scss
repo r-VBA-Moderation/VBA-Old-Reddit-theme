@@ -1,4 +1,3 @@
-@use '../../abstracts/images' as img;
 @use '../../abstracts/variables' as v;
 
 /* Subreddit Box */
@@ -39,7 +38,7 @@ div.titlebox span.number:after {
       height: 9px;
       display: inline-block;
       margin-right: 8px;
-      background: img.getImage("spritesheet") -64px -36px;
+      background: v.getImage("spritesheet") -64px -36px;
     }
 
     &:after {

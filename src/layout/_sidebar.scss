@@ -1,5 +1,4 @@
 @use '../abstracts/variables' as v;
-@use '../abstracts/images' as img;
 
 // fetch sidebar components
 @use 'sidebar-components/all';
@@ -17,7 +16,7 @@
 
   &:before {
     height: 192px;
-    background: img.getImage("sidebarimg");
+    background: v.getImage("sidebarimg");
     content: "";
     display: block;
     position: absolute;

@@ -1,5 +1,4 @@
 @use '../abstracts/variables' as v;
-@use '../abstracts/images' as img;
 
 /* RES Selection */
 
@@ -272,7 +271,7 @@ div {
   }
 
   .RESUserTagImage {
-    background-image: img.getImage("spritesheet");
+    background-image: v.getImage("spritesheet");
     background-position: -32px -101px;
   }
 }
@@ -564,7 +563,7 @@ html.res-commentBoxes .comment {
 
 .pinHeader-sub #sr-header-area,
 .pinHeader-subanduser #sr-header-area {
-  background-image: img.getImage("headerimg");
+  background-image: v.getImage("headerimg");
   background-position: 50% 0;
 }
 
@@ -592,7 +591,7 @@ html.res-commentBoxes .comment {
 
   #header {
     top: 0;
-    background-image: img.getImage("headerimg");
+    background-image: v.getImage("headerimg");
     height: 84px;
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.24);
   }
@@ -601,7 +600,7 @@ html.res-commentBoxes .comment {
 /* Gear Dropdown */
 
 .gearIcon {
-  background: img.getImage("spritesheet") -64px 0 !important;
+  background: v.getImage("spritesheet") -64px 0 !important;
   position: relative;
   top: 2px;
   transition: all 0.25s ease;
@@ -793,7 +792,7 @@ html.res-commentBoxes .comment {
 
 .res-nightmode {
   .arrow {
-    background-image: img.getImage("spritesheet") !important;
+    background-image: v.getImage("spritesheet") !important;
 
     &.up {
       background-position: 0px -80px !important;
@@ -814,16 +813,16 @@ html.res-commentBoxes .comment {
 
   .thumbnail {
     &.default {
-      background: #212121 img.getImage("spritesheet") -152px -48px;
+      background: #212121 v.getImage("spritesheet") -152px -48px;
     }
 
     &.self {
-      background: #212121 img.getImage("spritesheet") -96px -48px;
+      background: #212121 v.getImage("spritesheet") -96px -48px;
     }
   }
 
   .stickied .thumbnail {
-    background: #2db747 img.getImage("spritesheet") -96px -48px;
+    background: #2db747 v.getImage("spritesheet") -96px -48px;
   }
 
   body,

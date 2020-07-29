@@ -1,5 +1,4 @@
 @use '../abstracts/variables' as v;
-@use '../abstracts/images' as img;
 
 /* Link Flairs */
 
@@ -8,8 +7,7 @@
   height: 18px;
   border-radius: 20px;
   border: 0 solid;
-  @include v.theme("color", v.$body);
-
+  @include v.theme("color", v.$lightText);
   font-size: 12px;
   font-weight: 500;
   line-height: 16px;
@@ -27,13 +25,12 @@
 .linkflair-mod {
   .linkflairlabel {
     background: v.$moderator;
-    @include v.theme("color", v.$body);
   }
 
   .thumbnail {
     &.default,
     &.self {
-      background: v.$moderator img.getImage("spritesheet") -208px -104px;
+      background: v.$moderator v.getImage("spritesheet") -208px -104px;
     }
   }
 }

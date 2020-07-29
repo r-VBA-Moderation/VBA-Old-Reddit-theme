@@ -1,4 +1,4 @@
-@use '../abstracts/images' as img;
+@use '../abstracts/variables' as v;
 
 @use 'header-components/all';
 
@@ -8,7 +8,7 @@
   margin: 0;
   height: 196px;
   border: none;
-  background: img.getImage("headerimg") 50% (50% / cover) no-repeat;
+  background: v.getImage("headerimg") 50% (50% / cover) no-repeat;
   z-index: 1;
   box-shadow: 0 2px 1.5px 0 rgba(0, 0, 0, 0.12), 0 0 4px 0 rgba(0, 0, 0, 0.12);
 }

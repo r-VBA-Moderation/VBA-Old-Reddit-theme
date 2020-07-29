@@ -1,5 +1,4 @@
 @use '../abstracts/variables' as v;
-@use '../abstracts/images' as img;
 
 .entry .tagline {
   margin-top: 3px;
@@ -78,7 +77,7 @@
   vertical-align: top;
   height: 10px;
   width: 16px;
-  background-image: img.getImage("spritesheet");
+  background-image: v.getImage("spritesheet");
   background-position: -32px -101px;
   opacity: 0.25;
   margin-left: 2px;

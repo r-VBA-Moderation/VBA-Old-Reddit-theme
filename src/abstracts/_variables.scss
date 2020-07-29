@@ -1,7 +1,7 @@
-@use "sass:map";
-
-@use "../theme/reddit-dark" as dark;
-@use "../theme/reddit-light" as light;
+@forward 'mixins';
+@use 'sass:map';
+@use 'sass:string';
+@use 'functions' as f;
 
 $base-font: Arial, Helvetica, sans-serif;
 $mono-font: Consolas, "Lucida Console", "DejaVu Sans Mono", monospace;
@@ -9,12 +9,42 @@ $mono-font: Consolas, "Lucida Console", "DejaVu Sans Mono", monospace;
 $readers: "readers";
 $users: "users currently online";
 
+$_dev: false;
+
 $moderator: #27b062;
 $orangered: #f50;
 $gold: #ffd54f;
 $title-case: uppercase;
 
-$colors: (
+$_images: (
+  "clippy": "clippyflair",
+  "commentboxbg": "commentboxbg",
+  "footer": "footer",
+  "headerimg": "headerimg",
+  "noresults": "noresults",
+  "sg-codeblock": "sg-codeblock",
+  "sg-inlinecode": "sg-inlinecode",
+  "sg-rescode": "sg-rescode",
+  "sidebarimg": "sidebarimg",
+  "snoo": "snoo",
+  "spritesheet": "spritesheet",
+  "title": "title",
+);
+
+@function getImage($name) {
+  $result: "";
+
+  @if $_dev {
+    $img-root: "../images/";
+    $result: url($img-root + map.get($_images, $name) + ".png");
+  } @else {
+    $result: url(string.unquote("%%" + map.get($_images, $name) + "%%"));
+  }
+
+  @return $result;
+}
+
+$_colors: (
   "table": (
     "header-background": #4472c4,
     "header-color": #fff,
@@ -71,75 +101,11 @@ $colors: (
 );
 
 @function getColor($keys...) {
-  $result: map-deep-get($colors, $keys...);
+  $result: f.map-deep-get($_colors, $keys...);
   @return $result;
 }
 
-@function map-deep-get($map, $keys...) {
-  @each $key in $keys {
-    $map: map.get($map, $key);
-  }
-
-  @return $map;
-}
-
-// use like: @include theme('color', $secondary-text-color);
-
-@mixin themeProperty(
-  $theme,
-  $property,
-  $color,
-  $additionalPropertiesPositionIsFront,
-  $additionalProperties
-) {
-  @if $additionalPropertiesPositionIsFront {
-    #{$property}: unquote(
-      $additionalProperties + " " + map-get($theme, $color)
-    );
-  } @else {
-    #{$property}: unquote(
-      map-get($theme, $color) + " " + $additionalProperties
-    );
-  }
-}
-
-@mixin theme(
-  $property,
-  $color,
-  $forceDark: false,
-  $additionalPropertiesPositionIsFront: false,
-  $additionalProperties: ""
-) {
-  @if $forceDark {
-    @include themeProperty(
-      dark.$theme,
-      $property,
-      $color,
-      $additionalPropertiesPositionIsFront,
-      $additionalProperties
-    );
-  } @else {
-    @include themeProperty(
-      light.$theme,
-      $property,
-      $color,
-      $additionalPropertiesPositionIsFront,
-      $additionalProperties
-    );
-
-    @media (prefers-color-scheme: dark) {
-      @include themeProperty(
-        dark.$theme,
-        $property,
-        $color,
-        $additionalPropertiesPositionIsFront,
-        $additionalProperties
-      );
-    }
-  }
-}
-
-// Keys for intellisense
+// Theme keys for intellisense
 $actionIcon: "actionIcon";
 $active: "active";
 $banner-backgroundColor: "banner-backgroundColor";
@@ -200,18 +166,3 @@ $widgetColors-sidebarWidgetBorderColor: "widgetColors-sidebarWidgetBorderColor";
 $widgetColors-sidebarWidgetHeaderColor: "widgetColors-sidebarWidgetHeaderColor";
 $widgetColors-sidebarWidgetTextColor: "widgetColors-sidebarWidgetTextColor";
 $widgetColors-sidebarWidgetTitleColor: "widgetColors-sidebarWidgetTitleColor";
-
-@mixin stroke($color, $shadow: 0px) {
-  $val: map-get(light.$theme, $color);
-  $size: 1px;
-  $blur: 0;
-  text-shadow: $shadow $shadow $blur $val, $size * -1 $size * -1 $blur $val,
-    $size $size * -1 $blur $val, $size * -1 $size $blur $val,
-    $size $size $blur $val;
-  @media (prefers-color-scheme: dark) {
-    $val: map-get(dark.$theme, $color);
-    text-shadow: $shadow $shadow $blur $val, $size * -1 $size * -1 $blur $val,
-      $size $size * -1 $blur $val, $size * -1 $size $blur $val,
-      $size $size $blur $val;
-  }
-}

@@ -1,11 +1,10 @@
-@use '../../abstracts/images' as img;
 @use '../../abstracts/variables' as v;
 
 #mail,
 #modmail {
   width: 16px;
   height: 14px;
-  background-image: img.getImage("spritesheet") !important;
+  background-image: v.getImage("spritesheet") !important;
   background-repeat: no-repeat !important;
   background-color: transparent;
   transition: all 0.25s ease;
@@ -38,11 +37,11 @@
     padding: 16px 24px;
     bottom: 24px;
     z-index: 100;
-    background: v.getColor("mail", "havemail") img.getImage("spritesheet") 269px -120px
+    background: v.getColor("mail", "havemail") v.getImage("spritesheet") 269px -120px
       no-repeat;
     border-radius: 2px;
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.24);
-    @include v.theme("color", v.$body);
+    @include v.theme("color", v.$lightText);
     width: 300px;
     height: 48px;
     left: 32px;
@@ -91,4 +90,202 @@
 #new_modmail,
 #chat {
   transform: scale(0.85);
+}
+
+/* New Mail Toast Animation */
+
+#mail.havemail {
+  &:before {
+    animation-name: toast;
+    animation-duration: 8s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+    -webkit-animation-name: toast;
+    -webkit-animation-duration: 8s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: ease;
+  }
+
+  &:hover:before {
+    -webkit-animation-play-state: paused;
+    -moz-animation-play-state: paused;
+    -o-animation-play-state: paused;
+    animation-play-state: paused;
+  }
+}
+
+@-webkit-keyframes toast {
+  0% {
+    transform: translateY(76px);
+    -webkit-transform: translateY(76px);
+    opacity: 0;
+  }
+
+  20% {
+    transform: translateY(76px);
+    -webkit-transform: translateY(76px);
+    opacity: 0;
+  }
+
+  25% {
+    transform: translateY(-8px);
+    -webkit-transform: translateY(-8px);
+    opacity: 1;
+  }
+
+  27% {
+    transform: translateY(0px);
+    -webkit-transform: translateY(0px);
+    opacity: 1;
+  }
+
+  92% {
+    transform: translateY(0px);
+    -webkit-transform: translateY(0px);
+    opacity: 1;
+  }
+
+  97% {
+    transform: translateY(16px);
+    -webkit-transform: translateY(16px);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(76px);
+    -webkit-transform: translateY(76px);
+    opacity: 0;
+  }
+}
+
+@-o-keyframes toast {
+  0% {
+    transform: translateY(76px);
+    -webkit-transform: translateY(76px);
+    opacity: 0;
+  }
+
+  20% {
+    transform: translateY(76px);
+    -webkit-transform: translateY(76px);
+    opacity: 0;
+  }
+
+  25% {
+    transform: translateY(-8px);
+    -webkit-transform: translateY(-8px);
+    opacity: 1;
+  }
+
+  27% {
+    transform: translateY(0px);
+    -webkit-transform: translateY(0px);
+    opacity: 1;
+  }
+
+  92% {
+    transform: translateY(0px);
+    -webkit-transform: translateY(0px);
+    opacity: 1;
+  }
+
+  97% {
+    transform: translateY(16px);
+    -webkit-transform: translateY(16px);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(76px);
+    -webkit-transform: translateY(76px);
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes toast {
+  0% {
+    transform: translateY(76px);
+    -webkit-transform: translateY(76px);
+    opacity: 0;
+  }
+
+  20% {
+    transform: translateY(76px);
+    -webkit-transform: translateY(76px);
+    opacity: 0;
+  }
+
+  25% {
+    transform: translateY(-8px);
+    -webkit-transform: translateY(-8px);
+    opacity: 1;
+  }
+
+  27% {
+    transform: translateY(0px);
+    -webkit-transform: translateY(0px);
+    opacity: 1;
+  }
+
+  92% {
+    transform: translateY(0px);
+    -webkit-transform: translateY(0px);
+    opacity: 1;
+  }
+
+  97% {
+    transform: translateY(16px);
+    -webkit-transform: translateY(16px);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(76px);
+    -webkit-transform: translateY(76px);
+    opacity: 0;
+  }
+}
+
+@keyframes toast {
+  0% {
+    transform: translateY(76px);
+    -webkit-transform: translateY(76px);
+    opacity: 0;
+  }
+
+  20% {
+    transform: translateY(76px);
+    -webkit-transform: translateY(76px);
+    opacity: 0;
+  }
+
+  25% {
+    transform: translateY(-8px);
+    -webkit-transform: translateY(-8px);
+    opacity: 1;
+  }
+
+  27% {
+    transform: translateY(0px);
+    -webkit-transform: translateY(0px);
+    opacity: 1;
+  }
+
+  92% {
+    transform: translateY(0px);
+    -webkit-transform: translateY(0px);
+    opacity: 1;
+  }
+
+  97% {
+    transform: translateY(16px);
+    -webkit-transform: translateY(16px);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(76px);
+    -webkit-transform: translateY(76px);
+    opacity: 0;
+  }
 }
