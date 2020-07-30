@@ -1,9 +1,64 @@
 // -----------------------------------------------------------------------------
 // This file contains all application-wide Sass mixins.
 // -----------------------------------------------------------------------------
-
+@forward 'variables';
+@use 'sass:map';
 @use "../theme/reddit-dark" as dark;
 @use "../theme/reddit-light" as light;
+
+@mixin pargin($val) {
+  margin: $val;
+  padding: $val;
+}
+
+$_breakpoints: (
+  "extra-small": (
+    max-width: 600px,
+  ),
+  "small": (
+    min-width: 600px,
+  ),
+  "medium": (
+    min-width: 768px,
+  ),
+  "large": (
+    min-width: 992px,
+  ),
+  "extra-large": (
+    min-width: 1200px,
+  ),
+) !default;
+
+@mixin respond-to($breakpoint) {
+  // If the key exists in the map
+  @if map-has-key($_breakpoints, $breakpoint) {
+    // Prints a media query based on the value
+    @media only screen and #{inspect(map-get($_breakpoints, $breakpoint))} {
+      @content;
+    }
+  }
+
+  // If the key doesn't exist in the map
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Available breakpoints are: #{map-keys($breakpoints)}.";
+  }
+}
+
+@mixin stroke($color, $shadow: 0px) {
+  $val: map-get(light.$theme, $color);
+  $size: 1px;
+  $blur: 0;
+  text-shadow: $shadow $shadow $blur $val, $size * -1 $size * -1 $blur $val,
+    $size $size * -1 $blur $val, $size * -1 $size $blur $val,
+    $size $size $blur $val;
+  @media (prefers-color-scheme: dark) {
+    $val: map-get(dark.$theme, $color);
+    text-shadow: $shadow $shadow $blur $val, $size * -1 $size * -1 $blur $val,
+      $size $size * -1 $blur $val, $size * -1 $size $blur $val,
+      $size $size $blur $val;
+  }
+}
 
 @mixin themeProperty(
   $theme,
@@ -58,20 +113,5 @@
         $additionalProperties
       );
     }
-  }
-}
-
-@mixin stroke($color, $shadow: 0px) {
-  $val: map-get(light.$theme, $color);
-  $size: 1px;
-  $blur: 0;
-  text-shadow: $shadow $shadow $blur $val, $size * -1 $size * -1 $blur $val,
-    $size $size * -1 $blur $val, $size * -1 $size $blur $val,
-    $size $size $blur $val;
-  @media (prefers-color-scheme: dark) {
-    $val: map-get(dark.$theme, $color);
-    text-shadow: $shadow $shadow $blur $val, $size * -1 $size * -1 $blur $val,
-      $size $size * -1 $blur $val, $size * -1 $size $blur $val,
-      $size $size $blur $val;
   }
 }

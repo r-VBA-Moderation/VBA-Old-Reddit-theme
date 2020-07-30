@@ -67,7 +67,7 @@ a {
 #modmail {
   width: 16px;
   height: 14px;
-  background-image: url(%%spritesheet%%) !important;
+  background-image: url("../images/spritesheet.png") !important;
   background-repeat: no-repeat !important;
   background-color: transparent;
   transition: all 0.25s ease;
@@ -97,7 +97,7 @@ a {
   padding: 16px 24px;
   bottom: 24px;
   z-index: 100;
-  background: #ea4848 url(%%spritesheet%%) 269px -120px no-repeat;
+  background: #ea4848 url("../images/spritesheet.png") 269px -120px no-repeat;
   border-radius: 2px;
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.24);
   color: #ffffff ;
@@ -340,7 +340,7 @@ a {
 /* Preferences & Logout Icons */
 #header-bottom-right a.pref-lang {
   background-position: -32px 0;
-  background-image: url(%%spritesheet%%);
+  background-image: url("../images/spritesheet.png");
   width: 16px;
   height: 14px;
   display: inline-block;
@@ -353,7 +353,7 @@ a {
 
 .loggedin .logout a {
   background-position: -32px 0;
-  background-image: url(%%spritesheet%%);
+  background-image: url("../images/spritesheet.png");
   width: 16px;
   height: 14px;
   display: inline-block;
@@ -371,7 +371,7 @@ a {
   width: 0;
   padding-left: 42px;
   height: 42px;
-  background: url(%%spritesheet%%) -80px 0;
+  background: url("../images/spritesheet.png") -80px 0;
   margin: 0 8px 0 0;
   vertical-align: top;
   font-size: 0;
@@ -381,7 +381,7 @@ a {
   width: 0;
   padding-left: 42px;
   height: 42px;
-  background: url(%%spritesheet%%) -80px 0;
+  background: url("../images/spritesheet.png") -80px 0;
   margin: 0 8px 0 0;
   vertical-align: top;
   font-size: 0;
@@ -627,7 +627,7 @@ body:not(.loggedin) #header-bottom-right {
   margin-left: -16px;
   width: 16px;
   height: 16px;
-  background: url(%%spritesheet%%) -48px -32px no-repeat;
+  background: url("../images/spritesheet.png") -48px -32px no-repeat;
 }
 
 .user a {
@@ -665,7 +665,7 @@ body:not(.loggedin) #header-bottom-right {
   margin: 0;
   height: 196px;
   border: none;
-  background: url(%%headerimg%%) 50% 50%/cover no-repeat;
+  background: url("../images/headerimg.png") 50% 50%/cover no-repeat;
   z-index: 1;
   box-shadow: 0 2px 1.5px 0 rgba(0, 0, 0, 0.12), 0 0 4px 0 rgba(0, 0, 0, 0.12);
 }
@@ -675,7 +675,7 @@ body:not(.loggedin) #header-bottom-right {
   height: 800px;
   margin-top: 192px;
   padding: 528px 0 64px;
-  background: url(%%footer%%) 50% 0/cover no-repeat;
+  background: url("../images/footer.png") 50% 0/cover no-repeat;
 }
 
 .footer {
@@ -732,25 +732,6 @@ body:not(.loggedin) #header-bottom-right {
 }
 .sidebox .spacer {
   display: none;
-}
-
-/* /r/Naut Credits - Please do not remove this section */
-.side:after {
-  display: block;
-  margin: 0;
-  padding: 10px 0;
-  color: #24a0ed ;
-  content: "Subreddit CSS Theme by /r/Naut";
-  font: 16px Lato, Arial, sans-serif;
-  position: absolute;
-  width: 320px;
-  border: 1px solid rgba(0, 0, 0, 0.06);
-  text-align: center;
-}
-@media (prefers-color-scheme: dark) {
-  .side:after {
-    color: #4fbcff ;
-  }
 }
 
 /* Sidebar Description */
@@ -943,7 +924,7 @@ div.titlebox span.number:after {
   height: 9px;
   display: inline-block;
   margin-right: 8px;
-  background: url(%%spritesheet%%) -64px -36px;
+  background: url("../images/spritesheet.png") -64px -36px;
 }
 .titlebox .users-online .number:after {
   content: " users currently online";
@@ -1360,7 +1341,7 @@ div.titlebox span.number:after {
 }
 .side:before {
   height: 192px;
-  background: url(%%sidebarimg%%);
+  background: url("../images/sidebarimg.png");
   content: "";
   display: block;
   position: absolute;
@@ -1624,7 +1605,7 @@ div.titlebox span.number:after {
 
 .arrow {
   margin: 0;
-  background-image: url(%%spritesheet%%) !important;
+  background-image: url("../images/spritesheet.png") !important;
   width: 32px;
   border-radius: 2px;
   transition: background-color 0.25s ease;
@@ -2254,7 +2235,7 @@ body > .content .link.compressed .midcol {
   height: 16px !important;
   border-radius: 2px;
   background-color: transparent;
-  background-image: url(%%spritesheet%%) !important;
+  background-image: url("../images/spritesheet.png") !important;
   background-size: 264px 264px !important;
   border: 1px solid #c8c6cc;
   cursor: pointer;
@@ -2272,7 +2253,7 @@ body > .content .link.compressed .midcol {
   height: 16px !important;
   border-radius: 2px;
   background-color: transparent;
-  background-image: url(%%spritesheet%%) !important;
+  background-image: url("../images/spritesheet.png") !important;
   background-size: 264px 264px !important;
   border: 1px solid #c8c6cc;
   cursor: pointer;
@@ -3054,7 +3035,7 @@ body .content input[type=text]:focus, body .content input[type=password]:focus {
   background: #27b062;
 }
 .linkflair-mod .thumbnail.default, .linkflair-mod .thumbnail.self {
-  background: #27b062 url(%%spritesheet%%) -208px -104px;
+  background: #27b062 url("../images/spritesheet.png") -208px -104px;
 }
 
 /* RES Selection */
@@ -3286,7 +3267,7 @@ div.commentarea div.RES-keyNav-activeElement .md {
   border-radius: 0px 2px 2px 0px;
 }
 .res-nightmode .RESUserTagImage {
-  background-image: url(%%spritesheet%%);
+  background-image: url("../images/spritesheet.png");
   background-position: -32px -101px;
 }
 
@@ -3563,7 +3544,7 @@ html.res-commentBoxes .comment {
 /* Pinheader */
 .pinHeader-sub #sr-header-area,
 .pinHeader-subanduser #sr-header-area {
-  background-image: url(%%headerimg%%);
+  background-image: url("../images/headerimg.png");
   background-position: 50% 0;
 }
 
@@ -3586,14 +3567,14 @@ html.res-commentBoxes .comment {
 }
 .pinHeader-header #header {
   top: 0;
-  background-image: url(%%headerimg%%);
+  background-image: url("../images/headerimg.png");
   height: 84px;
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.24);
 }
 
 /* Gear Dropdown */
 .gearIcon {
-  background: url(%%spritesheet%%) -64px 0 !important;
+  background: url("../images/spritesheet.png") -64px 0 !important;
   position: relative;
   top: 2px;
   transition: all 0.25s ease;
@@ -3846,7 +3827,7 @@ html.res-commentBoxes .comment {
 /* RES Fixes / RES Nightmode */
 /* Voting Arrows */
 .res-nightmode .arrow {
-  background-image: url(%%spritesheet%%) !important;
+  background-image: url("../images/spritesheet.png") !important;
 }
 .res-nightmode .arrow.up {
   background-position: 0px -80px !important;
@@ -3861,13 +3842,13 @@ html.res-commentBoxes .comment {
   background-position: 0 -100px !important;
 }
 .res-nightmode .thumbnail.default {
-  background: #212121 url(%%spritesheet%%) -152px -48px;
+  background: #212121 url("../images/spritesheet.png") -152px -48px;
 }
 .res-nightmode .thumbnail.self {
-  background: #212121 url(%%spritesheet%%) -96px -48px;
+  background: #212121 url("../images/spritesheet.png") -96px -48px;
 }
 .res-nightmode .stickied .thumbnail {
-  background: #2db747 url(%%spritesheet%%) -96px -48px;
+  background: #2db747 url("../images/spritesheet.png") -96px -48px;
 }
 .res-nightmode body,
 .res-nightmode .listing.search-result-listing,
@@ -4547,7 +4528,7 @@ select:disabled:hover, select[aria-disabled=true]:hover {
   vertical-align: top;
   height: 10px;
   width: 16px;
-  background-image: url(%%spritesheet%%);
+  background-image: url("../images/spritesheet.png");
   background-position: -32px -101px;
   opacity: 0.25;
   margin-left: 2px;
@@ -4582,19 +4563,19 @@ select:disabled:hover, select[aria-disabled=true]:hover {
   border-radius: 28px;
 }
 .thumbnail.default {
-  background: #d2dbe0 url(%%spritesheet%%) -152px -48px;
+  background: #d2dbe0 url("../images/spritesheet.png") -152px -48px;
 }
 .thumbnail.self {
-  background: #d2dbe0 url(%%spritesheet%%) -96px -48px;
+  background: #d2dbe0 url("../images/spritesheet.png") -96px -48px;
 }
 .thumbnail.image {
-  background: #d2dbe0 url(%%spritesheet%%) -208px -48px;
+  background: #d2dbe0 url("../images/spritesheet.png") -208px -48px;
 }
 .thumbnail.nsfw {
-  background: #e85881 url(%%spritesheet%%) -96px -104px;
+  background: #e85881 url("../images/spritesheet.png") -96px -104px;
 }
 .thumbnail[data-href-url*="reddit.com"] {
-  background: #24a0ed url(%%spritesheet%%) -152px -104px;
+  background: #24a0ed url("../images/spritesheet.png") -152px -104px;
 }
 .thumbnail[data-href-url*="reddit.com"] img {
   display: none;
@@ -4605,7 +4586,7 @@ select:disabled:hover, select[aria-disabled=true]:hover {
 }
 
 .thumbnail.spoiler {
-  background: #f44336 url(%%spritesheet%%) -208px -148px;
+  background: #f44336 url("../images/spritesheet.png") -208px -148px;
 }
 
 /* Unvotable Message */
@@ -4772,7 +4753,7 @@ select:disabled:hover, select[aria-disabled=true]:hover {
   width: 100%;
 }
 .commentarea > .usertext textarea:not(:focus) {
-  background: url(%%commentboxbg%%) no-repeat 50% 50%;
+  background: url("../images/commentboxbg.png") no-repeat 50% 50%;
 }
 
 .usertext .bottom-area {
@@ -4826,7 +4807,7 @@ select:disabled:hover, select[aria-disabled=true]:hover {
 
 /* Gilding */
 .gilded-icon:before {
-  background: url(%%spritesheet%%) -112px -160px;
+  background: url("../images/spritesheet.png") -112px -160px;
   height: 16px;
   width: 16px;
 }
@@ -5204,13 +5185,13 @@ body > .content .link .rank,
   height: 32px;
   width: 32px;
   margin-left: -38px;
-  background: url(%%spritesheet%%) -64px -97px no-repeat;
+  background: url("../images/spritesheet.png") -64px -97px no-repeat;
   border: none !important;
   border-radius: 16px;
   transition: background 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 #search input[type=submit]:hover {
-  background: rgba(158, 158, 158, 0.2) url(%%spritesheet%%) -64px -97px no-repeat;
+  background: rgba(158, 158, 158, 0.2) url("../images/spritesheet.png") -64px -97px no-repeat;
 }
 #search #searchexpando {
   background: #edf1f3 ;
@@ -5285,7 +5266,7 @@ body > .content .link .rank,
   height: 32px;
   margin: 0;
   padding: 0;
-  background: url(%%spritesheet%%) -64px -97px;
+  background: url("../images/spritesheet.png") -64px -97px;
   box-shadow: none;
   border: none;
   transition: background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
@@ -5314,7 +5295,7 @@ body > .content .link .rank,
   top: 8px;
   width: 22px;
   height: 24px;
-  background: url(%%spritesheet%%) -49px -168px no-repeat;
+  background: url("../images/spritesheet.png") -49px -168px no-repeat;
   overflow: hidden;
   font-size: 0;
 }
@@ -5431,7 +5412,7 @@ body > .content .link .rank,
   margin: 0;
   width: 100%;
   height: 416px;
-  background: transparent url(%%noresults%%) no-repeat 50% 50%;
+  background: transparent url("../images/noresults.png") no-repeat 50% 50%;
   text-indent: -9999px;
   font-size: 0;
   display: block;
