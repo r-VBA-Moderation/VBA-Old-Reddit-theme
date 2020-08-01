@@ -10,6 +10,7 @@
 
 html {
   box-sizing: border-box;
+  border-radius: v.$radius;
 }
 
 /**
@@ -22,6 +23,7 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
+  border-radius: inherit;
 }
 
 // Apply top level theme properties
@@ -57,4 +59,8 @@ a {
 
 :focus {
   outline: none !important;
+}
+
+.gray {
+  @include v.theme("color", v.$secondary-text);
 }

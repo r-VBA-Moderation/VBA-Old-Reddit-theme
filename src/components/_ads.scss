@@ -27,7 +27,7 @@
 .link.promotedlink.promoted {
   @include v.theme("background-color", v.$body);
   @include v.theme("color", v.$bodyText);
-  @include v.theme("border", v.$postLine, false, false, "1px solid");
+  @include v.theme("border", v.$separator, false, false, "1px solid");
   padding: 16px;
 
   .thumbnail {

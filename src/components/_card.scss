@@ -2,16 +2,6 @@
 
 /* Shadows and Cards */
 
-body {
-  &.listing-page > .content,
-  &.other-discussions-page > .content {
-    @include v.theme("background", v.$body);
-    padding: 16px;
-    border-radius: 2px;
-    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
-  }
-}
-
 .comments-page .link,
 .commentarea > .sitetable > .comment,
 #bottom-comments:not(.child) > .sitetable > .comment,
@@ -32,10 +22,8 @@ body {
 .search-result-subreddit,
 .search-result-listing + .search-result-listing .contents,
 [class] .searchfacets {
-  @include v.theme("background", v.$body);
-  padding: 16px;
-  border-radius: 2px;
-  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
+  @include v.thing(true);
+  @include v.container;
 }
 
 .commentarea > .sitetable > .comment,

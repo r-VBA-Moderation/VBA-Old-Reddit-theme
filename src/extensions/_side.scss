@@ -1,7 +1,1 @@
 @use '../abstracts/mixins' as v;
-
-.titlebox form.toggle,
-.leavemoderator {
-  @include v.theme("color", v.$bodyText);
-  @include v.theme("background", v.$body);
-}

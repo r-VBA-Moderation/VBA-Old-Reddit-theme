@@ -6,7 +6,6 @@
   width: 320px;
   height: 128px;
   @include v.theme("border", v.$bodySecondary, false, true, "1px solid");
-  border-radius: 2px 2px 0 0;
 
   .read-next-header {
     @include v.theme(

@@ -117,15 +117,151 @@ $_breakpoints: (
   }
 }
 
-@mixin thing {
-  @include theme("background-color", v.$body);
-  @include theme("color", v.$bodyText);
-  @include theme("border-color", v.$postLine);
+@mixin thing($border: false, $forceDark: false) {
+  @include theme("background-color", v.$body, $forceDark);
+  @include theme("color", v.$bodyText, $forceDark);
   border-radius: v.$radius;
+  @if $border {
+    border: 1px solid;
+  }
+  @include theme("border-color", v.$line, $forceDark);
 }
 
-@mixin container {
-  margin: v.$container-margin-vert v.$container-margin-hor;
+@mixin container($margin: false) {
+  @if $margin {
+    margin: v.$container-margin-vert v.$container-margin-hor;
+  }
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
   padding: 16px;
+}
+
+@mixin push--auto {
+  margin: {
+    left: auto;
+    right: auto;
+  }
+}
+
+@mixin input($forceDark: false) {
+  @include theme("border", v.$line, $forceDark, true, "1px solid");
+  padding: 0 16px;
+  @include theme("background-color", v.$field, $forceDark);
+  @include theme("color", v.$bodyText, $forceDark);
+  border-radius: v.$radius;
+  &[type="text"] {
+    padding: 0 42px 0 16px;
+    border: 0 solid;
+    border-radius: v.$radius;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
+    transition: box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1),
+      background 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+      color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover {
+      box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14),
+        0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+    }
+
+    &:focus {
+      border-radius: 2px 2px 0 0;
+
+      &:hover {
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.24) !important;
+      }
+    }
+
+    &::-webkit-input-placeholder,
+    &:-moz-placeholder,
+    &::-moz-placeholder,
+    &:-ms-input-placeholder {
+      @include theme("color", v.$placeholder, $forceDark);
+      font-size: 14px;
+      text-transform: capitalize;
+      top: 1px;
+      position: relative;
+    }
+  }
+  &:hover {
+    @include theme("background-color", v.$body, $forceDark);
+    @include theme("border", v.$button, $forceDark, true, "1px solid");
+  }
+}
+
+@mixin reddit-button {
+  font-size: 12px;
+  line-height: 24px;
+  padding: 4px 9px 2px;
+  width: 100%;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  text-align: center;
+  text-decoration: none;
+  @include theme("border-color", v.$button);
+  @include theme("fill", v.$body);
+  @include theme("border-color", v.$body);
+  @include theme("background-color", v.$button);
+
+  &:active {
+    @include theme("background-color", v.$buttonShaded80);
+    @include theme("border-color", v.$buttonShaded80);
+    @include theme("color", v.$body);
+    @include theme("fill", v.$body);
+  }
+
+  &:hover {
+    @include theme("background-color", v.$buttonTinted50);
+    @include theme("border-color", v.$buttonTinted50);
+    @include theme("color", v.$body);
+    @include theme("fill", v.$body);
+  }
+}
+
+@mixin naut-button {
+  margin: 4px 16px 4px 0;
+  padding: 0 16px;
+  @include theme("background", v.$button);
+  border: none;
+  border-radius: v.$radius;
+  @include theme("color", v.$body);
+  text-transform: uppercase;
+  font-weight: 700;
+  height: 36px;
+  line-height: 36px;
+  font-size: 14px;
+  font-family: Lato, Arial, sans-serif;
+  box-shadow: 0 2px 1.5px 0 rgba(0, 0, 0, 0.12), 0 0 4px 0 rgba(0, 0, 0, 0.12);
+  transition: box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1),
+    background 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+    color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    @include theme("background", v.$buttonTinted50);
+    @include theme("color", v.$bodyText);
+  }
+
+  &:active {
+    @include theme("background", v.$buttonShaded80);
+    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14),
+      0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+  }
+  a {
+    @include theme("color", v.$body);
+    font-size: 12px;
+    line-height: 24px;
+    padding: 4px 9px 2px;
+    width: 100%;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    &:hover {
+      @include theme("color", v.$bodyText);
+    }
+  }
+}
+
+@mixin button {
+  @include naut-button();
 }

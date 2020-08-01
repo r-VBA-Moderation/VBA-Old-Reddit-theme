@@ -71,7 +71,6 @@ a.pretty-button {
 .big-mod-buttons {
   display: inline-block;
   overflow: hidden;
-  border-radius: 3px;
   vertical-align: top;
   margin-top: -1px;
 
@@ -80,12 +79,7 @@ a.pretty-button {
   }
 }
 
-.buttons > .pretty-button {
-  border-radius: 3px;
-}
-
 ul.report-reasons {
-  border-radius: 2px;
   @include v.theme("background", v.$body);
   border: none;
   padding: 8px;

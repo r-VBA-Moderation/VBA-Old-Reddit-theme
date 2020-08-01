@@ -1,0 +1,59 @@
+@use '../../abstracts/mixins' as v;
+
+/* Search */
+
+#search {
+  @include v.thing();
+  position: absolute;
+  top: 384px;
+  z-index: 1;
+  width: 320px;
+
+  input {
+    @include v.input();
+    &[type="text"] {
+      width: v.$sidebar-width;
+      height: 42px;
+      line-height: 41px;
+    }
+
+    &[type="submit"] {
+      height: 32px;
+      width: 32px;
+      margin-left: -38px;
+      background: v.getImage("spritesheet") -64px -97px no-repeat;
+      border: none !important;
+      border-radius: 16px;
+      transition: background 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+
+      &:hover {
+        background: rgba(158, 158, 158, 0.2) v.getImage("spritesheet") -64px -97px
+          no-repeat;
+      }
+    }
+  }
+
+  #searchexpando {
+    @include v.theme("background", v.$bodySecondary);
+    border: none;
+    margin: 0;
+    padding: 4px;
+    height: 154px;
+    line-height: 50px;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
+
+    label {
+      padding: 21px 8px 17px;
+      cursor: pointer;
+      transition: all 0.1s ease;
+
+      &:active {
+        background: rgba(0, 0, 0, 0.06);
+      }
+    }
+
+    p {
+      display: none !important;
+    }
+  }
+}

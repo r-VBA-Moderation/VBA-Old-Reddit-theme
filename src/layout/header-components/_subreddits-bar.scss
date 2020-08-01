@@ -3,7 +3,7 @@
 /* Subreddits Bar */
 
 #sr-header-area {
-  background: rgba(0, 0, 0, 0.08);
+  @include v.theme("background", v.$sr-header);
   border: none;
   transition: all 0.15s ease;
   height: 24px;
@@ -49,7 +49,7 @@ body:not(.loggedin) #sr-header-area .width-clip {
     #sr-more-link,
     .seperator,
     .dropdown.srdrop .selected {
-      color: rgba(255, 255, 255, 0.8);
+      @include v.theme("color", v.$bodyText);
     }
   }
 
@@ -102,8 +102,8 @@ a.random.choice {
   }
 
   .drop-choices {
+    @include v.theme("background-color", v.$body);
     &.srdrop {
-      border-radius: 2px;
       box-shadow: 0 1px 4px rgba(0, 0, 0, 0.24);
       opacity: 0;
       top: 14px !important;
@@ -115,10 +115,6 @@ a.random.choice {
         opacity: 1;
         top: 23px !important;
         visibility: visible;
-
-        a:first-child {
-          border-radius: 2px 2px 0 0;
-        }
       }
     }
 

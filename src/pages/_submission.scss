@@ -41,7 +41,6 @@
       padding: 0;
       border: none;
       @include v.theme("background", v.$button);
-      border-radius: 2px;
       box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
     }
 

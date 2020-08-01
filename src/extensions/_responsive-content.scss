@@ -84,8 +84,6 @@ $_double-element-width-large: calc(
         }
 
         &:focus {
-          border-radius: 2px 2px 0 0;
-
           &:hover {
             box-shadow: 0 1px 5px rgba(0, 0, 0, 0.24) !important;
           }
@@ -123,7 +121,6 @@ $_double-element-width-large: calc(
       @include v.theme("background", v.$bodySecondary);
       width: $_element-width-small;
       border: none;
-      border-radius: 0 0 2px 2px;
       margin: 0;
       padding: 4px;
       height: auto;

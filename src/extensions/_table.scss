@@ -7,6 +7,9 @@ table {
     tr {
       th {
         border: 1px solid v.getColor("table", "header-background") !important;
+        label {
+          color: #000;
+        }
       }
     }
   }
@@ -21,6 +24,10 @@ table {
         border: 1px solid v.getColor("table", "border") !important;
         a {
           color: v.getColor("table", "link") !important;
+        }
+        span,
+        label {
+          color: #000;
         }
       }
     }

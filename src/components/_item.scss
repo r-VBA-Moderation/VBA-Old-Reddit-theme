@@ -29,17 +29,12 @@
   }
 
   .search-result-subreddit .search-subscribe-button {
-    border-radius: 2px;
-
     .add {
       @include v.theme("background", v.$button);
       border: none;
-      border-radius: 2px;
-
       &:active {
         @include v.theme("background", v.$button);
         border: none;
-        border-radius: 2px;
       }
     }
 

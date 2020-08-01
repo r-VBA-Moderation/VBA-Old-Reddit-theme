@@ -1,18 +1,15 @@
 @use '../abstracts/mixins' as v;
 
-/* Body Content - Frontpage */
-
 body {
-  &[class] > .content,
-  &.listing-page[class] > .content {
-    border-radius: 4px;
-    margin: 16px 352px 64px 16px;
+  &.listing-page > .content,
+  &.other-discussions-page > .content {
     padding: 0;
   }
 }
 
 .link {
-  @include v.theme("border", v.$postLine, false, true, "thin solid");
+  @include v.theme("border-bottom", v.$separator, false, true, "thin solid");
+  border-radius: 0;
   margin: 0;
   padding: 16px;
   position: relative;
@@ -41,6 +38,6 @@ body > .content .link .rank,
 }
 
 .tagline .stickied-tagline {
-  @include v.theme("color", v.$placeholder);
+  @include v.theme("color", v.$metaText);
   cursor: help;
 }

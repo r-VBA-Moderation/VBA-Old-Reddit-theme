@@ -1,0 +1,11 @@
+@use '../abstracts/mixins' as v;
+
+/* Body Content - Frontpage */
+
+body {
+  .content {
+    @include v.thing(true);
+    @include v.container(true);
+    margin-right: (v.$container-margin-hor * 2) + v.$sidebar-width;
+  }
+}

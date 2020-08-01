@@ -9,7 +9,7 @@ ul.image-preview-list {
     display: flex;
     align-items: center;
     justify-content: center;
-    @include v.theme("border", v.$postLine, false, true, "1px solid");
+    @include v.theme("border", v.$separator, false, true, "1px solid");
     width: auto;
     .preview {
       display: flex;

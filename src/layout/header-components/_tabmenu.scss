@@ -51,6 +51,7 @@
       padding-bottom: 4px;
       @include v.theme("color", v.$bodyText);
       border-bottom: 2px solid;
+      border-radius: 0;
     }
   }
 }

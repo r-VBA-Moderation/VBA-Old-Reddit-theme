@@ -5,7 +5,6 @@
 .side .titlebox .tagline a.flairselectbtn,
 .leavemoderator a {
   @include v.theme("background", v.$body);
-  border-radius: 2px;
   @include v.theme("color", v.$secondary-text);
   font: bold 11px Lato, Arial, sans-serif;
   padding: 2px 8px;

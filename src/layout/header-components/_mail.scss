@@ -39,7 +39,6 @@
     z-index: 100;
     background: v.getColor("mail", "havemail") v.getImage("spritesheet") 269px -120px
       no-repeat;
-    border-radius: 2px;
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.24);
     @include v.theme("color", v.$lightText);
     width: 300px;

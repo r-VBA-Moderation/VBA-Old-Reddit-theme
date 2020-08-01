@@ -8,7 +8,8 @@
   display: inline-block;
 }
 
-.md pre {
+.md pre,
+.res-nightmode .content .md pre {
   background: v.getColor("code", "background") !important;
   padding-top: 3px;
   padding-bottom: 3px;
@@ -17,9 +18,6 @@
   position: relative;
   padding-left: 10px;
   font-family: v.$mono-font;
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
-  border-radius: 2px;
   > code {
     background: v.getColor("code", "background");
     color: v.getColor("code", "color");

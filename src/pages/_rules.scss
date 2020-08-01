@@ -7,7 +7,6 @@
     padding: 0 16px;
     @include v.theme("background", v.$button);
     border: none;
-    border-radius: 2px;
     @include v.theme("color", v.$body);
     text-transform: uppercase;
     font-weight: 700;
@@ -25,7 +24,6 @@
   padding: 0 16px;
   @include v.theme("background", v.$button);
   border: none;
-  border-radius: 2px;
   @include v.theme("color", v.$body);
   text-transform: uppercase;
   font-weight: 700;

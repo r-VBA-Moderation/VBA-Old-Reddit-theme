@@ -1,103 +1,5 @@
 @use '../abstracts/mixins' as v;
 
-/* Search */
-
-#search {
-  position: absolute;
-  top: 384px;
-  z-index: 1;
-  width: 320px;
-
-  input {
-    &[type="text"] {
-      padding: 0 42px 0 16px;
-      border: 0 solid;
-      border-radius: 2px;
-      width: 320px;
-      height: 42px;
-      line-height: 41px;
-      @include v.theme("background", v.$body);
-      box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
-      transition: box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1),
-        background 0.2s cubic-bezier(0.4, 0, 0.2, 1),
-        color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-
-      &:hover {
-        box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14),
-          0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
-      }
-
-      &:focus {
-        border-radius: 2px 2px 0 0;
-
-        &:hover {
-          box-shadow: 0 1px 5px rgba(0, 0, 0, 0.24) !important;
-        }
-      }
-    }
-
-    &[type="text"] {
-      &:-moz-placeholder,
-      &::-webkit-input-placeholder,
-      &:-ms-input-placeholder {
-        font-size: 14px;
-        text-transform: capitalize;
-        top: 1px;
-        position: relative;
-      }
-    }
-
-    &[type="text"] {
-      &::-webkit-input-placeholder,
-      &:-moz-placeholder,
-      &::-moz-placeholder,
-      &:-ms-input-placeholder {
-        @include v.theme("color", v.$placeholder);
-      }
-    }
-
-    &[type="submit"] {
-      height: 32px;
-      width: 32px;
-      margin-left: -38px;
-      background: v.getImage("spritesheet") -64px -97px no-repeat;
-      border: none !important;
-      border-radius: 16px;
-      transition: background 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-
-      &:hover {
-        background: rgba(158, 158, 158, 0.2) v.getImage("spritesheet") -64px -97px
-          no-repeat;
-      }
-    }
-  }
-
-  #searchexpando {
-    @include v.theme("background", v.$bodySecondary);
-    border: none;
-    border-radius: 0 0 2px 2px;
-    margin: 0;
-    padding: 4px;
-    height: 154px;
-    line-height: 50px;
-    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
-
-    label {
-      padding: 21px 8px 17px;
-      cursor: pointer;
-      transition: all 0.1s ease;
-
-      &:active {
-        background: rgba(0, 0, 0, 0.06);
-      }
-    }
-
-    p {
-      display: none !important;
-    }
-  }
-}
-
 /* Responsive Positioning */
 
 @media screen and (max-width: 1085px) {
@@ -171,7 +73,6 @@
     padding: 12px;
     background: #f9f9f9;
     z-index: -1;
-    border-radius: 0 0 2px 2px;
     box-shadow: 0 2px 1.5px 0 rgba(0, 0, 0, 0.12), 0 0 4px 0 rgba(0, 0, 0, 0.12);
     cursor: pointer;
     margin-top: -2px;
@@ -228,7 +129,6 @@
   max-width: 360px;
   height: 184px;
   margin: 0 16px 16px 0;
-  border-radius: 2px;
   vertical-align: top;
   overflow: hidden;
 
