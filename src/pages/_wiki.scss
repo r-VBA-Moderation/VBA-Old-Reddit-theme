@@ -41,9 +41,8 @@
   }
 
   .wiki-page-content {
-    margin: 16px 0;
-    @include v.theme("background", v.$body);
-    padding: 8px 0;
+    @include v.thing;
+    @include v.container;
 
     .wiki {
       > .toc > ul {
@@ -55,6 +54,9 @@
 
         h2 {
           @include v.theme("color", v.$bodyText);
+        }
+        h1 {
+          @include v.theme("color", v.$metaText);
         }
       }
     }

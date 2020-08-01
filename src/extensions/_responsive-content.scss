@@ -1,0 +1,195 @@
+@use '../abstracts/mixins' as v;
+
+$_search-height: 58px;
+$_element-count: 3;
+$_breakpoint: "large";
+
+// IE11 doesnt support nested calcs.
+// sass interpolation strips meaningful whitespace
+// hence awful lack of reuse here
+$_content-width-small: calc(100vw - #{(v.$container-margin-hor * 3)});
+$_content-width-large: calc(
+  100vw - #{v.$sidebar-width + (v.$container-margin-hor * 4)}
+);
+$_element-width-small: calc(
+  (100vw - #{(v.$container-margin-hor * 3)}) / #{$_element-count}
+);
+$_element-width-large: calc(
+  (100vw - #{v.$sidebar-width + (v.$container-margin-hor * 4)}) / #{$_element-count}
+);
+$_double-element-width-small: calc(
+  ((100vw - #{(v.$container-margin-hor * 3)}) / #{$_element-count}) * 2
+);
+$_double-element-width-large: calc(
+  (
+      (100vw - #{v.$sidebar-width + (v.$container-margin-hor * 4)}) / #{$_element-count}
+    ) * 2
+);
+
+.content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: $_content-width-small;
+  overflow: hidden;
+  @include v.container;
+  margin-top: v.$header-height + $_search-height - v.$container-margin-vert;
+  @include v.respond-to($_breakpoint) {
+    max-width: $_content-width-large;
+  }
+}
+
+.side {
+  visibility: hidden;
+  width: 0;
+  border: none;
+  @include v.padgin(0);
+  @include v.respond-to($_breakpoint) {
+    visibility: visible;
+    width: v.$sidebar-width;
+    @include v.container;
+    padding: 1rem;
+  }
+
+  #search {
+    visibility: visible;
+    position: absolute;
+    left: 0px;
+    top: v.$header-height;
+    height: $_search-height;
+    @include v.container;
+    width: $_content-width-small;
+    padding: 8px;
+    z-index: 1;
+    @include v.respond-to($_breakpoint) {
+      width: $content-width-large;
+    }
+
+    input {
+      @include v.input;
+      width: $_element-width-small;
+      @include v.respond-to($_breakpoint) {
+        width: $_element-width-large;
+      }
+      &[type="text"] {
+        height: 36px;
+        box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
+        transition: box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1),
+          background 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+          color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+
+        &:hover {
+          box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14),
+            0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+        }
+
+        &:focus {
+          border-radius: 2px 2px 0 0;
+
+          &:hover {
+            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.24) !important;
+          }
+        }
+      }
+
+      &[type="text"] {
+        &:-moz-placeholder,
+        &::-webkit-input-placeholder,
+        &:-ms-input-placeholder {
+          font-size: 14px;
+          text-transform: capitalize;
+          top: 1px;
+          position: relative;
+        }
+      }
+
+      &[type="submit"] {
+        height: 32px;
+        width: 32px;
+        margin-left: -38px;
+        background: v.getImage("spritesheet") -64px -97px no-repeat;
+        border: none !important;
+        border-radius: 16px;
+        transition: background 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+
+        &:hover {
+          background: rgba(158, 158, 158, 0.2) v.getImage("spritesheet") -64px -97px
+            no-repeat;
+        }
+      }
+    }
+
+    #searchexpando {
+      @include v.theme("background", v.$bodySecondary);
+      width: $_element-width-small;
+      border: none;
+      border-radius: 0 0 2px 2px;
+      margin: 0;
+      padding: 4px;
+      height: auto;
+      // line-height: 50px;
+      box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
+      @include v.respond-to($_breakpoint) {
+        width: $_element-width-large;
+      }
+      label {
+        // padding: 21px 8px 17px;
+        cursor: pointer;
+        transition: all 0.1s ease;
+
+        &:active {
+          background: rgba(0, 0, 0, 0.06);
+        }
+        input {
+          width: auto;
+        }
+      }
+
+      p {
+        display: none !important;
+      }
+    }
+  }
+
+  .submit {
+    visibility: visible;
+    position: absolute;
+    top: v.$header-height;
+    z-index: 2;
+    height: $_search-height;
+    @include v.container;
+    width: $_element-width-small;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include v.respond-to($_breakpoint) {
+      width: $_element-width-large;
+    }
+    &-link {
+      left: $_element-width-small;
+      @include v.respond-to($_breakpoint) {
+        left: $_element-width-large;
+      }
+    }
+    &-text {
+      left: $_double-element-width-small;
+      @include v.respond-to($_breakpoint) {
+        left: $_double-element-width-large;
+      }
+    }
+    .morelink {
+      @include v.button;
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 0;
+        // width: 300px;
+        max-width: $_element-width-small;
+      }
+      .nub {
+        display: none;
+      }
+    }
+  }
+}

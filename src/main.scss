@@ -4,9 +4,7 @@
 @use "base/base";
 
 // Layout-related sections
-@use "layout/header";
-@use "layout/footer";
-@use "layout/sidebar";
+@use "layout/all" as layout;
 
 // Components
 @use "components/all" as components;
@@ -15,4 +13,4 @@
 @use "pages/all" as pages;
 
 // Extensions
-@use "extensions/all" as extensions;
+// @use "extensions/all" as extensions;

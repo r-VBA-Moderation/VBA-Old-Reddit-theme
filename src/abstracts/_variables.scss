@@ -2,7 +2,7 @@
 @use 'sass:string';
 @use 'functions' as f;
 
-$_dev: true;
+$_dev: false;
 
 $base-font: Arial, Helvetica, sans-serif;
 $mono-font: Consolas, "Lucida Console", "DejaVu Sans Mono", monospace;
@@ -14,6 +14,12 @@ $moderator: #27b062;
 $orangered: #f50;
 $gold: #ffd54f;
 $title-case: uppercase;
+
+$radius: 4px;
+$header-height: 63px;
+$sidebar-width: 320px;
+$container-margin-vert: 20px;
+$container-margin-hor: 24px;
 
 $_images: (
   "clippy": "clippyflair",

@@ -2,6 +2,7 @@
 // This file contains all application-wide Sass mixins.
 // -----------------------------------------------------------------------------
 @forward 'variables';
+@use 'variables' as v;
 @use 'sass:map';
 @use "../theme/reddit-dark" as dark;
 @use "../theme/reddit-light" as light;
@@ -114,4 +115,17 @@ $_breakpoints: (
       );
     }
   }
+}
+
+@mixin thing {
+  @include theme("background-color", v.$body);
+  @include theme("color", v.$bodyText);
+  @include theme("border-color", v.$postLine);
+  border-radius: v.$radius;
+}
+
+@mixin container {
+  margin: v.$container-margin-vert v.$container-margin-hor;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
+  padding: 16px;
 }
