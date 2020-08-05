@@ -17,7 +17,7 @@
   .panestack-title {
     margin: 0;
     border-bottom: 0;
-    padding-left: 16px;
+    padding-left: v.$padding;
     margin-top: 16px;
 
     .title {
@@ -27,7 +27,7 @@
 
   .menuarea {
     margin: 0 0 20px;
-    padding-left: 16px;
+    padding-left: v.$padding;
   }
 }
 
@@ -74,7 +74,7 @@
 .commentarea > .usertext {
   @include v.theme("background", v.$body);
   margin: 0;
-  padding: 16px;
+  padding: v.$padding;
   overflow: visible;
   -ms-flex-order: -1;
   order: -1;
@@ -162,7 +162,7 @@
 
   .thing {
     margin: 0 0 16px;
-    padding: 8px 16px 8px 0;
+    padding: 8px v.$padding 8px 0;
   }
 
   .child .thing {
@@ -223,7 +223,7 @@
       display: block;
       width: calc(100% - 368px);
       background: rgba(0, 0, 0, 0);
-      left: 16px;
+      left: v.$padding;
       margin-top: -34px;
       height: 50px;
       color: transparent;
@@ -260,7 +260,7 @@
 
 .listing-page .comment {
   margin-left: 0;
-  padding: 16px 16px 16px 8px;
+  padding: v.$padding v.$padding v.$padding 8px;
 
   .midcol {
     width: 36px;

@@ -25,10 +25,8 @@
 }
 
 .link.promotedlink.promoted {
-  @include v.theme("background-color", v.$body);
-  @include v.theme("color", v.$bodyText);
-  @include v.theme("border", v.$separator, false, false, "1px solid");
-  padding: 16px;
+  @include v.thing(true);
+  @include v.container();
 
   .thumbnail {
     height: auto;
@@ -44,20 +42,19 @@
 }
 
 .organic-listing {
-  @include v.theme("background", v.$body, false, false, "important");
+  @include v.thing;
   padding: 0;
   position: relative;
   margin-bottom: 0;
   border: none;
-  border-radius: 2px 2px 0 0;
 
   .link {
-    padding: 16px;
+    padding: v.$padding;
     @include v.theme("background", v.$body);
 
     &.compressed,
     &.promotedlink {
-      padding: 16px;
+      padding: v.$padding;
       @include v.theme("background", v.$body);
     }
   }

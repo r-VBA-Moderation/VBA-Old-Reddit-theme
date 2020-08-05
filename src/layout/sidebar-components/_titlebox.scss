@@ -1,7 +1,5 @@
 @use '../../abstracts/mixins' as v;
 
-/* Titlebox Info */
-
 .titlebox {
   &:before {
     content: "Subreddit Info";
@@ -10,7 +8,6 @@
     font: 18px/24px Lato, Arial, sans-serif;
     margin: 8px 0;
   }
-
   .tagline {
     margin: 0;
 
@@ -37,6 +34,74 @@
         position: relative;
         top: -3px;
       }
+    }
+  }
+
+  h1.redditname {
+    a {
+      @include v.theme("color", v.$widgetColors-sidebarWidgetTextColor);
+    }
+  }
+  form.toggle,
+  .leavemoderator {
+    @include v.thing;
+  }
+
+  .subscribers {
+    @include v.theme("color", v.$widgetColors-sidebarWidgetTextColor);
+    font-size: 12px;
+    // hide "readers" - replace with user var in pseudo element
+    .word {
+      display: none;
+    }
+    .number {
+      cursor: text;
+      &:after {
+        content: " " + v.$readers;
+      }
+    }
+  }
+
+  .users-online {
+    .number {
+      font-style: italic;
+      cursor: text;
+
+      &:before {
+        content: "";
+        width: 16px;
+        height: 9px;
+        display: inline-block;
+        margin-right: 8px;
+        background: v.getImage("spritesheet") -64px -36px;
+      }
+
+      &:after {
+        content: " " + v.$users;
+      }
+    }
+    .word {
+      display: none;
+    }
+
+    &:before {
+      display: none;
+    }
+  }
+
+  .res-fancy-toggle-button {
+    @include v.button;
+    display: block;
+    border-radius: v.$radius;
+  }
+
+  .fancy-toggle-button {
+    // margin: 0;
+    // margin-left: 208px;
+
+    .active {
+      display: block;
+      @include v.button(true);
     }
   }
 }

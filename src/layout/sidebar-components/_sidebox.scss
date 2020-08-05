@@ -1,0 +1,39 @@
+@use '../../abstracts/mixins' as v;
+
+.sidebox {
+  .morelink {
+    @include v.button;
+    margin: v.$padding v.$padding;
+    .nub {
+      display: none;
+    }
+  }
+
+  .disabled .morelink {
+    box-shadow: none !important;
+    @include v.theme("background", v.$inactive);
+    width: v.$sidebar-width;
+
+    a {
+      @include v.theme("color", v.$inactiveText);
+      font-size: 14px;
+    }
+  }
+
+  &.mod-override .morelink {
+    a:after {
+      position: relative;
+      margin: 10px 10px 10px 0;
+      float: right;
+      margin-left: -16px;
+    }
+
+    &:hover a:after {
+      opacity: 1;
+    }
+  }
+
+  .spacer {
+    display: none;
+  }
+}

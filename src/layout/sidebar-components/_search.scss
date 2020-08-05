@@ -1,19 +1,17 @@
 @use '../../abstracts/mixins' as v;
 
-/* Search */
+// /* Search */
 
 #search {
   @include v.thing();
-  position: absolute;
-  top: 384px;
+  width: v.$sidebar-width;
   z-index: 1;
-  width: 320px;
 
   input {
     @include v.input();
     &[type="text"] {
       width: v.$sidebar-width;
-      height: 42px;
+      height: v.$search-height;
       line-height: 41px;
     }
 
@@ -32,28 +30,57 @@
       }
     }
   }
+}
 
-  #searchexpando {
-    @include v.theme("background", v.$bodySecondary);
-    border: none;
-    margin: 0;
-    padding: 4px;
-    height: 154px;
-    line-height: 50px;
-    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
+#searchexpando {
+  @include v.theme("background", v.$bodySecondary);
+  border: none;
+  margin: 0;
+  padding: 4px;
+  height: 154px;
+  line-height: 50px;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
 
-    label {
-      padding: 21px 8px 17px;
-      cursor: pointer;
-      transition: all 0.1s ease;
+  label {
+    padding: 21px 8px 17px;
+    cursor: pointer;
+    transition: all 0.1s ease;
 
-      &:active {
-        background: rgba(0, 0, 0, 0.06);
-      }
-    }
-
-    p {
-      display: none !important;
+    &:active {
+      background: rgba(0, 0, 0, 0.06);
     }
   }
+
+  p {
+    display: none !important;
+  }
 }
+
+//   body:not(.subscriber) #search {
+//     top: v.$side-start-vert + v.$subscription-prompt-height;
+//   }
+
+//   #searchexpando {
+//     @include v.theme("background", v.$bodySecondary);
+//     border: none;
+//     margin: 0;
+//     padding: 4px;
+//     height: 154px;
+//     line-height: 50px;
+//     box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
+
+//     label {
+//       padding: 21px 8px 17px;
+//       cursor: pointer;
+//       transition: all 0.1s ease;
+
+//       &:active {
+//         background: rgba(0, 0, 0, 0.06);
+//       }
+//     }
+
+//     p {
+//       display: none !important;
+//     }
+//   }
+// }

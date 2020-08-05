@@ -34,7 +34,7 @@
 #mail.havemail {
   &:before {
     position: fixed;
-    padding: 16px 24px;
+    padding: v.$padding 24px;
     bottom: 24px;
     z-index: 100;
     background: v.getColor("mail", "havemail") v.getImage("spritesheet") 269px -120px

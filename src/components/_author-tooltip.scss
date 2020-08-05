@@ -1,0 +1,54 @@
+@use "../abstracts/mixins" as v;
+
+.author-tooltip {
+  @include v.thing(true);
+  .hover-bubble {
+    .anchor-bottom-right,
+    .anchor-bottom-left {
+      &::before {
+        @include v.theme("border-top-color", v.$line);
+      }
+    }
+    .anchor-top-left,
+    .anchor-top-right {
+      &::before {
+        @include v.theme("border-bottom-color", v.$line);
+      }
+      .author-tooltip_common::after {
+        @include v.theme("border-bottom-color", v.$separator);
+      }
+    }
+  }
+  &__head {
+    @include v.thing();
+    h3 {
+      @include v.theme("color", v.$metaText);
+    }
+    a {
+      @include v.theme("color", v.$linkText);
+      &:hover {
+        @include v.theme("color", v.$active);
+      }
+    }
+  }
+  &__profile-name {
+    &::after {
+      @include v.theme("color", v.$bodyText);
+    }
+  }
+  &__title {
+    @include v.theme("color", v.$metaText);
+  }
+  &__description {
+    @include v.theme("color", v.$bodyText);
+  }
+  &__credentials-list {
+    li {
+      @include v.theme("border-right", v.$line, false, true, "1px solid");
+      border-radius: 0px;
+    }
+    strong {
+      @include v.theme("color", v.$metaText);
+    }
+  }
+}

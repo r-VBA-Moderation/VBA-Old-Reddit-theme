@@ -11,7 +11,7 @@ body {
   @include v.theme("border-bottom", v.$separator, false, true, "thin solid");
   border-radius: 0;
   margin: 0;
-  padding: 16px;
+  padding: v.$padding;
   position: relative;
 }
 

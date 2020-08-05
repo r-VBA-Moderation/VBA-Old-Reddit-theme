@@ -86,7 +86,7 @@
       @include v.theme("background", v.$voteText-base);
       border-radius: 2px;
       @include v.theme("color", v.$bodyText);
-      content: "Consider posting constructive criticism / an explanation when you downvote something.";
+      content: v.$downvote-hover-text;
       text-align: center;
       letter-spacing: 1px;
       font-weight: 400;

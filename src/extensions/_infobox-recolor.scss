@@ -1,0 +1,10 @@
+@use '../abstracts/mixins' as v;
+
+.side .titlebox h1.redditname:before {
+  @include v.theme("background-color", v.$banner-backgroundColor);
+}
+
+.side .titlebox h1.redditname a,
+.titlebox span.subscribers > span {
+  @include v.theme("color", v.$lightText);
+}

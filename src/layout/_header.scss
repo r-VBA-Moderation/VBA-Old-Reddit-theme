@@ -6,7 +6,7 @@
 
 #header {
   margin: 0;
-  height: 196px;
+  height: v.$header-height;
   border: none;
   background: v.getImage("headerimg") 50% (50% / cover) no-repeat;
   z-index: 1;

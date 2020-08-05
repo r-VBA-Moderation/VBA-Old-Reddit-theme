@@ -128,7 +128,7 @@
 
 .expando-gate {
   .expando-gate__show-once {
-    padding: 0 16px 0px 16px;
+    padding: 0 v.$padding 0px v.$padding;
   }
 
   &.expando-gate--interstitial {

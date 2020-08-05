@@ -46,7 +46,7 @@
 
     .tabmenu.formtab {
       a {
-        padding: 16px;
+        padding: v.$padding;
         width: 262px;
         display: inline-block;
         text-align: center;
@@ -78,7 +78,7 @@
   }
 
   .roundfield {
-    padding: 16px;
+    padding: v.$padding;
     width: 524px;
     border: none;
 
@@ -114,7 +114,7 @@
 
 .content.submit .info-notice {
   @include v.theme("background", v.$bodySecondary);
-  padding: 16px;
+  padding: v.$padding;
   border: none;
   margin-bottom: 0;
 }
@@ -132,7 +132,7 @@
     cursor: pointer;
     text-transform: capitalize;
     font: 17px Lato, Arial, sans-serif;
-    padding: 16px;
+    padding: v.$padding;
     margin-bottom: 48px;
 
     &:hover {
@@ -152,5 +152,5 @@ body #newlink-with-image-upload .file-upload-button {
 
 #new-link-image-input > div:first-of-type {
   display: inline-block;
-  padding-right: 16px;
+  padding-right: v.$padding;
 }

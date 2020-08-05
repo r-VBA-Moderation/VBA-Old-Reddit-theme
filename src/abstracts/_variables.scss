@@ -7,8 +7,9 @@ $_dev: false;
 $base-font: Arial, Helvetica, sans-serif;
 $mono-font: Consolas, "Lucida Console", "DejaVu Sans Mono", monospace;
 
-$readers: "readers";
+$readers: "Developers";
 $users: "users currently online";
+$downvote-hover-text: "Consider posting constructive criticism / an explanation when you downvote something.";
 
 $moderator: #27b062;
 $orangered: #f50;
@@ -16,13 +17,25 @@ $gold: #ffd54f;
 $title-case: uppercase;
 
 $radius: 4px;
-$header-height: 63px;
+$header-height: 196px;
 $sidebar-width: 320px;
 $container-margin-vert: 20px;
 $container-margin-hor: 24px;
+$padding: 16px;
+$button-height: 36px;
+
+$subscription-prompt-height: 30px;
+
+// Sidebar vars
+$titlebox-height: 76px;
+$titlebox-margin: -16px;
+$side-margin-top: $container-margin-vert + $titlebox-height;
+$side-start-vert: $container-margin-vert + $header-height;
+
+$search-height: 42px;
 
 $_images: (
-  "clippy": "clippyflair",
+  "clippyflair": "clippyflair",
   "commentboxbg": "commentboxbg",
   "footer": "footer",
   "headerimg": "headerimg",
@@ -34,6 +47,7 @@ $_images: (
   "snoo": "snoo",
   "spritesheet": "spritesheet",
   "title": "title",
+  "info-shield": "info-shield",
 );
 
 @function getImage($name) {
@@ -130,6 +144,7 @@ $field: "field";
 $fieldFade: "fieldFade";
 $flair: "flair";
 $highlight: "highlight";
+$highlight-background: "highlight-background";
 $inactive: "inactive";
 $inactiveText: "inactiveText";
 $lightText: "lightText";

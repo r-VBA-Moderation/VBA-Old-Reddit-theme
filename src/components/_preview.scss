@@ -16,7 +16,7 @@
       "1px solid"
     );
     @include v.theme("color", v.$secondary-text);
-    padding: 8px 16px;
+    padding: 8px v.$padding;
     background-color: #f2f7fa;
   }
 
@@ -42,7 +42,7 @@
   }
 
   .read-next-list {
-    padding: 8px 16px;
+    padding: 8px v.$padding;
   }
 
   .read-next-meta {

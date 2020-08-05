@@ -31,40 +31,43 @@
   }
 }
 
-.tagline .userattrs {
-  font-size: 0;
-
-  > {
-    * {
-      cursor: help;
-      display: inline-block;
-      @include v.theme("color", v.$lightText, false, false, "!important");
-      line-height: 13px;
-      padding: 0 3px;
-      font-size: 10px;
-      font-weight: 700;
-      margin-left: 4px;
-    }
-
-    :hover {
+.tagline {
+  .userattrs > a,
+  .flair {
+    // min-width: 16px;
+    height: auto;
+    border-radius: v.$radius;
+    margin: 0 5px;
+    padding: 2px 5px;
+    font-size: 10px;
+    background: transparent;
+    @include v.theme("color", v.$secondary-text);
+    border: none;
+    &:hover {
       text-decoration: none;
     }
   }
 
-  .moderator {
-    background: v.getColor("role", "moderator");
-  }
+  .userattrs {
+    font-size: 0;
+    > a {
+      cursor: help;
+    }
+    .moderator {
+      background: v.getColor("role", "moderator");
+    }
 
-  .admin {
-    background: v.getColor("role", "admin");
-  }
+    .admin {
+      background: v.getColor("role", "admin");
+    }
 
-  .submitter {
-    background: v.getColor("role", "submitter");
-  }
+    .submitter {
+      background: v.getColor("role", "submitter");
+    }
 
-  .friend {
-    background: v.getColor("role", "friend");
+    .friend {
+      background: v.getColor("role", "friend");
+    }
   }
 }
 

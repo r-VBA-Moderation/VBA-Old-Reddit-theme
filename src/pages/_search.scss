@@ -214,7 +214,7 @@
 
 .nav-buttons,
 .search-result-group footer .nav-buttons * {
-  padding: 16px 0;
+  padding: v.$padding 0;
   margin: 0 16px;
   @include v.theme("color", v.$secondary-text);
 }
@@ -227,7 +227,7 @@
 
 .nav-buttons .nextprev a {
   border: 0;
-  padding: 8px 16px;
+  padding: 8px v.$padding;
   background-color: transparent;
   @include v.theme("border", v.$bodySecondary, false, true, "1px solid");
   transition: background-color 0.15s ease;

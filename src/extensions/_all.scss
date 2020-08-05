@@ -1,6 +1,8 @@
+@use "clippyPoint-styles";
 @use "code";
-@use "hover-bubble";
-@use "side";
-@use "about";
-@use "table";
+@use 'hide-flair-selector';
+@use 'infobox-recolor';
 // @use 'responsive-content';
+@use 'subreddit-title-image-replace';
+@use 'subscription-prompt-excel';
+@use "table";

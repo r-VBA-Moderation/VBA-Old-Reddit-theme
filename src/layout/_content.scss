@@ -6,6 +6,10 @@ body {
   .content {
     @include v.thing(true);
     @include v.container(true);
-    margin-right: (v.$container-margin-hor * 2) + v.$sidebar-width;
+    margin-right: (v.$container-margin-vert * 2) + v.$sidebar-width;
   }
+}
+
+body:not(.subscriber) .content {
+  margin-top: v.$container-margin-vert + v.$subscription-prompt-height;
 }

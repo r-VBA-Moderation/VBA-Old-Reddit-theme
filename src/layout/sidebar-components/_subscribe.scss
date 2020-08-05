@@ -8,14 +8,20 @@
 
 .hover-bubble {
   &.multi-selector {
-    right: 346px !important;
+    right: 346px;
     margin-top: -56px;
     border: none;
   }
 
-  &.anchor-right:before {
-    right: -19px;
-    @include v.theme("border-left-color", v.$bodySecondary);
+  &.anchor-right {
+    margin-top: -35px;
+    > div.title > strong {
+      @include v.theme("color", v.$bodyText);
+    }
+    &:before {
+      right: -19px;
+      @include v.theme("border-left-color", v.$bodySecondary);
+    }
   }
 }
 

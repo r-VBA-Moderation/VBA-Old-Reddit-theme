@@ -4,7 +4,7 @@
   .subreddit-rule-buttons button,
   .subreddit-rule-add-form-buttons button,
   .form-buttons button {
-    padding: 0 16px;
+    padding: 0 v.$padding;
     @include v.theme("background", v.$button);
     border: none;
     @include v.theme("color", v.$body);
@@ -21,7 +21,7 @@
 }
 
 .subreddit-rule-delete-confirmation button {
-  padding: 0 16px;
+  padding: 0 v.$padding;
   @include v.theme("background", v.$button);
   border: none;
   @include v.theme("color", v.$body);

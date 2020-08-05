@@ -1,11 +1,5 @@
 @use '../abstracts/mixins' as v;
 
-/* Comment Body Text */
-
-.comment .usertext .md {
-  @include v.theme("color", v.$bodyText);
-}
-
 .md {
   a {
     @include v.theme("color", v.$linkText);
@@ -41,6 +35,18 @@
     @include v.theme("color", v.$bodyText);
     margin: 16px 0 0;
   }
+}
+
+/* Comment Body Text */
+
+.comment .usertext .md {
+  @include v.theme("color", v.$bodyText);
+}
+
+// New Comment
+.new-comment .usertext-body {
+  @include v.theme("background-color", v.$highlight-background);
+  @include v.theme("border-color", v.$line);
 }
 
 /* Deleted Comment */

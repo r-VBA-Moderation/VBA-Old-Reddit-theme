@@ -5,7 +5,7 @@
 .wiki-page {
   .wikititle {
     @include v.theme("background", v.$body);
-    padding: 9px 16px 10px;
+    padding: 9px v.$padding 10px;
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.16);
     font: 16px Lato, Arial, sans-serif;
     margin: 0;
@@ -14,7 +14,7 @@
   .pageactions {
     @include v.theme("background", v.$body);
     margin-left: 16px;
-    padding: 0 16px;
+    padding: 0 v.$padding;
     border: none;
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.16);
 
@@ -22,12 +22,12 @@
       margin: 0;
       background: transparent;
       border-radius: 0;
-      padding: 10px 16px 11px;
+      padding: 10px v.$padding 11px;
       @include v.theme("color", v.$secondary-text);
     }
 
     .wikiaction-current {
-      padding: 10px 16px 9px;
+      padding: 10px v.$padding 9px;
       @include v.theme("border-bottom", v.$active, false, true, "2px solid");
       @include v.theme("color", v.$active);
     }
@@ -81,6 +81,6 @@
   padding: 0;
 
   a {
-    padding: 0 16px;
+    padding: 0 v.$padding;
   }
 }

@@ -1,0 +1,99 @@
+@use '../abstracts/mixins' as v;
+
+$temp-top: v.$side-margin-top + v.$button-height;
+$titlebox-top: v.$side-start-vert + (v.$titlebox-margin * -1);
+
+body {
+  &:not(.subscriber) .side {
+    margin-top: v.$container-margin-vert + v.$subscription-prompt-height;
+    .titlebox {
+      h1.redditname {
+        top: v.$titlebox-top + v.$subscription-propt-height;
+      }
+      .subscribers {
+        top: v.$titlebox-top + 16px + 16px + v.$subscription-propt-height;
+      }
+      .users-online {
+      }
+      .fancy-toggle-button {
+        top: v.$titlebox-top + v.$subscription-propt-height;
+      }
+    }
+  }
+  .side {
+    margin: $temp-top v.$container-margin-hor 108px 0;
+
+    .titlebox {
+      h1.redditname {
+        &:before {
+          content: " ";
+          position: absolute;
+          display: block;
+          width: v.$sidebar-width;
+          z-index: -1;
+          height: v.$titlebox-height;
+          margin-top: v.$titlebox-margin;
+          margin-left: v.$titlebox-margin;
+          @include v.thing(true);
+        }
+
+        margin-bottom: 6px;
+        position: absolute;
+        top: v.$titlebox-top;
+        z-index: 100;
+      }
+    }
+    .subscribers {
+      position: absolute;
+      z-index: 100;
+      top: v.$titlebox-top + 16px + 16px;
+    }
+
+    .users-online {
+      display: inline;
+    }
+
+    .fancy-toggle-button {
+      margin: 0;
+      position: absolute;
+      margin-left: 208px;
+      top: v.$titlebox-top;
+      z-index: 100;
+    }
+  }
+}
+
+/* Search */
+
+#search {
+  position: absolute;
+  // top: v.$side-start-vert;
+
+  body:not(.subscriber) #search {
+    top: v.$side-start-vert + v.$subscription-prompt-height;
+  }
+}
+
+.sidebox.submit {
+  .morelink {
+    position: absolute;
+    top: v.$side-start-vert + v.$search-height + v.$padding;
+    font-size: 0;
+    width: 152px;
+  }
+
+  &.submit-text .morelink {
+    margin-left: 168px;
+
+    a:before {
+      font-size: 14px;
+      content: "Submit Text";
+    }
+  }
+  &.submit-link .morelink {
+    a:before {
+      font-size: 14px;
+      content: "Submit Link";
+    }
+  }
+}
