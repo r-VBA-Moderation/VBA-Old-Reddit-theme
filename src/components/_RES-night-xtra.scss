@@ -1,0 +1,755 @@
+@use '../abstracts/mixins' as v;
+
+.res-nightmode {
+  html.res-nightmode {
+    @include v.theme("background-color", v.$body, true);
+    @include v.theme("border-color", v.$line, true);
+  }
+
+  body {
+    @include v.theme("background-color", v.$body, true);
+    @include v.theme("border-color", v.$line, true);
+
+    .content {
+      @include v.theme("background-color", v.$body, true);
+      @include v.theme("border-color", v.$line, true);
+    }
+  }
+
+  .modal-body,
+  .side,
+  .icon-menu a {
+    @include v.theme("background-color", v.$body, true);
+    @include v.theme("border-color", v.$line, true);
+  }
+
+  .side {
+    .leavemoderator,
+    .leavecontributor-button,
+    .titlebox,
+    .spacer .titlebox .redditname,
+    .titlebox .flairtoggle {
+      @include v.theme("background-color", v.$body, true);
+      @include v.theme("border-color", v.$line, true);
+    }
+
+    .usertext-body .md ol {
+      @include v.theme("background-color", v.$body, true);
+      @include v.theme("border-color", v.$line, true);
+
+      ol {
+        @include v.theme("background-color", v.$body, true);
+        @include v.theme("border-color", v.$line, true);
+
+        li {
+          @include v.theme("background-color", v.$body, true);
+          @include v.theme("border-color", v.$line, true);
+        }
+      }
+    }
+  }
+
+  .modactionlisting table *,
+  .side .recommend-box .rec-item,
+  .crosspost-preview,
+  .crosspost-thing-preview,
+  .admin_takedown,
+  .happening-now {
+    @include v.theme("background-color", v.$body, true);
+    @include v.theme("border-color", v.$line, true);
+  }
+
+  .embedded-page {
+    .content > .sitetable,
+    &.helpcenter-page .content,
+    &.compose-page .content,
+    .content > .sitetable > div:nth-of-type(4n + 1),
+    &.helpcenter-page .content > div:nth-of-type(4n + 1),
+    &.compose-page .content > div:nth-of-type(4n + 1) {
+      @include v.theme("background-color", v.$body, true);
+      @include v.theme("color", v.$bodyText, true);
+    }
+  }
+
+  .link {
+    @include v.theme("background-color", v.$body, true);
+  }
+
+  .helpcenter-form {
+    .section-content {
+      @include v.theme("background-color", v.$body, true);
+    }
+
+    .helpcenter-bottom-panel .helpcenter-content-policy p {
+      @include v.theme("color", v.$bodyText, true);
+    }
+  }
+
+  .popup {
+    @include v.theme("background-color", v.$body, true);
+    @include v.theme("color", v.$bodyText, true);
+  }
+
+  .guider {
+    @include v.theme("background-color", v.$body, true);
+    @include v.theme("color", v.$bodyText, true);
+
+    p {
+      @include v.theme("background-color", v.$body, true);
+      @include v.theme("color", v.$bodyText, true);
+    }
+  }
+
+  #login_login {
+    @include v.theme("background-color", v.$field, true);
+    @include v.theme("color", v.$bodyText, true);
+  }
+
+  .RESCloseButton::after,
+  .message.new > .entry,
+  .read-next {
+    @include v.theme("border-color", v.$line, true);
+    @include v.theme("background-color", v.$field, true);
+  }
+
+  .drop-choices {
+    @include v.theme("border-color", v.$line, true);
+    @include v.theme("background-color", v.$field, true);
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  .read-next .read-next-header {
+    border-color: transparent;
+    background-color: #3e3e3e;
+  }
+
+  .flairselector {
+    h2 {
+      border-color: transparent;
+      background-color: #3e3e3e;
+    }
+
+    li {
+      &:hover {
+        border-color: transparent;
+        background-color: #3e3e3e;
+      }
+
+      &.selected {
+        border-color: #787878;
+      }
+    }
+  }
+
+  .RESNotification {
+    border-color: #787878;
+  }
+
+  .RESCloseButton:hover::after {
+    @include v.theme("background-color", v.$field, true);
+  }
+
+  #RESHoverContainer::after {
+    border-color: transparent #262626;
+  }
+
+  &.liveupdate-app .content {
+    background-color: #161616;
+  }
+
+  .entry .morecomments .gray,
+  .markdownEditor .RESCharCounter {
+    color: rgba(221, 221, 221, 0.8);
+  }
+
+  #BigEditor .markdownEditor .RESMacroDropdownList li:hover a {
+    @include v.theme("color", v.$bodyText, true);
+  }
+
+  .trophy-info .trophy-name {
+    color: #eee !important;
+  }
+
+  .sidecontentbox .content {
+    border-color: rgba(234, 234, 234, 0.1);
+  }
+
+  .RESUserTagImage::after {
+    color: #758ea8;
+  }
+
+  #DonateRES {
+    background: #ccc;
+  }
+
+  #progressIndicator,
+  .hover-bubble,
+  .side .side-message,
+  #editShortcutDialog,
+  #RESShortcutsAddFormContainer {
+    color: #ddd;
+    @include v.theme("border-color", v.$line, true);
+    @include v.theme("background-color", v.$field, true);
+  }
+
+  .login-form-side {
+    background-color: #888;
+    color: #eee;
+
+    .error {
+      color: #cd5a5a;
+    }
+  }
+
+  #header,
+  .liveupdate-home .content {
+    background-color: dimgray;
+  }
+
+  #jumpToContent {
+    color: #ddd;
+  }
+
+  #sr-header-area,
+  #sr-more-link {
+    background-color: #ccc;
+    color: #000;
+  }
+
+  .usertable tr .user .userkarma {
+    color: #aa9;
+  }
+
+  .thing.spam {
+    background-color: #3d2929;
+  }
+
+  .new-comment .usertext-body {
+    border-color: #242b3f;
+    background-color: #1a2135;
+  }
+
+  .RESDropdownList.RESMacroDropdownList {
+    a:hover,
+    li:hover {
+      background-color: #777;
+      @include v.theme("color", v.$bodyText, true);
+    }
+  }
+
+  .wiki-page .pageactions .wikiaction-current {
+    background-color: #777;
+  }
+
+  .contact-us-page .button {
+    background: #777;
+    color: #ddd;
+
+    &:hover {
+      background: #666;
+    }
+  }
+
+  .message .subject .correspondent {
+    background: #212f46;
+    color: #1496dc;
+  }
+
+  .moderator .linefield {
+    background: #1a1a1a;
+  }
+
+  .wiki-page .wiki-page-content .md.wiki > .toc ul {
+    @include v.theme("background-color", v.$body, true);
+  }
+
+  .tabmenu li {
+    a,
+    &.selected a {
+      @include v.theme("background-color", v.$body, true);
+    }
+  }
+
+  #report form {
+    @include v.theme("background-color", v.$body, true);
+  }
+
+  .tabmenu {
+    li.selected a {
+      color: #d25a32;
+      border-bottom-color: #262626;
+    }
+
+    &.formtab {
+      a {
+        color: #fff;
+        border-color: #505050;
+      }
+
+      .selected a {
+        color: #fff;
+        background-color: #5f99cf;
+      }
+    }
+  }
+
+  #RESDashboardAddComponent,
+  .dashboardPane > .RESDashboardComponent {
+    background-color: gray;
+  }
+
+  #RESDashboard .RESDashboardComponentHeader {
+    background-color: #848484;
+  }
+
+  .RESDashboardComponent .RESDashboardComponentHeader ul li {
+    &.active,
+    &:hover {
+      background-color: #ccc;
+    }
+  }
+
+  .side .titlebox form.flairtoggle,
+  .trophy-area .content {
+    @include v.theme("background-color", v.$body, true);
+    color: #ddd;
+  }
+
+  .side .md {
+    ol,
+    ul {
+      @include v.theme("background-color", v.$body, true);
+      color: #ddd;
+    }
+  }
+
+  .organic-listing {
+    border-color: #505050;
+    background-color: transparent !important;
+
+    .link {
+      background-color: transparent;
+      border-color: #505050;
+    }
+  }
+
+  .link.promotedlink {
+    background-color: transparent;
+    border-color: #505050;
+  }
+
+  .dropdown.lightdrop a.choice:hover {
+    background-color: #1a1a1a;
+  }
+
+  .sidebox,
+  .subreddit-info,
+  .raisedbox,
+  .login-form-side,
+  .interstitial-subreddit-description {
+    background-color: #393939;
+    border-color: #151515;
+    @include v.theme("color", v.$bodyText, true);
+  }
+
+  .subreddit-info .spacer a {
+    @include v.theme("background-color", v.$body, true);
+  }
+
+  .morelink {
+    background: #444;
+    border-color: #444;
+
+    &:hover {
+      border-color: #333;
+      background: #333;
+
+      a {
+        color: #1496dc;
+      }
+    }
+
+    .nub {
+      display: none;
+    }
+  }
+
+  .sidebox .spacer,
+  .side .linkinfo {
+    background-color: #393939;
+  }
+
+  .commentbody.border {
+    background-color: #369;
+  }
+
+  .content textarea,
+  .c-form-control,
+  input {
+    &[type="number"],
+    &[type="text"],
+    &[type="password"] {
+      @include v.theme("color", v.$bodyText, true);
+      @include v.theme("border", v.$line, true, true, "1px solid");
+      @include v.theme("background-color", v.$field, true);
+    }
+  }
+
+  .rulespage .example,
+  #userTaggerTable th,
+  #newCommentsTable th,
+  .RESDashboardComponent .RESDashboardComponentHeader ul .updateTime:hover {
+    color: #000;
+  }
+
+  .instructions {
+    .preftable th,
+    .pretty-form {
+      color: #000;
+    }
+  }
+
+  .remove-self .option,
+  .unfriend-button .option,
+  .RESDashboardComponent .widgetPath,
+  .entry .buttons li.reported-stamp,
+  .pretty-button,
+  .report-reasons {
+    color: #000;
+  }
+
+  .viewSource textarea[readonly] {
+    background: #666;
+  }
+
+  .reported {
+    border-color: #daa520;
+  }
+
+  .nextprev {
+    a {
+      background: #777;
+      border-color: #333;
+      color: #ddd;
+    }
+
+    img:hover {
+      opacity: 0.85;
+    }
+  }
+
+  #ad-frame {
+    opacity: 0.8;
+  }
+
+  .comment.unread {
+    background-color: #4a473b;
+  }
+
+  .raisedbox .flat-list a {
+    @include v.theme("background-color", v.$body, true);
+
+    &:hover {
+      background-color: #369;
+      color: #fff;
+    }
+  }
+
+  .instructions {
+    background: #fff;
+  }
+
+  #siteTable .link .title.loggedin.click,
+  #BigEditor .markdownEditor .RESMacroDropdownList a {
+    color: gray;
+  }
+
+  .markhelp.md tr td {
+    background-color: #36c;
+  }
+
+  .mail {
+    .havemail img,
+    .nohavemail img {
+      visibility: hidden;
+    }
+  }
+
+  .expando-button {
+    background-color: transparent;
+  }
+
+  #sr-autocomplete-area {
+    z-index: 1;
+  }
+
+  button {
+    color: #fff;
+    border: 1px outset gray;
+    background-color: #4d4d4d;
+  }
+
+  input {
+    &[type="button"],
+    &[type="submit"],
+    &[type="reset"] {
+      color: #fff;
+      border: 1px outset gray;
+      background-color: #4d4d4d;
+    }
+  }
+
+  .create-reddit .title {
+    background-color: rgba(24, 24, 24, 0.2);
+    color: #8ad;
+  }
+
+  .linefield {
+    border-color: #1a1a1a;
+    background-color: #4d4d4d;
+
+    .linefield-content,
+    &.mobile {
+      border-color: #1a1a1a;
+      background-color: #4d4d4d;
+    }
+  }
+
+  #RESShortcutsEditContainer,
+  #RESShortcutsSort,
+  #RESShortcutsRight,
+  #RESShortcutsLeft,
+  #RESShortcutsAdd {
+    background: #ccc;
+  }
+
+  .content {
+    .roundfield,
+    &.submit .roundfield {
+      background-color: #181818;
+    }
+  }
+
+  .traffic-table {
+    tr {
+      &:nth-of-type(even) {
+        background-color: #181818;
+      }
+
+      &:nth-of-type(odd).promo-traffic-live {
+        color: #181818;
+      }
+    }
+
+    &.promocampaign-table tr.active {
+      background-color: #6d2f39;
+      border: 2px dotted #a70000;
+    }
+  }
+
+  .sponsored-page {
+    .dashboard {
+      color: #dedede;
+    }
+
+    .campaign-editor .editor-group,
+    .editor-group {
+      background-color: #151515;
+    }
+
+    .campaign-editor .campaign-set {
+      background-color: #666;
+    }
+
+    .linefield-content {
+      textarea,
+      input {
+        color: #181818;
+      }
+    }
+  }
+
+  .linefield .markhelp table {
+    background-color: inherit;
+  }
+
+  .content .sponsored-page {
+    textarea,
+    input {
+      background-color: #fcfcfc;
+    }
+  }
+
+  .md {
+    code,
+    pre {
+      color: inherit;
+      border-color: #58697b;
+      background-color: #2a3340;
+    }
+  }
+
+  .link .md pre,
+  .content .md pre,
+  .new-comment .md pre,
+  .usertext.border .md pre,
+  .link .md :not(pre) > code,
+  .new-comment .md :not(pre) > code,
+  .usertext.border .md :not(pre) > code {
+    color: inherit;
+    border-color: #58697b;
+    background-color: #2a3340;
+  }
+
+  .comment .md p a {
+    &[href="/spoiler"],
+    &[href="#spoiler"] {
+      background-color: #000;
+      color: #000;
+    }
+  }
+
+  .usertable tr:hover,
+  .moderator-table tr:hover {
+    background-color: #444;
+  }
+
+  .usertext {
+    &.border .usertext-body,
+    &.grayed .usertext-body {
+      background-color: #444;
+    }
+  }
+
+  .login-form,
+  .login-form-side .submit,
+  #header-bottom-right,
+  #srList,
+  .dropdown.lightdrop .drop-choices {
+    @include v.theme("background-color", v.$field, true);
+  }
+
+  #srList tr {
+    border-bottom-color: #646464;
+
+    &:hover {
+      background-color: #3e3e3e;
+    }
+  }
+
+  #quickMessage {
+    textarea,
+    select {
+      @include v.theme("background-color", v.$bodyText, true);
+    }
+  }
+
+  #search {
+    input[type="text"] {
+      color: #fff !important;
+    }
+
+    select,
+    option {
+      color: #1a1a1a;
+    }
+  }
+
+  ul.res-search-tabs li a {
+    background-color: #393939;
+  }
+
+  &.res-searchHelper-searchPageTabs {
+    ul.res-search-tabs li.res-search-tab-active a,
+    .combined-search-page #previoussearch .res-search-pane {
+      background-color: #222;
+    }
+  }
+
+  #RESConsoleContainer {
+    background-color: #222;
+  }
+
+  #SearchRES-results-container li {
+    background-color: #222;
+
+    &:hover {
+      background-color: #222;
+    }
+  }
+
+  #REScommentSubToggle {
+    background-color: #222;
+  }
+
+  #searchexpando,
+  .post-sharing {
+    background: #303030;
+    border-color: #444;
+  }
+
+  &.res-searchHelper-searchPageTabs .combined-search-page {
+    .search-result .search-expando.collapsed::before {
+      background: linear-gradient(
+        to bottom,
+        rgba(34, 34, 34, 0) 0%,
+        #222222 100%
+      );
+    }
+
+    .search-result-group .search-result-group-header {
+      border-bottom-color: gray;
+    }
+  }
+
+  a,
+  .md a,
+  .share-button .option,
+  #subscribe a,
+  .share .option,
+  .wired a,
+  .side a,
+  .link .score.dislikes,
+  .linkcompressed .score.dislikes,
+  a[rel="tag"],
+  .dsq-help,
+  #authorInfoToolTip h3 a,
+  .reddiquette {
+    color: #8cb3d9;
+  }
+
+  .parent {
+    .author,
+    .subreddit {
+      color: #8cb3d9;
+    }
+  }
+
+  .combined-search-page .search-result a {
+    color: #8cb3d9;
+
+    > mark {
+      color: #8cb3d9;
+    }
+  }
+
+  .hoverHelp,
+  .deepthread a {
+    color: #8cb3d9;
+  }
+
+  .policy-page .md {
+    h1 a,
+    h3 a {
+      color: #8cb3d9;
+    }
+  }
+
+  .flairselector li a {
+    color: #85b3e0 !important;
+  }
+
+  .thing .title {
+    color: #dedede;
+  }
+}
