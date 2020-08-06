@@ -71,15 +71,20 @@ $_breakpoints: (
   $property,
   $color,
   $additionalPropertiesPositionIsFront,
-  $additionalProperties
+  $additionalProperties,
+  $important: false
 ) {
+  $imp: "";
+  @if ($important and ($additionalProperties != "!important")) {
+    $imp: "!important";
+  }
   @if $additionalPropertiesPositionIsFront {
     #{$property}: unquote(
-      $additionalProperties + " " + map-get($theme, $color)
+      $additionalProperties + " " + map-get($theme, $color) + " " + $imp
     );
   } @else {
     #{$property}: unquote(
-      map-get($theme, $color) + " " + $additionalProperties
+      map-get($theme, $color) + " " + $additionalProperties + $imp
     );
   }
 }
@@ -102,6 +107,16 @@ $_breakpoints: (
       $additionalProperties
     );
   } @else {
+    // @at-root .res-nightmode #{&} {
+    //   @include themeProperty(
+    //     dark.$theme,
+    //     $property,
+    //     $color,
+    //     $additionalPropertiesPositionIsFront,
+    //     $additionalProperties,
+    //     true
+    //   );
+    // }
     @include themeProperty(
       light.$theme,
       $property,
@@ -238,7 +253,8 @@ $_breakpoints: (
 
 @mixin hover-button {
   @include theme("background", v.$buttonTinted50);
-  @include theme("color", v.$body);
+  // @include theme("color", v.$bodyText);
+  color: #1b1b1c;
   @include theme("border-color", v.$buttonTinted50);
 }
 
@@ -262,7 +278,7 @@ $_breakpoints: (
   padding: 0 v.$padding;
   text-align: center;
   border-radius: v.$radius;
-  border: 1px solid;
+  border: 1px outset;
   text-transform: uppercase;
   font-weight: 700;
   height: v.$button-height;

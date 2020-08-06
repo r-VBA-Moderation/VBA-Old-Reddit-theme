@@ -34,7 +34,7 @@ html[lang="nm"] .footer-parent {
   margin: 0;
   max-width: none;
   height: 51px;
-  border: 0;
+  // border: 0;
   @include v.theme("border", v.$line, false, true, "1px solid");
   //   border-top: 1px solid #eee;
   border-radius: 0;
