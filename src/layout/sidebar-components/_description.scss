@@ -30,74 +30,13 @@
 
       h3,
       h4 {
-        @include v.button;
-        // margin: 1.5em 0;
+        margin: 0;
+        a {
+          @include v.link-as-button();
+          margin: 8px 0;
+          width: 100%;
+        }
       }
-
-      // h3 a {
-      //   padding: 0 v.$padding;
-      //   width: 100%;
-      //   @include v.theme("background", v.$button);
-      //   font: 12px/42px Lato, Arial, sans-serif;
-      //   @include v.theme("color", v.$body);
-      //   display: block;
-      //   margin: 1.5em 0;
-      //   text-align: center;
-      //   box-shadow: 0 2px 1.5px 0 rgba(0, 0, 0, 0.12),
-      //     0 0 4px 0 rgba(0, 0, 0, 0.12);
-      //   transition: box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1),
-      //     background 0.2s cubic-bezier(0.4, 0, 0.2, 1),
-      //     color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-
-      //   &:hover {
-      //     @include v.theme("background", v.$buttonTinted50);
-      //     @include v.theme("color", v.$button);
-      //     box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14),
-      //       0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
-      //   }
-
-      //   &:active {
-      //     @include v.theme("background", v.$buttonShaded80);
-      //     box-shadow: 0 2px 1.5px 0 rgba(0, 0, 0, 0.12),
-      //       0 0 4px 0 rgba(0, 0, 0, 0.12);
-      //   }
-      // }
-
-      // h4 a {
-      //   padding: 0 v.$padding;
-      //   @include v.theme("background", v.$body);
-      //   @include v.theme("color", v.$linkText);
-      //   font-weight: 700;
-      //   display: block;
-      //   margin: 1.5em 0;
-      //   font-size: 12px;
-      //   line-height: 42px;
-      //   text-align: center;
-      //   box-shadow: 0 2px 1.5px 0 rgba(0, 0, 0, 0.12),
-      //     0 0 4px 0 rgba(0, 0, 0, 0.12);
-      //   transition: box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1),
-      //     background 0.2s cubic-bezier(0.4, 0, 0.2, 1),
-      //     color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-      // }
     }
-
-    // h4 a {
-    //   &:hover {
-    //     box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14),
-    //       0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
-    //   }
-
-    //   &:active {
-    //     background: #f4f6f7;
-    //     box-shadow: 0 2px 1.5px 0 rgba(0, 0, 0, 0.12),
-    //       0 0 4px 0 rgba(0, 0, 0, 0.12);
-    //   }
-    // }
   }
-}
-
-/* Buttonstyle H3 */
-
-.md hr {
-  border: solid 1px #e5e5e5;
 }

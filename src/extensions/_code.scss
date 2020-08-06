@@ -52,6 +52,7 @@
 /*End code block formatting*/
 
 /*Inline code formatting*/
+.md code,
 .md p > code {
   background: v.getColor("code", "background") !important;
   color: v.getColor("code", "color");

@@ -2,6 +2,9 @@
 
 // fetch sidebar components
 @use 'sidebar-components/all';
+
+$_linkinfo-height: 98px;
+
 /* Sidebar */
 body {
   .side {
@@ -18,26 +21,38 @@ body {
       margin: 0 0 16px;
     }
   }
-  &:not(.subscriber) .side {
-    margin-top: v.$container-margin-vert + v.$subscription-prompt-height;
+  &:not(.subscriber) {
+    &.comments-page,
+    &.other-discussions-page {
+      .side {
+        margin-top: (v.$container-margin-vert * 2) + $_linkinfo-height +
+          v.$subscription-prompt-height;
+        .linkinfo {
+          top: v.$container-margin-vert + v.$header-height +
+            v.$subscription-prompt-height;
+        }
+      }
+    }
+    .side {
+      margin-top: v.$container-margin-vert + v.$subscription-prompt-height;
+    }
   }
 }
 
 /* Sidebar */
 
 // comments page has linkinfo box to add
-$linkinfo-height: 98px;
 
 .comments-page,
 .other-discussions-page {
   .side {
-    margin-top: 400px;
+    margin-top: (v.$container-margin-vert * 2) + $_linkinfo-height;
     .linkinfo {
       position: absolute;
-      top: 494px;
+      top: v.$container-margin-vert + v.$header-height;
       padding: v.$padding;
       width: v.$sidebar-width;
-      height: $linkinfo-height;
+      height: $_linkinfo-height;
       @include v.theme("background", v.$body);
       box-shadow: 0 1px 5px rgba(0, 0, 0, 0.16);
       border: none;

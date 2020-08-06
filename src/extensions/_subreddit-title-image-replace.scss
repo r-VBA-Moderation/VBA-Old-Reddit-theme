@@ -15,10 +15,11 @@
 
 .side .titlebox h1.redditname a {
   display: block;
-  height: 22px;
-  width: 176px;
+  height: 50px;
+  width: 100%;
   background-image: v.getImage("title");
   background-repeat: no-repeat;
+  background-position: center;
   background-size: auto 100%;
   text-indent: -9999px;
 }

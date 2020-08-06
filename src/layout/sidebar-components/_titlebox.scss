@@ -3,10 +3,12 @@
 .titlebox {
   &:before {
     content: "Subreddit Info";
-    display: block;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
     @include v.theme("color", v.$bodyText);
     font: 18px/24px Lato, Arial, sans-serif;
-    margin: 8px 0;
+    margin-bottom: 8px;
   }
   .tagline {
     margin: 0;
@@ -90,18 +92,33 @@
   }
 
   .res-fancy-toggle-button {
-    @include v.button;
-    display: block;
-    border-radius: v.$radius;
+    &.RESDashboardToggle,
+    &.RESshortcutside {
+      @include v.link-as-button;
+      max-width: 33%;
+      padding: 0;
+      padding: 0 8px;
+      font-size: 11px;
+      &.remove {
+        @include v.link-as-button(true);
+        max-width: 33%;
+        padding: 0;
+        padding: 0 8px;
+        font-size: 11px;
+      }
+    }
+    &.RESDashboardToggle {
+      margin-right: v.$padding !important;
+    }
   }
 
   .fancy-toggle-button {
-    // margin: 0;
+    margin: 0;
     // margin-left: 208px;
 
     .active {
-      display: block;
-      @include v.button(true);
+      @include v.link-as-button(true);
+      margin: v.$padding v.$padding v.$padding 0;
     }
   }
 }

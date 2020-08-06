@@ -4,25 +4,25 @@ $_css-class: "points";
 $_desc: "ClippyPoints Awarded:  ";
 
 /*Clippy Point Flair styling - Comments*/
+
 .commentarea {
   .entry {
-    padding-left: 40px;
+    padding-left: 45px;
   }
+
   .flair-,
   .side .tagline .flair- {
     &#{$_css-class} {
-      background-image: linear-gradient(
-          to bottom,
-          rgba(255, 255, 255, 0.4) 0%,
-          rgba(255, 255, 255, 0.4) 100%
-        ),
-        v.getImage("clippyflair");
+      background-color: transparent;
+      border: none;
+      background-image: v.getImage("clippyflair");
       position: absolute;
       width: 50px;
       height: 50px;
       left: 35px;
       border-radius: v.$radius;
-      @include v.stroke(v.$primary);
+      @include v.theme("color", v.$primary);
+      text-shadow: 0px 1px 0px #333333;
       font-size: 150%;
       font-weight: bold;
       text-align: center;
@@ -40,13 +40,21 @@ $_desc: "ClippyPoints Awarded:  ";
         text-indent: 0;
         transform: translateY(-50%);
         @include v.theme("background-color", v.$banner-backgroundColor);
-        @include v.stroke(v.$lightText);
+        @include v.theme("color", v.$lightText);
         border-radius: v.$radius;
         box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
         transition: all 0.25s ease;
         white-space: nowrap;
         text-shadow: none;
         letter-spacing: 0px;
+      }
+    }
+  }
+  .child {
+    .flair-,
+    .side .tagline .flair- {
+      &#{$_css-class} {
+        left: 25px;
       }
     }
   }
@@ -62,7 +70,7 @@ html.res-commentBoxes.res-commentBoxes-rounded .comment {
 
 /* Clippy Point Flair styling - Link Flair*/
 
-.flair-,
+.sidecontentbox .flair-,
 .linkflair .res-nightmode .flair-,
 .linkflair .flair- {
   &#{$_css-class} {

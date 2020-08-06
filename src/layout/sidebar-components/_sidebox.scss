@@ -2,8 +2,23 @@
 
 .sidebox {
   .morelink {
-    @include v.button;
-    margin: v.$padding v.$padding;
+    // reddit css doesn't support the all prop :(
+    // all: unset;
+    display: block;
+    text-align: center;
+    position: relative;
+    border: none;
+    background: none;
+    font-size: unset;
+    font-weight: unset;
+    letter-spacing: unset;
+    line-height: unset;
+    height: unset;
+    a {
+      box-sizing: border-box;
+      @include v.link-as-button();
+      margin-top: 0;
+    }
     .nub {
       display: none;
     }

@@ -31,7 +31,7 @@
   }
 }
 
-.tagline {
+.link .entry .tagline {
   .userattrs > a,
   .flair {
     // min-width: 16px;
@@ -41,10 +41,11 @@
     padding: 2px 5px;
     font-size: 10px;
     background: transparent;
-    @include v.theme("color", v.$secondary-text);
+    @include v.theme("color", v.$lightText);
     border: none;
     &:hover {
       text-decoration: none;
+      @include v.theme("color", v.$highlight);
     }
   }
 

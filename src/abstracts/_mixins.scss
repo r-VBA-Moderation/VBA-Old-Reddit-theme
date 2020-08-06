@@ -47,17 +47,22 @@ $_breakpoints: (
 }
 
 @mixin stroke($color, $shadow: 0px) {
-  $val: map-get(light.$theme, $color);
+  $color: map-get(light.$theme, $color);
   $size: 1px;
   $blur: 0;
-  text-shadow: $shadow $shadow $blur $val, $size * -1 $size * -1 $blur $val,
-    $size $size * -1 $blur $val, $size * -1 $size $blur $val,
-    $size $size $blur $val;
+  text-shadow: $shadow $shadow $blur $color, $size * -1 $size * -1 $blur $color,
+    $size $size * -1 $blur $color, $size * -1 $size $blur $color,
+    $size $size $blur $color;
+}
+
+@mixin theme-stroke($key, $shadow: 0px) {
+  $val: map-get(light.$theme, $key);
+  $size: 1px;
+  $blur: 0;
+  @include stroke($val, $shadow);
   @media (prefers-color-scheme: dark) {
-    $val: map-get(dark.$theme, $color);
-    text-shadow: $shadow $shadow $blur $val, $size * -1 $size * -1 $blur $val,
-      $size $size * -1 $blur $val, $size * -1 $size $blur $val,
-      $size $size $blur $val;
+    $val: map-get(dark.$theme, $key);
+    @include stroke($val, $shadow);
   }
 }
 
@@ -235,6 +240,34 @@ $_breakpoints: (
   @include theme("background", v.$buttonTinted50);
   @include theme("color", v.$body);
   @include theme("border-color", v.$buttonTinted50);
+}
+
+@mixin link-as-button($active: false) {
+  @if ($active) {
+    @include active-button();
+    &:active {
+      @include normal-button();
+    }
+  } @else {
+    @include normal-button();
+    &:active {
+      @include active-button();
+    }
+  }
+  &:hover {
+    @include hover-button();
+  }
+  display: inline-block;
+  margin: 0;
+  padding: 0 v.$padding;
+  text-align: center;
+  border-radius: v.$radius;
+  border: 1px solid;
+  text-transform: uppercase;
+  font-weight: 700;
+  height: v.$button-height;
+  line-height: v.$button-height;
+  font-size: 14px;
 }
 
 @mixin naut-button($active: false) {
