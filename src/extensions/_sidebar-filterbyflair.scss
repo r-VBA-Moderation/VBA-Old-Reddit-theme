@@ -1,0 +1,78 @@
+@use '../abstracts/mixins' as v;
+
+/* Filter by flair styling */
+.side {
+  .titlebox {
+    .md {
+      ul {
+        padding-left: 0;
+        list-style: none;
+        &:nth-of-type(1) > li {
+          > p {
+            @include v.link-as-button;
+            padding: 0 v.$padding;
+            width: 100%;
+            font-size: 14px !important;
+          }
+        }
+
+        li {
+          &:hover blockquote {
+            visibility: visible;
+            opacity: 1;
+            transition: opacity 0.25s ease, visibility 0.25s ease;
+          }
+          blockquote {
+            position: absolute;
+            @include v.thing(true);
+            @include v.container;
+            margin-top: -34px;
+            width: v.$sidebar-width;
+            z-index: 1;
+            visibility: hidden;
+            right: v.$sidebar-width + v.$container-margin-hor;
+            opacity: 0;
+            transition: opacity 0.25s ease, visibility 0.25s ease;
+            p {
+              border-radius: 3px;
+              width: 284px;
+              &:hover {
+                opacity: 0.85;
+              }
+              &:nth-child(1) > a {
+                background-color: v.getColor("linkflair", "unsolved");
+              }
+              &:nth-child(2) > a {
+                background-color: v.getColor("linkflair", "solved");
+              }
+              &:nth-child(3) > a {
+                background-color: v.getColor("linkflair", "discussion");
+              }
+              &:nth-child(4) > a {
+                background-color: v.getColor("linkflair", "protip");
+              }
+              &:nth-child(5) > a {
+                background-color: v.getColor("linkflair", "codereview");
+              }
+              &:nth-child(6) > a {
+                background-color: v.getColor("linkflair", "advertisement");
+              }
+              &:nth-child(7) > a {
+                background-color: v.getColor("linkflair", "challenge");
+              }
+
+              a {
+                @include v.link-as-button;
+                @include v.theme("color", v.$lightText);
+                @include v.theme("border-color", v.$line);
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* End Filter by flair styling */

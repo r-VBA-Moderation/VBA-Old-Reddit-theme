@@ -137,6 +137,15 @@ $_breakpoints: (
   }
 }
 
+@mixin theme-gradient-background($key) {
+  $color: map-get(light.$theme, $key);
+  background: linear-gradient(to bottom, rgba($color, 0) 0%, $color 100%);
+  @media (prefers-color-scheme: dark) {
+    $color: map-get(dark.$theme, $key);
+    background: linear-gradient(to bottom, rgba($color, 0) 0%, $color 100%);
+  }
+}
+
 @mixin thing($border: false, $forceDark: false) {
   @include theme("background-color", v.$body, $forceDark);
   @include theme("color", v.$bodyText, $forceDark);
@@ -166,7 +175,7 @@ $_breakpoints: (
   @include theme("border", v.$line, $forceDark, true, "1px solid");
   padding: 0 v.$padding;
   @include theme("background-color", v.$field, $forceDark);
-  @include theme("color", v.$bodyText, $forceDark);
+  @include theme("color", v.$bodyText, $forceDark, false, "!important");
   border-radius: v.$radius;
   &[type="text"] {
     padding: 0 42px 0 v.$padding;
@@ -194,7 +203,7 @@ $_breakpoints: (
     &:-moz-placeholder,
     &::-moz-placeholder,
     &:-ms-input-placeholder {
-      @include theme("color", v.$placeholder, $forceDark);
+      @include theme("color", v.$placeholder, $forceDark, false, "!important");
       font-size: 14px;
       text-transform: capitalize;
       top: 1px;
@@ -247,7 +256,7 @@ $_breakpoints: (
 
 @mixin active-button {
   @include theme("background", v.$buttonShaded80);
-  @include theme("color", v.$button);
+  @include theme("color", v.$lightText);
   @include theme("border-color", v.$button);
 }
 
@@ -278,12 +287,14 @@ $_breakpoints: (
   padding: 0 v.$padding;
   text-align: center;
   border-radius: v.$radius;
-  border: 1px outset;
+  // border: 1px outset;
+  border: 1px solid;
   text-transform: uppercase;
   font-weight: 700;
   height: v.$button-height;
   line-height: v.$button-height;
   font-size: 14px;
+  text-decoration: none;
 }
 
 @mixin naut-button($active: false) {

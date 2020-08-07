@@ -9,22 +9,6 @@
   padding: 65px 200px 40px;
 }
 
-.res-nightmode .footer-parent,
-html[lang="nm"] .footer-parent {
-  border-color: #1d1f22;
-  background: #24262a;
-}
-
-// .footer-parent:after {
-//   position: absolute;
-//   left: 30px;
-//   top: 80px;
-//   width: 157px;
-//   text-align: left;
-//   color: rgba(255, 255, 255, 0.5);
-//   content: "CSS Theme via /r/Formato by /u/Cereal_Addict";
-// }
-
 .footer.rounded {
   position: absolute;
   top: -51px;
@@ -40,117 +24,92 @@ html[lang="nm"] .footer-parent {
   border-radius: 0;
   padding: 0;
   text-align: center;
-}
-
-.res.res-nightmode .res.res-nightmode .footer-parent .footer,
-html[lang="nm"] .footer-parent .footer {
-  border-color: rgba(255, 255, 255, 0.05);
-  background: transparent;
-}
-
-.footer.rounded .col {
-  position: relative;
-  margin: 0;
-  width: auto;
-  border: 0;
-  padding: 0 20px;
-  -webkit-flex: none;
-  flex: none;
-  @include v.theme("color", v.$bodyText);
-  //   color: #999;
-}
-
-.footer.rounded .col:before {
-  height: 60px;
-  line-height: 50px;
-  font-size: 14px;
-}
-
-.footer.rounded .col:nth-of-type(1):before {
-  content: "About ";
-}
-
-.footer.rounded .col:nth-of-type(2):before {
-  content: "Help ";
-}
-
-.footer.rounded .col:nth-of-type(3):before {
-  content: "Apps & Tools ";
-}
-
-.footer.rounded .col:nth-of-type(4):before {
-  content: "<3 ";
-}
-
-.footer.rounded .col:after {
-  display: inline-block;
-  content: "▾";
-  -webkit-transform: rotate(180deg);
-  -moz-transform: rotate(180deg);
-  transform: rotate(180deg);
-}
-
-.footer.rounded .col ul.flat-vert.hover .flat-vert.title {
-  display: none;
-}
-
-.footer.rounded .col:hover {
-  @include v.thing;
-  //   background: #f0f0f0;
-  //   color: #666;
-}
-
-.footer.rounded .col ul.flat-vert.hover {
-  position: absolute;
-  left: 0;
-  bottom: 50px;
-  overflow: hidden;
-  min-width: 100%;
-  max-height: 0;
-  @include v.theme("background", v.$body);
-  //   background: #f0f0f0;
-  text-transform: capitalize;
-  transition: 0.5s;
-}
-
-.footer.rounded .col:hover ul.flat-vert.hover,
-.footer.rounded .col ul.flat-vert.hover:hover {
-  max-height: 280px;
-}
-
-.footer.rounded .col ul.flat-vert.hover li {
-  height: 20px;
-  @include v.theme("border-bottom", v.$line, false, true, "1px solid");
-  //   border-bottom: 1px solid #e4e4e4;
-  line-height: 20px;
-  white-space: nowrap;
-  font-size: 14px;
-  transition: 0.5s;
-}
-
-.res-nightmode .footer.rounded .col ul.flat-vert.hover li,
-html[lang="nm"] .footer.rounded .col ul.flat-vert.hover li {
-  border-bottom-color: rgba(255, 255, 255, 0.05);
-}
-
-.footer.rounded .col:hover ul.flat-vert.hover li,
-.footer.rounded .col ul.flat-vert.hover:hover li {
-  height: 40px;
-  line-height: 40px;
-}
-
-.footer.rounded .col ul.flat-vert.hover li a {
-  display: block;
-  height: 100%;
-  padding: 0 30px;
-  @include v.theme("color", v.$bodyText, false, true, "1px solid");
-}
-
-.footer.rounded .col ul.flat-vert.hover li a:hover {
-  @include v.theme("color", v.$linkText, false, true, "1px solid");
+  .col {
+    position: relative;
+    margin: 0;
+    width: auto;
+    border: 0;
+    padding: 0 20px;
+    -webkit-flex: none;
+    flex: none;
+    @include v.theme("color", v.$bodyText);
+    //   color: #999;
+    &:before {
+      height: 60px;
+      line-height: 50px;
+      font-size: 14px;
+    }
+    &:nth-of-type(1):before {
+      content: "About ";
+    }
+    &:nth-of-type(2):before {
+      content: "Help ";
+    }
+    &:nth-of-type(3):before {
+      content: "Apps & Tools ";
+    }
+    &:nth-of-type(4):before {
+      content: "<3 ";
+    }
+    &:after {
+      display: inline-block;
+      content: "▾";
+      -webkit-transform: rotate(180deg);
+      -moz-transform: rotate(180deg);
+      transform: rotate(180deg);
+    }
+    ul.flat-vert.hover {
+      position: absolute;
+      left: 0;
+      bottom: 50px;
+      overflow: hidden;
+      min-width: 100%;
+      max-height: 0;
+      @include v.theme("background", v.$body);
+      //   background: #f0f0f0;
+      text-transform: capitalize;
+      transition: 0.5s;
+      .flat-vert.title {
+        display: none;
+      }
+      li {
+        height: 20px;
+        @include v.theme("border-bottom", v.$line, false, true, "1px solid");
+        //   border-bottom: 1px solid #e4e4e4;
+        line-height: 20px;
+        white-space: nowrap;
+        font-size: 14px;
+        transition: 0.5s;
+        a {
+          display: block;
+          height: 100%;
+          padding: 0 30px;
+          @include v.theme("color", v.$bodyText, false, true, "1px solid");
+          &:hover {
+            @include v.theme("color", v.$linkText, false, true, "1px solid");
+          }
+        }
+      }
+    }
+    &:hover {
+      @include v.thing;
+      //   background: #f0f0f0;
+      //   color: #666;
+    }
+    &:hover ul.flat-vert.hover,
+    ul.flat-vert.hover:hover {
+      max-height: 280px;
+      li {
+        height: 40px;
+        line-height: 40px;
+      }
+    }
+  }
 }
 
 .debuginfo,
 #hsts_pixel {
-  display: none;
+  background-color: transparent;
+  position: absolute;
+  margin-top: -30px;
 }

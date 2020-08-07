@@ -41,7 +41,7 @@
 
   h1.redditname {
     a {
-      @include v.theme("color", v.$widgetColors-sidebarWidgetTextColor);
+      @include v.theme("color", v.$bodyText);
     }
   }
   form.toggle,
@@ -50,13 +50,13 @@
   }
 
   .subscribers {
-    @include v.theme("color", v.$widgetColors-sidebarWidgetTextColor);
     font-size: 12px;
     // hide "readers" - replace with user var in pseudo element
     .word {
       display: none;
     }
     .number {
+      @include v.theme("color", v.$bodyText);
       cursor: text;
       &:after {
         content: " " + v.$readers;
@@ -119,6 +119,27 @@
     .active {
       @include v.link-as-button(true);
       margin: v.$padding v.$padding v.$padding 0;
+    }
+  }
+
+  .md {
+    h1 {
+      line-height: 18px;
+      margin: 0.5em 0 0 !important;
+    }
+
+    h2 {
+      margin: 16px 0 2px;
+    }
+
+    h3,
+    h4 {
+      margin: 0;
+      a {
+        @include v.link-as-button();
+        margin: 8px 0;
+        width: 100%;
+      }
     }
   }
 }

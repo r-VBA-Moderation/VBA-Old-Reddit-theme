@@ -3,10 +3,17 @@
 /* Body Content - Frontpage */
 
 body {
-  .content {
+  div.content {
     @include v.thing(true);
     @include v.container(true);
     margin-right: (v.$container-margin-vert * 2) + v.$sidebar-width;
+
+    .usertext-edit {
+      width: 100%;
+      .md {
+        max-width: 100%;
+      }
+    }
   }
 }
 

@@ -1,0 +1,42 @@
+@use '../abstracts/mixins' as v;
+
+// don't forget to update the _sidebar-filterbyflair.scss file if you're using that extension...
+
+/*Custom post-flair formatting*/
+
+.linkflair-unsolved .linkflairlabel {
+  background-color: v.getColor("linkflair", "unsolved");
+}
+
+.linkflair-solved .linkflairlabel {
+  background-color: v.getColor("linkflair", "solved");
+}
+
+.linkflair-discussion .linkflairlabel {
+  background-color: v.getColor("linkflair", "discussion");
+}
+.linkflair-challenge .linkflairlabel {
+  background-color: v.getColor("linkflair", "challenge");
+}
+
+.linkflair-protip .linkflairlabel {
+  background-color: v.getColor("linkflair", "protip");
+}
+
+.linkflair-codereview .linkflairlabel {
+  background-color: v.getColor("linkflair", "codereview");
+}
+
+.linkflair-modpost .linkflairlabel {
+  background-color: v.getColor("linkflair", "modpost");
+}
+
+.linkflair-advertisement .linkflairlabel {
+  background-color: v.getColor("linkflair", "advertisement");
+}
+
+.linkflair-showntell .linkflairlabel {
+  background-color: v.getColor("linkflair", "showntell");
+}
+
+/*End Custom post-flair formatting*/

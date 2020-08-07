@@ -15,9 +15,14 @@ $moderator: #27b062;
 $orangered: #f50;
 $gold: #ffd54f;
 $title-case: uppercase;
+// $clippy: #008e00;
 
 $radius: 4px;
-$header-height: 196px;
+// $header-height: 196px;
+$header-height: 136px;
+$header-bottom-left-height: 96px;
+$header-bottom-left: $header-height - $header-bottom-left-height;
+
 $sidebar-width: 320px;
 $container-margin-vert: 20px;
 $container-margin-hor: 24px;
@@ -103,12 +108,12 @@ $_colors: (
     "unsolved": $orangered,
     "solved": #738491,
     "discussion": #007acc,
+    "challenge": #007acc,
     "protip": #e0d400,
     "codereview": #800080,
     "modpost": $moderator,
     "advertisement": #333333,
     "showntell": #000,
-    "clippy": #008e00,
   ),
   "code": (
     "background": #1e1e1e,
