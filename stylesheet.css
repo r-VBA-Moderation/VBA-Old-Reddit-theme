@@ -1028,7 +1028,7 @@ body:not(.loggedin) #header-bottom-right {
 .sidebox .morelink a:active {
   background: black ;
   color: #ffffff ;
-  border-color: #f50 ;
+  border: 1px solid #f50 ;
 }
 @media (prefers-color-scheme: dark) {
   .sidebox .morelink a:active {
@@ -1042,7 +1042,7 @@ body:not(.loggedin) #header-bottom-right {
 }
 @media (prefers-color-scheme: dark) {
   .sidebox .morelink a:active {
-    border-color: #d7dadc ;
+    border: 1px solid #d7dadc ;
   }
 }
 .sidebox .morelink a:hover {
@@ -1271,7 +1271,7 @@ body:not(.loggedin) #header-bottom-right {
 .titlebox .res-fancy-toggle-button.RESDashboardToggle:active, .titlebox .res-fancy-toggle-button.RESshortcutside:active {
   background: black ;
   color: #ffffff ;
-  border-color: #f50 ;
+  border: 1px solid #f50 ;
 }
 @media (prefers-color-scheme: dark) {
   .titlebox .res-fancy-toggle-button.RESDashboardToggle:active, .titlebox .res-fancy-toggle-button.RESshortcutside:active {
@@ -1285,7 +1285,7 @@ body:not(.loggedin) #header-bottom-right {
 }
 @media (prefers-color-scheme: dark) {
   .titlebox .res-fancy-toggle-button.RESDashboardToggle:active, .titlebox .res-fancy-toggle-button.RESshortcutside:active {
-    border-color: #d7dadc ;
+    border: 1px solid #d7dadc ;
   }
 }
 .titlebox .res-fancy-toggle-button.RESDashboardToggle:hover, .titlebox .res-fancy-toggle-button.RESshortcutside:hover {
@@ -1301,7 +1301,7 @@ body:not(.loggedin) #header-bottom-right {
 .titlebox .res-fancy-toggle-button.RESDashboardToggle.remove, .titlebox .res-fancy-toggle-button.RESshortcutside.remove {
   background: black ;
   color: #ffffff ;
-  border-color: #f50 ;
+  border: 1px solid #f50 ;
   display: inline-block;
   margin: 0;
   text-decoration: none;
@@ -1330,7 +1330,7 @@ body:not(.loggedin) #header-bottom-right {
 }
 @media (prefers-color-scheme: dark) {
   .titlebox .res-fancy-toggle-button.RESDashboardToggle.remove, .titlebox .res-fancy-toggle-button.RESshortcutside.remove {
-    border-color: #d7dadc ;
+    border: 1px solid #d7dadc ;
   }
 }
 .titlebox .res-fancy-toggle-button.RESDashboardToggle.remove:active, .titlebox .res-fancy-toggle-button.RESshortcutside.remove:active {
@@ -1372,7 +1372,7 @@ body:not(.loggedin) #header-bottom-right {
 .titlebox .fancy-toggle-button .active {
   background: black ;
   color: #ffffff ;
-  border-color: #f50 ;
+  border: 1px solid #f50 ;
   display: inline-block;
   margin: 0;
   text-decoration: none;
@@ -1398,7 +1398,7 @@ body:not(.loggedin) #header-bottom-right {
 }
 @media (prefers-color-scheme: dark) {
   .titlebox .fancy-toggle-button .active {
-    border-color: #d7dadc ;
+    border: 1px solid #d7dadc ;
   }
 }
 .titlebox .fancy-toggle-button .active:active {
@@ -1483,7 +1483,7 @@ body:not(.loggedin) #header-bottom-right {
 .titlebox .md h4 a:active {
   background: black ;
   color: #ffffff ;
-  border-color: #f50 ;
+  border: 1px solid #f50 ;
 }
 @media (prefers-color-scheme: dark) {
   .titlebox .md h3 a:active,
@@ -1500,7 +1500,7 @@ body:not(.loggedin) #header-bottom-right {
 @media (prefers-color-scheme: dark) {
   .titlebox .md h3 a:active,
 .titlebox .md h4 a:active {
-    border-color: #d7dadc ;
+    border: 1px solid #d7dadc ;
   }
 }
 .titlebox .md h3 a:hover,
@@ -1561,23 +1561,22 @@ body:not(.loggedin) #header-bottom-right {
     color: #d7dadc ;
   }
 }
-#search input[type=text] {
+#search input[type=text], #search input[type=url], #search input[type=password], #search input[type=number] {
   padding: 0 42px 0 16px;
-  border: 0 solid;
   border-radius: 4px;
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
   transition: box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1), background 0.2s cubic-bezier(0.4, 0, 0.2, 1), color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
-#search input[type=text]:hover {
+#search input[type=text]:hover, #search input[type=url]:hover, #search input[type=password]:hover, #search input[type=number]:hover {
   box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
 }
-#search input[type=text]:focus {
+#search input[type=text]:focus, #search input[type=url]:focus, #search input[type=password]:focus, #search input[type=number]:focus {
   border-radius: 2px 2px 0 0;
 }
-#search input[type=text]:focus:hover {
+#search input[type=text]:focus:hover, #search input[type=url]:focus:hover, #search input[type=password]:focus:hover, #search input[type=number]:focus:hover {
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.24) !important;
 }
-#search input[type=text]::-webkit-input-placeholder, #search input[type=text]:-moz-placeholder, #search input[type=text]::-moz-placeholder, #search input[type=text]:-ms-input-placeholder {
+#search input[type=text]::-webkit-input-placeholder, #search input[type=text]:-moz-placeholder, #search input[type=text]::-moz-placeholder, #search input[type=text]:-ms-input-placeholder, #search input[type=url]::-webkit-input-placeholder, #search input[type=url]:-moz-placeholder, #search input[type=url]::-moz-placeholder, #search input[type=url]:-ms-input-placeholder, #search input[type=password]::-webkit-input-placeholder, #search input[type=password]:-moz-placeholder, #search input[type=password]::-moz-placeholder, #search input[type=password]:-ms-input-placeholder, #search input[type=number]::-webkit-input-placeholder, #search input[type=number]:-moz-placeholder, #search input[type=number]::-moz-placeholder, #search input[type=number]:-ms-input-placeholder {
   color: #d2d0d6 !important;
   font-size: 14px;
   text-transform: capitalize;
@@ -1585,7 +1584,7 @@ body:not(.loggedin) #header-bottom-right {
   position: relative;
 }
 @media (prefers-color-scheme: dark) {
-  #search input[type=text]::-webkit-input-placeholder, #search input[type=text]:-moz-placeholder, #search input[type=text]::-moz-placeholder, #search input[type=text]:-ms-input-placeholder {
+  #search input[type=text]::-webkit-input-placeholder, #search input[type=text]:-moz-placeholder, #search input[type=text]::-moz-placeholder, #search input[type=text]:-ms-input-placeholder, #search input[type=url]::-webkit-input-placeholder, #search input[type=url]:-moz-placeholder, #search input[type=url]::-moz-placeholder, #search input[type=url]:-ms-input-placeholder, #search input[type=password]::-webkit-input-placeholder, #search input[type=password]:-moz-placeholder, #search input[type=password]::-moz-placeholder, #search input[type=password]:-ms-input-placeholder, #search input[type=number]::-webkit-input-placeholder, #search input[type=number]:-moz-placeholder, #search input[type=number]::-moz-placeholder, #search input[type=number]:-ms-input-placeholder {
     color: #3a3a3c !important;
   }
 }
@@ -2305,7 +2304,7 @@ body .c-btn-primary:active,
 body .wiki-page .wiki-page-content .wiki_button:active {
   background: black ;
   color: #ffffff ;
-  border-color: #f50 ;
+  border: 1px solid #f50 ;
 }
 @media (prefers-color-scheme: dark) {
   body .btn:active,
@@ -2328,7 +2327,7 @@ body .wiki-page .wiki-page-content .wiki_button:active {
 body button:active,
 body .c-btn-primary:active,
 body .wiki-page .wiki-page-content .wiki_button:active {
-    border-color: #d7dadc ;
+    border: 1px solid #d7dadc ;
   }
 }
 body .btn:hover,
@@ -5493,7 +5492,7 @@ body > .content .link .rank,
 .search-page .search-result-listing .search-result-group .search-expando-button.collapsed .search-expando-button-label-collapsed:active {
   background: black ;
   color: #ffffff ;
-  border-color: #f50 ;
+  border: 1px solid #f50 ;
 }
 @media (prefers-color-scheme: dark) {
   .search-page .search-result-listing .search-result-group .search-expando-button.collapsed .search-expando-button-label-collapsed:active {
@@ -5507,7 +5506,7 @@ body > .content .link .rank,
 }
 @media (prefers-color-scheme: dark) {
   .search-page .search-result-listing .search-result-group .search-expando-button.collapsed .search-expando-button-label-collapsed:active {
-    border-color: #d7dadc ;
+    border: 1px solid #d7dadc ;
   }
 }
 .search-page .search-result-listing .search-result-group .search-expando-button.collapsed .search-expando-button-label-collapsed:hover {
@@ -5523,7 +5522,7 @@ body > .content .link .rank,
 .search-page .search-result-listing .search-result-group .search-expando-button.expanded .search-expando-button-label-expanded {
   background: black ;
   color: #ffffff ;
-  border-color: #f50 ;
+  border: 1px solid #f50 ;
   display: inline-block;
   margin: 0;
   text-decoration: none;
@@ -5551,7 +5550,7 @@ body > .content .link .rank,
 }
 @media (prefers-color-scheme: dark) {
   .search-page .search-result-listing .search-result-group .search-expando-button.expanded .search-expando-button-label-expanded {
-    border-color: #d7dadc ;
+    border: 1px solid #d7dadc ;
   }
 }
 .search-page .search-result-listing .search-result-group .search-expando-button.expanded .search-expando-button-label-expanded:active {
@@ -5624,7 +5623,7 @@ body > .content .link .rank,
 .search-page .search-result-listing .search-result-group .nav-buttons .nextprev a:active {
   background: black ;
   color: #ffffff ;
-  border-color: #f50 ;
+  border: 1px solid #f50 ;
 }
 @media (prefers-color-scheme: dark) {
   .search-page .search-result-listing .search-result-group .nav-buttons .nextprev a:active {
@@ -5638,7 +5637,7 @@ body > .content .link .rank,
 }
 @media (prefers-color-scheme: dark) {
   .search-page .search-result-listing .search-result-group .nav-buttons .nextprev a:active {
-    border-color: #d7dadc ;
+    border: 1px solid #d7dadc ;
   }
 }
 .search-page .search-result-listing .search-result-group .nav-buttons .nextprev a:hover {
@@ -5740,7 +5739,7 @@ body > .content .link .rank,
 .combined-search-page .search-result-subreddit .search-subscribe-button .active.add:active {
   background: black ;
   color: #ffffff ;
-  border-color: #f50 ;
+  border: 1px solid #f50 ;
 }
 @media (prefers-color-scheme: dark) {
   .combined-search-page .search-result-subreddit .search-subscribe-button .active.add:active {
@@ -5754,7 +5753,7 @@ body > .content .link .rank,
 }
 @media (prefers-color-scheme: dark) {
   .combined-search-page .search-result-subreddit .search-subscribe-button .active.add:active {
-    border-color: #d7dadc ;
+    border: 1px solid #d7dadc ;
   }
 }
 .combined-search-page .search-result-subreddit .search-subscribe-button .active.add:hover {
@@ -5770,7 +5769,7 @@ body > .content .link .rank,
 .combined-search-page .search-result-subreddit .search-subscribe-button .active.remove {
   background: black ;
   color: #ffffff ;
-  border-color: #f50 ;
+  border: 1px solid #f50 ;
   display: inline-block;
   margin: 0;
   text-decoration: none;
@@ -5798,7 +5797,7 @@ body > .content .link .rank,
 }
 @media (prefers-color-scheme: dark) {
   .combined-search-page .search-result-subreddit .search-subscribe-button .active.remove {
-    border-color: #d7dadc ;
+    border: 1px solid #d7dadc ;
   }
 }
 .combined-search-page .search-result-subreddit .search-subscribe-button .active.remove:active {
@@ -6110,21 +6109,147 @@ ul.image-preview-list li .description pre {
 }
 
 /* Submission Page */
-.formtabs-content {
+.content.submit ul.tabmenu li:not(.selected) a {
+  background: #f50 ;
+  color: #ffffff ;
+  border: 1px solid #f50 ;
+  margin: 16px 0;
+  font-size: 14px;
+  text-align: center;
+  border-radius: 4px;
+  text-transform: uppercase;
+  font-weight: 700;
+  height: 36px;
+  line-height: 36px;
+  padding: 0 16px;
+}
+@media (prefers-color-scheme: dark) {
+  .content.submit ul.tabmenu li:not(.selected) a {
+    background: #d7dadc ;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .content.submit ul.tabmenu li:not(.selected) a {
+    color: #1a1a1b ;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .content.submit ul.tabmenu li:not(.selected) a {
+    border: 1px solid #d7dadc ;
+  }
+}
+.content.submit ul.tabmenu li:not(.selected) a:active {
+  background: black ;
+  color: #ffffff ;
+  border: 1px solid #f50 ;
+}
+@media (prefers-color-scheme: dark) {
+  .content.submit ul.tabmenu li:not(.selected) a:active {
+    background: #0d0e0e ;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .content.submit ul.tabmenu li:not(.selected) a:active {
+    color: #ffffff ;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .content.submit ul.tabmenu li:not(.selected) a:active {
+    border: 1px solid #d7dadc ;
+  }
+}
+.content.submit ul.tabmenu li:not(.selected) a:hover {
+  background: white ;
+  color: #1b1b1c;
+  border-color: #1b1b1c;
+}
+@media (prefers-color-scheme: dark) {
+  .content.submit ul.tabmenu li:not(.selected) a:hover {
+    background: white ;
+  }
+}
+.content.submit ul.tabmenu li:not(.selected) a:active {
+  margin: 16px 0;
+}
+.content.submit ul.tabmenu li.selected a {
+  background: black ;
+  color: #ffffff ;
+  border: 1px solid #f50 ;
+  margin: 16px 0;
+  font-size: 14px;
+  text-align: center;
+  border-radius: 4px;
+  text-transform: uppercase;
+  font-weight: 700;
+  height: 36px;
+  line-height: 36px;
+  padding: 0 16px;
+}
+@media (prefers-color-scheme: dark) {
+  .content.submit ul.tabmenu li.selected a {
+    background: #0d0e0e ;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .content.submit ul.tabmenu li.selected a {
+    color: #ffffff ;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .content.submit ul.tabmenu li.selected a {
+    border: 1px solid #d7dadc ;
+  }
+}
+.content.submit ul.tabmenu li.selected a:active {
+  background: #f50 ;
+  color: #ffffff ;
+  border: 1px solid #f50 ;
+}
+@media (prefers-color-scheme: dark) {
+  .content.submit ul.tabmenu li.selected a:active {
+    background: #d7dadc ;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .content.submit ul.tabmenu li.selected a:active {
+    color: #1a1a1b ;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .content.submit ul.tabmenu li.selected a:active {
+    border: 1px solid #d7dadc ;
+  }
+}
+.content.submit ul.tabmenu li.selected a:hover {
+  background: white ;
+  color: #1b1b1c;
+  border-color: #1b1b1c;
+}
+@media (prefers-color-scheme: dark) {
+  .content.submit ul.tabmenu li.selected a:hover {
+    background: white ;
+  }
+}
+.content.submit ul.tabmenu li.selected a:active {
+  margin: 16px 0;
+}
+.content.submit .formtabs-content {
+  border-top: 4px solid #c8c6cc ;
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
   padding: 16px;
   width: 100%;
 }
-.formtabs-content .roundfield {
+@media (prefers-color-scheme: dark) {
+  .content.submit .formtabs-content {
+    border-top: 4px solid #343536 ;
+  }
+}
+.content.submit .formtabs-content .roundfield {
   width: 100%;
 }
-.formtabs-content .roundfield textarea,
-.formtabs-content .roundfield input,
-.formtabs-content .roundfield input[type=text],
-.formtabs-content .roundfield input[type=url],
-.formtabs-content .roundfield input[type=password],
-.formtabs-content .roundfield input[type=number],
-.formtabs-content .roundfield select {
+.content.submit .formtabs-content .roundfield textarea,
+.content.submit .formtabs-content .roundfield input:not([type=checkbox]):not([type=radio]),
+.content.submit .formtabs-content .roundfield select {
   border: 1px solid #dadada ;
   padding: 0 16px;
   background-color: #f6f7f8 ;
@@ -6134,103 +6259,106 @@ ul.image-preview-list li .description pre {
   padding: 16px;
 }
 @media (prefers-color-scheme: dark) {
-  .formtabs-content .roundfield textarea,
-.formtabs-content .roundfield input,
-.formtabs-content .roundfield input[type=text],
-.formtabs-content .roundfield input[type=url],
-.formtabs-content .roundfield input[type=password],
-.formtabs-content .roundfield input[type=number],
-.formtabs-content .roundfield select {
+  .content.submit .formtabs-content .roundfield textarea,
+.content.submit .formtabs-content .roundfield input:not([type=checkbox]):not([type=radio]),
+.content.submit .formtabs-content .roundfield select {
     border: 1px solid #343536 ;
   }
 }
 @media (prefers-color-scheme: dark) {
-  .formtabs-content .roundfield textarea,
-.formtabs-content .roundfield input,
-.formtabs-content .roundfield input[type=text],
-.formtabs-content .roundfield input[type=url],
-.formtabs-content .roundfield input[type=password],
-.formtabs-content .roundfield input[type=number],
-.formtabs-content .roundfield select {
+  .content.submit .formtabs-content .roundfield textarea,
+.content.submit .formtabs-content .roundfield input:not([type=checkbox]):not([type=radio]),
+.content.submit .formtabs-content .roundfield select {
     background-color: #272729 ;
   }
 }
 @media (prefers-color-scheme: dark) {
-  .formtabs-content .roundfield textarea,
-.formtabs-content .roundfield input,
-.formtabs-content .roundfield input[type=text],
-.formtabs-content .roundfield input[type=url],
-.formtabs-content .roundfield input[type=password],
-.formtabs-content .roundfield input[type=number],
-.formtabs-content .roundfield select {
+  .content.submit .formtabs-content .roundfield textarea,
+.content.submit .formtabs-content .roundfield input:not([type=checkbox]):not([type=radio]),
+.content.submit .formtabs-content .roundfield select {
     color: #d7dadc ;
   }
 }
-.formtabs-content .roundfield textarea[type=text],
-.formtabs-content .roundfield input[type=text],
-.formtabs-content .roundfield input[type=text][type=text],
-.formtabs-content .roundfield input[type=url][type=text],
-.formtabs-content .roundfield input[type=password][type=text],
-.formtabs-content .roundfield input[type=number][type=text],
-.formtabs-content .roundfield select[type=text] {
+.content.submit .formtabs-content .roundfield textarea[type=text], .content.submit .formtabs-content .roundfield textarea[type=url], .content.submit .formtabs-content .roundfield textarea[type=password], .content.submit .formtabs-content .roundfield textarea[type=number],
+.content.submit .formtabs-content .roundfield input:not([type=checkbox]):not([type=radio])[type=text],
+.content.submit .formtabs-content .roundfield input:not([type=checkbox]):not([type=radio])[type=url],
+.content.submit .formtabs-content .roundfield input:not([type=checkbox]):not([type=radio])[type=password],
+.content.submit .formtabs-content .roundfield input:not([type=checkbox]):not([type=radio])[type=number],
+.content.submit .formtabs-content .roundfield select[type=text],
+.content.submit .formtabs-content .roundfield select[type=url],
+.content.submit .formtabs-content .roundfield select[type=password],
+.content.submit .formtabs-content .roundfield select[type=number] {
   padding: 0 42px 0 16px;
-  border: 0 solid;
   border-radius: 4px;
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
   transition: box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1), background 0.2s cubic-bezier(0.4, 0, 0.2, 1), color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
-.formtabs-content .roundfield textarea[type=text]:hover,
-.formtabs-content .roundfield input[type=text]:hover,
-.formtabs-content .roundfield input[type=text][type=text]:hover,
-.formtabs-content .roundfield input[type=url][type=text]:hover,
-.formtabs-content .roundfield input[type=password][type=text]:hover,
-.formtabs-content .roundfield input[type=number][type=text]:hover,
-.formtabs-content .roundfield select[type=text]:hover {
+.content.submit .formtabs-content .roundfield textarea[type=text]:hover, .content.submit .formtabs-content .roundfield textarea[type=url]:hover, .content.submit .formtabs-content .roundfield textarea[type=password]:hover, .content.submit .formtabs-content .roundfield textarea[type=number]:hover,
+.content.submit .formtabs-content .roundfield input:not([type=checkbox]):not([type=radio])[type=text]:hover,
+.content.submit .formtabs-content .roundfield input:not([type=checkbox]):not([type=radio])[type=url]:hover,
+.content.submit .formtabs-content .roundfield input:not([type=checkbox]):not([type=radio])[type=password]:hover,
+.content.submit .formtabs-content .roundfield input:not([type=checkbox]):not([type=radio])[type=number]:hover,
+.content.submit .formtabs-content .roundfield select[type=text]:hover,
+.content.submit .formtabs-content .roundfield select[type=url]:hover,
+.content.submit .formtabs-content .roundfield select[type=password]:hover,
+.content.submit .formtabs-content .roundfield select[type=number]:hover {
   box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
 }
-.formtabs-content .roundfield textarea[type=text]:focus,
-.formtabs-content .roundfield input[type=text]:focus,
-.formtabs-content .roundfield input[type=text][type=text]:focus,
-.formtabs-content .roundfield input[type=url][type=text]:focus,
-.formtabs-content .roundfield input[type=password][type=text]:focus,
-.formtabs-content .roundfield input[type=number][type=text]:focus,
-.formtabs-content .roundfield select[type=text]:focus {
+.content.submit .formtabs-content .roundfield textarea[type=text]:focus, .content.submit .formtabs-content .roundfield textarea[type=url]:focus, .content.submit .formtabs-content .roundfield textarea[type=password]:focus, .content.submit .formtabs-content .roundfield textarea[type=number]:focus,
+.content.submit .formtabs-content .roundfield input:not([type=checkbox]):not([type=radio])[type=text]:focus,
+.content.submit .formtabs-content .roundfield input:not([type=checkbox]):not([type=radio])[type=url]:focus,
+.content.submit .formtabs-content .roundfield input:not([type=checkbox]):not([type=radio])[type=password]:focus,
+.content.submit .formtabs-content .roundfield input:not([type=checkbox]):not([type=radio])[type=number]:focus,
+.content.submit .formtabs-content .roundfield select[type=text]:focus,
+.content.submit .formtabs-content .roundfield select[type=url]:focus,
+.content.submit .formtabs-content .roundfield select[type=password]:focus,
+.content.submit .formtabs-content .roundfield select[type=number]:focus {
   border-radius: 2px 2px 0 0;
 }
-.formtabs-content .roundfield textarea[type=text]:focus:hover,
-.formtabs-content .roundfield input[type=text]:focus:hover,
-.formtabs-content .roundfield input[type=text][type=text]:focus:hover,
-.formtabs-content .roundfield input[type=url][type=text]:focus:hover,
-.formtabs-content .roundfield input[type=password][type=text]:focus:hover,
-.formtabs-content .roundfield input[type=number][type=text]:focus:hover,
-.formtabs-content .roundfield select[type=text]:focus:hover {
+.content.submit .formtabs-content .roundfield textarea[type=text]:focus:hover, .content.submit .formtabs-content .roundfield textarea[type=url]:focus:hover, .content.submit .formtabs-content .roundfield textarea[type=password]:focus:hover, .content.submit .formtabs-content .roundfield textarea[type=number]:focus:hover,
+.content.submit .formtabs-content .roundfield input:not([type=checkbox]):not([type=radio])[type=text]:focus:hover,
+.content.submit .formtabs-content .roundfield input:not([type=checkbox]):not([type=radio])[type=url]:focus:hover,
+.content.submit .formtabs-content .roundfield input:not([type=checkbox]):not([type=radio])[type=password]:focus:hover,
+.content.submit .formtabs-content .roundfield input:not([type=checkbox]):not([type=radio])[type=number]:focus:hover,
+.content.submit .formtabs-content .roundfield select[type=text]:focus:hover,
+.content.submit .formtabs-content .roundfield select[type=url]:focus:hover,
+.content.submit .formtabs-content .roundfield select[type=password]:focus:hover,
+.content.submit .formtabs-content .roundfield select[type=number]:focus:hover {
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.24) !important;
 }
-.formtabs-content .roundfield textarea[type=text]::-webkit-input-placeholder, .formtabs-content .roundfield textarea[type=text]:-moz-placeholder, .formtabs-content .roundfield textarea[type=text]::-moz-placeholder, .formtabs-content .roundfield textarea[type=text]:-ms-input-placeholder,
-.formtabs-content .roundfield input[type=text]::-webkit-input-placeholder,
-.formtabs-content .roundfield input[type=text]:-moz-placeholder,
-.formtabs-content .roundfield input[type=text]::-moz-placeholder,
-.formtabs-content .roundfield input[type=text]:-ms-input-placeholder,
-.formtabs-content .roundfield input[type=text][type=text]::-webkit-input-placeholder,
-.formtabs-content .roundfield input[type=text][type=text]:-moz-placeholder,
-.formtabs-content .roundfield input[type=text][type=text]::-moz-placeholder,
-.formtabs-content .roundfield input[type=text][type=text]:-ms-input-placeholder,
-.formtabs-content .roundfield input[type=url][type=text]::-webkit-input-placeholder,
-.formtabs-content .roundfield input[type=url][type=text]:-moz-placeholder,
-.formtabs-content .roundfield input[type=url][type=text]::-moz-placeholder,
-.formtabs-content .roundfield input[type=url][type=text]:-ms-input-placeholder,
-.formtabs-content .roundfield input[type=password][type=text]::-webkit-input-placeholder,
-.formtabs-content .roundfield input[type=password][type=text]:-moz-placeholder,
-.formtabs-content .roundfield input[type=password][type=text]::-moz-placeholder,
-.formtabs-content .roundfield input[type=password][type=text]:-ms-input-placeholder,
-.formtabs-content .roundfield input[type=number][type=text]::-webkit-input-placeholder,
-.formtabs-content .roundfield input[type=number][type=text]:-moz-placeholder,
-.formtabs-content .roundfield input[type=number][type=text]::-moz-placeholder,
-.formtabs-content .roundfield input[type=number][type=text]:-ms-input-placeholder,
-.formtabs-content .roundfield select[type=text]::-webkit-input-placeholder,
-.formtabs-content .roundfield select[type=text]:-moz-placeholder,
-.formtabs-content .roundfield select[type=text]::-moz-placeholder,
-.formtabs-content .roundfield select[type=text]:-ms-input-placeholder {
+.content.submit .formtabs-content .roundfield textarea[type=text]::-webkit-input-placeholder, .content.submit .formtabs-content .roundfield textarea[type=text]:-moz-placeholder, .content.submit .formtabs-content .roundfield textarea[type=text]::-moz-placeholder, .content.submit .formtabs-content .roundfield textarea[type=text]:-ms-input-placeholder, .content.submit .formtabs-content .roundfield textarea[type=url]::-webkit-input-placeholder, .content.submit .formtabs-content .roundfield textarea[type=url]:-moz-placeholder, .content.submit .formtabs-content .roundfield textarea[type=url]::-moz-placeholder, .content.submit .formtabs-content .roundfield textarea[type=url]:-ms-input-placeholder, .content.submit .formtabs-content .roundfield textarea[type=password]::-webkit-input-placeholder, .content.submit .formtabs-content .roundfield textarea[type=password]:-moz-placeholder, .content.submit .formtabs-content .roundfield textarea[type=password]::-moz-placeholder, .content.submit .formtabs-content .roundfield textarea[type=password]:-ms-input-placeholder, .content.submit .formtabs-content .roundfield textarea[type=number]::-webkit-input-placeholder, .content.submit .formtabs-content .roundfield textarea[type=number]:-moz-placeholder, .content.submit .formtabs-content .roundfield textarea[type=number]::-moz-placeholder, .content.submit .formtabs-content .roundfield textarea[type=number]:-ms-input-placeholder,
+.content.submit .formtabs-content .roundfield input:not([type=checkbox]):not([type=radio])[type=text]::-webkit-input-placeholder,
+.content.submit .formtabs-content .roundfield input:not([type=checkbox]):not([type=radio])[type=text]:-moz-placeholder,
+.content.submit .formtabs-content .roundfield input:not([type=checkbox]):not([type=radio])[type=text]::-moz-placeholder,
+.content.submit .formtabs-content .roundfield input:not([type=checkbox]):not([type=radio])[type=text]:-ms-input-placeholder,
+.content.submit .formtabs-content .roundfield input:not([type=checkbox]):not([type=radio])[type=url]::-webkit-input-placeholder,
+.content.submit .formtabs-content .roundfield input:not([type=checkbox]):not([type=radio])[type=url]:-moz-placeholder,
+.content.submit .formtabs-content .roundfield input:not([type=checkbox]):not([type=radio])[type=url]::-moz-placeholder,
+.content.submit .formtabs-content .roundfield input:not([type=checkbox]):not([type=radio])[type=url]:-ms-input-placeholder,
+.content.submit .formtabs-content .roundfield input:not([type=checkbox]):not([type=radio])[type=password]::-webkit-input-placeholder,
+.content.submit .formtabs-content .roundfield input:not([type=checkbox]):not([type=radio])[type=password]:-moz-placeholder,
+.content.submit .formtabs-content .roundfield input:not([type=checkbox]):not([type=radio])[type=password]::-moz-placeholder,
+.content.submit .formtabs-content .roundfield input:not([type=checkbox]):not([type=radio])[type=password]:-ms-input-placeholder,
+.content.submit .formtabs-content .roundfield input:not([type=checkbox]):not([type=radio])[type=number]::-webkit-input-placeholder,
+.content.submit .formtabs-content .roundfield input:not([type=checkbox]):not([type=radio])[type=number]:-moz-placeholder,
+.content.submit .formtabs-content .roundfield input:not([type=checkbox]):not([type=radio])[type=number]::-moz-placeholder,
+.content.submit .formtabs-content .roundfield input:not([type=checkbox]):not([type=radio])[type=number]:-ms-input-placeholder,
+.content.submit .formtabs-content .roundfield select[type=text]::-webkit-input-placeholder,
+.content.submit .formtabs-content .roundfield select[type=text]:-moz-placeholder,
+.content.submit .formtabs-content .roundfield select[type=text]::-moz-placeholder,
+.content.submit .formtabs-content .roundfield select[type=text]:-ms-input-placeholder,
+.content.submit .formtabs-content .roundfield select[type=url]::-webkit-input-placeholder,
+.content.submit .formtabs-content .roundfield select[type=url]:-moz-placeholder,
+.content.submit .formtabs-content .roundfield select[type=url]::-moz-placeholder,
+.content.submit .formtabs-content .roundfield select[type=url]:-ms-input-placeholder,
+.content.submit .formtabs-content .roundfield select[type=password]::-webkit-input-placeholder,
+.content.submit .formtabs-content .roundfield select[type=password]:-moz-placeholder,
+.content.submit .formtabs-content .roundfield select[type=password]::-moz-placeholder,
+.content.submit .formtabs-content .roundfield select[type=password]:-ms-input-placeholder,
+.content.submit .formtabs-content .roundfield select[type=number]::-webkit-input-placeholder,
+.content.submit .formtabs-content .roundfield select[type=number]:-moz-placeholder,
+.content.submit .formtabs-content .roundfield select[type=number]::-moz-placeholder,
+.content.submit .formtabs-content .roundfield select[type=number]:-ms-input-placeholder {
   color: #d2d0d6 !important;
   font-size: 14px;
   text-transform: capitalize;
@@ -6238,67 +6366,63 @@ ul.image-preview-list li .description pre {
   position: relative;
 }
 @media (prefers-color-scheme: dark) {
-  .formtabs-content .roundfield textarea[type=text]::-webkit-input-placeholder, .formtabs-content .roundfield textarea[type=text]:-moz-placeholder, .formtabs-content .roundfield textarea[type=text]::-moz-placeholder, .formtabs-content .roundfield textarea[type=text]:-ms-input-placeholder,
-.formtabs-content .roundfield input[type=text]::-webkit-input-placeholder,
-.formtabs-content .roundfield input[type=text]:-moz-placeholder,
-.formtabs-content .roundfield input[type=text]::-moz-placeholder,
-.formtabs-content .roundfield input[type=text]:-ms-input-placeholder,
-.formtabs-content .roundfield input[type=text][type=text]::-webkit-input-placeholder,
-.formtabs-content .roundfield input[type=text][type=text]:-moz-placeholder,
-.formtabs-content .roundfield input[type=text][type=text]::-moz-placeholder,
-.formtabs-content .roundfield input[type=text][type=text]:-ms-input-placeholder,
-.formtabs-content .roundfield input[type=url][type=text]::-webkit-input-placeholder,
-.formtabs-content .roundfield input[type=url][type=text]:-moz-placeholder,
-.formtabs-content .roundfield input[type=url][type=text]::-moz-placeholder,
-.formtabs-content .roundfield input[type=url][type=text]:-ms-input-placeholder,
-.formtabs-content .roundfield input[type=password][type=text]::-webkit-input-placeholder,
-.formtabs-content .roundfield input[type=password][type=text]:-moz-placeholder,
-.formtabs-content .roundfield input[type=password][type=text]::-moz-placeholder,
-.formtabs-content .roundfield input[type=password][type=text]:-ms-input-placeholder,
-.formtabs-content .roundfield input[type=number][type=text]::-webkit-input-placeholder,
-.formtabs-content .roundfield input[type=number][type=text]:-moz-placeholder,
-.formtabs-content .roundfield input[type=number][type=text]::-moz-placeholder,
-.formtabs-content .roundfield input[type=number][type=text]:-ms-input-placeholder,
-.formtabs-content .roundfield select[type=text]::-webkit-input-placeholder,
-.formtabs-content .roundfield select[type=text]:-moz-placeholder,
-.formtabs-content .roundfield select[type=text]::-moz-placeholder,
-.formtabs-content .roundfield select[type=text]:-ms-input-placeholder {
+  .content.submit .formtabs-content .roundfield textarea[type=text]::-webkit-input-placeholder, .content.submit .formtabs-content .roundfield textarea[type=text]:-moz-placeholder, .content.submit .formtabs-content .roundfield textarea[type=text]::-moz-placeholder, .content.submit .formtabs-content .roundfield textarea[type=text]:-ms-input-placeholder, .content.submit .formtabs-content .roundfield textarea[type=url]::-webkit-input-placeholder, .content.submit .formtabs-content .roundfield textarea[type=url]:-moz-placeholder, .content.submit .formtabs-content .roundfield textarea[type=url]::-moz-placeholder, .content.submit .formtabs-content .roundfield textarea[type=url]:-ms-input-placeholder, .content.submit .formtabs-content .roundfield textarea[type=password]::-webkit-input-placeholder, .content.submit .formtabs-content .roundfield textarea[type=password]:-moz-placeholder, .content.submit .formtabs-content .roundfield textarea[type=password]::-moz-placeholder, .content.submit .formtabs-content .roundfield textarea[type=password]:-ms-input-placeholder, .content.submit .formtabs-content .roundfield textarea[type=number]::-webkit-input-placeholder, .content.submit .formtabs-content .roundfield textarea[type=number]:-moz-placeholder, .content.submit .formtabs-content .roundfield textarea[type=number]::-moz-placeholder, .content.submit .formtabs-content .roundfield textarea[type=number]:-ms-input-placeholder,
+.content.submit .formtabs-content .roundfield input:not([type=checkbox]):not([type=radio])[type=text]::-webkit-input-placeholder,
+.content.submit .formtabs-content .roundfield input:not([type=checkbox]):not([type=radio])[type=text]:-moz-placeholder,
+.content.submit .formtabs-content .roundfield input:not([type=checkbox]):not([type=radio])[type=text]::-moz-placeholder,
+.content.submit .formtabs-content .roundfield input:not([type=checkbox]):not([type=radio])[type=text]:-ms-input-placeholder,
+.content.submit .formtabs-content .roundfield input:not([type=checkbox]):not([type=radio])[type=url]::-webkit-input-placeholder,
+.content.submit .formtabs-content .roundfield input:not([type=checkbox]):not([type=radio])[type=url]:-moz-placeholder,
+.content.submit .formtabs-content .roundfield input:not([type=checkbox]):not([type=radio])[type=url]::-moz-placeholder,
+.content.submit .formtabs-content .roundfield input:not([type=checkbox]):not([type=radio])[type=url]:-ms-input-placeholder,
+.content.submit .formtabs-content .roundfield input:not([type=checkbox]):not([type=radio])[type=password]::-webkit-input-placeholder,
+.content.submit .formtabs-content .roundfield input:not([type=checkbox]):not([type=radio])[type=password]:-moz-placeholder,
+.content.submit .formtabs-content .roundfield input:not([type=checkbox]):not([type=radio])[type=password]::-moz-placeholder,
+.content.submit .formtabs-content .roundfield input:not([type=checkbox]):not([type=radio])[type=password]:-ms-input-placeholder,
+.content.submit .formtabs-content .roundfield input:not([type=checkbox]):not([type=radio])[type=number]::-webkit-input-placeholder,
+.content.submit .formtabs-content .roundfield input:not([type=checkbox]):not([type=radio])[type=number]:-moz-placeholder,
+.content.submit .formtabs-content .roundfield input:not([type=checkbox]):not([type=radio])[type=number]::-moz-placeholder,
+.content.submit .formtabs-content .roundfield input:not([type=checkbox]):not([type=radio])[type=number]:-ms-input-placeholder,
+.content.submit .formtabs-content .roundfield select[type=text]::-webkit-input-placeholder,
+.content.submit .formtabs-content .roundfield select[type=text]:-moz-placeholder,
+.content.submit .formtabs-content .roundfield select[type=text]::-moz-placeholder,
+.content.submit .formtabs-content .roundfield select[type=text]:-ms-input-placeholder,
+.content.submit .formtabs-content .roundfield select[type=url]::-webkit-input-placeholder,
+.content.submit .formtabs-content .roundfield select[type=url]:-moz-placeholder,
+.content.submit .formtabs-content .roundfield select[type=url]::-moz-placeholder,
+.content.submit .formtabs-content .roundfield select[type=url]:-ms-input-placeholder,
+.content.submit .formtabs-content .roundfield select[type=password]::-webkit-input-placeholder,
+.content.submit .formtabs-content .roundfield select[type=password]:-moz-placeholder,
+.content.submit .formtabs-content .roundfield select[type=password]::-moz-placeholder,
+.content.submit .formtabs-content .roundfield select[type=password]:-ms-input-placeholder,
+.content.submit .formtabs-content .roundfield select[type=number]::-webkit-input-placeholder,
+.content.submit .formtabs-content .roundfield select[type=number]:-moz-placeholder,
+.content.submit .formtabs-content .roundfield select[type=number]::-moz-placeholder,
+.content.submit .formtabs-content .roundfield select[type=number]:-ms-input-placeholder {
     color: #3a3a3c !important;
   }
 }
-.formtabs-content .roundfield textarea:hover,
-.formtabs-content .roundfield input:hover,
-.formtabs-content .roundfield input[type=text]:hover,
-.formtabs-content .roundfield input[type=url]:hover,
-.formtabs-content .roundfield input[type=password]:hover,
-.formtabs-content .roundfield input[type=number]:hover,
-.formtabs-content .roundfield select:hover {
+.content.submit .formtabs-content .roundfield textarea:hover,
+.content.submit .formtabs-content .roundfield input:not([type=checkbox]):not([type=radio]):hover,
+.content.submit .formtabs-content .roundfield select:hover {
   background-color: #ffffff ;
   border: 1px solid #f50 ;
 }
 @media (prefers-color-scheme: dark) {
-  .formtabs-content .roundfield textarea:hover,
-.formtabs-content .roundfield input:hover,
-.formtabs-content .roundfield input[type=text]:hover,
-.formtabs-content .roundfield input[type=url]:hover,
-.formtabs-content .roundfield input[type=password]:hover,
-.formtabs-content .roundfield input[type=number]:hover,
-.formtabs-content .roundfield select:hover {
+  .content.submit .formtabs-content .roundfield textarea:hover,
+.content.submit .formtabs-content .roundfield input:not([type=checkbox]):not([type=radio]):hover,
+.content.submit .formtabs-content .roundfield select:hover {
     background-color: #1a1a1b ;
   }
 }
 @media (prefers-color-scheme: dark) {
-  .formtabs-content .roundfield textarea:hover,
-.formtabs-content .roundfield input:hover,
-.formtabs-content .roundfield input[type=text]:hover,
-.formtabs-content .roundfield input[type=url]:hover,
-.formtabs-content .roundfield input[type=password]:hover,
-.formtabs-content .roundfield input[type=number]:hover,
-.formtabs-content .roundfield select:hover {
+  .content.submit .formtabs-content .roundfield textarea:hover,
+.content.submit .formtabs-content .roundfield input:not([type=checkbox]):not([type=radio]):hover,
+.content.submit .formtabs-content .roundfield select:hover {
     border: 1px solid #d7dadc ;
   }
 }
-.formtabs-content #newlink-with-image-upload .image-upload-drop-target {
+.content.submit .formtabs-content #newlink-with-image-upload .image-upload-drop-target {
   border: 1px solid #dadada !important;
   padding: 0 16px;
   background-color: #f6f7f8 !important;
@@ -6306,37 +6430,36 @@ ul.image-preview-list li .description pre {
   border-radius: 4px;
 }
 @media (prefers-color-scheme: dark) {
-  .formtabs-content #newlink-with-image-upload .image-upload-drop-target {
+  .content.submit .formtabs-content #newlink-with-image-upload .image-upload-drop-target {
     border: 1px solid #343536 !important;
   }
 }
 @media (prefers-color-scheme: dark) {
-  .formtabs-content #newlink-with-image-upload .image-upload-drop-target {
+  .content.submit .formtabs-content #newlink-with-image-upload .image-upload-drop-target {
     background-color: #272729 !important;
   }
 }
 @media (prefers-color-scheme: dark) {
-  .formtabs-content #newlink-with-image-upload .image-upload-drop-target {
+  .content.submit .formtabs-content #newlink-with-image-upload .image-upload-drop-target {
     color: #d7dadc !important;
   }
 }
-.formtabs-content #newlink-with-image-upload .image-upload-drop-target[type=text] {
+.content.submit .formtabs-content #newlink-with-image-upload .image-upload-drop-target[type=text], .content.submit .formtabs-content #newlink-with-image-upload .image-upload-drop-target[type=url], .content.submit .formtabs-content #newlink-with-image-upload .image-upload-drop-target[type=password], .content.submit .formtabs-content #newlink-with-image-upload .image-upload-drop-target[type=number] {
   padding: 0 42px 0 16px;
-  border: 0 solid;
   border-radius: 4px;
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
   transition: box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1), background 0.2s cubic-bezier(0.4, 0, 0.2, 1), color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
-.formtabs-content #newlink-with-image-upload .image-upload-drop-target[type=text]:hover {
+.content.submit .formtabs-content #newlink-with-image-upload .image-upload-drop-target[type=text]:hover, .content.submit .formtabs-content #newlink-with-image-upload .image-upload-drop-target[type=url]:hover, .content.submit .formtabs-content #newlink-with-image-upload .image-upload-drop-target[type=password]:hover, .content.submit .formtabs-content #newlink-with-image-upload .image-upload-drop-target[type=number]:hover {
   box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
 }
-.formtabs-content #newlink-with-image-upload .image-upload-drop-target[type=text]:focus {
+.content.submit .formtabs-content #newlink-with-image-upload .image-upload-drop-target[type=text]:focus, .content.submit .formtabs-content #newlink-with-image-upload .image-upload-drop-target[type=url]:focus, .content.submit .formtabs-content #newlink-with-image-upload .image-upload-drop-target[type=password]:focus, .content.submit .formtabs-content #newlink-with-image-upload .image-upload-drop-target[type=number]:focus {
   border-radius: 2px 2px 0 0;
 }
-.formtabs-content #newlink-with-image-upload .image-upload-drop-target[type=text]:focus:hover {
+.content.submit .formtabs-content #newlink-with-image-upload .image-upload-drop-target[type=text]:focus:hover, .content.submit .formtabs-content #newlink-with-image-upload .image-upload-drop-target[type=url]:focus:hover, .content.submit .formtabs-content #newlink-with-image-upload .image-upload-drop-target[type=password]:focus:hover, .content.submit .formtabs-content #newlink-with-image-upload .image-upload-drop-target[type=number]:focus:hover {
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.24) !important;
 }
-.formtabs-content #newlink-with-image-upload .image-upload-drop-target[type=text]::-webkit-input-placeholder, .formtabs-content #newlink-with-image-upload .image-upload-drop-target[type=text]:-moz-placeholder, .formtabs-content #newlink-with-image-upload .image-upload-drop-target[type=text]::-moz-placeholder, .formtabs-content #newlink-with-image-upload .image-upload-drop-target[type=text]:-ms-input-placeholder {
+.content.submit .formtabs-content #newlink-with-image-upload .image-upload-drop-target[type=text]::-webkit-input-placeholder, .content.submit .formtabs-content #newlink-with-image-upload .image-upload-drop-target[type=text]:-moz-placeholder, .content.submit .formtabs-content #newlink-with-image-upload .image-upload-drop-target[type=text]::-moz-placeholder, .content.submit .formtabs-content #newlink-with-image-upload .image-upload-drop-target[type=text]:-ms-input-placeholder, .content.submit .formtabs-content #newlink-with-image-upload .image-upload-drop-target[type=url]::-webkit-input-placeholder, .content.submit .formtabs-content #newlink-with-image-upload .image-upload-drop-target[type=url]:-moz-placeholder, .content.submit .formtabs-content #newlink-with-image-upload .image-upload-drop-target[type=url]::-moz-placeholder, .content.submit .formtabs-content #newlink-with-image-upload .image-upload-drop-target[type=url]:-ms-input-placeholder, .content.submit .formtabs-content #newlink-with-image-upload .image-upload-drop-target[type=password]::-webkit-input-placeholder, .content.submit .formtabs-content #newlink-with-image-upload .image-upload-drop-target[type=password]:-moz-placeholder, .content.submit .formtabs-content #newlink-with-image-upload .image-upload-drop-target[type=password]::-moz-placeholder, .content.submit .formtabs-content #newlink-with-image-upload .image-upload-drop-target[type=password]:-ms-input-placeholder, .content.submit .formtabs-content #newlink-with-image-upload .image-upload-drop-target[type=number]::-webkit-input-placeholder, .content.submit .formtabs-content #newlink-with-image-upload .image-upload-drop-target[type=number]:-moz-placeholder, .content.submit .formtabs-content #newlink-with-image-upload .image-upload-drop-target[type=number]::-moz-placeholder, .content.submit .formtabs-content #newlink-with-image-upload .image-upload-drop-target[type=number]:-ms-input-placeholder {
   color: #d2d0d6 !important;
   font-size: 14px;
   text-transform: capitalize;
@@ -6344,28 +6467,67 @@ ul.image-preview-list li .description pre {
   position: relative;
 }
 @media (prefers-color-scheme: dark) {
-  .formtabs-content #newlink-with-image-upload .image-upload-drop-target[type=text]::-webkit-input-placeholder, .formtabs-content #newlink-with-image-upload .image-upload-drop-target[type=text]:-moz-placeholder, .formtabs-content #newlink-with-image-upload .image-upload-drop-target[type=text]::-moz-placeholder, .formtabs-content #newlink-with-image-upload .image-upload-drop-target[type=text]:-ms-input-placeholder {
+  .content.submit .formtabs-content #newlink-with-image-upload .image-upload-drop-target[type=text]::-webkit-input-placeholder, .content.submit .formtabs-content #newlink-with-image-upload .image-upload-drop-target[type=text]:-moz-placeholder, .content.submit .formtabs-content #newlink-with-image-upload .image-upload-drop-target[type=text]::-moz-placeholder, .content.submit .formtabs-content #newlink-with-image-upload .image-upload-drop-target[type=text]:-ms-input-placeholder, .content.submit .formtabs-content #newlink-with-image-upload .image-upload-drop-target[type=url]::-webkit-input-placeholder, .content.submit .formtabs-content #newlink-with-image-upload .image-upload-drop-target[type=url]:-moz-placeholder, .content.submit .formtabs-content #newlink-with-image-upload .image-upload-drop-target[type=url]::-moz-placeholder, .content.submit .formtabs-content #newlink-with-image-upload .image-upload-drop-target[type=url]:-ms-input-placeholder, .content.submit .formtabs-content #newlink-with-image-upload .image-upload-drop-target[type=password]::-webkit-input-placeholder, .content.submit .formtabs-content #newlink-with-image-upload .image-upload-drop-target[type=password]:-moz-placeholder, .content.submit .formtabs-content #newlink-with-image-upload .image-upload-drop-target[type=password]::-moz-placeholder, .content.submit .formtabs-content #newlink-with-image-upload .image-upload-drop-target[type=password]:-ms-input-placeholder, .content.submit .formtabs-content #newlink-with-image-upload .image-upload-drop-target[type=number]::-webkit-input-placeholder, .content.submit .formtabs-content #newlink-with-image-upload .image-upload-drop-target[type=number]:-moz-placeholder, .content.submit .formtabs-content #newlink-with-image-upload .image-upload-drop-target[type=number]::-moz-placeholder, .content.submit .formtabs-content #newlink-with-image-upload .image-upload-drop-target[type=number]:-ms-input-placeholder {
     color: #3a3a3c !important;
   }
 }
-.formtabs-content #newlink-with-image-upload .image-upload-drop-target:hover {
+.content.submit .formtabs-content #newlink-with-image-upload .image-upload-drop-target:hover {
   background-color: #ffffff ;
   border: 1px solid #f50 ;
 }
 @media (prefers-color-scheme: dark) {
-  .formtabs-content #newlink-with-image-upload .image-upload-drop-target:hover {
+  .content.submit .formtabs-content #newlink-with-image-upload .image-upload-drop-target:hover {
     background-color: #1a1a1b ;
   }
 }
 @media (prefers-color-scheme: dark) {
-  .formtabs-content #newlink-with-image-upload .image-upload-drop-target:hover {
+  .content.submit .formtabs-content #newlink-with-image-upload .image-upload-drop-target:hover {
     border: 1px solid #d7dadc ;
   }
 }
-.formtabs-content #newlink-with-image-upload .file-upload-button {
+.content.submit .formtabs-content #newlink-with-image-upload .file-upload-button {
   padding-right: 16px;
   font-size: 14px;
   line-height: 36px;
+}
+.content.submit .info-notice,
+.content.submit .infobar {
+  background-color: #fbe6e8 ;
+  border: 1px solid #dadada ;
+}
+@media (prefers-color-scheme: dark) {
+  .content.submit .info-notice,
+.content.submit .infobar {
+    background-color: #17232d ;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .content.submit .info-notice,
+.content.submit .infobar {
+    border: 1px solid #343536 ;
+  }
+}
+
+.content h1,
+.submit_text h1 {
+  text-transform: uppercase;
+  color: #7a797c ;
+}
+@media (prefers-color-scheme: dark) {
+  .content h1,
+.submit_text h1 {
+    color: #818384 ;
+  }
+}
+
+.submit_text h1 span {
+  text-transform: uppercase;
+  color: #f50 ;
+}
+@media (prefers-color-scheme: dark) {
+  .submit_text h1 span {
+    color: #f50 ;
+  }
 }
 
 /* Wiki Page */
@@ -6802,7 +6964,7 @@ html.res-commentBoxes.res-commentBoxes-rounded .comment {
 .side .titlebox .md ul:nth-of-type(1) > li > p:active {
   background: black ;
   color: #ffffff ;
-  border-color: #f50 ;
+  border: 1px solid #f50 ;
 }
 @media (prefers-color-scheme: dark) {
   .side .titlebox .md ul:nth-of-type(1) > li > p:active {
@@ -6816,7 +6978,7 @@ html.res-commentBoxes.res-commentBoxes-rounded .comment {
 }
 @media (prefers-color-scheme: dark) {
   .side .titlebox .md ul:nth-of-type(1) > li > p:active {
-    border-color: #d7dadc ;
+    border: 1px solid #d7dadc ;
   }
 }
 .side .titlebox .md ul:nth-of-type(1) > li > p:hover {
@@ -6931,7 +7093,7 @@ html.res-commentBoxes.res-commentBoxes-rounded .comment {
 .side .titlebox .md ul li blockquote p a:active {
   background: black ;
   color: #ffffff ;
-  border-color: #f50 ;
+  border: 1px solid #f50 ;
 }
 @media (prefers-color-scheme: dark) {
   .side .titlebox .md ul li blockquote p a:active {
@@ -6945,7 +7107,7 @@ html.res-commentBoxes.res-commentBoxes-rounded .comment {
 }
 @media (prefers-color-scheme: dark) {
   .side .titlebox .md ul li blockquote p a:active {
-    border-color: #d7dadc ;
+    border: 1px solid #d7dadc ;
   }
 }
 .side .titlebox .md ul li blockquote p a:hover {

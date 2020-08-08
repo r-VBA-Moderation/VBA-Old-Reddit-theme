@@ -1,35 +1,58 @@
 @use '../abstracts/mixins' as v;
 
 /* Submission Page */
-
-.formtabs-content {
-  @include v.container();
-  width: 100%;
-  .roundfield {
-    width: 100%;
-    textarea,
-    input,
-    input[type="text"],
-    input[type="url"],
-    input[type="password"],
-    input[type="number"],
-    select {
-      @include v.input;
-      width: 100%;
-      padding: v.$padding;
+.content.submit {
+  ul.tabmenu {
+    li:not(.selected) a {
+      @include v.button;
+    }
+    li.selected a {
+      @include v.button(true);
     }
   }
-  #newlink-with-image-upload {
-    .image-upload-drop-target {
-      @include v.input(false, true);
+  .formtabs-content {
+    // 4px solid #5f99cf
+    @include v.theme("border-top", v.$separator, false, true, "4px solid");
+    @include v.container();
+    width: 100%;
+    .roundfield {
+      width: 100%;
+      textarea,
+      input:not([type="checkbox"]):not([type="radio"]),
+      select {
+        @include v.input;
+        width: 100%;
+        padding: v.$padding;
+      }
     }
-    .file-upload-button {
-      padding-right: v.$padding;
-      font-size: 14px;
-      line-height: v.$button-height;
+    #newlink-with-image-upload {
+      .image-upload-drop-target {
+        @include v.input(false, true);
+      }
+      .file-upload-button {
+        padding-right: v.$padding;
+        font-size: 14px;
+        line-height: v.$button-height;
+      }
     }
+  }
+  .info-notice,
+  .infobar {
+    @include v.theme("background-color", v.$highlight);
+    @include v.theme("border", v.$line, false, true, "1px solid");
   }
 }
+
+.content h1,
+.submit_text h1 {
+  text-transform: uppercase;
+  @include v.theme("color", v.$metaText);
+}
+.submit_text h1 span {
+  text-transform: uppercase;
+  @include v.theme("color", v.$primary);
+}
+
 // #new-link-image-input > label
 
 // .submit-page {

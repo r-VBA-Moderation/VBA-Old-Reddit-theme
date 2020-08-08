@@ -188,9 +188,11 @@ $_breakpoints: (
   );
   @include theme("color", v.$bodyText, $forceDark, false, "", $important);
   border-radius: v.$radius;
-  &[type="text"] {
+  &[type="text"],
+  &[type="url"],
+  &[type="password"],
+  &[type="number"] {
     padding: 0 42px 0 v.$padding;
-    border: 0 solid;
     border-radius: v.$radius;
     box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
     transition: box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1),
@@ -227,51 +229,19 @@ $_breakpoints: (
   }
 }
 
-// @mixin reddit-button {
-//   font-size: 12px;
-//   line-height: 24px;
-//   padding: 4px 9px 2px;
-//   width: 100%;
-//   font-weight: 700;
-//   letter-spacing: 0.5px;
-//   text-transform: uppercase;
-//   border: 1px solid transparent;
-//   border-radius: 4px;
-//   text-align: center;
-//   text-decoration: none;
-//   @include theme("border-color", v.$button);
-//   @include theme("fill", v.$body);
-//   @include theme("border-color", v.$body);
-//   @include theme("background-color", v.$button);
-
-//   &:active {
-//     @include theme("background-color", v.$buttonShaded80);
-//     @include theme("border-color", v.$buttonShaded80);
-//     @include theme("color", v.$body);
-//     @include theme("fill", v.$body);
-//   }
-
-//   &:hover {
-//     @include theme("background-color", v.$buttonTinted50);
-//     @include theme("border-color", v.$buttonTinted50);
-//     @include theme("color", v.$body);
-//     @include theme("fill", v.$body);
-//   }
-// }
-
-@mixin normal-button {
+@mixin _normal-button {
   @include theme("background", v.$button);
   @include theme("color", v.$body);
   @include theme("border", v.$button, false, true, "1px solid");
 }
 
-@mixin active-button {
+@mixin _active-button {
   @include theme("background", v.$buttonShaded80);
   @include theme("color", v.$lightText);
-  @include theme("border-color", v.$button);
+  @include theme("border", v.$button, false, true, "1px solid");
 }
 
-@mixin hover-button {
+@mixin _hover-button {
   @include theme("background", v.$buttonTinted50);
   // @include theme("color", v.$bodyText);
   color: #1b1b1c;
@@ -281,18 +251,18 @@ $_breakpoints: (
 
 @mixin button($active: false, $link-as-button: false) {
   @if ($active) {
-    @include active-button();
+    @include _active-button();
     &:active {
-      @include normal-button();
+      @include _normal-button();
     }
   } @else {
-    @include normal-button();
+    @include _normal-button();
     &:active {
-      @include active-button();
+      @include _active-button();
     }
   }
   &:hover {
-    @include hover-button();
+    @include _hover-button();
   }
   @if ($link-as-button) {
     display: inline-block;
