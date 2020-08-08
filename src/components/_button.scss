@@ -2,16 +2,9 @@
 
 body {
   .btn,
-  button {
+  button,
+  .c-btn-primary,
+  .wiki-page .wiki-page-content .wiki_button {
     @include v.button;
   }
-}
-
-.c-btn-primary,
-.wiki-page .wiki-page-content .wiki_button {
-  @include v.button;
-}
-
-.c-btn-primary:active {
-  margin-top: 4px;
 }

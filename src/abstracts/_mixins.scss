@@ -96,7 +96,8 @@ $_breakpoints: (
   $color,
   $forceDark: false,
   $additionalPropertiesPositionIsFront: false,
-  $additionalProperties: ""
+  $additionalProperties: "",
+  $important: false
 ) {
   @if $forceDark {
     @include themeProperty(
@@ -104,7 +105,8 @@ $_breakpoints: (
       $property,
       $color,
       $additionalPropertiesPositionIsFront,
-      $additionalProperties
+      $additionalProperties,
+      $important
     );
   } @else {
     // @at-root .res-nightmode #{&} {
@@ -122,7 +124,8 @@ $_breakpoints: (
       $property,
       $color,
       $additionalPropertiesPositionIsFront,
-      $additionalProperties
+      $additionalProperties,
+      $important
     );
 
     @media (prefers-color-scheme: dark) {
@@ -131,7 +134,8 @@ $_breakpoints: (
         $property,
         $color,
         $additionalPropertiesPositionIsFront,
-        $additionalProperties
+        $additionalProperties,
+        $important
       );
     }
   }
@@ -171,11 +175,18 @@ $_breakpoints: (
   }
 }
 
-@mixin input($forceDark: false) {
-  @include theme("border", v.$line, $forceDark, true, "1px solid");
+@mixin input($forceDark: false, $important: false) {
+  @include theme("border", v.$line, $forceDark, true, "1px solid", $important);
   padding: 0 v.$padding;
-  @include theme("background-color", v.$field, $forceDark);
-  @include theme("color", v.$bodyText, $forceDark, false, "!important");
+  @include theme(
+    "background-color",
+    v.$field,
+    $forceDark,
+    false,
+    "",
+    $important
+  );
+  @include theme("color", v.$bodyText, $forceDark, false, "", $important);
   border-radius: v.$radius;
   &[type="text"] {
     padding: 0 42px 0 v.$padding;
@@ -216,42 +227,42 @@ $_breakpoints: (
   }
 }
 
-@mixin reddit-button {
-  font-size: 12px;
-  line-height: 24px;
-  padding: 4px 9px 2px;
-  width: 100%;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-  border: 1px solid transparent;
-  border-radius: 4px;
-  text-align: center;
-  text-decoration: none;
-  @include theme("border-color", v.$button);
-  @include theme("fill", v.$body);
-  @include theme("border-color", v.$body);
-  @include theme("background-color", v.$button);
+// @mixin reddit-button {
+//   font-size: 12px;
+//   line-height: 24px;
+//   padding: 4px 9px 2px;
+//   width: 100%;
+//   font-weight: 700;
+//   letter-spacing: 0.5px;
+//   text-transform: uppercase;
+//   border: 1px solid transparent;
+//   border-radius: 4px;
+//   text-align: center;
+//   text-decoration: none;
+//   @include theme("border-color", v.$button);
+//   @include theme("fill", v.$body);
+//   @include theme("border-color", v.$body);
+//   @include theme("background-color", v.$button);
 
-  &:active {
-    @include theme("background-color", v.$buttonShaded80);
-    @include theme("border-color", v.$buttonShaded80);
-    @include theme("color", v.$body);
-    @include theme("fill", v.$body);
-  }
+//   &:active {
+//     @include theme("background-color", v.$buttonShaded80);
+//     @include theme("border-color", v.$buttonShaded80);
+//     @include theme("color", v.$body);
+//     @include theme("fill", v.$body);
+//   }
 
-  &:hover {
-    @include theme("background-color", v.$buttonTinted50);
-    @include theme("border-color", v.$buttonTinted50);
-    @include theme("color", v.$body);
-    @include theme("fill", v.$body);
-  }
-}
+//   &:hover {
+//     @include theme("background-color", v.$buttonTinted50);
+//     @include theme("border-color", v.$buttonTinted50);
+//     @include theme("color", v.$body);
+//     @include theme("fill", v.$body);
+//   }
+// }
 
 @mixin normal-button {
   @include theme("background", v.$button);
   @include theme("color", v.$body);
-  @include theme("border-color", v.$button);
+  @include theme("border", v.$button, false, true, "1px solid");
 }
 
 @mixin active-button {
@@ -264,10 +275,11 @@ $_breakpoints: (
   @include theme("background", v.$buttonTinted50);
   // @include theme("color", v.$bodyText);
   color: #1b1b1c;
-  @include theme("border-color", v.$buttonTinted50);
+  border-color: #1b1b1c;
+  // @include theme("border-color", v.$buttonTinted50);
 }
 
-@mixin link-as-button($active: false) {
+@mixin button($active: false, $link-as-button: false) {
   @if ($active) {
     @include active-button();
     &:active {
@@ -282,63 +294,27 @@ $_breakpoints: (
   &:hover {
     @include hover-button();
   }
-  display: inline-block;
-  margin: 0;
-  padding: 0 v.$padding;
-  text-align: center;
-  border-radius: v.$radius;
-  // border: 1px outset;
-  border: 1px solid;
-  text-transform: uppercase;
-  font-weight: 700;
-  height: v.$button-height;
-  line-height: v.$button-height;
-  font-size: 14px;
-  text-decoration: none;
-}
-
-@mixin naut-button($active: false) {
-  @if ($active) {
-    @include active-button();
-    &:active {
-      @include normal-button();
-    }
+  @if ($link-as-button) {
+    display: inline-block;
+    margin: 0;
+    text-decoration: none;
   } @else {
-    @include normal-button();
+    margin: v.$padding 0;
     &:active {
-      @include active-button();
+      margin: v.$padding 0;
     }
   }
-
-  &:hover {
-    @include hover-button();
-  }
-  margin: v.$padding 0;
-  padding: 0 v.$padding;
+  font-size: 14px;
   text-align: center;
   border-radius: v.$radius;
-  border: 1px solid;
   text-transform: uppercase;
   font-weight: 700;
   height: v.$button-height;
   line-height: v.$button-height;
-  font-size: 14px;
+  padding: 0 v.$padding;
 
-  // font-family: Lato, Arial, sans-serif;
-  box-shadow: 0 2px 1.5px 0 rgba(0, 0, 0, 0.12), 0 0 4px 0 rgba(0, 0, 0, 0.12);
-  transition: box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1),
-    background 0.2s cubic-bezier(0.4, 0, 0.2, 1),
-    color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-
-  a {
-    background-color: transparent;
-    text-align: center;
-    color: inherit;
-    text-transform: inherit;
-    font-weight: inherit;
-  }
-}
-
-@mixin button($active: false) {
-  @include naut-button($active);
+  // box-shadow: 0 2px 1.5px 0 rgba(0, 0, 0, 0.12), 0 0 4px 0 rgba(0, 0, 0, 0.12);
+  // transition: box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1),
+  //   background 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+  //   color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }

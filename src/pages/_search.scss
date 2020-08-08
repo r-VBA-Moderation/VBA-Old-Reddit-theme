@@ -29,7 +29,7 @@
       .search-expando-button {
         &.collapsed {
           .search-expando-button-label-collapsed {
-            @include v.link-as-button;
+            @include v.button(false, true);
             font-size: 10px;
             height: 20px;
             line-height: 20px;
@@ -37,7 +37,7 @@
         }
         &.expanded {
           .search-expando-button-label-expanded {
-            @include v.link-as-button(true);
+            @include v.button(true, true);
             font-size: 10px;
             height: 20px;
             line-height: 20px;
@@ -51,7 +51,7 @@
           padding: v.$padding;
 
           a {
-            @include v.link-as-button;
+            @include v.button(false, true);
             margin-left: v.$container-margin-hor;
           }
         }
@@ -103,13 +103,13 @@
   .search-result-subreddit .search-subscribe-button {
     .active {
       &.add {
-        @include v.link-as-button;
+        @include v.button(false, true);
         font-size: 10px;
         height: 20px;
         line-height: 20px;
       }
       &.remove {
-        @include v.link-as-button(true);
+        @include v.button(true, true);
         font-size: 10px;
         height: 20px;
         line-height: 20px;
@@ -117,7 +117,7 @@
     }
 
     // .remove {
-    //   @include v.link-as-button(true);
+    //   @include v.button(true, true);
     //   font-size: 10px;
     //   height: 20px;
     //   line-height: 20px;

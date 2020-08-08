@@ -16,7 +16,7 @@
     height: unset;
     a {
       box-sizing: border-box;
-      @include v.link-as-button();
+      @include v.button(false, true);
       margin-top: 0;
     }
     .nub {

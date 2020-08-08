@@ -19,7 +19,18 @@
       padding: v.$padding;
     }
   }
+  #newlink-with-image-upload {
+    .image-upload-drop-target {
+      @include v.input(false, true);
+    }
+    .file-upload-button {
+      padding-right: v.$padding;
+      font-size: 14px;
+      line-height: v.$button-height;
+    }
+  }
 }
+// #new-link-image-input > label
 
 // .submit-page {
 //   #header {

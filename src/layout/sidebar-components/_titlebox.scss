@@ -94,13 +94,13 @@
   .res-fancy-toggle-button {
     &.RESDashboardToggle,
     &.RESshortcutside {
-      @include v.link-as-button;
+      @include v.button(false, true);
       max-width: 33%;
       padding: 0;
       padding: 0 8px;
       font-size: 11px;
       &.remove {
-        @include v.link-as-button(true);
+        @include v.button(true, true);
         max-width: 33%;
         padding: 0;
         padding: 0 8px;
@@ -117,7 +117,7 @@
     // margin-left: 208px;
 
     .active {
-      @include v.link-as-button(true);
+      @include v.button(true, true);
       margin: v.$padding v.$padding v.$padding 0;
     }
   }
@@ -136,7 +136,7 @@
     h4 {
       margin: 0;
       a {
-        @include v.link-as-button();
+        @include v.button(false, true);
         margin: 8px 0;
         width: 100%;
       }

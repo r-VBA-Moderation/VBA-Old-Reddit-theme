@@ -996,19 +996,18 @@ body:not(.loggedin) #header-bottom-right {
   box-sizing: border-box;
   background: #f50 ;
   color: #ffffff ;
-  border-color: #f50 ;
+  border: 1px solid #f50 ;
   display: inline-block;
   margin: 0;
-  padding: 0 16px;
+  text-decoration: none;
+  font-size: 14px;
   text-align: center;
   border-radius: 4px;
-  border: 1px solid;
   text-transform: uppercase;
   font-weight: 700;
   height: 36px;
   line-height: 36px;
-  font-size: 14px;
-  text-decoration: none;
+  padding: 0 16px;
   margin-top: 0;
 }
 @media (prefers-color-scheme: dark) {
@@ -1023,7 +1022,7 @@ body:not(.loggedin) #header-bottom-right {
 }
 @media (prefers-color-scheme: dark) {
   .sidebox .morelink a {
-    border-color: #d7dadc ;
+    border: 1px solid #d7dadc ;
   }
 }
 .sidebox .morelink a:active {
@@ -1049,16 +1048,11 @@ body:not(.loggedin) #header-bottom-right {
 .sidebox .morelink a:hover {
   background: white ;
   color: #1b1b1c;
-  border-color: white ;
+  border-color: #1b1b1c;
 }
 @media (prefers-color-scheme: dark) {
   .sidebox .morelink a:hover {
     background: white ;
-  }
-}
-@media (prefers-color-scheme: dark) {
-  .sidebox .morelink a:hover {
-    border-color: white ;
   }
 }
 .sidebox .morelink .nub {
@@ -1242,19 +1236,18 @@ body:not(.loggedin) #header-bottom-right {
 .titlebox .res-fancy-toggle-button.RESDashboardToggle, .titlebox .res-fancy-toggle-button.RESshortcutside {
   background: #f50 ;
   color: #ffffff ;
-  border-color: #f50 ;
+  border: 1px solid #f50 ;
   display: inline-block;
   margin: 0;
-  padding: 0 16px;
+  text-decoration: none;
+  font-size: 14px;
   text-align: center;
   border-radius: 4px;
-  border: 1px solid;
   text-transform: uppercase;
   font-weight: 700;
   height: 36px;
   line-height: 36px;
-  font-size: 14px;
-  text-decoration: none;
+  padding: 0 16px;
   max-width: 33%;
   padding: 0;
   padding: 0 8px;
@@ -1272,7 +1265,7 @@ body:not(.loggedin) #header-bottom-right {
 }
 @media (prefers-color-scheme: dark) {
   .titlebox .res-fancy-toggle-button.RESDashboardToggle, .titlebox .res-fancy-toggle-button.RESshortcutside {
-    border-color: #d7dadc ;
+    border: 1px solid #d7dadc ;
   }
 }
 .titlebox .res-fancy-toggle-button.RESDashboardToggle:active, .titlebox .res-fancy-toggle-button.RESshortcutside:active {
@@ -1298,16 +1291,11 @@ body:not(.loggedin) #header-bottom-right {
 .titlebox .res-fancy-toggle-button.RESDashboardToggle:hover, .titlebox .res-fancy-toggle-button.RESshortcutside:hover {
   background: white ;
   color: #1b1b1c;
-  border-color: white ;
+  border-color: #1b1b1c;
 }
 @media (prefers-color-scheme: dark) {
   .titlebox .res-fancy-toggle-button.RESDashboardToggle:hover, .titlebox .res-fancy-toggle-button.RESshortcutside:hover {
     background: white ;
-  }
-}
-@media (prefers-color-scheme: dark) {
-  .titlebox .res-fancy-toggle-button.RESDashboardToggle:hover, .titlebox .res-fancy-toggle-button.RESshortcutside:hover {
-    border-color: white ;
   }
 }
 .titlebox .res-fancy-toggle-button.RESDashboardToggle.remove, .titlebox .res-fancy-toggle-button.RESshortcutside.remove {
@@ -1316,16 +1304,15 @@ body:not(.loggedin) #header-bottom-right {
   border-color: #f50 ;
   display: inline-block;
   margin: 0;
-  padding: 0 16px;
+  text-decoration: none;
+  font-size: 14px;
   text-align: center;
   border-radius: 4px;
-  border: 1px solid;
   text-transform: uppercase;
   font-weight: 700;
   height: 36px;
   line-height: 36px;
-  font-size: 14px;
-  text-decoration: none;
+  padding: 0 16px;
   max-width: 33%;
   padding: 0;
   padding: 0 8px;
@@ -1349,7 +1336,7 @@ body:not(.loggedin) #header-bottom-right {
 .titlebox .res-fancy-toggle-button.RESDashboardToggle.remove:active, .titlebox .res-fancy-toggle-button.RESshortcutside.remove:active {
   background: #f50 ;
   color: #ffffff ;
-  border-color: #f50 ;
+  border: 1px solid #f50 ;
 }
 @media (prefers-color-scheme: dark) {
   .titlebox .res-fancy-toggle-button.RESDashboardToggle.remove:active, .titlebox .res-fancy-toggle-button.RESshortcutside.remove:active {
@@ -1363,22 +1350,17 @@ body:not(.loggedin) #header-bottom-right {
 }
 @media (prefers-color-scheme: dark) {
   .titlebox .res-fancy-toggle-button.RESDashboardToggle.remove:active, .titlebox .res-fancy-toggle-button.RESshortcutside.remove:active {
-    border-color: #d7dadc ;
+    border: 1px solid #d7dadc ;
   }
 }
 .titlebox .res-fancy-toggle-button.RESDashboardToggle.remove:hover, .titlebox .res-fancy-toggle-button.RESshortcutside.remove:hover {
   background: white ;
   color: #1b1b1c;
-  border-color: white ;
+  border-color: #1b1b1c;
 }
 @media (prefers-color-scheme: dark) {
   .titlebox .res-fancy-toggle-button.RESDashboardToggle.remove:hover, .titlebox .res-fancy-toggle-button.RESshortcutside.remove:hover {
     background: white ;
-  }
-}
-@media (prefers-color-scheme: dark) {
-  .titlebox .res-fancy-toggle-button.RESDashboardToggle.remove:hover, .titlebox .res-fancy-toggle-button.RESshortcutside.remove:hover {
-    border-color: white ;
   }
 }
 .titlebox .res-fancy-toggle-button.RESDashboardToggle {
@@ -1393,16 +1375,15 @@ body:not(.loggedin) #header-bottom-right {
   border-color: #f50 ;
   display: inline-block;
   margin: 0;
-  padding: 0 16px;
+  text-decoration: none;
+  font-size: 14px;
   text-align: center;
   border-radius: 4px;
-  border: 1px solid;
   text-transform: uppercase;
   font-weight: 700;
   height: 36px;
   line-height: 36px;
-  font-size: 14px;
-  text-decoration: none;
+  padding: 0 16px;
   margin: 16px 16px 16px 0;
 }
 @media (prefers-color-scheme: dark) {
@@ -1423,7 +1404,7 @@ body:not(.loggedin) #header-bottom-right {
 .titlebox .fancy-toggle-button .active:active {
   background: #f50 ;
   color: #ffffff ;
-  border-color: #f50 ;
+  border: 1px solid #f50 ;
 }
 @media (prefers-color-scheme: dark) {
   .titlebox .fancy-toggle-button .active:active {
@@ -1437,22 +1418,17 @@ body:not(.loggedin) #header-bottom-right {
 }
 @media (prefers-color-scheme: dark) {
   .titlebox .fancy-toggle-button .active:active {
-    border-color: #d7dadc ;
+    border: 1px solid #d7dadc ;
   }
 }
 .titlebox .fancy-toggle-button .active:hover {
   background: white ;
   color: #1b1b1c;
-  border-color: white ;
+  border-color: #1b1b1c;
 }
 @media (prefers-color-scheme: dark) {
   .titlebox .fancy-toggle-button .active:hover {
     background: white ;
-  }
-}
-@media (prefers-color-scheme: dark) {
-  .titlebox .fancy-toggle-button .active:hover {
-    border-color: white ;
   }
 }
 .titlebox .md h1 {
@@ -1470,19 +1446,18 @@ body:not(.loggedin) #header-bottom-right {
 .titlebox .md h4 a {
   background: #f50 ;
   color: #ffffff ;
-  border-color: #f50 ;
+  border: 1px solid #f50 ;
   display: inline-block;
   margin: 0;
-  padding: 0 16px;
+  text-decoration: none;
+  font-size: 14px;
   text-align: center;
   border-radius: 4px;
-  border: 1px solid;
   text-transform: uppercase;
   font-weight: 700;
   height: 36px;
   line-height: 36px;
-  font-size: 14px;
-  text-decoration: none;
+  padding: 0 16px;
   margin: 8px 0;
   width: 100%;
 }
@@ -1501,7 +1476,7 @@ body:not(.loggedin) #header-bottom-right {
 @media (prefers-color-scheme: dark) {
   .titlebox .md h3 a,
 .titlebox .md h4 a {
-    border-color: #d7dadc ;
+    border: 1px solid #d7dadc ;
   }
 }
 .titlebox .md h3 a:active,
@@ -1532,18 +1507,12 @@ body:not(.loggedin) #header-bottom-right {
 .titlebox .md h4 a:hover {
   background: white ;
   color: #1b1b1c;
-  border-color: white ;
+  border-color: #1b1b1c;
 }
 @media (prefers-color-scheme: dark) {
   .titlebox .md h3 a:hover,
 .titlebox .md h4 a:hover {
     background: white ;
-  }
-}
-@media (prefers-color-scheme: dark) {
-  .titlebox .md h3 a:hover,
-.titlebox .md h4 a:hover {
-    border-color: white ;
   }
 }
 
@@ -1574,7 +1543,7 @@ body:not(.loggedin) #header-bottom-right {
   border: 1px solid #dadada ;
   padding: 0 16px;
   background-color: #f6f7f8 ;
-  color: #1b1b1c !important;
+  color: #1b1b1c ;
   border-radius: 4px;
 }
 @media (prefers-color-scheme: dark) {
@@ -1589,7 +1558,7 @@ body:not(.loggedin) #header-bottom-right {
 }
 @media (prefers-color-scheme: dark) {
   #search input {
-    color: #d7dadc !important;
+    color: #d7dadc ;
   }
 }
 #search input[type=text] {
@@ -2290,181 +2259,99 @@ body:not(.subscriber) .content {
 }
 
 body .btn,
-body button {
+body button,
+body .c-btn-primary,
+body .wiki-page .wiki-page-content .wiki_button {
   background: #f50 ;
   color: #ffffff ;
-  border-color: #f50 ;
+  border: 1px solid #f50 ;
   margin: 16px 0;
-  padding: 0 16px;
+  font-size: 14px;
   text-align: center;
   border-radius: 4px;
-  border: 1px solid;
   text-transform: uppercase;
   font-weight: 700;
   height: 36px;
   line-height: 36px;
-  font-size: 14px;
-  box-shadow: 0 2px 1.5px 0 rgba(0, 0, 0, 0.12), 0 0 4px 0 rgba(0, 0, 0, 0.12);
-  transition: box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1), background 0.2s cubic-bezier(0.4, 0, 0.2, 1), color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 0 16px;
 }
 @media (prefers-color-scheme: dark) {
   body .btn,
-body button {
+body button,
+body .c-btn-primary,
+body .wiki-page .wiki-page-content .wiki_button {
     background: #d7dadc ;
   }
 }
 @media (prefers-color-scheme: dark) {
   body .btn,
-body button {
+body button,
+body .c-btn-primary,
+body .wiki-page .wiki-page-content .wiki_button {
     color: #1a1a1b ;
   }
 }
 @media (prefers-color-scheme: dark) {
   body .btn,
-body button {
-    border-color: #d7dadc ;
+body button,
+body .c-btn-primary,
+body .wiki-page .wiki-page-content .wiki_button {
+    border: 1px solid #d7dadc ;
   }
 }
 body .btn:active,
-body button:active {
+body button:active,
+body .c-btn-primary:active,
+body .wiki-page .wiki-page-content .wiki_button:active {
   background: black ;
   color: #ffffff ;
   border-color: #f50 ;
 }
 @media (prefers-color-scheme: dark) {
   body .btn:active,
-body button:active {
+body button:active,
+body .c-btn-primary:active,
+body .wiki-page .wiki-page-content .wiki_button:active {
     background: #0d0e0e ;
   }
 }
 @media (prefers-color-scheme: dark) {
   body .btn:active,
-body button:active {
+body button:active,
+body .c-btn-primary:active,
+body .wiki-page .wiki-page-content .wiki_button:active {
     color: #ffffff ;
   }
 }
 @media (prefers-color-scheme: dark) {
   body .btn:active,
-body button:active {
+body button:active,
+body .c-btn-primary:active,
+body .wiki-page .wiki-page-content .wiki_button:active {
     border-color: #d7dadc ;
   }
 }
 body .btn:hover,
-body button:hover {
+body button:hover,
+body .c-btn-primary:hover,
+body .wiki-page .wiki-page-content .wiki_button:hover {
   background: white ;
   color: #1b1b1c;
-  border-color: white ;
+  border-color: #1b1b1c;
 }
 @media (prefers-color-scheme: dark) {
   body .btn:hover,
-body button:hover {
+body button:hover,
+body .c-btn-primary:hover,
+body .wiki-page .wiki-page-content .wiki_button:hover {
     background: white ;
   }
 }
-@media (prefers-color-scheme: dark) {
-  body .btn:hover,
-body button:hover {
-    border-color: white ;
-  }
-}
-body .btn a,
-body button a {
-  background-color: transparent;
-  text-align: center;
-  color: inherit;
-  text-transform: inherit;
-  font-weight: inherit;
-}
-
-.c-btn-primary,
-.wiki-page .wiki-page-content .wiki_button {
-  background: #f50 ;
-  color: #ffffff ;
-  border-color: #f50 ;
+body .btn:active,
+body button:active,
+body .c-btn-primary:active,
+body .wiki-page .wiki-page-content .wiki_button:active {
   margin: 16px 0;
-  padding: 0 16px;
-  text-align: center;
-  border-radius: 4px;
-  border: 1px solid;
-  text-transform: uppercase;
-  font-weight: 700;
-  height: 36px;
-  line-height: 36px;
-  font-size: 14px;
-  box-shadow: 0 2px 1.5px 0 rgba(0, 0, 0, 0.12), 0 0 4px 0 rgba(0, 0, 0, 0.12);
-  transition: box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1), background 0.2s cubic-bezier(0.4, 0, 0.2, 1), color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-}
-@media (prefers-color-scheme: dark) {
-  .c-btn-primary,
-.wiki-page .wiki-page-content .wiki_button {
-    background: #d7dadc ;
-  }
-}
-@media (prefers-color-scheme: dark) {
-  .c-btn-primary,
-.wiki-page .wiki-page-content .wiki_button {
-    color: #1a1a1b ;
-  }
-}
-@media (prefers-color-scheme: dark) {
-  .c-btn-primary,
-.wiki-page .wiki-page-content .wiki_button {
-    border-color: #d7dadc ;
-  }
-}
-.c-btn-primary:active,
-.wiki-page .wiki-page-content .wiki_button:active {
-  background: black ;
-  color: #ffffff ;
-  border-color: #f50 ;
-}
-@media (prefers-color-scheme: dark) {
-  .c-btn-primary:active,
-.wiki-page .wiki-page-content .wiki_button:active {
-    background: #0d0e0e ;
-  }
-}
-@media (prefers-color-scheme: dark) {
-  .c-btn-primary:active,
-.wiki-page .wiki-page-content .wiki_button:active {
-    color: #ffffff ;
-  }
-}
-@media (prefers-color-scheme: dark) {
-  .c-btn-primary:active,
-.wiki-page .wiki-page-content .wiki_button:active {
-    border-color: #d7dadc ;
-  }
-}
-.c-btn-primary:hover,
-.wiki-page .wiki-page-content .wiki_button:hover {
-  background: white ;
-  color: #1b1b1c;
-  border-color: white ;
-}
-@media (prefers-color-scheme: dark) {
-  .c-btn-primary:hover,
-.wiki-page .wiki-page-content .wiki_button:hover {
-    background: white ;
-  }
-}
-@media (prefers-color-scheme: dark) {
-  .c-btn-primary:hover,
-.wiki-page .wiki-page-content .wiki_button:hover {
-    border-color: white ;
-  }
-}
-.c-btn-primary a,
-.wiki-page .wiki-page-content .wiki_button a {
-  background-color: transparent;
-  text-align: center;
-  color: inherit;
-  text-transform: inherit;
-  font-weight: inherit;
-}
-
-.c-btn-primary:active {
-  margin-top: 4px;
 }
 
 /* Shadows and Cards */
@@ -5572,19 +5459,18 @@ body > .content .link .rank,
 .search-page .search-result-listing .search-result-group .search-expando-button.collapsed .search-expando-button-label-collapsed {
   background: #f50 ;
   color: #ffffff ;
-  border-color: #f50 ;
+  border: 1px solid #f50 ;
   display: inline-block;
   margin: 0;
-  padding: 0 16px;
+  text-decoration: none;
+  font-size: 14px;
   text-align: center;
   border-radius: 4px;
-  border: 1px solid;
   text-transform: uppercase;
   font-weight: 700;
   height: 36px;
   line-height: 36px;
-  font-size: 14px;
-  text-decoration: none;
+  padding: 0 16px;
   font-size: 10px;
   height: 20px;
   line-height: 20px;
@@ -5601,7 +5487,7 @@ body > .content .link .rank,
 }
 @media (prefers-color-scheme: dark) {
   .search-page .search-result-listing .search-result-group .search-expando-button.collapsed .search-expando-button-label-collapsed {
-    border-color: #d7dadc ;
+    border: 1px solid #d7dadc ;
   }
 }
 .search-page .search-result-listing .search-result-group .search-expando-button.collapsed .search-expando-button-label-collapsed:active {
@@ -5627,16 +5513,11 @@ body > .content .link .rank,
 .search-page .search-result-listing .search-result-group .search-expando-button.collapsed .search-expando-button-label-collapsed:hover {
   background: white ;
   color: #1b1b1c;
-  border-color: white ;
+  border-color: #1b1b1c;
 }
 @media (prefers-color-scheme: dark) {
   .search-page .search-result-listing .search-result-group .search-expando-button.collapsed .search-expando-button-label-collapsed:hover {
     background: white ;
-  }
-}
-@media (prefers-color-scheme: dark) {
-  .search-page .search-result-listing .search-result-group .search-expando-button.collapsed .search-expando-button-label-collapsed:hover {
-    border-color: white ;
   }
 }
 .search-page .search-result-listing .search-result-group .search-expando-button.expanded .search-expando-button-label-expanded {
@@ -5645,16 +5526,15 @@ body > .content .link .rank,
   border-color: #f50 ;
   display: inline-block;
   margin: 0;
-  padding: 0 16px;
+  text-decoration: none;
+  font-size: 14px;
   text-align: center;
   border-radius: 4px;
-  border: 1px solid;
   text-transform: uppercase;
   font-weight: 700;
   height: 36px;
   line-height: 36px;
-  font-size: 14px;
-  text-decoration: none;
+  padding: 0 16px;
   font-size: 10px;
   height: 20px;
   line-height: 20px;
@@ -5677,7 +5557,7 @@ body > .content .link .rank,
 .search-page .search-result-listing .search-result-group .search-expando-button.expanded .search-expando-button-label-expanded:active {
   background: #f50 ;
   color: #ffffff ;
-  border-color: #f50 ;
+  border: 1px solid #f50 ;
 }
 @media (prefers-color-scheme: dark) {
   .search-page .search-result-listing .search-result-group .search-expando-button.expanded .search-expando-button-label-expanded:active {
@@ -5691,22 +5571,17 @@ body > .content .link .rank,
 }
 @media (prefers-color-scheme: dark) {
   .search-page .search-result-listing .search-result-group .search-expando-button.expanded .search-expando-button-label-expanded:active {
-    border-color: #d7dadc ;
+    border: 1px solid #d7dadc ;
   }
 }
 .search-page .search-result-listing .search-result-group .search-expando-button.expanded .search-expando-button-label-expanded:hover {
   background: white ;
   color: #1b1b1c;
-  border-color: white ;
+  border-color: #1b1b1c;
 }
 @media (prefers-color-scheme: dark) {
   .search-page .search-result-listing .search-result-group .search-expando-button.expanded .search-expando-button-label-expanded:hover {
     background: white ;
-  }
-}
-@media (prefers-color-scheme: dark) {
-  .search-page .search-result-listing .search-result-group .search-expando-button.expanded .search-expando-button-label-expanded:hover {
-    border-color: white ;
   }
 }
 .search-page .search-result-listing .search-result-group .nav-buttons .nextprev {
@@ -5717,19 +5592,18 @@ body > .content .link .rank,
 .search-page .search-result-listing .search-result-group .nav-buttons .nextprev a {
   background: #f50 ;
   color: #ffffff ;
-  border-color: #f50 ;
+  border: 1px solid #f50 ;
   display: inline-block;
   margin: 0;
-  padding: 0 16px;
+  text-decoration: none;
+  font-size: 14px;
   text-align: center;
   border-radius: 4px;
-  border: 1px solid;
   text-transform: uppercase;
   font-weight: 700;
   height: 36px;
   line-height: 36px;
-  font-size: 14px;
-  text-decoration: none;
+  padding: 0 16px;
   margin-left: 24px;
 }
 @media (prefers-color-scheme: dark) {
@@ -5744,7 +5618,7 @@ body > .content .link .rank,
 }
 @media (prefers-color-scheme: dark) {
   .search-page .search-result-listing .search-result-group .nav-buttons .nextprev a {
-    border-color: #d7dadc ;
+    border: 1px solid #d7dadc ;
   }
 }
 .search-page .search-result-listing .search-result-group .nav-buttons .nextprev a:active {
@@ -5770,16 +5644,11 @@ body > .content .link .rank,
 .search-page .search-result-listing .search-result-group .nav-buttons .nextprev a:hover {
   background: white ;
   color: #1b1b1c;
-  border-color: white ;
+  border-color: #1b1b1c;
 }
 @media (prefers-color-scheme: dark) {
   .search-page .search-result-listing .search-result-group .nav-buttons .nextprev a:hover {
     background: white ;
-  }
-}
-@media (prefers-color-scheme: dark) {
-  .search-page .search-result-listing .search-result-group .nav-buttons .nextprev a:hover {
-    border-color: white ;
   }
 }
 
@@ -5837,19 +5706,18 @@ body > .content .link .rank,
 .combined-search-page .search-result-subreddit .search-subscribe-button .active.add {
   background: #f50 ;
   color: #ffffff ;
-  border-color: #f50 ;
+  border: 1px solid #f50 ;
   display: inline-block;
   margin: 0;
-  padding: 0 16px;
+  text-decoration: none;
+  font-size: 14px;
   text-align: center;
   border-radius: 4px;
-  border: 1px solid;
   text-transform: uppercase;
   font-weight: 700;
   height: 36px;
   line-height: 36px;
-  font-size: 14px;
-  text-decoration: none;
+  padding: 0 16px;
   font-size: 10px;
   height: 20px;
   line-height: 20px;
@@ -5866,7 +5734,7 @@ body > .content .link .rank,
 }
 @media (prefers-color-scheme: dark) {
   .combined-search-page .search-result-subreddit .search-subscribe-button .active.add {
-    border-color: #d7dadc ;
+    border: 1px solid #d7dadc ;
   }
 }
 .combined-search-page .search-result-subreddit .search-subscribe-button .active.add:active {
@@ -5892,16 +5760,11 @@ body > .content .link .rank,
 .combined-search-page .search-result-subreddit .search-subscribe-button .active.add:hover {
   background: white ;
   color: #1b1b1c;
-  border-color: white ;
+  border-color: #1b1b1c;
 }
 @media (prefers-color-scheme: dark) {
   .combined-search-page .search-result-subreddit .search-subscribe-button .active.add:hover {
     background: white ;
-  }
-}
-@media (prefers-color-scheme: dark) {
-  .combined-search-page .search-result-subreddit .search-subscribe-button .active.add:hover {
-    border-color: white ;
   }
 }
 .combined-search-page .search-result-subreddit .search-subscribe-button .active.remove {
@@ -5910,16 +5773,15 @@ body > .content .link .rank,
   border-color: #f50 ;
   display: inline-block;
   margin: 0;
-  padding: 0 16px;
+  text-decoration: none;
+  font-size: 14px;
   text-align: center;
   border-radius: 4px;
-  border: 1px solid;
   text-transform: uppercase;
   font-weight: 700;
   height: 36px;
   line-height: 36px;
-  font-size: 14px;
-  text-decoration: none;
+  padding: 0 16px;
   font-size: 10px;
   height: 20px;
   line-height: 20px;
@@ -5942,7 +5804,7 @@ body > .content .link .rank,
 .combined-search-page .search-result-subreddit .search-subscribe-button .active.remove:active {
   background: #f50 ;
   color: #ffffff ;
-  border-color: #f50 ;
+  border: 1px solid #f50 ;
 }
 @media (prefers-color-scheme: dark) {
   .combined-search-page .search-result-subreddit .search-subscribe-button .active.remove:active {
@@ -5956,22 +5818,17 @@ body > .content .link .rank,
 }
 @media (prefers-color-scheme: dark) {
   .combined-search-page .search-result-subreddit .search-subscribe-button .active.remove:active {
-    border-color: #d7dadc ;
+    border: 1px solid #d7dadc ;
   }
 }
 .combined-search-page .search-result-subreddit .search-subscribe-button .active.remove:hover {
   background: white ;
   color: #1b1b1c;
-  border-color: white ;
+  border-color: #1b1b1c;
 }
 @media (prefers-color-scheme: dark) {
   .combined-search-page .search-result-subreddit .search-subscribe-button .active.remove:hover {
     background: white ;
-  }
-}
-@media (prefers-color-scheme: dark) {
-  .combined-search-page .search-result-subreddit .search-subscribe-button .active.remove:hover {
-    border-color: white ;
   }
 }
 .combined-search-page .search-result .search-comments {
@@ -6271,7 +6128,7 @@ ul.image-preview-list li .description pre {
   border: 1px solid #dadada ;
   padding: 0 16px;
   background-color: #f6f7f8 ;
-  color: #1b1b1c !important;
+  color: #1b1b1c ;
   border-radius: 4px;
   width: 100%;
   padding: 16px;
@@ -6306,7 +6163,7 @@ ul.image-preview-list li .description pre {
 .formtabs-content .roundfield input[type=password],
 .formtabs-content .roundfield input[type=number],
 .formtabs-content .roundfield select {
-    color: #d7dadc !important;
+    color: #d7dadc ;
   }
 }
 .formtabs-content .roundfield textarea[type=text],
@@ -6440,6 +6297,75 @@ ul.image-preview-list li .description pre {
 .formtabs-content .roundfield select:hover {
     border: 1px solid #d7dadc ;
   }
+}
+.formtabs-content #newlink-with-image-upload .image-upload-drop-target {
+  border: 1px solid #dadada !important;
+  padding: 0 16px;
+  background-color: #f6f7f8 !important;
+  color: #1b1b1c !important;
+  border-radius: 4px;
+}
+@media (prefers-color-scheme: dark) {
+  .formtabs-content #newlink-with-image-upload .image-upload-drop-target {
+    border: 1px solid #343536 !important;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .formtabs-content #newlink-with-image-upload .image-upload-drop-target {
+    background-color: #272729 !important;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .formtabs-content #newlink-with-image-upload .image-upload-drop-target {
+    color: #d7dadc !important;
+  }
+}
+.formtabs-content #newlink-with-image-upload .image-upload-drop-target[type=text] {
+  padding: 0 42px 0 16px;
+  border: 0 solid;
+  border-radius: 4px;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
+  transition: box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1), background 0.2s cubic-bezier(0.4, 0, 0.2, 1), color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.formtabs-content #newlink-with-image-upload .image-upload-drop-target[type=text]:hover {
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+}
+.formtabs-content #newlink-with-image-upload .image-upload-drop-target[type=text]:focus {
+  border-radius: 2px 2px 0 0;
+}
+.formtabs-content #newlink-with-image-upload .image-upload-drop-target[type=text]:focus:hover {
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.24) !important;
+}
+.formtabs-content #newlink-with-image-upload .image-upload-drop-target[type=text]::-webkit-input-placeholder, .formtabs-content #newlink-with-image-upload .image-upload-drop-target[type=text]:-moz-placeholder, .formtabs-content #newlink-with-image-upload .image-upload-drop-target[type=text]::-moz-placeholder, .formtabs-content #newlink-with-image-upload .image-upload-drop-target[type=text]:-ms-input-placeholder {
+  color: #d2d0d6 !important;
+  font-size: 14px;
+  text-transform: capitalize;
+  top: 1px;
+  position: relative;
+}
+@media (prefers-color-scheme: dark) {
+  .formtabs-content #newlink-with-image-upload .image-upload-drop-target[type=text]::-webkit-input-placeholder, .formtabs-content #newlink-with-image-upload .image-upload-drop-target[type=text]:-moz-placeholder, .formtabs-content #newlink-with-image-upload .image-upload-drop-target[type=text]::-moz-placeholder, .formtabs-content #newlink-with-image-upload .image-upload-drop-target[type=text]:-ms-input-placeholder {
+    color: #3a3a3c !important;
+  }
+}
+.formtabs-content #newlink-with-image-upload .image-upload-drop-target:hover {
+  background-color: #ffffff ;
+  border: 1px solid #f50 ;
+}
+@media (prefers-color-scheme: dark) {
+  .formtabs-content #newlink-with-image-upload .image-upload-drop-target:hover {
+    background-color: #1a1a1b ;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .formtabs-content #newlink-with-image-upload .image-upload-drop-target:hover {
+    border: 1px solid #d7dadc ;
+  }
+}
+.formtabs-content #newlink-with-image-upload .file-upload-button {
+  padding-right: 16px;
+  font-size: 14px;
+  line-height: 36px;
 }
 
 /* Wiki Page */
@@ -6842,19 +6768,18 @@ html.res-commentBoxes.res-commentBoxes-rounded .comment {
 .side .titlebox .md ul:nth-of-type(1) > li > p {
   background: #f50 ;
   color: #ffffff ;
-  border-color: #f50 ;
+  border: 1px solid #f50 ;
   display: inline-block;
   margin: 0;
-  padding: 0 16px;
+  text-decoration: none;
+  font-size: 14px;
   text-align: center;
   border-radius: 4px;
-  border: 1px solid;
   text-transform: uppercase;
   font-weight: 700;
   height: 36px;
   line-height: 36px;
-  font-size: 14px;
-  text-decoration: none;
+  padding: 0 16px;
   padding: 0 16px;
   width: 100%;
   font-size: 14px !important;
@@ -6871,7 +6796,7 @@ html.res-commentBoxes.res-commentBoxes-rounded .comment {
 }
 @media (prefers-color-scheme: dark) {
   .side .titlebox .md ul:nth-of-type(1) > li > p {
-    border-color: #d7dadc ;
+    border: 1px solid #d7dadc ;
   }
 }
 .side .titlebox .md ul:nth-of-type(1) > li > p:active {
@@ -6897,16 +6822,11 @@ html.res-commentBoxes.res-commentBoxes-rounded .comment {
 .side .titlebox .md ul:nth-of-type(1) > li > p:hover {
   background: white ;
   color: #1b1b1c;
-  border-color: white ;
+  border-color: #1b1b1c;
 }
 @media (prefers-color-scheme: dark) {
   .side .titlebox .md ul:nth-of-type(1) > li > p:hover {
     background: white ;
-  }
-}
-@media (prefers-color-scheme: dark) {
-  .side .titlebox .md ul:nth-of-type(1) > li > p:hover {
-    border-color: white ;
   }
 }
 .side .titlebox .md ul li:hover blockquote {
@@ -6977,19 +6897,18 @@ html.res-commentBoxes.res-commentBoxes-rounded .comment {
 .side .titlebox .md ul li blockquote p a {
   background: #f50 ;
   color: #ffffff ;
-  border-color: #f50 ;
+  border: 1px solid #f50 ;
   display: inline-block;
   margin: 0;
-  padding: 0 16px;
+  text-decoration: none;
+  font-size: 14px;
   text-align: center;
   border-radius: 4px;
-  border: 1px solid;
   text-transform: uppercase;
   font-weight: 700;
   height: 36px;
   line-height: 36px;
-  font-size: 14px;
-  text-decoration: none;
+  padding: 0 16px;
   color: #ffffff ;
   border-color: #dadada ;
   width: 100%;
@@ -7006,7 +6925,7 @@ html.res-commentBoxes.res-commentBoxes-rounded .comment {
 }
 @media (prefers-color-scheme: dark) {
   .side .titlebox .md ul li blockquote p a {
-    border-color: #d7dadc ;
+    border: 1px solid #d7dadc ;
   }
 }
 .side .titlebox .md ul li blockquote p a:active {
@@ -7032,16 +6951,11 @@ html.res-commentBoxes.res-commentBoxes-rounded .comment {
 .side .titlebox .md ul li blockquote p a:hover {
   background: white ;
   color: #1b1b1c;
-  border-color: white ;
+  border-color: #1b1b1c;
 }
 @media (prefers-color-scheme: dark) {
   .side .titlebox .md ul li blockquote p a:hover {
     background: white ;
-  }
-}
-@media (prefers-color-scheme: dark) {
-  .side .titlebox .md ul li blockquote p a:hover {
-    border-color: white ;
   }
 }
 @media (prefers-color-scheme: dark) {
