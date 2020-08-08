@@ -2,40 +2,21 @@
 
 /* Comments Page */
 
+// TODO: make padding same as res. res fucks it all up
+
 .entry {
   margin-bottom: v.$padding;
 }
 
-.commentarea form.usertext.cloneable.warn-on-unload,
-.thing {
+.commentarea form.usertext.cloneable.warn-on-unload {
   margin: 0 0 16px;
   padding: v.$padding 0;
 }
+.content .commentarea > .sitetable > .comment,
 .child .thing {
-  margin: 0;
-  padding: 0;
+  margin: 0 0 8px 10px;
+  padding: 5px 8px 5px 5px;
 }
-
-// .comments-page .link .usertext .md {
-//   margin-bottom: 0;
-
-//   .commentarea {
-//     display: -ms-flexbox;
-//     display: flex;
-//     -ms-flex-direction: column;
-//     flex-direction: column;
-// .panestack-title {
-//   margin: 0;
-//   border-bottom: 0;
-//   padding-left: v.$padding;
-//   margin-top: 16px;
-
-//       .title {
-//         @include v.theme("color", v.$titleText);
-//       }
-//     }
-//   }
-// }
 
 .panestack-title {
   margin: 0;
@@ -43,53 +24,6 @@
   padding-left: v.$padding;
   margin-top: 16px;
 }
-
-// .comments-page .link,
-// .commentarea > .sitetable > .comment,
-// #bottom-comments:not(.child) > .sitetable > .comment {
-//   margin-bottom: 0;
-//   padding-bottom: 0;
-// }
-
-// .comment-permalink-page .commentarea .menuarea {
-//   margin: 20px 0;
-// }
-
-// .commentarea .menuarea {
-//   span.dropdown-title.lightdrop {
-//     @include v.theme("color", v.$secondary-text);
-
-//     &:first-letter {
-//       text-transform: capitalize;
-//     }
-//   }
-
-//   .dropdown.lightdrop .selected {
-//     font-weight: 400;
-//   }
-
-//   .toggle a {
-//     @include v.theme("color", v.$secondary-text);
-//     font-weight: 400;
-//   }
-// }
-
-// .help-hoverable {
-//   @include v.theme("color", v.$secondary-text);
-//   font-weight: 400;
-// }
-
-// .commentarea .menuarea .toggle a:hover {
-//   @include v.theme("color", v.$active);
-// }
-
-// .help-hoverable {
-//   &:hover {
-//     @include v.theme("color", v.$active);
-//   }
-
-//   font-size: x-small;
-// }
 
 .commentarea > .usertext {
   overflow: visible;

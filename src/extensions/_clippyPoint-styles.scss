@@ -4,6 +4,7 @@ $_css-class: "points";
 $_desc: "ClippyPoints Awarded:  ";
 $_margin: 85px;
 $_offset: 25px;
+$_left-pad: 5px;
 /*Clippy Point Flair styling - Comments*/
 
 .commentarea {
@@ -20,7 +21,7 @@ $_offset: 25px;
       position: absolute;
       width: 50px;
       height: 50px;
-      left: ($_offset + v.$padding);
+      left: ($_offset + $_left-pad);
       border-radius: v.$radius;
       @include v.theme("color", v.$primary);
       text-shadow: 0px 1px 0px #333333;
@@ -29,8 +30,7 @@ $_offset: 25px;
       text-align: center;
       line-height: 50px;
       z-index: 1;
-
-      &:hover:after {
+      &:after {
         content: $_desc attr(title);
         position: absolute;
         left: -1px;
@@ -44,21 +44,19 @@ $_offset: 25px;
         @include v.theme("color", v.$lightText);
         border-radius: v.$radius;
         box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
-        transition: all 0.25s ease;
         white-space: nowrap;
         text-shadow: none;
         letter-spacing: 0px;
+        visibility: hidden;
+        overflow: hidden;
+      }
+      &:hover:after {
+        visibility: visible;
+        @include v.animation-grow-width(220px);
       }
     }
   }
 
-  .child {
-    .flair- {
-      &#{$_css-class} {
-        left: $_offset;
-      }
-    }
-  }
   form.usertext.cloneable.warn-on-unload {
     margin-left: $_margin - 24px;
   }

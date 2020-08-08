@@ -39,6 +39,8 @@ $side-start-vert: $container-margin-vert + $header-height;
 
 $search-height: 42px;
 
+$transition: 0.5s;
+
 $_images: (
   "clippyflair": "clippyflair",
   "commentboxbg": "commentboxbg",

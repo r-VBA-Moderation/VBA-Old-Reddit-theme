@@ -1,4 +1,68 @@
 @charset "UTF-8";
+@keyframes animation-slide-out-up {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0, -100%);
+  }
+}
+@keyframes animation-slide-out-down {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0, 100%);
+  }
+}
+@keyframes animation-slide-out-left {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-100%, 0);
+  }
+}
+@keyframes animation-slide-out-right {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(100%, 0);
+  }
+}
+@keyframes animation-slide-in-up {
+  0% {
+    transform: translate(0, 100%);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@keyframes animation-slide-in-down {
+  0% {
+    transform: translate(0, -100%);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@keyframes animation-slide-in-left {
+  0% {
+    transform: translate(-100%, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@keyframes animation-slide-in-right {
+  0% {
+    transform: translate(100%, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
 /**
  * Set up a decent box model on the root element
  */
@@ -3397,19 +3461,6 @@ html div.RES-keyNav-activeElement {
     border-left: 3px solid #343536 ;
   }
 }
-html .res .commentarea .thing {
-  padding: 14px 16px 8px 8px !important;
-}
-html .res .commentarea .thing.collapsed {
-  padding-bottom: 16px !important;
-}
-html .res .commentarea .entry .flat-list {
-  margin-bottom: 0;
-  padding-bottom: 0;
-}
-html .res .comment .entry {
-  margin-bottom: 16px;
-}
 html .userTagLink.hasTag,
 html #userTaggerPreview {
   font-size: 11px !important;
@@ -4743,15 +4794,15 @@ select:disabled:hover, select[aria-disabled=true]:hover {
   margin-bottom: 16px;
 }
 
-.commentarea form.usertext.cloneable.warn-on-unload,
-.thing {
+.commentarea form.usertext.cloneable.warn-on-unload {
   margin: 0 0 16px;
   padding: 16px 0;
 }
 
+.content .commentarea > .sitetable > .comment,
 .child .thing {
-  margin: 0;
-  padding: 0;
+  margin: 0 0 8px 10px;
+  padding: 5px 8px 5px 5px;
 }
 
 .panestack-title {
@@ -6207,7 +6258,7 @@ ul.image-preview-list li .description pre {
   position: absolute;
   width: 50px;
   height: 50px;
-  left: 41px;
+  left: 30px;
   border-radius: 4px;
   color: #f50 ;
   text-shadow: 0px 1px 0px #333333;
@@ -6223,8 +6274,8 @@ ul.image-preview-list li .description pre {
     color: #f50 ;
   }
 }
-.commentarea .flair-points:hover:after,
-.commentarea .side .tagline .flair-points:hover:after {
+.commentarea .flair-points:after,
+.commentarea .side .tagline .flair-points:after {
   content: "ClippyPoints Awarded:  " attr(title);
   position: absolute;
   left: -1px;
@@ -6238,25 +6289,50 @@ ul.image-preview-list li .description pre {
   color: #ffffff ;
   border-radius: 4px;
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
-  transition: all 0.25s ease;
   white-space: nowrap;
   text-shadow: none;
   letter-spacing: 0px;
+  visibility: hidden;
+  overflow: hidden;
 }
 @media (prefers-color-scheme: dark) {
-  .commentarea .flair-points:hover:after,
-.commentarea .side .tagline .flair-points:hover:after {
+  .commentarea .flair-points:after,
+.commentarea .side .tagline .flair-points:after {
     background-color: #f50 ;
   }
 }
 @media (prefers-color-scheme: dark) {
-  .commentarea .flair-points:hover:after,
-.commentarea .side .tagline .flair-points:hover:after {
+  .commentarea .flair-points:after,
+.commentarea .side .tagline .flair-points:after {
     color: #ffffff ;
   }
 }
-.commentarea .child .flair-points {
-  left: 25px;
+.commentarea .flair-points:hover:after,
+.commentarea .side .tagline .flair-points:hover:after {
+  visibility: visible;
+  -webkit-animation-delay: 0;
+  -webkit-animation-duration: 0.5s;
+  -webkit-animation-name: animation-grow-width;
+  -webkit-animation-fill-mode: fowards;
+  -webkit-animation-direction: ease;
+  -moz-animation-delay: 0;
+  -moz-animation-duration: 0.5s;
+  -moz-animation-name: animation-grow-width;
+  -moz-animation-fill-mode: fowards;
+  -moz-animation-direction: ease;
+  animation-delay: 0;
+  animation-duration: 0.5s;
+  animation-name: animation-grow-width;
+  animation-fill-mode: fowards;
+  animation-direction: ease;
+}
+@keyframes animation-grow-width {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 220px;
+  }
 }
 .commentarea form.usertext.cloneable.warn-on-unload {
   margin-left: 61px;

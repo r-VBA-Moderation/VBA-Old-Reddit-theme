@@ -130,26 +130,26 @@ html {
     // }
   }
 
-  .res {
-    .commentarea {
-      .thing {
-        padding: 14px v.$padding 8px 8px !important;
+  // .res {
+  //   .commentarea {
+  //     .thing {
+  //       padding: 14px v.$padding 8px 8px !important;
 
-        &.collapsed {
-          padding-bottom: v.$padding !important;
-        }
-      }
+  //       &.collapsed {
+  //         padding-bottom: v.$padding !important;
+  //       }
+  //     }
 
-      .entry .flat-list {
-        margin-bottom: 0;
-        padding-bottom: 0;
-      }
-    }
+  //     .entry .flat-list {
+  //       margin-bottom: 0;
+  //       padding-bottom: 0;
+  //     }
+  //   }
 
-    .comment .entry {
-      margin-bottom: 16px;
-    }
-  }
+  //   .comment .entry {
+  //     margin-bottom: 16px;
+  //   }
+  // }
 
   /* RES Tag Dialog + RES Tag */
 
