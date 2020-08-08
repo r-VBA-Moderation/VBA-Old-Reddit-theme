@@ -177,7 +177,7 @@ $_breakpoints: (
 
 @mixin input($forceDark: false, $important: false) {
   @include theme("border", v.$line, $forceDark, true, "1px solid", $important);
-  padding: 0 v.$padding;
+  padding: 8px v.$padding;
   @include theme(
     "background-color",
     v.$field,
@@ -188,40 +188,20 @@ $_breakpoints: (
   );
   @include theme("color", v.$bodyText, $forceDark, false, "", $important);
   border-radius: v.$radius;
-  &[type="text"],
-  &[type="url"],
-  &[type="password"],
-  &[type="number"] {
-    padding: 0 42px 0 v.$padding;
-    border-radius: v.$radius;
-    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
-    transition: box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1),
-      background 0.2s cubic-bezier(0.4, 0, 0.2, 1),
-      color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
+  transition: box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1),
+    background 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+    color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 
-    &:hover {
-      box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14),
-        0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
-    }
-
-    &:focus {
-      border-radius: 2px 2px 0 0;
-
-      &:hover {
-        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.24) !important;
-      }
-    }
-
-    &::-webkit-input-placeholder,
-    &:-moz-placeholder,
-    &::-moz-placeholder,
-    &:-ms-input-placeholder {
-      @include theme("color", v.$placeholder, $forceDark, false, "!important");
-      font-size: 14px;
-      text-transform: capitalize;
-      top: 1px;
-      position: relative;
-    }
+  &::-webkit-input-placeholder,
+  &:-moz-placeholder,
+  &::-moz-placeholder,
+  &:-ms-input-placeholder {
+    @include theme("color", v.$placeholder, $forceDark, false, "!important");
+    font-size: 14px;
+    text-transform: capitalize;
+    top: 1px;
+    position: relative;
   }
   &:hover {
     @include theme("background-color", v.$body, $forceDark);
@@ -269,9 +249,9 @@ $_breakpoints: (
     margin: 0;
     text-decoration: none;
   } @else {
-    margin: v.$padding 0;
+    margin: v.$padding v.$padding v.$padding 0;
     &:active {
-      margin: v.$padding 0;
+      margin: v.$padding v.$padding v.$padding 0;
     }
   }
   font-size: 14px;

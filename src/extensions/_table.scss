@@ -1,6 +1,7 @@
 @use '../abstracts/mixins' as v;
 
 table {
+  margin: v.$padding 0;
   thead {
     background-color: v.getColor("table", "header-background");
     color: v.getColor("table", "header-background");
@@ -8,7 +9,7 @@ table {
       th {
         border: 1px solid v.getColor("table", "header-background") !important;
         label {
-          color: #000;
+          color: #fff;
         }
       }
     }

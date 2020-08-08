@@ -2,89 +2,106 @@
 
 /* Comments Page */
 
-.commentarea {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: column;
-  flex-direction: column;
+.entry {
+  margin-bottom: v.$padding;
 }
 
-.comments-page .link .usertext .md {
-  margin-bottom: 0;
+.commentarea form.usertext.cloneable.warn-on-unload,
+.thing {
+  margin: 0 0 16px;
+  padding: v.$padding 0;
+}
+.child .thing {
+  margin: 0;
+  padding: 0;
 }
 
-.commentarea {
-  .panestack-title {
-    margin: 0;
-    border-bottom: 0;
-    padding-left: v.$padding;
-    margin-top: 16px;
+// .comments-page .link .usertext .md {
+//   margin-bottom: 0;
 
-    .title {
-      @include v.theme("color", v.$titleText);
-    }
-  }
+//   .commentarea {
+//     display: -ms-flexbox;
+//     display: flex;
+//     -ms-flex-direction: column;
+//     flex-direction: column;
+// .panestack-title {
+//   margin: 0;
+//   border-bottom: 0;
+//   padding-left: v.$padding;
+//   margin-top: 16px;
 
-  .menuarea {
-    margin: 0 0 20px;
-    padding-left: v.$padding;
-  }
+//       .title {
+//         @include v.theme("color", v.$titleText);
+//       }
+//     }
+//   }
+// }
+
+.panestack-title {
+  margin: 0;
+  border-bottom: 0;
+  padding-left: v.$padding;
+  margin-top: 16px;
 }
 
-.comment-permalink-page .commentarea .menuarea {
-  margin: 20px 0;
-}
+// .comments-page .link,
+// .commentarea > .sitetable > .comment,
+// #bottom-comments:not(.child) > .sitetable > .comment {
+//   margin-bottom: 0;
+//   padding-bottom: 0;
+// }
 
-.commentarea .menuarea {
-  span.dropdown-title.lightdrop {
-    @include v.theme("color", v.$secondary-text);
+// .comment-permalink-page .commentarea .menuarea {
+//   margin: 20px 0;
+// }
 
-    &:first-letter {
-      text-transform: capitalize;
-    }
-  }
+// .commentarea .menuarea {
+//   span.dropdown-title.lightdrop {
+//     @include v.theme("color", v.$secondary-text);
 
-  .dropdown.lightdrop .selected {
-    font-weight: 400;
-  }
+//     &:first-letter {
+//       text-transform: capitalize;
+//     }
+//   }
 
-  .toggle a {
-    @include v.theme("color", v.$secondary-text);
-    font-weight: 400;
-  }
-}
+//   .dropdown.lightdrop .selected {
+//     font-weight: 400;
+//   }
 
-.help-hoverable {
-  @include v.theme("color", v.$secondary-text);
-  font-weight: 400;
-}
+//   .toggle a {
+//     @include v.theme("color", v.$secondary-text);
+//     font-weight: 400;
+//   }
+// }
 
-.commentarea .menuarea .toggle a:hover {
-  @include v.theme("color", v.$active);
-}
+// .help-hoverable {
+//   @include v.theme("color", v.$secondary-text);
+//   font-weight: 400;
+// }
 
-.help-hoverable {
-  &:hover {
-    @include v.theme("color", v.$active);
-  }
+// .commentarea .menuarea .toggle a:hover {
+//   @include v.theme("color", v.$active);
+// }
 
-  font-size: x-small;
-}
+// .help-hoverable {
+//   &:hover {
+//     @include v.theme("color", v.$active);
+//   }
+
+//   font-size: x-small;
+// }
 
 .commentarea > .usertext {
-  @include v.theme("background", v.$body);
-  margin: 0;
-  padding: v.$padding;
   overflow: visible;
   -ms-flex-order: -1;
   order: -1;
 }
 
 .usertext button {
-  margin: 0 16px 0 0;
+  margin: v.$padding v.$padding v.$padding 0;
 }
 
-.commentarea {
+.comments-page {
   .usertext-edit {
     width: 100%;
     max-width: 504px;
@@ -96,8 +113,10 @@
     }
   }
 
-  > .usertext textarea:not(:focus) {
-    background: v.getImage("commentboxbg") no-repeat 50% 50%;
+  .usertext textarea:not(:focus) {
+    background-image: v.getImage("commentboxbg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
   }
 }
 
@@ -121,11 +140,6 @@
   border: none;
   @include v.theme("color", v.$bodyText);
   max-width: initial;
-
-  // select {
-  //   margin: 8px 0 8px 6px;
-  //   @include v.theme("background", v.$canvas);
-  // }
 }
 
 .reddit-infobar.gold-accent {
@@ -150,33 +164,6 @@
 
 .user-gilded > .entry .gilded-icon:before {
   width: 16px;
-}
-
-/* Comments */
-
-.commentarea {
-  .sitetable {
-    margin: 0;
-    box-shadow: none;
-  }
-
-  .thing {
-    margin: 0 0 16px;
-    padding: 8px v.$padding 8px 0;
-  }
-
-  .child .thing {
-    box-shadow: none;
-    padding: 8px 8px 8px 2px;
-    margin: 8px 0 0;
-  }
-
-  .comment .midcol {
-    margin-top: 2px;
-    width: 32px;
-    margin-right: 6px;
-    overflow: visible;
-  }
 }
 
 /* Comment Stack Behind Parent */

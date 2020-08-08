@@ -1,11 +1,15 @@
+@use '../abstracts/mixins' as v;
+
 /* Cookies Bar */
 
 #eu-cookie-policy {
   .reddit-infobar {
     padding-right: 118px;
   }
-
+  .md {
+    margin-right: v.$padding;
+  }
   .c-btn-primary {
-    margin: -2px 16px 0 0;
+    margin: 0 v.$padding 0 0;
   }
 }

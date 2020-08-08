@@ -8,7 +8,6 @@
   z-index: 1;
 
   input {
-    @include v.input();
     &[type="text"] {
       width: v.$sidebar-width;
       height: v.$search-height;

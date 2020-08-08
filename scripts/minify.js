@@ -19,7 +19,7 @@ fs.readFile(style, function (err, data) {
         mergeIntoShorthands: true, // controls merging properties into shorthands; defaults to true
         mergeMedia: true, // controls `@media` merging; defaults to true
         mergeNonAdjacentRules: true, // controls non-adjacent rule merging; defaults to true
-        mergeSemantically: true, // controls semantic merging; defaults to false
+        mergeSemantically: true, // controls semantic merging; defaults to false -reduces
         overrideProperties: true, // controls property overriding based on understandability; defaults to true
         removeEmpty: true, // controls removing empty rules and nested blocks; defaults to `true`
         reduceNonAdjacentRules: true, // controls non-adjacent rule reducing; defaults to true

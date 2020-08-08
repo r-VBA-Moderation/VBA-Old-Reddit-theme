@@ -114,22 +114,20 @@ html {
 
   div {
     &.RES-keyNav-activeElement {
-      background-color: transparent !important;
-      padding-left: 8px !important;
+      // background-color: transparent !important;
       @include v.theme("border-left", v.$separator, false, true, "3px solid");
     }
 
-    &.commentarea div.RES-keyNav-activeElement {
-      &.entry div.noncollapsed {
-        background-color: transparent !important;
-        padding-left: 8px !important;
-        @include v.theme("border-left", v.$separator, false, true, "3px solid");
-      }
+    // &.commentarea div.RES-keyNav-activeElement {
+    //   &.entry div.noncollapsed {
+    //     // background-color: transparent !important;
+    //     @include v.theme("border-left", v.$separator, false, true, "3px solid");
+    //   }
 
-      .md {
-        background-color: transparent !important;
-      }
-    }
+    //   .md {
+    //     background-color: transparent !important;
+    //   }
+    // }
   }
 
   .res {
