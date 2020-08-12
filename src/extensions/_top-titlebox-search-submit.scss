@@ -13,8 +13,8 @@ body {
       .subscribers {
         top: v.$titlebox-top + 16px + 16px + v.$subscription-propt-height;
       }
-      .users-online {
-      }
+      // .users-online {
+      // }
       .fancy-toggle-button {
         top: v.$titlebox-top + v.$subscription-propt-height;
       }
@@ -63,7 +63,7 @@ body {
   }
 }
 
-/* Search */
+// Search
 
 #search {
   position: absolute;

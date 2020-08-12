@@ -3,7 +3,7 @@ const fs = require('fs');
 
 const style = 'stylesheet.css';
 const outputPath = 'min.stylesheet.css';
-/* compile scss files */
+// compile scss files
 // you need to set 'filename' to a string of the path to your main scss file
 
 fs.readFile(style, function (err, data) {

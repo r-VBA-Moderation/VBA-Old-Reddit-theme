@@ -5,7 +5,7 @@ $_desc: "ClippyPoints Awarded:  ";
 $_margin: 85px;
 $_offset: 25px;
 $_left-pad: 5px;
-/*Clippy Point Flair styling - Comments*/
+//Clippy Point Flair styling - Comments
 
 .commentarea {
   .entry {
@@ -52,7 +52,7 @@ $_left-pad: 5px;
       }
       &:hover:after {
         visibility: visible;
-        @include v.animation-grow-width(220px);
+        @include v.animation-grow(width, 0, 220px);
       }
     }
   }
@@ -68,9 +68,9 @@ html.res-commentBoxes.res-commentBoxes-rounded .comment {
   position: relative;
 }
 
-/*End Clippy Point Flair styling - Comments*/
+//End Clippy Point Flair styling - Comments
 
-/* Clippy Point Flair styling - Link Flair*/
+// Clippy Point Flair styling - Link Flair
 
 .sidecontentbox .flair-,
 .linkflair .res-nightmode .flair-,
@@ -96,4 +96,4 @@ html.res-commentBoxes.res-commentBoxes-rounded .comment {
   }
 }
 
-/* End Clippy Point Flair styling - Link Flair*/
+// End Clippy Point Flair styling - Link Flair

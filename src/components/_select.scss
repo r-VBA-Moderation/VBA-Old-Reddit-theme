@@ -18,7 +18,7 @@ select {
   &:focus {
     @include v.theme("border-color", v.$active);
     @include v.theme("box-shadow", v.$active, false, true, "0 0 1px 1px");
-    /* It'd be nice to use -webkit-focus-ring-color here but it doesn't work on box-shadow */
+    // It'd be nice to use -webkit-focus-ring-color here but it doesn't work on box-shadow
     outline: none;
   }
   option {

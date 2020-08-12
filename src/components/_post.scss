@@ -1,6 +1,6 @@
 @use '../abstracts/mixins' as v;
 
-/* Inner Post Area */
+// Inner Post Area
 
 .link {
   .entry {
@@ -17,13 +17,13 @@
   }
 }
 
-/* Submission Title */
+// Submission Title
 
 body .content .sitetable .link .title a:hover {
   @include v.theme("color", v.$active);
 }
 
-/* Unvisited*/
+// Unvisited
 
 .thing .title {
   &.loggedin.click,
@@ -35,7 +35,7 @@ body .content .sitetable .link .title a:hover {
   @include v.theme("color", v.$posttitletextcolor);
 }
 
-/* Visited  */
+// Visited
 
 .content .thing {
   .title:visited,
@@ -44,7 +44,7 @@ body .content .sitetable .link .title a:hover {
   }
 }
 
-/* Clicking */
+// Clicking
 
 .thing .title {
   &.loggedin.click:visited,
@@ -53,7 +53,7 @@ body .content .sitetable .link .title a:hover {
   }
 }
 
-/* Domain */
+// Domain
 
 .link .domain {
   visibility: hidden;

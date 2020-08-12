@@ -1,68 +1,4 @@
 @charset "UTF-8";
-@keyframes animation-slide-out-up {
-  0% {
-    transform: translate(0, 0);
-  }
-  100% {
-    transform: translate(0, -100%);
-  }
-}
-@keyframes animation-slide-out-down {
-  0% {
-    transform: translate(0, 0);
-  }
-  100% {
-    transform: translate(0, 100%);
-  }
-}
-@keyframes animation-slide-out-left {
-  0% {
-    transform: translate(0, 0);
-  }
-  100% {
-    transform: translate(-100%, 0);
-  }
-}
-@keyframes animation-slide-out-right {
-  0% {
-    transform: translate(0, 0);
-  }
-  100% {
-    transform: translate(100%, 0);
-  }
-}
-@keyframes animation-slide-in-up {
-  0% {
-    transform: translate(0, 100%);
-  }
-  100% {
-    transform: translate(0, 0);
-  }
-}
-@keyframes animation-slide-in-down {
-  0% {
-    transform: translate(0, -100%);
-  }
-  100% {
-    transform: translate(0, 0);
-  }
-}
-@keyframes animation-slide-in-left {
-  0% {
-    transform: translate(-100%, 0);
-  }
-  100% {
-    transform: translate(0, 0);
-  }
-}
-@keyframes animation-slide-in-right {
-  0% {
-    transform: translate(100%, 0);
-  }
-  100% {
-    transform: translate(0, 0);
-  }
-}
 /**
  * Set up a decent box model on the root element
  */
@@ -143,7 +79,7 @@ a {
   margin-top: 60px;
   height: 180px;
   border-top: 50px solid #ffffff ;
-  background: url("../images/footer.png") 50% 0/cover no-repeat;
+  background: url(%%footer%%) 50% 0/cover no-repeat;
   padding: 65px 200px 40px;
 }
 @media (prefers-color-scheme: dark) {
@@ -303,7 +239,7 @@ a {
 #modmail {
   width: 16px;
   height: 14px;
-  background-image: url("../images/spritesheet.png") !important;
+  background-image: url(%%spritesheet%%) !important;
   background-repeat: no-repeat !important;
   background-color: transparent;
   transition: all 0.25s ease;
@@ -333,7 +269,7 @@ a {
   padding: 16px 24px;
   bottom: 24px;
   z-index: 100;
-  background: #ea4848 url("../images/spritesheet.png") 269px -120px no-repeat;
+  background: #ea4848 url(%%spritesheet%%) 269px -120px no-repeat;
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.24);
   color: #ffffff ;
   width: 300px;
@@ -361,7 +297,6 @@ a {
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.76);
 }
 
-/* Fix comments page sorting options being on top of the havemail element */
 .commentarea .panestack-title,
 .commentarea .menuarea {
   z-index: 0;
@@ -383,173 +318,46 @@ a {
   transform: scale(0.85);
 }
 
-/* New Mail Toast Animation */
 #mail.havemail:before {
-  animation-name: toast;
+  animation-name: uf1n90j;
   animation-duration: 8s;
   animation-iteration-count: 1;
   animation-timing-function: ease;
-  -webkit-animation-name: toast;
-  -webkit-animation-duration: 8s;
-  -webkit-animation-iteration-count: 1;
-  -webkit-animation-timing-function: ease;
+}
+@keyframes uf1n90j {
+  0% {
+    transform: translateY(76px);
+    opacity: 0;
+  }
+  20% {
+    transform: translateY(76px);
+    opacity: 0;
+  }
+  25% {
+    transform: translateY(-8px);
+    opacity: 1;
+  }
+  27% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  92% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  97% {
+    transform: translateY(16px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(76px);
+    opacity: 0;
+  }
 }
 #mail.havemail:hover:before {
-  -webkit-animation-play-state: paused;
-  -moz-animation-play-state: paused;
-  -o-animation-play-state: paused;
   animation-play-state: paused;
 }
 
-@-webkit-keyframes toast {
-  0% {
-    transform: translateY(76px);
-    -webkit-transform: translateY(76px);
-    opacity: 0;
-  }
-  20% {
-    transform: translateY(76px);
-    -webkit-transform: translateY(76px);
-    opacity: 0;
-  }
-  25% {
-    transform: translateY(-8px);
-    -webkit-transform: translateY(-8px);
-    opacity: 1;
-  }
-  27% {
-    transform: translateY(0px);
-    -webkit-transform: translateY(0px);
-    opacity: 1;
-  }
-  92% {
-    transform: translateY(0px);
-    -webkit-transform: translateY(0px);
-    opacity: 1;
-  }
-  97% {
-    transform: translateY(16px);
-    -webkit-transform: translateY(16px);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(76px);
-    -webkit-transform: translateY(76px);
-    opacity: 0;
-  }
-}
-@-o-keyframes toast {
-  0% {
-    transform: translateY(76px);
-    -webkit-transform: translateY(76px);
-    opacity: 0;
-  }
-  20% {
-    transform: translateY(76px);
-    -webkit-transform: translateY(76px);
-    opacity: 0;
-  }
-  25% {
-    transform: translateY(-8px);
-    -webkit-transform: translateY(-8px);
-    opacity: 1;
-  }
-  27% {
-    transform: translateY(0px);
-    -webkit-transform: translateY(0px);
-    opacity: 1;
-  }
-  92% {
-    transform: translateY(0px);
-    -webkit-transform: translateY(0px);
-    opacity: 1;
-  }
-  97% {
-    transform: translateY(16px);
-    -webkit-transform: translateY(16px);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(76px);
-    -webkit-transform: translateY(76px);
-    opacity: 0;
-  }
-}
-@-moz-keyframes toast {
-  0% {
-    transform: translateY(76px);
-    -webkit-transform: translateY(76px);
-    opacity: 0;
-  }
-  20% {
-    transform: translateY(76px);
-    -webkit-transform: translateY(76px);
-    opacity: 0;
-  }
-  25% {
-    transform: translateY(-8px);
-    -webkit-transform: translateY(-8px);
-    opacity: 1;
-  }
-  27% {
-    transform: translateY(0px);
-    -webkit-transform: translateY(0px);
-    opacity: 1;
-  }
-  92% {
-    transform: translateY(0px);
-    -webkit-transform: translateY(0px);
-    opacity: 1;
-  }
-  97% {
-    transform: translateY(16px);
-    -webkit-transform: translateY(16px);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(76px);
-    -webkit-transform: translateY(76px);
-    opacity: 0;
-  }
-}
-@keyframes toast {
-  0% {
-    transform: translateY(76px);
-    -webkit-transform: translateY(76px);
-    opacity: 0;
-  }
-  20% {
-    transform: translateY(76px);
-    -webkit-transform: translateY(76px);
-    opacity: 0;
-  }
-  25% {
-    transform: translateY(-8px);
-    -webkit-transform: translateY(-8px);
-    opacity: 1;
-  }
-  27% {
-    transform: translateY(0px);
-    -webkit-transform: translateY(0px);
-    opacity: 1;
-  }
-  92% {
-    transform: translateY(0px);
-    -webkit-transform: translateY(0px);
-    opacity: 1;
-  }
-  97% {
-    transform: translateY(16px);
-    -webkit-transform: translateY(16px);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(76px);
-    -webkit-transform: translateY(76px);
-    opacity: 0;
-  }
-}
-/* Reddit Name */
 #header .pagename {
   font-size: 0;
 }
@@ -572,10 +380,9 @@ a {
   }
 }
 
-/* Preferences & Logout Icons */
 #header-bottom-right a.pref-lang {
   background-position: -32px 0;
-  background-image: url("../images/spritesheet.png");
+  background-image: url(%%spritesheet%%);
   width: 16px;
   height: 14px;
   display: inline-block;
@@ -588,7 +395,7 @@ a {
 
 .loggedin .logout a {
   background-position: -32px 0;
-  background-image: url("../images/spritesheet.png");
+  background-image: url(%%spritesheet%%);
   width: 16px;
   height: 14px;
   display: inline-block;
@@ -600,13 +407,12 @@ a {
   background-position: -48px 0;
 }
 
-/* Snoo */
 #header-img {
   z-index: 99;
   width: 0;
   padding-left: 42px;
   height: 42px;
-  background: url("../images/spritesheet.png") -80px 0;
+  background: url(%%spritesheet%%) -80px 0;
   margin: 0 8px 0 0;
   vertical-align: top;
   font-size: 0;
@@ -616,7 +422,7 @@ a {
   width: 0;
   padding-left: 42px;
   height: 42px;
-  background: url("../images/spritesheet.png") -80px 0;
+  background: url(%%spritesheet%%) -80px 0;
   margin: 0 8px 0 0;
   vertical-align: top;
   font-size: 0;
@@ -628,7 +434,6 @@ a {
   background-position: -122px 0;
 }
 
-/* Subreddits Bar */
 #sr-header-area {
   background: #ffffff ;
   border: none;
@@ -727,7 +532,6 @@ a.random.choice {
   color: transparent !important;
 }
 
-/* Subreddits Dropdown */
 #sr-header-area .dropdown.srdrop .selected {
   margin: 0 12px 0 8px;
   padding: 0;
@@ -782,7 +586,6 @@ a.random.choice {
   }
 }
 
-/* Tabmenu - Hot / New / Top */
 #header-bottom-left {
   position: absolute;
   top: 40px;
@@ -855,7 +658,6 @@ a.random.choice {
   display: none !important;
 }
 
-/* User Bar */
 #header-bottom-right {
   position: absolute;
   top: 0;
@@ -883,7 +685,7 @@ body:not(.loggedin) #header-bottom-right {
   margin-left: -16px;
   width: 16px;
   height: 16px;
-  background: url("../images/spritesheet.png") -48px -32px no-repeat;
+  background: url(%%spritesheet%%) -48px -32px no-repeat;
 }
 
 .user a {
@@ -916,22 +718,19 @@ body:not(.loggedin) #header-bottom-right {
   }
 }
 
-/* Header */
 #header {
   margin: 0;
   height: 136px;
   border: none;
-  background: url("../images/headerimg.png") 50% 50%/cover no-repeat;
+  background: url(%%headerimg%%) 50% 50%/cover no-repeat;
   z-index: 1;
   box-shadow: 0 2px 1.5px 0 rgba(0, 0, 0, 0.12), 0 0 4px 0 rgba(0, 0, 0, 0.12);
 }
 
-/* Account Activity */
 .account-activity-box a {
   text-transform: uppercase;
 }
 
-/* Edit Flair */
 .side .titlebox .tagline a.flairselectbtn,
 .leavemoderator a {
   background: #ffffff ;
@@ -966,7 +765,6 @@ body:not(.loggedin) #header-bottom-right {
   font-size: 0;
 }
 
-/* Login Form */
 .login-form-side {
   border: none;
   border-bottom: 1px solid #ccc ;
@@ -997,7 +795,6 @@ body:not(.loggedin) #header-bottom-right {
   margin-right: -3px;
 }
 
-/* Mod Box */
 .side #moderation_tools .title h1 {
   text-transform: capitalize;
   color: #434450 ;
@@ -1033,7 +830,6 @@ body:not(.loggedin) #header-bottom-right {
   background: none;
 }
 
-/* Recently Viewed Links */
 .gadget .midcol {
   width: 38px;
 }
@@ -1154,10 +950,6 @@ body:not(.loggedin) #header-bottom-right {
   display: none;
 }
 
-/* Submit Button */
-/* Subscribe Button */
-/* Subscribe */
-/* Unsubscribe */
 .hover-bubble.multi-selector {
   right: 346px;
   margin-top: -56px;
@@ -1286,7 +1078,7 @@ body:not(.loggedin) #header-bottom-right {
   height: 9px;
   display: inline-block;
   margin-right: 8px;
-  background: url("../images/spritesheet.png") -64px -36px;
+  background: url(%%spritesheet%%) -64px -36px;
 }
 .titlebox .users-online .number:after {
   content: " users currently online";
@@ -1612,13 +1404,13 @@ body:not(.loggedin) #header-bottom-right {
   height: 32px;
   width: 32px;
   margin-left: -38px;
-  background: url("../images/spritesheet.png") -64px -97px no-repeat;
+  background: url(%%spritesheet%%) -64px -97px no-repeat;
   border: none !important;
   border-radius: 16px;
   transition: background 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 #search input[type=submit]:hover {
-  background: rgba(158, 158, 158, 0.2) url("../images/spritesheet.png") -64px -97px no-repeat;
+  background: rgba(158, 158, 158, 0.2) url(%%spritesheet%%) -64px -97px no-repeat;
 }
 
 #searchexpando {
@@ -1647,7 +1439,6 @@ body:not(.loggedin) #header-bottom-right {
   display: none !important;
 }
 
-/* Sidebar */
 body .side {
   margin: 20px 24px 108px 0;
   padding: 0;
@@ -1670,7 +1461,6 @@ body:not(.subscriber) .side {
   margin-top: 50px;
 }
 
-/* Sidebar */
 .comments-page .side,
 .other-discussions-page .side {
   margin-top: 138px;
@@ -1756,7 +1546,6 @@ body:not(.subscriber) .side {
   }
 }
 
-/* Body Content - Frontpage */
 body div.content {
   background-color: #ffffff ;
   color: #1b1b1c ;
@@ -1794,7 +1583,6 @@ body:not(.subscriber) .content {
   margin-top: 50px;
 }
 
-/* Ads */
 #ad-frame,
 #ad_main,
 #ad_main_top {
@@ -1811,7 +1599,6 @@ body:not(.subscriber) .content {
   margin: 10px;
 }
 
-/* Promoted */
 .content .spacer {
   margin: 0;
 }
@@ -1907,7 +1694,6 @@ body:not(.subscriber) .content {
   }
 }
 
-/* Voting Arrows */
 .link .midcol {
   width: 32px !important;
   margin: 0 16px 0 0;
@@ -1939,7 +1725,7 @@ body:not(.subscriber) .content {
 
 .arrow {
   margin: 0;
-  background-image: url("../images/spritesheet.png") !important;
+  background-image: url(%%spritesheet%%) !important;
   width: 32px;
   border-radius: 2px;
   transition: background-color 0.25s ease;
@@ -1968,12 +1754,30 @@ body:not(.subscriber) .content {
   content: " ";
   background: #ff4500 ;
   border-radius: 28px;
-  animation: upvote 0.35s ease-out forwards;
-  -webkit-animation: upvote 0.35s ease-out forwards;
+  animation-name: uf1n90k;
+  animation-duration: 0.35s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
 }
 @media (prefers-color-scheme: dark) {
   .arrow.upmod:focus:after {
     background: #ff4500 ;
+  }
+}
+@keyframes uf1n90k {
+  0% {
+    transform: scale(0, 0);
+    opacity: 1;
+  }
+  45% {
+    opacity: 1;
+  }
+  98% {
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1.5, 1.5);
+    opacity: 0;
   }
 }
 .arrow.down {
@@ -2030,13 +1834,11 @@ body:not(.subscriber) .content {
   }
 }
 
-/* Voting Arrows */
 .green {
   color: #27b062 !important;
   font-weight: 700;
 }
 
-/* Archived Post Voting Arrows */
 .thing .arrow.archived {
   pointer-events: none;
 }
@@ -2047,78 +1849,6 @@ body:not(.subscriber) .content {
   opacity: 0.2;
 }
 
-@-webkit-keyframes upvote {
-  0% {
-    transform: scale(0, 0);
-    -webkit-transform: scale(0, 0);
-    opacity: 1;
-  }
-  45% {
-    opacity: 1;
-  }
-  98% {
-    opacity: 0;
-  }
-  100% {
-    transform: scale(1.5, 1.5);
-    -webkit-transform: scale(1.5, 1.5);
-    opacity: 0;
-  }
-}
-@-moz-keyframes upvote {
-  0% {
-    transform: scale(0, 0);
-    -webkit-transform: scale(0, 0);
-    opacity: 1;
-  }
-  45% {
-    opacity: 1;
-  }
-  98% {
-    opacity: 0;
-  }
-  100% {
-    transform: scale(1.5, 1.5);
-    -webkit-transform: scale(1.5, 1.5);
-    opacity: 0;
-  }
-}
-@-o-keyframes upvote {
-  0% {
-    transform: scale(0, 0);
-    -webkit-transform: scale(0, 0);
-    opacity: 1;
-  }
-  45% {
-    opacity: 1;
-  }
-  98% {
-    opacity: 0;
-  }
-  100% {
-    transform: scale(1.5, 1.5);
-    -webkit-transform: scale(1.5, 1.5);
-    opacity: 0;
-  }
-}
-@keyframes upvote {
-  0% {
-    transform: scale(0, 0);
-    -webkit-transform: scale(0, 0);
-    opacity: 1;
-  }
-  45% {
-    opacity: 1;
-  }
-  98% {
-    opacity: 0;
-  }
-  100% {
-    transform: scale(1.5, 1.5);
-    -webkit-transform: scale(1.5, 1.5);
-    opacity: 0;
-  }
-}
 .author-tooltip {
   background-color: #ffffff ;
   color: #1b1b1c ;
@@ -2260,7 +1990,7 @@ body:not(.subscriber) .content {
 
 body .btn,
 body button,
-body .c-btn-primary,
+body .c-btn,
 body .wiki-page .wiki-page-content .wiki_button {
   background: #f50 ;
   color: #ffffff ;
@@ -2278,7 +2008,7 @@ body .wiki-page .wiki-page-content .wiki_button {
 @media (prefers-color-scheme: dark) {
   body .btn,
 body button,
-body .c-btn-primary,
+body .c-btn,
 body .wiki-page .wiki-page-content .wiki_button {
     background: #d7dadc ;
   }
@@ -2286,7 +2016,7 @@ body .wiki-page .wiki-page-content .wiki_button {
 @media (prefers-color-scheme: dark) {
   body .btn,
 body button,
-body .c-btn-primary,
+body .c-btn,
 body .wiki-page .wiki-page-content .wiki_button {
     color: #1a1a1b ;
   }
@@ -2294,14 +2024,14 @@ body .wiki-page .wiki-page-content .wiki_button {
 @media (prefers-color-scheme: dark) {
   body .btn,
 body button,
-body .c-btn-primary,
+body .c-btn,
 body .wiki-page .wiki-page-content .wiki_button {
     border: 1px solid #d7dadc ;
   }
 }
 body .btn:active,
 body button:active,
-body .c-btn-primary:active,
+body .c-btn:active,
 body .wiki-page .wiki-page-content .wiki_button:active {
   background: black ;
   color: #ffffff ;
@@ -2310,7 +2040,7 @@ body .wiki-page .wiki-page-content .wiki_button:active {
 @media (prefers-color-scheme: dark) {
   body .btn:active,
 body button:active,
-body .c-btn-primary:active,
+body .c-btn:active,
 body .wiki-page .wiki-page-content .wiki_button:active {
     background: #0d0e0e ;
   }
@@ -2318,7 +2048,7 @@ body .wiki-page .wiki-page-content .wiki_button:active {
 @media (prefers-color-scheme: dark) {
   body .btn:active,
 body button:active,
-body .c-btn-primary:active,
+body .c-btn:active,
 body .wiki-page .wiki-page-content .wiki_button:active {
     color: #ffffff ;
   }
@@ -2326,14 +2056,14 @@ body .wiki-page .wiki-page-content .wiki_button:active {
 @media (prefers-color-scheme: dark) {
   body .btn:active,
 body button:active,
-body .c-btn-primary:active,
+body .c-btn:active,
 body .wiki-page .wiki-page-content .wiki_button:active {
     border: 1px solid #d7dadc ;
   }
 }
 body .btn:hover,
 body button:hover,
-body .c-btn-primary:hover,
+body .c-btn:hover,
 body .wiki-page .wiki-page-content .wiki_button:hover {
   background: white ;
   color: #1b1b1c;
@@ -2342,19 +2072,18 @@ body .wiki-page .wiki-page-content .wiki_button:hover {
 @media (prefers-color-scheme: dark) {
   body .btn:hover,
 body button:hover,
-body .c-btn-primary:hover,
+body .c-btn:hover,
 body .wiki-page .wiki-page-content .wiki_button:hover {
     background: white ;
   }
 }
 body .btn:active,
 body button:active,
-body .c-btn-primary:active,
+body .c-btn:active,
 body .wiki-page .wiki-page-content .wiki_button:active {
   margin: 16px 16px 16px 0;
 }
 
-/* Shadows and Cards */
 .comments-page .link,
 .commentarea > .sitetable > .comment,
 #bottom-comments:not(.child) > .sitetable > .comment,
@@ -2456,7 +2185,71 @@ body .wiki-page .wiki-page-content .wiki_button:active {
   }
 }
 
-/* Submission Flatlist - Comment / Share / Report */
+.thing {
+  background-color: #ffffff ;
+  color: #1b1b1c ;
+  border-radius: 4px;
+  border-color: #dadada ;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
+  padding: 16px;
+}
+@media (prefers-color-scheme: dark) {
+  .thing {
+    background-color: #1a1a1b ;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .thing {
+    color: #d7dadc ;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .thing {
+    border-color: #343536 ;
+  }
+}
+
+.report-modal .modal-content,
+.tfa-login-modal .modal-content,
+.backup-codes-modal .modal-content,
+.tfa-verify-email-modal .modal-content,
+.disable-tfa-modal .modal-content {
+  background-color: #ffffff ;
+  color: #1b1b1c ;
+  border-radius: 4px;
+  border: 1px solid;
+  border-color: #dadada ;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
+  padding: 16px;
+}
+@media (prefers-color-scheme: dark) {
+  .report-modal .modal-content,
+.tfa-login-modal .modal-content,
+.backup-codes-modal .modal-content,
+.tfa-verify-email-modal .modal-content,
+.disable-tfa-modal .modal-content {
+    background-color: #1a1a1b ;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .report-modal .modal-content,
+.tfa-login-modal .modal-content,
+.backup-codes-modal .modal-content,
+.tfa-verify-email-modal .modal-content,
+.disable-tfa-modal .modal-content {
+    color: #d7dadc ;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .report-modal .modal-content,
+.tfa-login-modal .modal-content,
+.backup-codes-modal .modal-content,
+.tfa-verify-email-modal .modal-content,
+.disable-tfa-modal .modal-content {
+    border-color: #343536 ;
+  }
+}
+
 .link .flat-list {
   padding: 0;
   margin-top: 3px;
@@ -2614,7 +2407,6 @@ body .wiki-page .wiki-page-content .wiki_button:active {
   }
 }
 
-/* Comment Body Text */
 .comment .usertext .md {
   color: #1b1b1c ;
 }
@@ -2639,7 +2431,6 @@ body .wiki-page .wiki-page-content .wiki_button:active {
   }
 }
 
-/* Deleted Comment */
 .usertext.grayed .usertext-body {
   margin: 4px 0;
   background-color: transparent;
@@ -2647,7 +2438,6 @@ body .wiki-page .wiki-page-content .wiki_button:active {
   padding: 0;
 }
 
-/* Spam Comment */
 .comment.spam > .child {
   padding-left: 0;
   margin-left: 16px;
@@ -2682,7 +2472,6 @@ body .wiki-page .wiki-page-content .wiki_button:active {
   }
 }
 
-/* Reply / Share / report */
 .deepthread a {
   color: #24a0ed ;
 }
@@ -2701,7 +2490,6 @@ body .wiki-page .wiki-page-content .wiki_button:active {
   }
 }
 
-/* Compressed Submission */
 .link.compressed {
   margin-bottom: 0;
   padding-top: 0;
@@ -2722,7 +2510,6 @@ body > .content .link.compressed .midcol {
   margin: 8px 4px 0 0;
 }
 
-/* Cookies Bar */
 #eu-cookie-policy .reddit-infobar {
   padding-right: 118px;
 }
@@ -2733,7 +2520,6 @@ body > .content .link.compressed .midcol {
   margin: 0 16px 0 0;
 }
 
-/* Expando Button */
 .expando-button {
   position: relative;
   top: -1px;
@@ -2741,7 +2527,7 @@ body > .content .link.compressed .midcol {
   width: 16px !important;
   height: 16px !important;
   background-color: transparent;
-  background-image: url("../images/spritesheet.png") !important;
+  background-image: url(%%spritesheet%%) !important;
   background-size: 264px 264px !important;
   border: 1px solid #c8c6cc ;
   cursor: pointer;
@@ -2758,7 +2544,7 @@ body > .content .link.compressed .midcol {
   width: 16px !important;
   height: 16px !important;
   background-color: transparent;
-  background-image: url("../images/spritesheet.png") !important;
+  background-image: url(%%spritesheet%%) !important;
   background-size: 264px 264px !important;
   border: 1px solid #c8c6cc ;
   cursor: pointer;
@@ -2854,7 +2640,6 @@ body > .content .link.compressed .midcol {
   background-color: rgba(66, 66, 66, 0.54);
 }
 
-/* Expando Text */
 .link .usertext .md {
   margin-top: 12px;
   margin-bottom: -12px;
@@ -2877,7 +2662,6 @@ body > .content .link.compressed .midcol {
   }
 }
 
-/* Flair Selector */
 .flairselector {
   position: fixed;
   top: 20% !important;
@@ -3082,7 +2866,6 @@ body > .content .link.compressed .midcol {
   }
 }
 
-/* Infobar (Default yellow announcement bar) */
 .content .infobar {
   margin: 0 0 16px;
   padding: 16px;
@@ -3147,7 +2930,6 @@ body > .content .link.compressed .midcol {
   }
 }
 
-/* Welcome Infobar */
 .commentarea .infobar {
   line-height: 18px;
   margin: 0 0 16px;
@@ -3157,7 +2939,6 @@ body > .content .link.compressed .midcol {
   font-weight: 700;
 }
 
-/* Updated Reddit Infobar */
 .reddit-infobar.with-icon {
   border: none;
   background: #ffffff ;
@@ -3278,13 +3059,6 @@ body input:hover {
   }
 }
 
-/* Last Clicked */
-.link.last-clicked {
-  background: rgba(0, 0, 0, 0.04);
-  border: none;
-}
-
-/* Link Flairs */
 .linkflairlabel {
   padding: 2px 8px;
   height: 18px;
@@ -3313,26 +3087,9 @@ body input:hover {
   background: #27b062;
 }
 .linkflair-mod .thumbnail.default, .linkflair-mod .thumbnail.self {
-  background: #27b062 url("../images/spritesheet.png") -208px -104px;
+  background: #27b062 url(%%spritesheet%%) -208px -104px;
 }
 
-html {
-  /* RES Selection */
-  /* RES Tag Dialog + RES Tag */
-  /* Input Fields */
-  /* Misc. Fixes */
-  /* More RES Fixes */
-  /* Pinheader */
-  /* Gear Dropdown */
-  /* Toggle Off */
-  /* Toggle On */
-  /* RES Popup */
-  /* RES Fixes / RES Nightmode */
-  /* Voting Arrows */
-  /* Pure White */
-  /* Toolbox */
-  /* RES L+C */
-}
 html .res-nightmode #sr-header-area,
 html .res-nightmode #sr-more-link {
   background-color: #1a1a1b ;
@@ -3849,7 +3606,7 @@ html .res #RESShortcuts {
 }
 html .pinHeader-sub #sr-header-area,
 html .pinHeader-subanduser #sr-header-area {
-  background-image: url("../images/headerimg.png");
+  background-image: url(%%headerimg%%);
   background-position: 50% 0;
 }
 html .pinHeader-sub #header-bottom-left,
@@ -3870,12 +3627,12 @@ html .pinHeader-header.res.comments-page .side {
 }
 html .pinHeader-header #header {
   top: 0;
-  background-image: url("../images/headerimg.png");
+  background-image: url(%%headerimg%%);
   height: 84px;
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.24);
 }
 html .gearIcon {
-  background: url("../images/spritesheet.png") -64px 0 !important;
+  background: url(%%spritesheet%%) -64px 0 !important;
   position: relative;
   top: 2px;
   transition: all 0.25s ease;
@@ -4096,7 +3853,7 @@ html .x_button:hover {
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
 }
 html .res-nightmode .arrow {
-  background-image: url("../images/spritesheet.png") !important;
+  background-image: url(%%spritesheet%%) !important;
 }
 html .res-nightmode .arrow.up {
   background-position: 0px -80px !important;
@@ -4149,7 +3906,6 @@ html .link .entry .buttons li .redditSingleClick {
   }
 }
 
-/* Inner Post Area */
 .link .entry {
   padding: 0;
   margin: 0;
@@ -4161,7 +3917,6 @@ html .link .entry .buttons li .redditSingleClick {
   overflow: visible;
 }
 
-/* Submission Title */
 body .content .sitetable .link .title a:hover {
   color: #f50 ;
 }
@@ -4171,7 +3926,6 @@ body .content .sitetable .link .title a:hover {
   }
 }
 
-/* Unvisited*/
 .thing .title {
   color: #434450 ;
 }
@@ -4189,7 +3943,6 @@ body .content .sitetable .link .title a:hover {
   }
 }
 
-/* Visited  */
 .content .thing .title:visited, .content .thing.visited .title {
   color: #aaaab0 ;
 }
@@ -4199,7 +3952,6 @@ body .content .sitetable .link .title a:hover {
   }
 }
 
-/* Clicking */
 .thing .title.loggedin.click:visited, .thing .title.click:visited {
   color: #24a0ed ;
 }
@@ -4209,7 +3961,6 @@ body .content .sitetable .link .title a:hover {
   }
 }
 
-/* Domain */
 .link .domain {
   visibility: hidden;
 }
@@ -4241,7 +3992,6 @@ body .content .sitetable .link .title a:hover {
   margin-left: 4px;
 }
 
-/* Next Post / Preview */
 .read-next {
   width: 320px;
   height: 128px;
@@ -4308,61 +4058,23 @@ body .content .sitetable .link .title a:hover {
   }
 }
 
-/* Report Comment */
-.action-form {
-  position: fixed;
-  top: 35%;
-  left: 40%;
-  margin: 0;
-  padding: 24px;
-  background: #ffffff ;
-  z-index: 100;
-  box-shadow: 0 0 16px rgba(0, 0, 0, 0.12);
-  border: none;
+.report-modal .report-form-big-content-policy,
+.report-modal .report-form-last-step-text,
+.report-modal .report-form-last-step-text-custom-rules,
+.report-modal .report-abuse-of-report-button-confirmation-page,
+.report-modal .report-form-bottom-panel .report-form-content-policy p {
+  color: #1b1b1c ;
 }
 @media (prefers-color-scheme: dark) {
-  .action-form {
-    background: #1a1a1b ;
-  }
-}
-.action-form .reason-prompt {
-  font-size: 16px;
-  color: #434450 ;
-  padding-bottom: 8px;
-  display: block;
-}
-@media (prefers-color-scheme: dark) {
-  .action-form .reason-prompt {
+  .report-modal .report-form-big-content-policy,
+.report-modal .report-form-last-step-text,
+.report-modal .report-form-last-step-text-custom-rules,
+.report-modal .report-abuse-of-report-button-confirmation-page,
+.report-modal .report-form-bottom-panel .report-form-content-policy p {
     color: #d7dadc ;
   }
-}
-.action-form .reason-prompt:first-letter {
-  text-transform: capitalize;
-}
-.action-form .reason-prompt li {
-  padding: 4px 4px 4px 0;
-  display: block;
-}
-.action-form li label {
-  padding: 4px 4px 4px 0;
-  cursor: pointer;
-  display: block;
-  color: #434450 ;
-  text-transform: capitalize;
-}
-@media (prefers-color-scheme: dark) {
-  .action-form li label {
-    color: #d7dadc ;
-  }
-}
-.action-form li label:hover {
-  background-color: rgba(0, 0, 0, 0.05);
-}
-.action-form input[name=other_reason] {
-  padding: 8px;
 }
 
-/* Reported & Spam / Remove / Approved */
 body .content .thing.spam {
   background: #edeff1 ;
 }
@@ -4486,7 +4198,6 @@ select:hover {
 select:focus {
   border-color: #f50 ;
   box-shadow: 0 0 1px 1px #f50 ;
-  /* It'd be nice to use -webkit-focus-ring-color here but it doesn't work on box-shadow */
   outline: none;
 }
 @media (prefers-color-scheme: dark) {
@@ -4519,7 +4230,6 @@ select:disabled:hover, select[aria-disabled=true]:hover {
   }
 }
 
-/* /Top Sorting Menu */
 .content > .menuarea {
   margin: 0;
   padding: 0 20px;
@@ -4682,7 +4392,7 @@ select:disabled:hover, select[aria-disabled=true]:hover {
   vertical-align: top;
   height: 10px;
   width: 16px;
-  background-image: url("../images/spritesheet.png");
+  background-image: url(%%spritesheet%%);
   background-position: -32px -101px;
   opacity: 0.25;
   margin-left: 2px;
@@ -4696,40 +4406,30 @@ select:disabled:hover, select[aria-disabled=true]:hover {
   opacity: 1;
 }
 
-/* Thumbnails */
 .thumbnail {
-  width: 80px;
-  height: 56px;
-  margin: 0 16px 0 0;
-}
-.thumbnail img {
-  min-height: 56px;
-  min-width: 80px;
-  max-width: none;
-  position: relative;
-  transform: translateY(-50%);
-  top: 50%;
-}
-.thumbnail.default, .thumbnail.self, .thumbnail.nsfw, .thumbnail.image, .thumbnail.spoiler, .thumbnail[data-href-url*="reddit.com"] {
   width: 56px;
   height: 56px;
   margin: 0 28px 0 12px;
-  border-radius: 28px;
+  border-radius: 4px;
+}
+.thumbnail img {
+  width: 56px;
+  height: 56px;
 }
 .thumbnail.default {
-  background: #d2dbe0 url("../images/spritesheet.png") -152px -48px;
+  background: #d2dbe0 url(%%spritesheet%%) -152px -48px;
 }
 .thumbnail.self {
-  background: #d2dbe0 url("../images/spritesheet.png") -96px -48px;
+  background: #d2dbe0 url(%%spritesheet%%) -96px -48px;
 }
 .thumbnail.image {
-  background: #d2dbe0 url("../images/spritesheet.png") -208px -48px;
+  background: #d2dbe0 url(%%spritesheet%%) -208px -48px;
 }
 .thumbnail.nsfw {
-  background: #e85881 url("../images/spritesheet.png") -96px -104px;
+  background: #e85881 url(%%spritesheet%%) -96px -104px;
 }
 .thumbnail[data-href-url*="reddit.com"] {
-  background: #24a0ed url("../images/spritesheet.png") -152px -104px;
+  background: #24a0ed url(%%spritesheet%%) -152px -104px;
 }
 .thumbnail[data-href-url*="reddit.com"] img {
   display: none;
@@ -4740,10 +4440,9 @@ select:disabled:hover, select[aria-disabled=true]:hover {
 }
 
 .thumbnail.spoiler {
-  background: #f44336 url("../images/spritesheet.png") -208px -148px;
+  background: #f44336 url(%%spritesheet%%) -208px -148px;
 }
 
-/* Unvotable Message */
 .unvotable-message {
   border: 0 solid;
   color: #98abba ;
@@ -4757,7 +4456,6 @@ select:disabled:hover, select[aria-disabled=true]:hover {
   text-transform: capitalize;
 }
 
-/* Video Player */
 .pinnable-content.pinned .link {
   display: flex;
 }
@@ -4789,7 +4487,6 @@ select:disabled:hover, select[aria-disabled=true]:hover {
   box-shadow: none !important;
 }
 
-/* Comments Page */
 .entry {
   margin-bottom: 16px;
 }
@@ -4832,7 +4529,7 @@ select:disabled:hover, select[aria-disabled=true]:hover {
   width: 100%;
 }
 .comments-page .usertext textarea:not(:focus) {
-  background-image: url("../images/commentboxbg.png");
+  background-image: url(%%commentboxbg%%);
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
@@ -4884,9 +4581,8 @@ select:disabled:hover, select[aria-disabled=true]:hover {
   margin: 0;
 }
 
-/* Gilding */
 .gilded-icon:before {
-  background: url("../images/spritesheet.png") -112px -160px;
+  background: url(%%spritesheet%%) -112px -160px;
   height: 16px;
   width: 16px;
 }
@@ -4895,7 +4591,6 @@ select:disabled:hover, select[aria-disabled=true]:hover {
   width: 16px;
 }
 
-/* Comment Stack Behind Parent */
 .comment .child,
 .comment .showreplies {
   border-left: 1px solid #edf1f3 ;
@@ -4985,13 +4680,11 @@ select:disabled:hover, select[aria-disabled=true]:hover {
   }
 }
 
-/* Sticky Comment */
 .stickied.comment > .entry a,
 .stickied.comment .tagline .stickied-tagline {
   color: #27b062;
 }
 
-/* Comments (/r/.../comments) */
 .listing-page .comment {
   margin-left: 0;
   padding: 16px 16px 16px 8px;
@@ -5027,13 +4720,11 @@ body.listing-page > .content, body.other-discussions-page > .content {
   }
 }
 
-/* Link Objects - From Left to Right */
 body > .content .link .rank,
 .rank-spacer {
   display: none;
 }
 
-/* Sticky Post */
 .thing.link.stickied a.title,
 .thing.link.stickied li a,
 .thing.link.stickied .entry li .comments {
@@ -5413,18 +5104,16 @@ body > .content .link .rank,
   }
 }
 
-/* No Results */
 #noresults {
   margin: 0;
   width: 100%;
   height: 416px;
-  background: transparent url("../images/noresults.png") no-repeat 50% 50%;
+  background: transparent url(%%noresults%%) no-repeat 50% 50%;
   text-indent: -9999px;
   font-size: 0;
   display: block;
 }
 
-/* Item */
 .search-result {
   overflow: hidden;
   width: 100%;
@@ -5625,18 +5314,16 @@ body > .content .link .rank,
   }
 }
 
-/* No Results */
 #noresults {
   margin: 0;
   width: 100%;
   height: 416px;
-  background: transparent url("../images/noresults.png") no-repeat 50% 50%;
+  background: transparent url(%%noresults%%) no-repeat 50% 50%;
   text-indent: -9999px;
   font-size: 0;
   display: block;
 }
 
-/* Subreddit Settings Page / Flair Page / Stylesheet Page / Rules Page */
 .linefield {
   background: #ffffff ;
   color: #98abba ;
@@ -5785,7 +5472,6 @@ body > .content .link .rank,
   color: rgba(0, 0, 0, 0.87);
 }
 
-/* Stylesheet Page */
 .stylesheet-customize-container .pretty-form {
   padding: 8px 0;
   margin-bottom: 16px;
@@ -5870,7 +5556,6 @@ ul.image-preview-list li .description pre {
   margin: 0.25rem;
 }
 
-/* Submission Page */
 .content.submit ul.tabmenu li:not(.selected) a {
   background: #f50 ;
   color: #ffffff ;
@@ -6110,7 +5795,6 @@ ul.image-preview-list li .description pre {
   }
 }
 
-/* Wiki Page */
 .wiki-page .wikititle {
   background: #ffffff ;
   padding: 9px 16px 10px;
@@ -6237,7 +5921,6 @@ ul.image-preview-list li .description pre {
   background-color: rgba(0, 0, 0, 0.1) !important;
 }
 
-/* Wiki Talk Submit */
 .wiki-page .wiki-page-content .discussionlink {
   margin: 16px 0 0;
   padding: 0;
@@ -6246,7 +5929,6 @@ ul.image-preview-list li .description pre {
   padding: 0 16px;
 }
 
-/*Clippy Point Flair styling - Comments*/
 .commentarea .entry {
   margin-left: 85px;
 }
@@ -6254,7 +5936,7 @@ ul.image-preview-list li .description pre {
 .commentarea .side .tagline .flair-points {
   background-color: transparent;
   border: none;
-  background-image: url("../images/clippyflair.png");
+  background-image: url(%%clippyflair%%);
   position: absolute;
   width: 50px;
   height: 50px;
@@ -6310,23 +5992,13 @@ ul.image-preview-list li .description pre {
 .commentarea .flair-points:hover:after,
 .commentarea .side .tagline .flair-points:hover:after {
   visibility: visible;
-  -webkit-animation-delay: 0;
-  -webkit-animation-duration: 0.5s;
-  -webkit-animation-name: animation-grow-width;
-  -webkit-animation-fill-mode: fowards;
-  -webkit-animation-direction: ease;
-  -moz-animation-delay: 0;
-  -moz-animation-duration: 0.5s;
-  -moz-animation-name: animation-grow-width;
-  -moz-animation-fill-mode: fowards;
-  -moz-animation-direction: ease;
+  animation-name: uf1n912;
   animation-delay: 0;
   animation-duration: 0.5s;
-  animation-name: animation-grow-width;
+  animation-timing-function: ease;
   animation-fill-mode: fowards;
-  animation-direction: ease;
 }
-@keyframes animation-grow-width {
+@keyframes uf1n912 {
   0% {
     width: 0;
   }
@@ -6344,8 +6016,6 @@ html.res-commentBoxes.res-commentBoxes-rounded .comment {
   position: relative;
 }
 
-/*End Clippy Point Flair styling - Comments*/
-/* Clippy Point Flair styling - Link Flair*/
 .sidecontentbox .flair-points,
 .linkflair .res-nightmode .flair-points,
 .linkflair .flair-points {
@@ -6404,8 +6074,6 @@ html.res-commentBoxes.res-commentBoxes-rounded .comment {
   }
 }
 
-/* End Clippy Point Flair styling - Link Flair*/
-/* Code Block formatting*/
 .usertext-body > .md,
 .wiki-page-content > .md pre {
   max-width: 100%;
@@ -6436,10 +6104,7 @@ html.res-commentBoxes.res-commentBoxes-rounded .comment {
 }
 .md pre > code:before,
 .res-nightmode .content .md pre > code:before {
-  /* Chrome Fix */
   overflow-wrap: normal;
-  /* word-wrap: normal; */
-  /* End Chrome Fix */
   background: #1e1e1e;
   height: 100%;
   color: #858585;
@@ -6453,8 +6118,6 @@ html.res-commentBoxes.res-commentBoxes-rounded .comment {
   content: "1   2   3   4   5   6   7   8   9   10  11  12  13  14  15  16  17  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89  90  91  92  93  94  95  96  97  98  99  100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 251 252 253 254 255 256 257 258 259 260 261 262 263 264 265 266 267 268 269 270 271 272 273 274 275 276 277 278 279 280 281 282 283 284 285 286 287 288 289 290 291 292 293 294 295 296 297 298 299 300 301 302 303 304 305 306 307 308 309 310 311 312 313 314 315 316 317 318 319 320 321 322 323 324 325 326 327 328 329 330 331 332 333 334 335 336 337 338 339 340 341 342 343 344 345 346 347 348 349 350 351 352 353 354 355 356 357 358 359 360 361 362 363 364 365 366 367 368 369 370 371 372 373 374 375 376 377 378 379 380 381 382 383 384 385 386 387 388 389 390 391 392 393 394 395 396 397 398 399 400 401 402 403 404 405 406 407 408 409 410 411 412 413 414 415 416 417 418 419 420 421 422 423 424 425 426 427 428 429 430 431 432 433 434 435 436 437 438 439 440 441 442 443 444 445 446 447 448 449 450 451 452 453 454 455 456 457 458 459 460 461 462 463 464 465 466 467 468 469 470 471 472 473 474 475 476 477 478 479 480 481 482 483 484 485 486 487 488 489 490 491 492 493 494 495 496 497 498 499 500 501 502 503 504 505" "506 507 508 509 510 511 512 513 514 515 516 517 518 519 520 521 522 523 524 525 526 527 528 529 530 531 532 533 534 535 536 537 538 539 540 541 542 543 544 545 546 547 548 549 550 551 552 553 554 555 556 557 558 559 560 561 562 563 564 565 566 567 568 569 570 571 572 573 574 575 576 577 578 579 580 581 582 583 584 585 586 587 588 589 590 591 592 593 594 595 596 597 598 599 600 601 602 603 604 605 606 607 608 609 610 611 612 613 614 615 616 617 618 619 620 621 622 623 624 625 626 627 628 629 630 631 632 633 634 635 636 637 638 639 640 641 642 643 644 645 646 647 648 649 650 651 652 653 654 655 656 657 658 659 660 661 662 663 664 665 666 667 668 669 670 671 672 673 674 675 676 677 678 679 680 681 682 683 684 685 686 687 688 689 690 691 692 693 694 695 696 697 698 699 700 701 702 703 704 705 706 707 708 709 710 711 712 713 714 715 716 717 718 719 720 721 722 723 724 725 726 727 728 729 730 731 732 733 734 735 736 737 738 739 740 741 742 743 744 745 746 747 748 749 750 751 752 753 754 755 756 757 758 759 760 761" " 762 763 764 765 766 767 768 769 770 771 772 773 774 775 776 777 778 779 780 781 782 783 784 785 786 787 788 789 790 791 792 793 794 795 796 797 798 799 800 801 802 803 804 805 806 807 808 809 810 811 812 813 814 815 816 817 818 819 820 821 822 823 824 825 826 827 828 829 830 831 832 833 834 835 836 837 838 839 840 841 842 843 844 845 846 847 848 849 850 851 852 853 854 855 856 857 858 859 860 861 862 863 864 865 866 867 868 869 870 871 872 873 874 875 876 877 878 879 880 881 882 883 884 885 886 887 888 889 890 891 892 893 894 895 896 897 898 899 900 901 902 903 904 905 906 907 908 909 910 911 912 913 914 915 916 917 918 919 920 921 922 923 924 925 926 927 928 929 930 931 932 933 934 935 936 937 938 939 940 941 942 943 944 945 946 947 948 949 950 951 952 953 954 955 956 957 958 959 960 961 962 963 964 965 966 967 968 969 970 971 972 973 974 975 976 977 978 979 980 981 982 983 984 985 986 987 988 989 990 991 992 993 994 995 996 997 998 999 1000";
 }
 
-/*End code block formatting*/
-/*Inline code formatting*/
 .md code,
 .md p > code {
   background: #1e1e1e !important;
@@ -6463,8 +6126,6 @@ html.res-commentBoxes.res-commentBoxes-rounded .comment {
   font-family: Consolas, "Lucida Console", "DejaVu Sans Mono", monospace;
 }
 
-/*End inline code formatting*/
-/*Custom post-flair formatting*/
 .linkflair-unsolved .linkflairlabel {
   background-color: #f50;
 }
@@ -6501,7 +6162,6 @@ html.res-commentBoxes.res-commentBoxes-rounded .comment {
   background-color: #000;
 }
 
-/*End Custom post-flair formatting*/
 .flairtoggle,
 .titlebox .tagline {
   visibility: hidden;
@@ -6529,7 +6189,6 @@ html.res-commentBoxes.res-commentBoxes-rounded .comment {
   }
 }
 
-/* Filter by flair styling */
 .side .titlebox .md ul {
   padding-left: 0;
   list-style: none;
@@ -6738,8 +6397,6 @@ html.res-commentBoxes.res-commentBoxes-rounded .comment {
   }
 }
 
-/* End Filter by flair styling */
-/* Sidebar Rules box styling */
 .side h3:nth-child(3) > a {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
@@ -6762,24 +6419,21 @@ html.res-commentBoxes.res-commentBoxes-rounded .comment {
   }
 }
 
-/* End Sidebar Rules box styling */
-/* This is the one in the header */
 #header .pagename a {
   height: 42px;
   width: 320px;
-  background-image: url("../images/title.png");
+  background-image: url(%%title%%);
   background-repeat: no-repeat;
   background-size: auto 42px;
   text-indent: -9999px;
 }
 
-/* This is the one in the sidebar */
 .side .titlebox h1.redditname a {
   display: block;
   height: 50px;
   width: 100%;
   background-color: #f50 ;
-  background-image: url("../images/title.png");
+  background-image: url(%%title%%);
   background-repeat: no-repeat;
   background-position: center;
   background-size: auto 100%;
@@ -6791,7 +6445,6 @@ html.res-commentBoxes.res-commentBoxes-rounded .comment {
   }
 }
 
-/* End Addon */
 body:not(.subscriber) #header::after {
   content: "You're not subscribed to r/vba yet! Subscribe now to get help with your vba code!";
   position: absolute;
@@ -6806,7 +6459,7 @@ body:not(.subscriber) #header::after {
   border-radius: 0;
   color: #444444;
   padding-left: 40px;
-  background-image: url("../images/info-shield.png");
+  background-image: url(%%info-shield%%);
   background-position: 10px center;
   background-repeat: no-repeat;
   top: 136px;

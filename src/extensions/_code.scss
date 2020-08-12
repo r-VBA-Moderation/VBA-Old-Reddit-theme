@@ -1,6 +1,6 @@
 @use '../abstracts/mixins' as v;
 
-/* Code Block formatting*/
+// Code Block formatting
 
 .usertext-body > .md,
 .wiki-page-content > .md pre {
@@ -28,10 +28,10 @@
     padding-left: 10px;
     font-family: v.$mono-font;
     &:before {
-      /* Chrome Fix */
+      // Chrome Fix
       overflow-wrap: normal;
-      /* word-wrap: normal; */
-      /* End Chrome Fix */
+      // word-wrap: normal;
+      // End Chrome Fix
       background: v.getColor("code", "background");
       height: 100%;
       color: v.getColor("code", "line-nums");
@@ -49,9 +49,9 @@
   }
 }
 
-/*End code block formatting*/
+//End code block formatting
 
-/*Inline code formatting*/
+//Inline code formatting
 .md code,
 .md p > code {
   background: v.getColor("code", "background") !important;
@@ -60,4 +60,4 @@
   font-family: v.$mono-font;
 }
 
-/*End inline code formatting*/
+//End inline code formatting

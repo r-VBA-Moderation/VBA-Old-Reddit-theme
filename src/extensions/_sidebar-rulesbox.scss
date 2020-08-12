@@ -1,6 +1,6 @@
 @use '../abstracts/mixins' as v;
 
-/* Sidebar Rules box styling */
+// Sidebar Rules box styling
 .side {
   h3:nth-child(3) > a {
     border-bottom-left-radius: 0;
@@ -20,4 +20,4 @@
   }
 }
 
-/* End Sidebar Rules box styling */
+// End Sidebar Rules box styling

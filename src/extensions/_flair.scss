@@ -2,7 +2,7 @@
 
 // don't forget to update the _sidebar-filterbyflair.scss file if you're using that extension...
 
-/*Custom post-flair formatting*/
+//Custom post-flair formatting
 
 .linkflair-unsolved .linkflairlabel {
   background-color: v.getColor("linkflair", "unsolved");
@@ -39,4 +39,4 @@
   background-color: v.getColor("linkflair", "showntell");
 }
 
-/*End Custom post-flair formatting*/
+//End Custom post-flair formatting

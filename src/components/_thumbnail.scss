@@ -1,20 +1,21 @@
 @use '../abstracts/mixins' as v;
 
-/* Thumbnails */
-
+// Thumbnails
+//  Todo - fix this
 .thumbnail {
   width: 80px;
   height: 56px;
   margin: 0 16px 0 0;
+  border-radius: v.$radius;
 
-  img {
-    min-height: 56px;
-    min-width: 80px;
-    max-width: none;
-    position: relative;
-    transform: translateY(-50%);
-    top: 50%;
-  }
+  // img {
+  //   min-height: 56px;
+  //   min-width: 80px;
+  //   max-width: none;
+  //   position: relative;
+  //   transform: translateY(-50%);
+  //   top: 50%;
+  // }
 
   &.default,
   &.self,
@@ -25,7 +26,6 @@
     width: 56px;
     height: 56px;
     margin: 0 28px 0 12px;
-    border-radius: 28px;
   }
 
   &.default {

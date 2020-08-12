@@ -37,7 +37,7 @@
   }
 }
 
-/* Comment Body Text */
+// Comment Body Text
 
 .comment .usertext .md {
   @include v.theme("color", v.$bodyText);
@@ -49,7 +49,7 @@
   @include v.theme("border-color", v.$line);
 }
 
-/* Deleted Comment */
+// Deleted Comment
 
 .usertext.grayed .usertext-body {
   margin: 4px 0;
@@ -58,7 +58,7 @@
   padding: 0;
 }
 
-/* Spam Comment */
+// Spam Comment
 
 .comment {
   &.spam > .child {
@@ -84,7 +84,7 @@
   }
 }
 
-/* Reply / Share / report */
+// Reply / Share / report
 
 .deepthread a {
   @include v.theme("color", v.$linkText);

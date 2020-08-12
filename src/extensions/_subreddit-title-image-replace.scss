@@ -1,6 +1,6 @@
 @use '../abstracts/mixins' as v;
 
-/* This is the one in the header */
+// This is the one in the header
 
 #header .pagename a {
   height: 42px;
@@ -11,7 +11,7 @@
   text-indent: -9999px;
 }
 
-/* This is the one in the sidebar */
+// This is the one in the sidebar
 
 .side .titlebox h1.redditname a {
   display: block;
@@ -25,4 +25,4 @@
   text-indent: -9999px;
 }
 
-/* End Addon */
+// End Addon

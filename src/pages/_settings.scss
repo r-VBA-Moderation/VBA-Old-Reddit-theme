@@ -1,6 +1,6 @@
 @use '../abstracts/mixins' as v;
 
-/* Subreddit Settings Page / Flair Page / Stylesheet Page / Rules Page */
+// Subreddit Settings Page / Flair Page / Stylesheet Page / Rules Page
 
 .linefield {
   @include v.theme("background", v.$body);

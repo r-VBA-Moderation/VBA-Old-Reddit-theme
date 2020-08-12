@@ -269,183 +269,29 @@ $_breakpoints: (
   //   color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-// https://brandonbrule.github.io/scss-animation-keyframe-mixin/
+// no need to use @at-root. SASS now automatically hoists keyframes.
+@mixin animation-keyframes {
+  $animation-name: unique-id();
+  animation-name: $animation-name;
 
-@mixin keyframe($animation_name) {
   @keyframes #{$animation_name} {
     @content;
   }
 }
 
-@mixin animation(
-  $delay,
-  $duration,
-  $animation,
-  $direction: forward,
-  $fillmode: fowards
-) {
-  -webkit-animation-delay: $delay;
-  -webkit-animation-duration: $duration;
-  -webkit-animation-name: $animation;
-  -webkit-animation-fill-mode: $fillmode;
-  -webkit-animation-direction: $direction;
-
-  -moz-animation-delay: $delay;
-  -moz-animation-duration: $duration;
-  -moz-animation-name: $animation;
-  -moz-animation-fill-mode: $fillmode;
-  -moz-animation-direction: $direction;
-
-  animation-delay: $delay;
-  animation-duration: $duration;
-  animation-name: $animation;
-  animation-fill-mode: $fillmode;
-  animation-direction: $direction;
-}
-
-// -- Slide Animations -- //
-
-// Slide Out Top from Center
-@include keyframe(animation-slide-out-up) {
-  0% {
-    transform: translate(0, 0);
-  }
-
-  100% {
-    transform: translate(0, -100%);
-  }
-}
-
-@include keyframe(animation-slide-out-down) {
-  0% {
-    transform: translate(0, 0);
-  }
-
-  100% {
-    transform: translate(0, 100%);
-  }
-}
-
-// Slide Out Left from Center
-@include keyframe(animation-slide-out-left) {
-  0% {
-    transform: translate(0, 0);
-  }
-
-  100% {
-    transform: translate(-100%, 0);
-  }
-}
-
-// Slide out Right from Center
-@include keyframe(animation-slide-out-right) {
-  0% {
-    transform: translate(0, 0);
-  }
-
-  100% {
-    transform: translate(100%, 0);
-  }
-}
-
-@include keyframe(animation-slide-in-up) {
-  0% {
-    transform: translate(0, 100%);
-  }
-
-  100% {
-    transform: translate(0, 0);
-  }
-}
-
-@include keyframe(animation-slide-in-down) {
-  0% {
-    transform: translate(0, -100%);
-  }
-
-  100% {
-    transform: translate(0, 0);
-  }
-}
-
-// Slide in Left to Center
-@include keyframe(animation-slide-in-left) {
-  0% {
-    transform: translate(-100%, 0);
-  }
-
-  100% {
-    transform: translate(0, 0);
-  }
-}
-
-// Slide in Right to Center
-@include keyframe(animation-slide-in-right) {
-  0% {
-    transform: translate(100%, 0);
-  }
-
-  100% {
-    transform: translate(0, 0);
-  }
-}
-
-@mixin animation-slide-in-up {
-  @include animation(0, v.$transition, animation-slide-in-up, ease);
-}
-
-@mixin animation-slide-in-down {
-  @include animation(0, v.$transition, animation-slide-in-down, ease);
-}
-
-@mixin animation-slide-in-right {
-  @include animation(0, v.$transition, animation-slide-in-right, ease);
-}
-
-@mixin animation-slide-in-left {
-  @include animation(0, v.$transition, animation-slide-in-left, ease);
-}
-
-@mixin animation-slide-out-up {
-  @include animation(0, v.$transition, animation-slide-out-up, ease);
-}
-
-@mixin animation-slide-out-down {
-  @include animation(0, v.$transition, animation-slide-out-down, ease);
-}
-
-@mixin animation-slide-out-right {
-  @include animation(0, v.$transition, animation-slide-out-right, ease);
-}
-
-@mixin animation-slide-out-left {
-  @include animation(0, v.$transition, animation-slide-out-left, ease);
-}
-
-// custom
-
-@mixin animation-grow-width($width: 100%) {
-  @include keyframe(animation-grow-width) {
+@mixin animation-grow($prop: width, $startVal: 0, $endVal: 100%) {
+  @include animation-keyframes {
     0% {
-      width: 0;
+      #{$prop}: $startVal;
     }
 
     100% {
-      width: $width;
+      #{$prop}: $endVal;
     }
   }
-  @include animation(0, v.$transition, animation-grow-width, ease);
-}
 
-@mixin animation-grow-height($height: 100%) {
-  @include keyframe(animation-grow-height) {
-    0% {
-      height: 0;
-    }
-
-    100% {
-      height: $height;
-    }
-  }
-  @include animation(0, v.$transition, animation-grow-height, ease);
+  animation-delay: 0;
+  animation-duration: v.$transition;
+  animation-timing-function: ease;
+  animation-fill-mode: fowards;
 }

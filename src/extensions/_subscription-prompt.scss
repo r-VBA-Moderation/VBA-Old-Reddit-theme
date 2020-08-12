@@ -1,4 +1,4 @@
-/* Subscription prompt - shamelessly pilfered from excel - sorry chaps */
+// Subscription prompt - shamelessly pilfered from excel - sorry chaps
 body:not(.subscriber) #siteTable::before {
   content: "You're not subscribed to r/vba yet! Subscribe now to get help with your vba code!";
   display: block;

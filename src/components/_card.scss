@@ -1,6 +1,6 @@
 @use '../abstracts/mixins' as v;
 
-/* Shadows and Cards */
+//  Cards, Modals, etc
 
 .comments-page .link,
 .commentarea > .sitetable > .comment,
@@ -26,7 +26,18 @@
   @include v.container;
 }
 
-// .commentarea > .sitetable > .comment,
-// #bottom-comments > .sitetable > .comment {
-//   // padding-left: 10px;
-// }
+.thing {
+  @include v.thing;
+  @include v.container;
+}
+
+.report-modal,
+.tfa-login-modal,
+.backup-codes-modal,
+.tfa-verify-email-modal,
+.disable-tfa-modal {
+  .modal-content {
+    @include v.thing(true);
+    @include v.container;
+  }
+}

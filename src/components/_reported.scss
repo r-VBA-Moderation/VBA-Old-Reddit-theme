@@ -1,6 +1,6 @@
 @use '../abstracts/mixins' as v;
 
-/* Reported & Spam / Remove / Approved */
+// Reported & Spam / Remove / Approved
 
 body .content .thing.spam {
   @include v.theme("background", v.$canvas);

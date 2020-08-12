@@ -1,6 +1,6 @@
 @use '../../abstracts/mixins' as v;
 
-/* Subreddits Bar */
+// Subreddits Bar
 
 #sr-header-area {
   @include v.theme("background", v.$sr-header);
@@ -81,7 +81,7 @@ a.random.choice {
   color: transparent !important;
 }
 
-/* Subreddits Dropdown */
+// Subreddits Dropdown
 #sr-header-area {
   .dropdown.srdrop .selected {
     margin: 0 12px 0 8px;

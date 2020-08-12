@@ -15,14 +15,14 @@ body {
   position: relative;
 }
 
-/* Link Objects - From Left to Right */
+// Link Objects - From Left to Right
 
 body > .content .link .rank,
 .rank-spacer {
   display: none;
 }
 
-/* Sticky Post */
+// Sticky Post
 
 .thing.link.stickied {
   a.title,

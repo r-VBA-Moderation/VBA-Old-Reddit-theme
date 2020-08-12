@@ -89,7 +89,7 @@ html {
     @include v.theme("color", v.$metaText);
   }
 
-  /* RES Selection */
+  // RES Selection
   .entry.res-selected,
   .entry.res-selected .md-container {
     @include v.theme(
@@ -151,7 +151,7 @@ html {
   //   }
   // }
 
-  /* RES Tag Dialog + RES Tag */
+  // RES Tag Dialog + RES Tag
 
   .userTagLink.hasTag,
   #userTaggerPreview {
@@ -230,9 +230,9 @@ html {
     color: rgba(255, 255, 255, 0.45) !important;
   }
 
-  /* Input Fields */
+  // Input Fields
 
-  /* Misc. Fixes */
+  // Misc. Fixes
 
   .res .thing .tagline .author {
     border-radius: v.$radius !important;
@@ -432,7 +432,7 @@ html {
     }
   }
 
-  /* More RES Fixes */
+  // More RES Fixes
 
   .res {
     .link .tagline a.voteWeight {
@@ -484,7 +484,7 @@ html {
     @include v.theme("color", v.$bodyText);
   }
 
-  /* Pinheader */
+  // Pinheader
 
   .pinHeader-sub #sr-header-area,
   .pinHeader-subanduser #sr-header-area {
@@ -522,7 +522,7 @@ html {
     }
   }
 
-  /* Gear Dropdown */
+  // Gear Dropdown
 
   .gearIcon {
     background: v.getImage("spritesheet") -64px 0 !important;
@@ -589,7 +589,7 @@ html {
     }
   }
 
-  /* Toggle Off */
+  // Toggle Off
 
   .moduleToggle:not(.enabled) .toggleOn,
   .toggleButton:not(.enabled) .toggleOn,
@@ -602,7 +602,7 @@ html {
     border-radius: v.$radius;
   }
 
-  /* Toggle On */
+  // Toggle On
 
   .moduleToggle.enabled .toggleOn,
   .toggleButton.enabled .toggleOn,
@@ -621,7 +621,7 @@ html {
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12);
   }
 
-  /* RES Popup */
+  // RES Popup
 
   .guider {
     border: none;
@@ -674,14 +674,14 @@ html {
       }
     }
   }
-  /* RES Fixes / RES Nightmode */
-  /* Voting Arrows */
+  // RES Fixes / RES Nightmode
+  // Voting Arrows
 
   .drop-choices a.choice {
     @include v.theme("color", v.$bodyText, true, false, "!important");
   }
 
-  /* Pure White */
+  // Pure White
 
   .comment .score {
     font-size: inherit;
@@ -701,14 +701,14 @@ html {
     padding-bottom: 0;
   }
 
-  /* Toolbox */
+  // Toolbox
 
   body.mod-toolbox .tb-action-button {
     height: 22px !important;
     line-height: 0px;
   }
 
-  /* RES L+C */
+  // RES L+C
 
   .link .entry .buttons li .redditSingleClick {
     padding: 0 1px;

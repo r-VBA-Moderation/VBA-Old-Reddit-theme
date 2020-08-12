@@ -1,6 +1,6 @@
 @use '../abstracts/mixins' as v;
 
-/* Comments Page */
+// Comments Page
 
 // TODO: make padding same as res. res fucks it all up
 
@@ -88,7 +88,7 @@
   }
 }
 
-/* Gilding */
+// Gilding
 
 .gilded-icon:before {
   background: v.getImage("spritesheet") -112px -160px;
@@ -100,7 +100,7 @@
   width: 16px;
 }
 
-/* Comment Stack Behind Parent */
+// Comment Stack Behind Parent
 
 .comment {
   .child,
@@ -168,7 +168,7 @@
   }
 }
 
-/* Sticky Comment */
+// Sticky Comment
 
 .stickied.comment {
   > .entry a,
@@ -177,7 +177,7 @@
   }
 }
 
-/* Comments (/r/.../comments) */
+// Comments (/r/.../comments)
 
 .listing-page .comment {
   margin-left: 0;

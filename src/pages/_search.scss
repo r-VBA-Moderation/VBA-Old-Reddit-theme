@@ -60,7 +60,7 @@
   }
 }
 
-/* No Results */
+// No Results
 // NOTE: not sure if this is even still an element in reddit?
 #noresults {
   margin: 0;
@@ -72,7 +72,7 @@
   display: block;
 }
 
-/* Item */
+// Item
 
 .search-result {
   overflow: hidden;
@@ -157,7 +157,7 @@
 
 // body > div.content > div.listing.search-result-listing > div > div > div:nth-child(1) > div > div.search-expando.collapsed > div > div
 
-// /* Responsive Positioning */
+// // Responsive Positioning
 
 // @media screen and (max-width: 1085px) {
 //   .search-page #search {
@@ -165,7 +165,7 @@
 //   }
 // }
 
-// /* Fix search results position */
+// // Fix search results position
 // div#previoussearch > form#search > input,
 // div#previoussearch > form#search > label {
 //   margin-left: 160px;
@@ -177,7 +177,7 @@
 //   position: static;
 // }
 
-// /* Search results page */
+// // Search results page
 
 // .search-page {
 //   #header-bottom-left {
@@ -265,7 +265,7 @@
 //   border: none;
 // }
 
-// /* New Search Results */
+// // New Search Results
 
 // .search-result-group {
 //   max-width: none;
@@ -290,7 +290,7 @@
 //   margin-right: 16px;
 // }
 
-// /* Subreddits */
+// // Subreddits
 
 // .search-result.search-result-subreddit {
 //   display: inline-block;
@@ -316,7 +316,7 @@
 //   }
 // }
 
-// /* More subreddits */
+// // More subreddits
 
 // [class] .searchfacets {
 //   border: none;
@@ -367,7 +367,7 @@
 //   display: none;
 // }
 
-/* No Results */
+// No Results
 
 #noresults {
   margin: 0;
@@ -379,7 +379,7 @@
   display: block;
 }
 
-// /* Next Page */
+// // Next Page
 
 // .nav-buttons,
 // .search-result-group footer .nav-buttons * {

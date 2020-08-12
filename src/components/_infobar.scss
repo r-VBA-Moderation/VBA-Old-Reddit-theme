@@ -1,6 +1,6 @@
 @use '../abstracts/mixins' as v;
 
-/* Infobar (Default yellow announcement bar) */
+// Infobar (Default yellow announcement bar)
 
 .content .infobar {
   margin: 0 0 16px;
@@ -38,7 +38,7 @@
   }
 }
 
-/* Welcome Infobar */
+// Welcome Infobar
 
 .commentarea .infobar {
   line-height: 18px;
@@ -50,7 +50,7 @@
   }
 }
 
-/* Updated Reddit Infobar */
+// Updated Reddit Infobar
 
 .reddit-infobar.with-icon {
   border: none;

@@ -1,25 +1,25 @@
- /* Remove Sidebar Image & Shrink Header */
+ // Remove Sidebar Image & Shrink Header 
  .side::before {
    content: none;
  }
 
  #header-bottom-left {
-   /* top: 100px; */
+   // top: 100px; 
    top: 40px;
  }
 
  #header {
-   /* height: 196px; */
+   // height: 196px; 
    height: 136px;
  }
 
  .side {
    margin-top: 200px;
-   /* margin-top: 140px; */
+   // margin-top: 140px; 
  }
 
  .search-page .side {
-   /* margin-top: 150px; */
+   // margin-top: 150px; 
    margin-top: 90px;
  }
 
@@ -40,18 +40,18 @@
  .titlebox .fancy-toggle-button,
  .comments-page .side .linkinfo,
  .other-discussions-page .side .linkinfo {
-   /* margin-top: -80px; */
+   // margin-top: -80px; 
    margin-top: -140px;
  }
 
- /* End Remove Sidebar Image & Shrink Header */
+ // End Remove Sidebar Image & Shrink Header 
 
- /* Disable 'get premium banner' - temporary */
+ // Disable 'get premium banner' - temporary 
  /* .premium-banner {
     display: none;
   } */
 
- /* Fix search results position */
+ // Fix search results position 
  div#previoussearch>form#search>input,
  div#previoussearch>form#search>label {
    margin-left: 160px;
@@ -63,4 +63,4 @@
    position: static;
  }
 
- /* End Fix search results position */
+ // End Fix search results position 
