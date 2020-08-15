@@ -3,41 +3,27 @@
 // Thumbnails
 //  Todo - fix this
 .thumbnail {
-  width: 80px;
+  width: 56px;
   height: 56px;
   margin: 0 16px 0 0;
   border-radius: v.$radius;
 
-  // img {
-  //   min-height: 56px;
-  //   min-width: 80px;
-  //   max-width: none;
-  //   position: relative;
-  //   transform: translateY(-50%);
-  //   top: 50%;
-  // }
-
-  &.default,
-  &.self,
-  &.nsfw,
-  &.image,
-  &.spoiler,
-  &[data-href-url*="reddit.com"] {
-    width: 56px;
-    height: 56px;
-    margin: 0 28px 0 12px;
+  img {
+    position: relative;
+    transform: translateY(-50%);
+    top: 50%;
   }
 
   &.default {
-    background: v.getColor("thumbnail", "default") v.getImage("spritesheet") -152px -48px;
+    background: v.getColor("thumbnail", "default") v.getImage("spritesheet") -152px -50px;
   }
 
   &.self {
-    background: v.getColor("thumbnail", "default") v.getImage("spritesheet") -96px -48px;
+    background: v.getColor("thumbnail", "default") v.getImage("spritesheet") -96px -50px;
   }
 
   &.image {
-    background: v.getColor("thumbnail", "default") v.getImage("spritesheet") -208px -48px;
+    background: v.getColor("thumbnail", "default") v.getImage("spritesheet") -208px -50px;
   }
 
   &.nsfw {
