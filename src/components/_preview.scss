@@ -2,6 +2,10 @@
 
 // Next Post / Preview
 
+.nextprev {
+  padding: v.$padding;
+}
+
 .read-next {
   width: 320px;
   height: 128px;
@@ -17,7 +21,6 @@
     );
     @include v.theme("color", v.$secondary-text);
     padding: 8px v.$padding;
-    background-color: #f2f7fa;
   }
 
   .read-next-nav {
