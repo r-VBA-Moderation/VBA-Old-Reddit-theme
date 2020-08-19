@@ -4,7 +4,8 @@ body {
   .btn,
   button,
   .c-btn,
-  .wiki-page .wiki-page-content .wiki_button {
+  .wiki-page .wiki-page-content .wiki_button,
+  .next-button a {
     @include v.button;
   }
 }
