@@ -319,12 +319,12 @@ a {
 }
 
 #mail.havemail:before {
-  animation-name: uf1n90j;
+  animation-name: ue9kwg6;
   animation-duration: 8s;
   animation-iteration-count: 1;
   animation-timing-function: ease;
 }
-@keyframes uf1n90j {
+@keyframes ue9kwg6 {
   0% {
     transform: translateY(76px);
     opacity: 0;
@@ -1754,7 +1754,7 @@ body:not(.subscriber) .content {
   content: " ";
   background: #ff4500 ;
   border-radius: 28px;
-  animation-name: uf1n90k;
+  animation-name: ue9kwgh;
   animation-duration: 0.35s;
   animation-timing-function: ease-out;
   animation-fill-mode: forwards;
@@ -1764,7 +1764,7 @@ body:not(.subscriber) .content {
     background: #ff4500 ;
   }
 }
-@keyframes uf1n90k {
+@keyframes ue9kwgh {
   0% {
     transform: scale(0, 0);
     opacity: 1;
@@ -1991,7 +1991,8 @@ body:not(.subscriber) .content {
 body .btn,
 body button,
 body .c-btn,
-body .wiki-page .wiki-page-content .wiki_button {
+body .wiki-page .wiki-page-content .wiki_button,
+body .next-button a {
   background: #f50 ;
   color: #ffffff ;
   border: 1px solid #f50 ;
@@ -2009,7 +2010,8 @@ body .wiki-page .wiki-page-content .wiki_button {
   body .btn,
 body button,
 body .c-btn,
-body .wiki-page .wiki-page-content .wiki_button {
+body .wiki-page .wiki-page-content .wiki_button,
+body .next-button a {
     background: #d7dadc ;
   }
 }
@@ -2017,7 +2019,8 @@ body .wiki-page .wiki-page-content .wiki_button {
   body .btn,
 body button,
 body .c-btn,
-body .wiki-page .wiki-page-content .wiki_button {
+body .wiki-page .wiki-page-content .wiki_button,
+body .next-button a {
     color: #1a1a1b ;
   }
 }
@@ -2025,14 +2028,16 @@ body .wiki-page .wiki-page-content .wiki_button {
   body .btn,
 body button,
 body .c-btn,
-body .wiki-page .wiki-page-content .wiki_button {
+body .wiki-page .wiki-page-content .wiki_button,
+body .next-button a {
     border: 1px solid #d7dadc ;
   }
 }
 body .btn:active,
 body button:active,
 body .c-btn:active,
-body .wiki-page .wiki-page-content .wiki_button:active {
+body .wiki-page .wiki-page-content .wiki_button:active,
+body .next-button a:active {
   background: black ;
   color: #ffffff ;
   border: 1px solid #f50 ;
@@ -2041,7 +2046,8 @@ body .wiki-page .wiki-page-content .wiki_button:active {
   body .btn:active,
 body button:active,
 body .c-btn:active,
-body .wiki-page .wiki-page-content .wiki_button:active {
+body .wiki-page .wiki-page-content .wiki_button:active,
+body .next-button a:active {
     background: #0d0e0e ;
   }
 }
@@ -2049,7 +2055,8 @@ body .wiki-page .wiki-page-content .wiki_button:active {
   body .btn:active,
 body button:active,
 body .c-btn:active,
-body .wiki-page .wiki-page-content .wiki_button:active {
+body .wiki-page .wiki-page-content .wiki_button:active,
+body .next-button a:active {
     color: #ffffff ;
   }
 }
@@ -2057,14 +2064,16 @@ body .wiki-page .wiki-page-content .wiki_button:active {
   body .btn:active,
 body button:active,
 body .c-btn:active,
-body .wiki-page .wiki-page-content .wiki_button:active {
+body .wiki-page .wiki-page-content .wiki_button:active,
+body .next-button a:active {
     border: 1px solid #d7dadc ;
   }
 }
 body .btn:hover,
 body button:hover,
 body .c-btn:hover,
-body .wiki-page .wiki-page-content .wiki_button:hover {
+body .wiki-page .wiki-page-content .wiki_button:hover,
+body .next-button a:hover {
   background: white ;
   color: #1b1b1c;
   border-color: #1b1b1c;
@@ -2073,14 +2082,16 @@ body .wiki-page .wiki-page-content .wiki_button:hover {
   body .btn:hover,
 body button:hover,
 body .c-btn:hover,
-body .wiki-page .wiki-page-content .wiki_button:hover {
+body .wiki-page .wiki-page-content .wiki_button:hover,
+body .next-button a:hover {
     background: white ;
   }
 }
 body .btn:active,
 body button:active,
 body .c-btn:active,
-body .wiki-page .wiki-page-content .wiki_button:active {
+body .wiki-page .wiki-page-content .wiki_button:active,
+body .next-button a:active {
   margin: 16px 16px 16px 0;
 }
 
@@ -3992,6 +4003,10 @@ body .content .sitetable .link .title a:hover {
   margin-left: 4px;
 }
 
+.nextprev {
+  padding: 16px;
+}
+
 .read-next {
   width: 320px;
   height: 128px;
@@ -4006,7 +4021,6 @@ body .content .sitetable .link .title a:hover {
   border-bottom: 1px solid #edf1f3 ;
   color: #98abba ;
   padding: 8px 16px;
-  background-color: #f2f7fa;
 }
 @media (prefers-color-scheme: dark) {
   .read-next .read-next-header {
@@ -4409,21 +4423,22 @@ select:disabled:hover, select[aria-disabled=true]:hover {
 .thumbnail {
   width: 56px;
   height: 56px;
-  margin: 0 28px 0 12px;
+  margin: 0 16px 0 0;
   border-radius: 4px;
 }
 .thumbnail img {
-  width: 56px;
-  height: 56px;
+  position: relative;
+  transform: translateY(-50%);
+  top: 50%;
 }
 .thumbnail.default {
-  background: #d2dbe0 url(%%spritesheet%%) -152px -48px;
+  background: #d2dbe0 url(%%spritesheet%%) -152px -50px;
 }
 .thumbnail.self {
-  background: #d2dbe0 url(%%spritesheet%%) -96px -48px;
+  background: #d2dbe0 url(%%spritesheet%%) -96px -50px;
 }
 .thumbnail.image {
-  background: #d2dbe0 url(%%spritesheet%%) -208px -48px;
+  background: #d2dbe0 url(%%spritesheet%%) -208px -50px;
 }
 .thumbnail.nsfw {
   background: #e85881 url(%%spritesheet%%) -96px -104px;
@@ -5992,13 +6007,13 @@ ul.image-preview-list li .description pre {
 .commentarea .flair-points:hover:after,
 .commentarea .side .tagline .flair-points:hover:after {
   visibility: visible;
-  animation-name: uf1n912;
+  animation-name: ue9kwhc;
   animation-delay: 0;
   animation-duration: 0.5s;
   animation-timing-function: ease;
   animation-fill-mode: fowards;
 }
-@keyframes uf1n912 {
+@keyframes ue9kwhc {
   0% {
     width: 0;
   }
@@ -6186,6 +6201,152 @@ html.res-commentBoxes.res-commentBoxes-rounded .comment {
   .side .titlebox h1.redditname a,
 .titlebox span.subscribers > span {
     color: #ffffff ;
+  }
+}
+
+body div.content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: calc(100vw - 72px);
+  overflow: hidden;
+  margin-top: 98px;
+}
+@media only screen and (min-width: 1200px) {
+  body div.content {
+    max-width: calc( 100vw - 416px );
+  }
+}
+
+body .side {
+  visibility: hidden;
+  width: 0;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+@media only screen and (min-width: 1200px) {
+  body .side {
+    visibility: visible;
+    width: 320px;
+    margin: 20px 24px 108px 0;
+  }
+}
+body .side #search {
+  visibility: visible;
+  position: absolute;
+  left: 24px;
+  top: 156px;
+  height: 58px;
+  background-color: #ffffff ;
+  color: #1b1b1c ;
+  border-radius: 4px;
+  border: 1px solid;
+  border-color: #dadada ;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
+  padding: 16px;
+  width: calc(100vw - 72px);
+  padding: 8px 16px;
+  z-index: 1;
+}
+@media (prefers-color-scheme: dark) {
+  body .side #search {
+    background-color: #1a1a1b ;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  body .side #search {
+    color: #d7dadc ;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  body .side #search {
+    border-color: #343536 ;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  body .side #search {
+    width: calc( 100vw - 416px );
+  }
+}
+body .side #search input {
+  width: calc( ((100vw - 72px) - 80px) / 3 );
+}
+@media only screen and (min-width: 1200px) {
+  body .side #search input {
+    width: calc( ( (100vw - 416px) - 80px ) / 3 );
+  }
+}
+body .side #search input[type=submit] {
+  height: 32px;
+  width: 32px;
+  margin-left: -38px;
+  background: url(%%spritesheet%%) -64px -97px no-repeat;
+  border: none !important;
+  border-radius: 16px;
+  transition: background 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+body .side #search input[type=submit]:hover {
+  background: rgba(158, 158, 158, 0.2) url(%%spritesheet%%) -64px -97px no-repeat;
+}
+body .side #search #searchexpando {
+  width: calc( ((100vw - 72px) - 80px) / 3 );
+  border: none;
+  margin: 0;
+  padding: 4px;
+  height: auto;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
+}
+@media only screen and (min-width: 1200px) {
+  body .side #search #searchexpando {
+    width: calc( ( (100vw - 416px) - 80px ) / 3 );
+  }
+}
+body .side #search #searchexpando label {
+  cursor: pointer;
+  transition: all 0.1s ease;
+}
+body .side #search #searchexpando label:active {
+  background: rgba(0, 0, 0, 0.06);
+}
+body .side #search #searchexpando label input {
+  width: auto;
+}
+body .side #search #searchexpando p {
+  display: none !important;
+}
+body .side .submit {
+  visibility: visible;
+  position: absolute;
+  top: 156px;
+  z-index: 2;
+  height: 1px;
+  min-height: 58px;
+  width: calc( ((100vw - 72px) - 80px) / 3 );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -ms-flex-align: center;
+}
+@media only screen and (min-width: 1200px) {
+  body .side .submit {
+    width: calc( ( (100vw - 416px) - 80px ) / 3 );
+  }
+}
+body .side .submit-link {
+  left: calc( (((100vw - 72px)) / 3) + (16px + 32px) );
+}
+@media only screen and (min-width: 1200px) {
+  body .side .submit-link {
+    left: calc( ( ((100vw - 416px)) / 3 ) + (16px + 32px) );
+  }
+}
+body .side .submit-text {
+  left: calc( (((100vw - 72px)) / 3) * 2 + (16px * 3) );
+}
+@media only screen and (min-width: 1200px) {
+  body .side .submit-text {
+    left: calc( ( ((100vw - 416px)) / 3 ) * 2 + (16px * 3) );
   }
 }
 
