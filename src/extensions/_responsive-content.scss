@@ -23,26 +23,30 @@ $_element-width-large: calc(
     ) / #{$_element-count}
 );
 
+// CleanCSS bug with spaces after + sign. using minus minus (hence the *-1)
 $_submit-link-left-small: calc(
-  (((100vw - #{(v.$container-margin-hor * 3)})) / #{$_element-count}) +
-    (#{v.$padding} + 32px)
+  ((100vw - #{(v.$container-margin-hor * 3)}) / #{$_element-count}) -
+    ((#{v.$padding} - -32px) * -1)
 );
 
+// CleanCSS bug with spaces after + sign. using minus minus (hence the *-1)
 $_submit-link-left-large: calc(
   (
       ((100vw - #{v.$sidebar-width + (v.$container-margin-hor * 4)})) / #{$_element-count}
-    ) + (#{v.$padding} + 32px)
+    ) - ((#{v.$padding} - -32px) * -1)
 );
 
+// CleanCSS bug with spaces after + sign. using minus minus (hence the *-1)
 $_submit-text-left-small: calc(
-  (((100vw - #{(v.$container-margin-hor * 3)})) / #{$_element-count}) * 2 +
-    (#{v.$padding} * #{$_element-count})
+  (((100vw - #{(v.$container-margin-hor * 3)})) / #{$_element-count}) * 2 -
+    (#{v.$padding} * #{$_element-count} * -1)
 );
 
+// CleanCSS bug with spaces after + sign. using minus minus (hence the *-1)
 $_submit-text-left-large: calc(
   (
-      ((100vw - #{v.$sidebar-width + (v.$container-margin-hor * 4)})) / #{$_element-count}
-    ) * 2 + (#{v.$padding} * #{$_element-count})
+      (100vw - #{v.$sidebar-width + (v.$container-margin-hor * 4)}) / #{$_element-count}
+    ) * 2 - (#{v.$padding} * #{$_element-count} * -1)
 );
 
 body div.content {

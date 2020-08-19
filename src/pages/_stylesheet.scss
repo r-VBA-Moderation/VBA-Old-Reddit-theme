@@ -17,11 +17,14 @@
   }
 }
 
-.sheets .btn.right {
-  background: transparent;
-  border: none;
-  box-shadow: none;
-  padding: 0;
+.sheets .btn {
+  margin-right: v.$padding;
+  &.right {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+  }
 }
 
 pre {
