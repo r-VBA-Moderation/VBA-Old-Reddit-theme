@@ -19,7 +19,7 @@ body:not(.loggedin) #header-bottom-right {
 }
 
 #header-bottom-right a {
-  color: rgba(255, 255, 255, 0.7);
+  @include v.theme("color", v.$linkText);
 
   &:hover {
     text-decoration: underline;
