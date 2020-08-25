@@ -2,184 +2,69 @@
 
 // // Expando Button
 
-// .expando-button {
-//   @include v.theme("background-color", v.$actionIcon);
-//   // background-color: transparent;
-//   // width: 31px !important;
-//   // height: 31px !important;
-//   background-image: none !important;
-//   border-radius: v.$radius;
-//   position: relative;
-//   width: 100%;
-//   height: 2px;
-//   background-color: #fff;
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   transition: all 0.4s ease;
+$_bar-thickness: 1px;
+$_margin-top: 5px;
+$_padding: 5px;
+$_icon-size: 30px;
+$_top: $_margin-top + $_padding - ($_bar-thickness * 2);
 
-//   &.collapsed {
-//     &:before,
-//     &:after {
-//       content: "";
-//       position: absolute;
-//       z-index: 1;
-//       top: -10px;
-//       width: 100%;
-//       height: 2px;
-//       background: inherit;
-//     }
-//   }
-// }
+.expando-button,
+.res-nightmode .expando-button,
+.thing.link.stickied .expando-button:hover {
+  @include v.theme("border", v.$actionIcon, false, true, "solid 1px");
+  border-radius: v.$radius;
+  margin: $_margin-top 8px 0 0 !important;
+  padding: $_padding;
+}
 
-.expando-button {
+.expando-button.video.collapsed,
+.expando-button.video-muted.collapsed,
+.expando-button.selftext.collapsed,
+.expando-button.image.collapsed,
+.expando-button.video.collapsed:hover,
+.expando-button.video-muted.collapsed:hover,
+.expando-button.selftext.collapsed:hover,
+.thing.link.stickied .expando-button:hover,
+.expando-button.image.collapsed:hover,
+.expando-button.video.expanded,
+.expando-button.video-muted.expanded,
+.expando-button.selftext.expanded,
+.expando-button.image.expanded,
+.expando-button.video.expanded:hover,
+.expando-button.video-muted.expanded:hover,
+.expando-button.selftext.expanded:hover,
+.expando-button.image.expanded:hover {
+  background: transparent;
+  height: $_icon-size;
+  width: $_icon-size;
+}
+
+.expando-button:before,
+.expando-button:after {
+  display: block;
   position: relative;
-  top: -1px;
-  margin: 2px 6px 2px 0 !important;
-  width: 16px !important;
-  height: 16px !important;
-  background-color: transparent;
-  background-image: v.getImage("spritesheet") !important;
-  background-size: 264px 264px !important;
-  @include v.theme("border", v.$separator, false, true, "1px solid");
-  cursor: pointer;
-
-  &.image,
-  &.video-muted {
-    position: relative;
-    top: -1px;
-    margin: 2px 6px 2px 0 !important;
-    width: 16px !important;
-    height: 16px !important;
-    background-color: transparent;
-    background-image: v.getImage("spritesheet") !important;
-    background-size: 264px 264px !important;
-    @include v.theme("border", v.$separator, false, true, "1px solid");
-    cursor: pointer;
-  }
-
-  &:hover {
-    @include v.theme("background-color", v.$button);
-    @include v.theme("border-color", v.$button);
-  }
-
-  &.selftext.collapsed,
-  &.crosspost.collapsed {
-    background-position: 0 -48px !important;
-  }
-
-  &.selftext.collapsed:hover,
-  &.crosspost.collapsed:hover {
-    background-position: -16px -48px !important;
-  }
-
-  &.selftext.expanded,
-  &.crosspost.expanded {
-    background-position: -32px -48px !important;
-  }
-
-  &.selftext.expanded:hover,
-  &.crosspost.expanded:hover {
-    background-position: -48px -48px !important;
-  }
-
-  &.video {
-    &.collapsed {
-      background-position: -64px -48px !important;
-
-      &:hover {
-        background-position: -80px -48px !important;
-      }
-    }
-
-    &.expanded {
-      background-position: -32px -48px !important;
-
-      &:hover {
-        background-position: -48px -48px !important;
-      }
-    }
-  }
-
-  &.image {
-    &.collapsedExpando {
-      background-position: -32px -64px !important;
-
-      &:hover {
-        background-position: -48px -64px !important;
-      }
-    }
-
-    &.expanded {
-      background-position: -32px -48px !important;
-
-      &:hover {
-        background-position: -48px -48px !important;
-      }
-    }
-
-    &.gallery {
-      &.collapsedExpando {
-        background-position: 0 -64px !important;
-
-        &:hover {
-          background-position: -16px -64px !important;
-        }
-      }
-
-      &.expanded {
-        background-position: -32px -48px !important;
-
-        &:hover {
-          background-position: -48px -48px !important;
-        }
-      }
-    }
-  }
-
-  &.video-muted {
-    &.collapsed {
-      background-position: -64px -64px !important;
-
-      &:hover {
-        background-position: -80px -64px !important;
-      }
-    }
-
-    &.expanded {
-      background-position: -32px -48px !important;
-
-      &:hover {
-        background-position: -48px -48px !important;
-      }
-    }
-  }
+  // left: 9.5px;
+  top: $_top;
+  width: 100%;
+  height: $_bar-thickness;
+  @include v.theme("background", v.$actionIcon);
+  content: "";
+  transition: 0.3s;
+  z-index: 100;
 }
 
-.expando-gate {
-  .expando-gate__show-once {
-    padding: 0 v.$padding 0px v.$padding;
-  }
-
-  &.expando-gate--interstitial {
-    background-color: #424242;
-  }
+.expando-button:after {
+  transform: rotate(90deg);
 }
 
-.expando-gate.expando-gate--overlay {
-  background-color: rgba(66, 66, 66, 0.54);
+.expando-button.expanded:before,
+.expando-button.expanded:after {
+  transform: rotate(180deg);
 }
 
-// Expando Text
-
-.link .usertext .md {
-  margin-top: 12px;
-  margin-bottom: -12px;
-  padding-top: 12px;
-  padding-left: 0;
-  background-color: transparent;
-  border: 0 solid;
-  @include v.theme("border-top", v.$bodySecondary, false, true, "1px solid");
-  border-radius: 0;
-  @include v.theme("color", v.$bodyText);
-}
+// .usertext-body .md .expando-button,
+// .wiki-page .expando-button,
+// .messages-page .expando-button {
+//   margin: -7px 0 0 0 !important;
+//   vertical-align: middle !important;
+// }
