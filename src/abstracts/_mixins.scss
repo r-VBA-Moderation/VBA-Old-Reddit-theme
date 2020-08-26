@@ -310,8 +310,8 @@ $_breakpoints: (
     }
   }
 
-  animation-delay: 0;
+  animation-delay: 0s;
   animation-duration: v.$transition;
   animation-timing-function: ease;
-  animation-fill-mode: fowards;
+  animation-fill-mode: forwards;
 }

@@ -319,12 +319,12 @@ a {
 }
 
 #mail.havemail:before {
-  animation-name: u3cl7uv;
+  animation-name: u3clat2;
   animation-duration: 8s;
   animation-iteration-count: 1;
   animation-timing-function: ease;
 }
-@keyframes u3cl7uv {
+@keyframes u3clat2 {
   0% {
     transform: translateY(76px);
     opacity: 0;
@@ -1476,7 +1476,6 @@ body:not(.loggedin) #header-bottom-right {
   margin: 0;
   padding: 4px;
   height: 154px;
-  line-height: 50px;
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
 }
 @media (prefers-color-scheme: dark) {
@@ -1811,7 +1810,7 @@ body:not(.subscriber) .content {
   content: " ";
   background: #ff4500 ;
   border-radius: 28px;
-  animation-name: u3cl7vt;
+  animation-name: u3clat6;
   animation-duration: 0.35s;
   animation-timing-function: ease-out;
   animation-fill-mode: forwards;
@@ -1821,7 +1820,7 @@ body:not(.subscriber) .content {
     background: #ff4500 ;
   }
 }
-@keyframes u3cl7vt {
+@keyframes u3clat6 {
   0% {
     transform: scale(0, 0);
     opacity: 1;
@@ -6092,11 +6091,78 @@ ul.image-preview-list li .description pre {
   padding: 0 16px;
 }
 
-.commentarea .entry {
-  margin-left: 85px;
+.flair-points {
+  font-weight: bold;
+  background-color: #ffffff ;
+  border-width: 1px;
+  border-color: #1b1b1c ;
+  background: #f50 ;
+  color: #ffffff ;
+  border-style: none;
 }
-.commentarea .flair-points,
-.commentarea .side .tagline .flair-points {
+@media (prefers-color-scheme: dark) {
+  .flair-points {
+    background-color: #ffffff ;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .flair-points {
+    border-color: #d7dadc ;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .flair-points {
+    background: #f50 ;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .flair-points {
+    color: #ffffff ;
+  }
+}
+.flair-points::before {
+  content: "ClippyPoints Awarded:  ";
+  position: relative;
+  margin: 0em 0 0;
+  background-color: #f50 ;
+  border: 0px solid;
+  padding: 0px 0px;
+  visibility: hidden;
+  display: none;
+  width: 0;
+}
+@media (prefers-color-scheme: dark) {
+  .flair-points::before {
+    background-color: #f50 ;
+  }
+}
+.flair-points:hover::before {
+  display: initial;
+  visibility: visible;
+  min-width: 300px;
+  width: auto;
+  animation-name: u3clatw;
+  animation-delay: 0s;
+  animation-duration: 0.5s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+@keyframes u3clatw {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 300px;
+  }
+}
+.flair-points::after {
+  content: "";
+}
+
+.commentarea .entry {
+  margin-left: 80px;
+}
+.commentarea .flair-points {
   background-color: transparent;
   border: none;
   background-image: url("../images/clippyflair.png");
@@ -6111,130 +6177,54 @@ ul.image-preview-list li .description pre {
   font-weight: bold;
   text-align: center;
   line-height: 50px;
-  z-index: 1;
 }
 @media (prefers-color-scheme: dark) {
-  .commentarea .flair-points,
-.commentarea .side .tagline .flair-points {
+  .commentarea .flair-points {
     color: #f50 ;
   }
 }
-.commentarea .flair-points:after,
-.commentarea .side .tagline .flair-points:after {
+.commentarea .flair-points::after {
   content: "ClippyPoints Awarded:  " attr(title);
   position: absolute;
-  left: -1px;
+  left: 50px;
+  top: 0px;
   font-size: 90%;
   line-height: 15px;
   margin-top: -2px;
   padding: 6px 6px;
-  text-indent: 0;
-  transform: translateY(-50%);
   background-color: #f50 ;
   color: #ffffff ;
   border-radius: 4px;
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
   white-space: nowrap;
-  text-shadow: none;
-  letter-spacing: 0px;
-  visibility: hidden;
-  overflow: hidden;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+  transform-origin: left center;
 }
 @media (prefers-color-scheme: dark) {
-  .commentarea .flair-points:after,
-.commentarea .side .tagline .flair-points:after {
+  .commentarea .flair-points::after {
     background-color: #f50 ;
   }
 }
 @media (prefers-color-scheme: dark) {
-  .commentarea .flair-points:after,
-.commentarea .side .tagline .flair-points:after {
+  .commentarea .flair-points::after {
     color: #ffffff ;
   }
 }
-.commentarea .flair-points:hover:after,
-.commentarea .side .tagline .flair-points:hover:after {
-  visibility: visible;
-  animation-name: u3cl7w6;
-  animation-delay: 0;
-  animation-duration: 0.5s;
-  animation-timing-function: ease;
-  animation-fill-mode: fowards;
+.commentarea .flair-points:hover::after {
+  transform: scaleX(1);
 }
-@keyframes u3cl7w6 {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 220px;
-  }
+.commentarea .flair-points::before {
+  display: none;
 }
 .commentarea form.usertext.cloneable.warn-on-unload {
-  margin-left: 61px;
+  margin-left: 56px;
 }
 
 .commentarea .thing,
 .res .commentarea .thing,
 html.res-commentBoxes.res-commentBoxes-rounded .comment {
   position: relative;
-}
-
-.sidecontentbox .flair-points,
-.linkflair .res-nightmode .flair-points,
-.linkflair .flair-points {
-  font-weight: bold;
-  background-color: #ffffff ;
-  border-width: 1px;
-  border-color: #1b1b1c ;
-  background: #f50 ;
-  color: #ffffff ;
-  border-style: none;
-}
-@media (prefers-color-scheme: dark) {
-  .sidecontentbox .flair-points,
-.linkflair .res-nightmode .flair-points,
-.linkflair .flair-points {
-    background-color: #ffffff ;
-  }
-}
-@media (prefers-color-scheme: dark) {
-  .sidecontentbox .flair-points,
-.linkflair .res-nightmode .flair-points,
-.linkflair .flair-points {
-    border-color: #d7dadc ;
-  }
-}
-@media (prefers-color-scheme: dark) {
-  .sidecontentbox .flair-points,
-.linkflair .res-nightmode .flair-points,
-.linkflair .flair-points {
-    background: #f50 ;
-  }
-}
-@media (prefers-color-scheme: dark) {
-  .sidecontentbox .flair-points,
-.linkflair .res-nightmode .flair-points,
-.linkflair .flair-points {
-    color: #ffffff ;
-  }
-}
-.sidecontentbox .flair-points:hover:before,
-.linkflair .res-nightmode .flair-points:hover:before,
-.linkflair .flair-points:hover:before {
-  content: "ClippyPoints Awarded:  ";
-  position: relative;
-  margin: 0em 0 0;
-  background-color: #f50 ;
-  border: 0px solid;
-  padding: 0px 0px;
-  transition: ease-in-out;
-}
-@media (prefers-color-scheme: dark) {
-  .sidecontentbox .flair-points:hover:before,
-.linkflair .res-nightmode .flair-points:hover:before,
-.linkflair .flair-points:hover:before {
-    background-color: #f50 ;
-  }
 }
 
 .usertext-body > .md,
@@ -6806,9 +6796,8 @@ body.comments-page .side {
   }
 }
 .side .titlebox .md ul li:hover blockquote {
-  visibility: visible;
-  opacity: 1;
-  transition: opacity 0.25s ease, visibility 0.25s ease;
+  transform: scaleX(1);
+  transition-delay: 0s;
 }
 .side .titlebox .md ul li blockquote {
   position: absolute;
@@ -6819,13 +6808,14 @@ body.comments-page .side {
   border-color: #dadada ;
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
   padding: 16px;
-  margin-top: -34px;
+  margin-top: -54px;
   width: 320px;
   z-index: 1;
-  visibility: hidden;
   right: 344px;
-  opacity: 0;
-  transition: opacity 0.25s ease, visibility 0.25s ease;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+  transform-origin: right center;
+  transition-delay: 1s;
 }
 @media (prefers-color-scheme: dark) {
   .side .titlebox .md ul li blockquote {

@@ -2,57 +2,97 @@
 
 $_css-class: "points";
 $_desc: "ClippyPoints Awarded:  ";
-$_margin: 85px;
+$_margin: 80px;
 $_offset: 25px;
 $_left-pad: 5px;
+
+// Clippy Point Flair styling - Link Flair
+
+.flair- {
+  &#{$_css-class} {
+    font-weight: bold;
+    @include v.theme("background-color", v.$lightText);
+    border-width: 1px;
+    @include v.theme("border-color", v.$bodyText);
+    @include v.theme("background", v.$primary);
+    @include v.theme("color", v.$lightText);
+    border-style: none;
+
+    &::before {
+      content: $_desc;
+      position: relative;
+      margin: 0em 0 0;
+      @include v.theme("background-color", v.$banner-backgroundColor);
+      border: 0px solid;
+      padding: 0px 0px;
+      visibility: hidden;
+      display: none;
+      width: 0;
+    }
+    &:hover::before {
+      display: initial;
+      visibility: visible;
+      min-width: 300px;
+      width: auto;
+      @include v.animation-grow(width, 0, 300px);
+    }
+    &::after {
+      content: "";
+    }
+  }
+}
+// End Clippy Point Flair styling - Link Flair
+
 //Clippy Point Flair styling - Comments
+
+$_clippy-size: 50px;
 
 .commentarea {
   .entry {
     margin-left: $_margin;
   }
 
-  .flair-,
-  .side .tagline .flair- {
+  .flair- {
     &#{$_css-class} {
       background-color: transparent;
       border: none;
       background-image: v.getImage("clippyflair");
       position: absolute;
-      width: 50px;
-      height: 50px;
+      width: $_clippy-size;
+      height: $_clippy-size;
       left: ($_offset + $_left-pad);
       border-radius: v.$radius;
       @include v.theme("color", v.$primary);
+      // border: 1px solid red;
       text-shadow: 0px 1px 0px #333333;
       font-size: 150%;
       font-weight: bold;
       text-align: center;
-      line-height: 50px;
-      z-index: 1;
-      &:after {
+      line-height: $_clippy-size;
+      // z-index: 1;
+      &::after {
         content: $_desc attr(title);
         position: absolute;
-        left: -1px;
+        left: $_clippy-size;
+        top: 0px;
         font-size: 90%;
         line-height: 15px;
         margin-top: -2px;
         padding: 6px 6px;
-        text-indent: 0;
-        transform: translateY(-50%);
         @include v.theme("background-color", v.$banner-backgroundColor);
         @include v.theme("color", v.$lightText);
         border-radius: v.$radius;
         box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
         white-space: nowrap;
-        text-shadow: none;
-        letter-spacing: 0px;
-        visibility: hidden;
-        overflow: hidden;
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
+        transform-origin: left center;
       }
-      &:hover:after {
-        visibility: visible;
-        @include v.animation-grow(width, 0, 220px);
+      &:hover::after {
+        transform: scaleX(1);
+      }
+      &::before {
+        display: none;
       }
     }
   }
@@ -69,31 +109,3 @@ html.res-commentBoxes.res-commentBoxes-rounded .comment {
 }
 
 //End Clippy Point Flair styling - Comments
-
-// Clippy Point Flair styling - Link Flair
-
-.sidecontentbox .flair-,
-.linkflair .res-nightmode .flair-,
-.linkflair .flair- {
-  &#{$_css-class} {
-    font-weight: bold;
-    @include v.theme("background-color", v.$lightText);
-    border-width: 1px;
-    @include v.theme("border-color", v.$bodyText);
-    @include v.theme("background", v.$primary);
-    @include v.theme("color", v.$lightText);
-    border-style: none;
-
-    &:hover:before {
-      content: $_desc;
-      position: relative;
-      margin: 0em 0 0;
-      @include v.theme("background-color", v.$banner-backgroundColor);
-      border: 0px solid;
-      padding: 0px 0px;
-      transition: ease-in-out;
-    }
-  }
-}
-
-// End Clippy Point Flair styling - Link Flair
