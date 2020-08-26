@@ -21,6 +21,7 @@
 #ad_main_top,
 .search-result-subreddit,
 .search-result-listing + .search-result-listing .contents,
+.link .usertext-body .md,
 [class] .searchfacets {
   @include v.thing(true);
   @include v.container;

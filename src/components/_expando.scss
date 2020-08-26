@@ -14,7 +14,7 @@ $_top: $_margin-top + $_padding - ($_bar-thickness * 2);
   @include v.theme("border", v.$actionIcon, false, true, "solid 1px");
   border-radius: v.$radius;
   margin: $_margin-top 8px 0 0 !important;
-  padding: $_padding;
+  padding: $_padding !important;
 }
 
 .expando-button.video.collapsed,
@@ -41,8 +41,8 @@ $_top: $_margin-top + $_padding - ($_bar-thickness * 2);
 
 .expando-button:before,
 .expando-button:after {
-  display: block;
-  position: relative;
+  position: relative !important;
+  display: flex;
   // left: 9.5px;
   top: $_top;
   width: 100%;
@@ -50,7 +50,6 @@ $_top: $_margin-top + $_padding - ($_bar-thickness * 2);
   @include v.theme("background", v.$actionIcon);
   content: "";
   transition: 0.3s;
-  z-index: 100;
 }
 
 .expando-button:after {

@@ -54,141 +54,151 @@ $_submit-text-left-large: calc(
 );
 
 body {
-  &:not(.subscriber) {
+  // only on comments page and font page
+  &.comments-page,
+  &.listing-page {
+    &:not(.subscriber) {
+      div.content {
+        margin-top: $_search-height + v.$subscription-prompt-height +
+          v.$container-margin-vert * 2;
+      }
+      .side {
+        .sidebox.submit,
+        #search {
+          top: v.$header-height + v.$container-margin-vert +
+            v.$subscription-prompt-height;
+        }
+      }
+    }
+
     div.content {
-      margin-top: $_search-height + v.$subscription-prompt-height +
-        v.$container-margin-vert * 2;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      max-width: $_content-width-small;
+      overflow: hidden;
+      margin-top: $_search-height + v.$container-margin-vert * 2;
+      @include v.respond-to($_breakpoint) {
+        max-width: $_content-width-large;
+      }
     }
     .side {
-      .sidebox.submit,
+      visibility: hidden;
+      width: 0;
+      border: none;
+      @include v.pargin(0);
+      @include v.respond-to($_breakpoint) {
+        visibility: visible;
+        width: v.$sidebar-width;
+        margin: v.$container-margin-vert v.$container-margin-hor 108px 0;
+        // @include v.container;
+        // padding: 1rem;
+      }
+
+      .spacer:first-of-type {
+        margin-bottom: 0;
+      }
+
       #search {
-        top: v.$header-height + v.$container-margin-vert +
-          v.$subscription-prompt-height;
+        visibility: visible;
+        position: absolute;
+        left: v.$container-margin-hor;
+        top: v.$header-height + v.$container-margin-vert;
+        height: $_search-height;
+        @include v.thing(true);
+        @include v.container;
+        width: $_content-width-small;
+        padding: 8px 16px;
+        z-index: 1;
+        @include v.respond-to($_breakpoint) {
+          width: $_content-width-large;
+        }
+
+        input {
+          width: $_element-width-small;
+          @include v.respond-to($_breakpoint) {
+            width: $_element-width-large;
+          }
+
+          &[type="submit"] {
+            height: 32px;
+            width: 32px;
+            margin-left: -38px;
+            background: v.getImage("spritesheet") -64px -97px no-repeat;
+            border: none !important;
+            border-radius: 16px;
+            transition: background 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+
+            &:hover {
+              background: rgba(158, 158, 158, 0.2) v.getImage("spritesheet") -64px -97px
+                no-repeat;
+            }
+          }
+        }
+
+        #searchexpando {
+          width: $_element-width-small;
+          border: none;
+          margin: 0;
+          padding: 4px;
+          height: auto;
+          box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
+          @include v.respond-to($_breakpoint) {
+            width: $_element-width-large;
+          }
+          label {
+            cursor: pointer;
+            transition: all 0.1s ease;
+
+            &:active {
+              background: rgba(0, 0, 0, 0.06);
+            }
+            input {
+              width: auto;
+            }
+          }
+
+          p {
+            display: none !important;
+          }
+        }
+      }
+
+      .sidebox.submit {
+        visibility: visible;
+        position: absolute;
+        top: v.$header-height + v.$container-margin-vert;
+        z-index: 2;
+        height: 1px;
+        min-height: $_search-height;
+        width: $_element-width-small;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        -ms-flex-align: center;
+        @include v.respond-to($_breakpoint) {
+          width: $_element-width-large;
+        }
+        &-link {
+          left: $_submit-link-left-small;
+          @include v.respond-to($_breakpoint) {
+            left: $_submit-link-left-large;
+          }
+        }
+        &.disabled,
+        &-text {
+          left: $_submit-text-left-small;
+          @include v.respond-to($_breakpoint) {
+            left: $_submit-text-left-large;
+          }
+        }
       }
     }
   }
 
-  div.content {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    max-width: $_content-width-small;
-    overflow: hidden;
-    margin-top: $_search-height + v.$container-margin-vert * 2;
-    @include v.respond-to($_breakpoint) {
-      max-width: $_content-width-large;
-    }
-  }
-  .side {
-    visibility: hidden;
-    width: 0;
-    border: none;
-    @include v.pargin(0);
-    @include v.respond-to($_breakpoint) {
-      visibility: visible;
-      width: v.$sidebar-width;
-      margin: v.$container-margin-vert v.$container-margin-hor 108px 0;
-      // @include v.container;
-      // padding: 1rem;
-    }
-
-    .spacer:first-of-type {
-      margin-bottom: 0;
-    }
-
-    #search {
-      visibility: visible;
-      position: absolute;
-      left: v.$container-margin-hor;
-      top: v.$header-height + v.$container-margin-vert;
-      height: $_search-height;
-      @include v.thing(true);
-      @include v.container;
-      width: $_content-width-small;
-      padding: 8px 16px;
-      z-index: 1;
-      @include v.respond-to($_breakpoint) {
-        width: $_content-width-large;
-      }
-
-      input {
-        width: $_element-width-small;
-        @include v.respond-to($_breakpoint) {
-          width: $_element-width-large;
-        }
-
-        &[type="submit"] {
-          height: 32px;
-          width: 32px;
-          margin-left: -38px;
-          background: v.getImage("spritesheet") -64px -97px no-repeat;
-          border: none !important;
-          border-radius: 16px;
-          transition: background 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-
-          &:hover {
-            background: rgba(158, 158, 158, 0.2) v.getImage("spritesheet") -64px -97px
-              no-repeat;
-          }
-        }
-      }
-
-      #searchexpando {
-        width: $_element-width-small;
-        border: none;
-        margin: 0;
-        padding: 4px;
-        height: auto;
-        box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
-        @include v.respond-to($_breakpoint) {
-          width: $_element-width-large;
-        }
-        label {
-          cursor: pointer;
-          transition: all 0.1s ease;
-
-          &:active {
-            background: rgba(0, 0, 0, 0.06);
-          }
-          input {
-            width: auto;
-          }
-        }
-
-        p {
-          display: none !important;
-        }
-      }
-    }
-
-    .sidebox.submit {
-      visibility: visible;
-      position: absolute;
-      top: v.$header-height + v.$container-margin-vert;
-      z-index: 2;
-      height: 1px;
-      min-height: $_search-height;
-      width: $_element-width-small;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      -ms-flex-align: center;
-      @include v.respond-to($_breakpoint) {
-        width: $_element-width-large;
-      }
-      &-link {
-        left: $_submit-link-left-small;
-        @include v.respond-to($_breakpoint) {
-          left: $_submit-link-left-large;
-        }
-      }
-      &.disabled,
-      &-text {
-        left: $_submit-text-left-small;
-        @include v.respond-to($_breakpoint) {
-          left: $_submit-text-left-large;
-        }
-      }
+  &.comments-page {
+    .side {
+      margin-top: v.$container-margin-vert + v.$linkinfo-height;
     }
   }
 }

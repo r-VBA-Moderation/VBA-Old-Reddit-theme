@@ -1,3 +1,5 @@
+@use 'sass:color';
+
 $_primary: #f50;
 
 $theme: (
@@ -10,10 +12,10 @@ $theme: (
   "bodySecondary": #272727,
   "bodyFade": lighten(#1a1a1b, 7%),
   "bodyText": #d7dadc,
-  "bodyTextAlpha20": transparentize(#d7dadc, 0.8),
+  "bodyTextAlpha20": color.scale(#d7dadc, $alpha: 80%),
   "button": #d7dadc,
-  "buttonTinted50": lighten(#d7dadc, 50%),
-  "buttonShaded80": darken(#d7dadc, 80%),
+  "buttonTinted50": color.scale(#d7dadc, $lightness: 50%),
+  "buttonShaded80": color.scale(#d7dadc, $lightness: -80%),
   "canvas": #030303,
   "errorText": #ff0000,
   "field": #272729,

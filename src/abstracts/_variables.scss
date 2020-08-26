@@ -2,7 +2,7 @@
 @use 'sass:string';
 @use 'functions' as f;
 
-$_dev: false;
+$_dev: true;
 
 $base-font: Arial, Helvetica, sans-serif;
 $mono-font: Consolas, "Lucida Console", "DejaVu Sans Mono", monospace;
@@ -36,6 +36,7 @@ $titlebox-height: 76px;
 $titlebox-margin: -16px;
 $side-margin-top: $container-margin-vert + $titlebox-height;
 $side-start-vert: $container-margin-vert + $header-height;
+$linkinfo-height: 98px;
 
 $search-height: 42px;
 
@@ -90,7 +91,7 @@ $_colors: (
   "selection": (
     "background": #7dbcff99,
     // #0079d3,
-      "color": #fff,
+    "color": #fff,
   ),
   "role": (
     "moderator": $moderator,

@@ -40,25 +40,39 @@
                 opacity: 0.85;
               }
               &:nth-child(1) > a {
-                background-color: v.getColor("linkflair", "unsolved");
+                @include v.customButtonColors(
+                  v.getColor("linkflair", "unsolved")
+                );
               }
               &:nth-child(2) > a {
-                background-color: v.getColor("linkflair", "solved");
+                @include v.customButtonColors(
+                  v.getColor("linkflair", "solved")
+                );
               }
               &:nth-child(3) > a {
-                background-color: v.getColor("linkflair", "discussion");
+                @include v.customButtonColors(
+                  v.getColor("linkflair", "discussion")
+                );
               }
               &:nth-child(4) > a {
-                background-color: v.getColor("linkflair", "protip");
+                @include v.customButtonColors(
+                  v.getColor("linkflair", "protip")
+                );
               }
               &:nth-child(5) > a {
-                background-color: v.getColor("linkflair", "codereview");
+                @include v.customButtonColors(
+                  v.getColor("linkflair", "codereview")
+                );
               }
               &:nth-child(6) > a {
-                background-color: v.getColor("linkflair", "advertisement");
+                @include v.customButtonColors(
+                  v.getColor("linkflair", "advertisement")
+                );
               }
               &:nth-child(7) > a {
-                background-color: v.getColor("linkflair", "challenge");
+                @include v.customButtonColors(
+                  v.getColor("linkflair", "challenge")
+                );
               }
 
               a {

@@ -6,6 +6,7 @@
 @use 'sass:map';
 @use "../theme/reddit-dark" as dark;
 @use "../theme/reddit-light" as light;
+@use 'sass:color';
 
 @mixin pargin($val) {
   margin: $val;
@@ -223,10 +224,29 @@ $_breakpoints: (
 
 @mixin _hover-button {
   @include theme("background", v.$buttonTinted50);
-  // @include theme("color", v.$bodyText);
-  color: #1b1b1c;
-  border-color: #1b1b1c;
-  // @include theme("border-color", v.$buttonTinted50);
+  @include theme("color", v.$body);
+  @include theme("border", v.$buttonTinted50, false, true, "1px solid");
+  // color: #1b1b1c;
+  // border-color: #1b1b1c;
+  // @include theme("background", v.$buttonShaded80);
+  // @include theme("color", v.$lightText);
+  // @include theme("border", v.$button, false, true, "1px solid");
+}
+
+@mixin customButtonColors($baseColor) {
+  background: $baseColor;
+  @include theme("color", v.$lightText);
+  border: 1px solid $baseColor;
+  &:active {
+    background: color.scale($baseColor, $lightness: -80%);
+    @include theme("color", v.$lightText);
+    border: 1px solid $baseColor;
+  }
+  &:hover {
+    background: color.scale($baseColor, $lightness: 50%);
+    border: 1px solid color.scale($baseColor, $lightness: 50%);
+    @include theme("color", v.$lightText);
+  }
 }
 
 @mixin button($active: false, $link-as-button: false) {

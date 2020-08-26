@@ -3,8 +3,6 @@
 // fetch sidebar components
 @use 'sidebar-components/all';
 
-$_linkinfo-height: 98px;
-
 // Sidebar
 body {
   .side {
@@ -25,7 +23,7 @@ body {
     &.comments-page,
     &.other-discussions-page {
       .side {
-        margin-top: (v.$container-margin-vert * 2) + $_linkinfo-height +
+        margin-top: (v.$container-margin-vert * 2) + v.$linkinfo-height +
           v.$subscription-prompt-height;
         .linkinfo {
           top: v.$container-margin-vert + v.$header-height +
@@ -46,13 +44,13 @@ body {
 .comments-page,
 .other-discussions-page {
   .side {
-    margin-top: (v.$container-margin-vert * 2) + $_linkinfo-height;
+    margin-top: (v.$container-margin-vert * 2) + v.$linkinfo-height;
     .linkinfo {
       position: absolute;
       top: v.$container-margin-vert + v.$header-height;
       padding: v.$padding;
       width: v.$sidebar-width;
-      height: $_linkinfo-height;
+      height: v.$linkinfo-height;
       @include v.theme("background", v.$body);
       box-shadow: 0 1px 5px rgba(0, 0, 0, 0.16);
       border: none;
