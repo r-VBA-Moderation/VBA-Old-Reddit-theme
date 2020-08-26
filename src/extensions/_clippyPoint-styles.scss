@@ -45,7 +45,7 @@ $_clippy-size: 50px;
         box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
         white-space: nowrap;
         transform: scaleX(0);
-        transition: transform 0.3s ease;
+        transition: transform v.$transition ease;
         transform-origin: left center;
       }
       &:hover::after {
@@ -71,11 +71,12 @@ html.res-commentBoxes.res-commentBoxes-rounded .comment {
 //End Clippy Point Flair styling - Comments
 
 // Clippy Point Flair styling - Link Flair
-.tagline,
+.link .entry .tagline,
 .sidecontentbox,
 .linkflair {
   .flair- {
     &#{$_css-class} {
+      display: inline-flex;
       font-weight: bold;
       @include v.theme("background-color", v.$lightText);
       border-width: 1px;
@@ -86,24 +87,25 @@ html.res-commentBoxes.res-commentBoxes-rounded .comment {
 
       &::before {
         content: $_desc;
-        position: relative;
-        margin: 0em 0 0;
+        // display: inline;
         @include v.theme("background-color", v.$banner-backgroundColor);
+        white-space: nowrap;
+        overflow: hidden;
         border: 0px solid;
-        padding: 0px 0px;
-        visibility: hidden;
-        display: none;
-        width: 0;
+        position: relative;
+        width: 0 !important;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition-property: transform, width;
+        transition-duration: v.$transition;
+        transition-timing-function: ease;
       }
-      &:hover::before {
-        display: initial;
-        visibility: visible;
-        min-width: 300px;
-        width: auto;
-        @include v.animation-grow(width, 0, 300px);
-      }
-      &::after {
-        content: "";
+      &:hover {
+        @include v.theme("color", v.$lightText);
+        &::before {
+          width: 130px !important;
+          transform: scaleX(1);
+        }
       }
     }
   }

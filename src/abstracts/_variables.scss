@@ -2,7 +2,7 @@
 @use 'sass:string';
 @use 'functions' as f;
 
-$_dev: true;
+$_dev: false;
 
 $base-font: Arial, Helvetica, sans-serif;
 $mono-font: Consolas, "Lucida Console", "DejaVu Sans Mono", monospace;

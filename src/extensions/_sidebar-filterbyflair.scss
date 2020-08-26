@@ -32,7 +32,7 @@
             right: v.$sidebar-width + v.$container-margin-hor;
             // opacity: 0;
             transform: scaleX(0);
-            transition: transform 0.3s ease;
+            transition: transform v.$transition ease;
             transform-origin: right center;
             transition-delay: 1s;
             p {

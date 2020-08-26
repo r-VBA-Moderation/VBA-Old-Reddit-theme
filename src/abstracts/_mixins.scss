@@ -239,13 +239,10 @@ $_breakpoints: (
   border: 1px solid $baseColor;
   &:active {
     background: color.scale($baseColor, $lightness: -80%);
-    @include theme("color", v.$lightText);
-    border: 1px solid $baseColor;
   }
   &:hover {
     background: color.scale($baseColor, $lightness: 50%);
     border: 1px solid color.scale($baseColor, $lightness: 50%);
-    @include theme("color", v.$lightText);
   }
 }
 

@@ -31,6 +31,7 @@
   }
 }
 
+.sidecontentbox,
 .link .entry .tagline {
   .userattrs > a,
   .flair {
@@ -40,7 +41,6 @@
     margin: 0 5px;
     padding: 2px 5px;
     font-size: 10px;
-    background: transparent;
     @include v.theme("color", v.$lightText);
     border: none;
     &:hover {

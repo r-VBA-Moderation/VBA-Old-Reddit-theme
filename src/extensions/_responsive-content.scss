@@ -54,6 +54,12 @@ $_submit-text-left-large: calc(
 );
 
 body {
+  // lol fuck it - cannot get this to work
+  // #sr-header-area .drop-choices.inuse {
+  //   position: relative;
+  //   z-index: 10000000 !important;
+  // }
+
   // only on comments page and font page
   &.comments-page,
   &.listing-page {
@@ -72,6 +78,8 @@ body {
     }
 
     div.content {
+      position: relative;
+      z-index: 0;
       display: flex;
       flex-direction: column;
       width: 100%;
@@ -102,6 +110,7 @@ body {
       #search {
         visibility: visible;
         position: absolute;
+        z-index: 1;
         left: v.$container-margin-hor;
         top: v.$header-height + v.$container-margin-vert;
         height: $_search-height;
@@ -109,7 +118,7 @@ body {
         @include v.container;
         width: $_content-width-small;
         padding: 8px 16px;
-        z-index: 1;
+
         @include v.respond-to($_breakpoint) {
           width: $_content-width-large;
         }
@@ -137,6 +146,8 @@ body {
         }
 
         #searchexpando {
+          position: absolute;
+          z-index: 100;
           width: $_element-width-small;
           border: none;
           margin: 0;
