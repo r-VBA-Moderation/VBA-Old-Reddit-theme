@@ -60,7 +60,8 @@ body {
   //   z-index: 10000000 !important;
   // }
 
-  // only on comments page and font page
+  // only on comments, front and wiki pages
+  &.wiki-page,
   &.comments-page,
   &.listing-page {
     &:not(.subscriber) {
