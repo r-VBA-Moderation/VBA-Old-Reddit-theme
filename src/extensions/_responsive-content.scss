@@ -74,6 +74,9 @@ body {
           top: v.$header-height + v.$container-margin-vert +
             v.$subscription-prompt-height;
         }
+        #login_login-main {
+          margin-top: v.$subscription-prompt-height;
+        }
       }
     }
 
