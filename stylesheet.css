@@ -319,12 +319,12 @@ a {
 }
 
 #mail.havemail:before {
-  animation-name: u3t7n9p;
+  animation-name: u9vtdod;
   animation-duration: 8s;
   animation-iteration-count: 1;
   animation-timing-function: ease;
 }
-@keyframes u3t7n9p {
+@keyframes u9vtdod {
   0% {
     transform: translateY(76px);
     opacity: 0;
@@ -1811,7 +1811,7 @@ body:not(.subscriber) .content {
   content: " ";
   background: #ff4500 ;
   border-radius: 28px;
-  animation-name: u3t7na9;
+  animation-name: u9vtdp3;
   animation-duration: 0.35s;
   animation-timing-function: ease-out;
   animation-fill-mode: forwards;
@@ -1821,7 +1821,7 @@ body:not(.subscriber) .content {
     background: #ff4500 ;
   }
 }
-@keyframes u3t7na9 {
+@keyframes u9vtdp3 {
   0% {
     transform: scale(0, 0);
     opacity: 1;
@@ -6591,6 +6591,54 @@ body.comments-page .side {
   .side .titlebox h1.redditname a {
     background-color: #f50 ;
   }
+}
+
+body:not(.subscriber) #header::after {
+  content: "You're not subscribed to r/vba yet! Subscribe now to get help with your vba code!";
+  position: absolute;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 17px;
+  height: 30px;
+  transition: all 0.2s ease;
+  text-align: center;
+  background-color: #ffdf84;
+  border-radius: 0;
+  color: #444444;
+  padding-left: 40px;
+  background-image: url(%%info-shield%%);
+  background-position: 10px center;
+  background-repeat: no-repeat;
+  top: 136px;
+  border: 1px solid #e0bc80;
+}
+body:not(.subscriber) span.fancy-toggle-button.subscribe-button.toggle {
+  position: absolute;
+  top: 136px;
+  left: 766px;
+  margin: 0;
+  padding-top: 4px;
+  z-index: 1;
+}
+body:not(.subscriber) span.fancy-toggle-button.subscribe-button.toggle a.add {
+  box-sizing: content-box;
+  margin: 0;
+  font-weight: normal;
+  width: 100px;
+  height: 20px;
+  border-radius: 0;
+  border: 1px solid #ababab;
+  background-color: #f0f0f0;
+  color: #444444;
+  text-align: center;
+  padding: 0;
+  line-height: 20px;
+}
+body:not(.subscriber) div.multi-selector.hover-bubble.anchor-right {
+  right: calc(100vw - 766px);
+  left: 561px;
+  margin-top: -40px;
 }
 
 /*# sourceMappingURL=stylesheet.css.map */
