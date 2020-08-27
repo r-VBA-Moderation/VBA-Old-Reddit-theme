@@ -5,14 +5,12 @@
 .content .infobar {
   margin: 0 0 16px;
   padding: v.$padding;
-  // line-height: 26px;
   height: auto;
-  // border: none;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
   @include v.theme("border-bottom", v.$line, false, true, "1px solid");
   @include v.theme("background-color", v.$navBar-backgroundColor);
-  @include v.theme("color", v.$lightText);
+  @include v.theme("color", v.$bodyText);
 
   &.listingsignupbar,
   .listingsignupbar__title,
