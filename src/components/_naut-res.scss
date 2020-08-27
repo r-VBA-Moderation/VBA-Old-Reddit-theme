@@ -1,6 +1,16 @@
 @use '../abstracts/mixins' as v;
 
 html {
+  .res-show-link {
+    @include v.theme("background-color", v.$body);
+    @include v.theme("color", v.$bodyText);
+  }
+
+  .viewSource textarea {
+    @include v.theme("background-color", v.$canvas);
+    @include v.theme("color", v.$inactiveText);
+  }
+
   .res-nightmode #sr-header-area,
   .res-nightmode #sr-more-link {
     @include v.theme("background-color", v.$body, true);
