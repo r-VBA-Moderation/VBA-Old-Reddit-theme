@@ -1,6 +1,9 @@
+
 # Modular Old Reddit Theme
 
 This is a [SASS](https://sass-lang.com/) theme for [Old Reddit ](old.reddit.com).
+
+Originally heavily inspired by the excellent [Naut theme](https://github.com/Axel--/Naut-for-reddit/) (but almost completely re-written), this theme supports the [prefers-color-scheme](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme) and introduces responsive elements.
 
 ## Installation
 
