@@ -95,6 +95,7 @@
     &.RESDashboardToggle,
     &.RESshortcutside {
       @include v.button(false, true);
+      margin: v.$padding 5px 0 0;
       max-width: 33%;
       padding: 0;
       padding: 0 8px;
@@ -110,10 +111,10 @@
   }
 
   .fancy-toggle-button {
-    margin: v.$padding 10px v.$padding 0;
+    margin: 0;
     .active {
       @include v.button(true, true);
-      margin: v.$padding 10px v.$padding 0;
+      margin: v.$padding 5px 0 0;
     }
   }
 
