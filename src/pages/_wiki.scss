@@ -41,10 +41,23 @@
   .wiki-page-content {
     @include v.thing;
     @include v.container;
+    margin: v.$padding;
+
+    .discussionlink {
+      margin: v.$padding 0 0;
+      padding: 0;
+
+      a {
+        padding: 0 v.$padding;
+      }
+    }
 
     .wiki {
-      > .toc > ul {
-        border: none;
+      > .toc {
+        border-radius: 0px;
+        > ul {
+          border: none;
+        }
       }
 
       &.md {
@@ -71,16 +84,5 @@
     .wikirevisionlisting table tr:hover {
       background-color: rgba(0, 0, 0, 0.1) !important;
     }
-  }
-}
-
-// Wiki Talk Submit
-
-.wiki-page .wiki-page-content .discussionlink {
-  margin: 16px 0 0;
-  padding: 0;
-
-  a {
-    padding: 0 v.$padding;
   }
 }
