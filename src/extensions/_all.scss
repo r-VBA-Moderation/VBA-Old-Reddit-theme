@@ -1,14 +1,7 @@
-@use "clippyPoint-styles";
-@use "code";
-@use 'flair';
 @use 'hide-flair-selector';
 @use 'infobox-recolor';
 @use 'responsive-content';
-@use 'sidebar-filterbyflair';
-@use 'sidebar-rulesbox';
 @use 'subreddit-title-image-replace';
-@use 'subscription-prompt-excel';
-@use "table";
 
 // import community specific themes last
 @use './community_extensions/all';
