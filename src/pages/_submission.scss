@@ -32,6 +32,9 @@
         padding-right: v.$padding;
         font-size: 14px;
         line-height: v.$button-height;
+        @include v.theme("background-color", v.$primary);
+        @include v.theme("color", v.$lightText);
+        @include v.theme("border-color", v.$primary);
       }
     }
   }
