@@ -2,14 +2,14 @@
 @use 'sass:string';
 @use 'functions' as f;
 
-$_dev: false;
+$_dev: true;
 
 $base-font: Arial, Helvetica, sans-serif;
 $mono-font: Consolas, "Lucida Console", "DejaVu Sans Mono", monospace;
 
 $readers: "Developers";
 $users: "users currently online";
-$downvote-hover-text: "Consider posting constructive criticism / an explanation when you downvote something.";
+$downvote-hover-text: "Consider posting constructive criticism or an explanation when you downvote something.";
 
 $moderator: #27b062;
 $orangered: #f50;
