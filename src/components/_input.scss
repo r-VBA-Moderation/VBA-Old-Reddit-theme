@@ -1,9 +1,10 @@
 @use '../abstracts/mixins' as v;
 
 body {
+  .crosspost-field,
   .text,
   textarea,
   input {
-    @include v.input;
+    @include v.input(false, true);
   }
 }

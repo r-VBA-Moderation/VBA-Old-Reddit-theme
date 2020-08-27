@@ -2,6 +2,9 @@
 
 //  Cards, Modals, etc
 
+.crossposting-modal .modal-body,
+.post-sharing,
+.flairselector,
 .comments-page .link,
 .commentarea > .sitetable > .comment,
 #bottom-comments:not(.child) > .sitetable > .comment,
@@ -41,4 +44,15 @@
     @include v.thing(true);
     @include v.container;
   }
+}
+
+.crossposting-modal #cross_post .crosspost-description,
+.crossposting-modal #cross_post .crosspost-thing-preview {
+  @include v.thing(true);
+  @include v.container;
+}
+
+.crossposting-modal .crosspost-warning,
+.crossposting-modal .crosspost-label {
+  @include v.theme("color", v.$bodyText);
 }
