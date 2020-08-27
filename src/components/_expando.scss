@@ -43,7 +43,6 @@ $_top: $_margin-top + $_padding - ($_bar-thickness * 2);
 .expando-button:after {
   position: relative !important;
   display: flex;
-  // left: 9.5px;
   top: $_top;
   width: 100%;
   height: $_bar-thickness;
@@ -53,6 +52,7 @@ $_top: $_margin-top + $_padding - ($_bar-thickness * 2);
 }
 
 .expando-button:after {
+  top: $_top - 1px;
   transform: rotate(90deg);
 }
 
@@ -60,10 +60,3 @@ $_top: $_margin-top + $_padding - ($_bar-thickness * 2);
 .expando-button.expanded:after {
   transform: rotate(180deg);
 }
-
-// .usertext-body .md .expando-button,
-// .wiki-page .expando-button,
-// .messages-page .expando-button {
-//   margin: -7px 0 0 0 !important;
-//   vertical-align: middle !important;
-// }
