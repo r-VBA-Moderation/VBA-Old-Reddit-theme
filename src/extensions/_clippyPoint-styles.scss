@@ -71,6 +71,7 @@ html.res-commentBoxes.res-commentBoxes-rounded .comment {
 //End Clippy Point Flair styling - Comments
 
 // Clippy Point Flair styling - Link Flair
+.titlebox,
 .link .entry .tagline,
 .sidecontentbox,
 .linkflair {
@@ -103,7 +104,7 @@ html.res-commentBoxes.res-commentBoxes-rounded .comment {
       &:hover {
         @include v.theme("color", v.$lightText);
         &::before {
-          width: 130px !important;
+          width: 115px !important;
           transform: scaleX(1);
         }
       }
