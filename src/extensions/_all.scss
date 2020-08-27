@@ -9,3 +9,6 @@
 @use 'subreddit-title-image-replace';
 @use 'subscription-prompt-excel';
 @use "table";
+
+// import community specific themes last
+@use './community_extensions/all';
