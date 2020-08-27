@@ -107,18 +107,13 @@
         font-size: 11px;
       }
     }
-    &.RESDashboardToggle {
-      margin-right: v.$padding !important;
-    }
   }
 
   .fancy-toggle-button {
-    margin: 0;
-    // margin-left: 208px;
-
+    margin: v.$padding 10px v.$padding 0;
     .active {
       @include v.button(true, true);
-      margin: v.$padding v.$padding v.$padding 0;
+      margin: v.$padding 10px v.$padding 0;
     }
   }
 
