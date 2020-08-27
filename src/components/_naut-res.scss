@@ -1,13 +1,17 @@
 @use '../abstracts/mixins' as v;
 
 html {
+  .RESMacroDropdown,
   .res-show-link {
-    @include v.theme("background-color", v.$body);
-    @include v.theme("color", v.$bodyText);
+    @include v.thing(true);
   }
 
-  .viewSource textarea {
-    @include v.theme("background-color", v.$canvas);
+  .RESMacroDropdown li a {
+    @include v.theme("color", v.$inactiveText);
+    border-radius: 0;
+  }
+  .viewSource textarea[readonly] {
+    @include v.theme("background", v.$canvas);
     @include v.theme("color", v.$inactiveText);
   }
 
@@ -173,6 +177,7 @@ html {
   }
 
   .RESDialogSmall {
+    @include v.thing;
     border: none;
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.12);
     margin-top: 8px;
