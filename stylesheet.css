@@ -314,20 +314,12 @@ a {
 }
 
 #mail.havemail:before {
-<<<<<<< HEAD
-  animation-name: u0girls;
-=======
-  animation-name: uix85ac;
->>>>>>> upstream/master
+  animation-name: u95qptj;
   animation-duration: 8s;
   animation-iteration-count: 1;
   animation-timing-function: ease;
 }
-<<<<<<< HEAD
-@keyframes u0girls {
-=======
-@keyframes uix85ac {
->>>>>>> upstream/master
+@keyframes u95qptj {
   0% {
     transform: translateY(76px);
     opacity: 0;
@@ -1788,11 +1780,7 @@ body:not(.subscriber) .content {
   content: " ";
   background: #ff4500 ;
   border-radius: 28px;
-<<<<<<< HEAD
-  animation-name: u0girm8;
-=======
-  animation-name: uix85b6;
->>>>>>> upstream/master
+  animation-name: u95qpue;
   animation-duration: 0.35s;
   animation-timing-function: ease-out;
   animation-fill-mode: forwards;
@@ -1802,11 +1790,7 @@ body:not(.subscriber) .content {
     background: #ff4500 ;
   }
 }
-<<<<<<< HEAD
-@keyframes u0girm8 {
-=======
-@keyframes uix85b6 {
->>>>>>> upstream/master
+@keyframes u95qpue {
   0% {
     transform: scale(0, 0);
     opacity: 1;
