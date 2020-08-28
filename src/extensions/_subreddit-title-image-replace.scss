@@ -1,14 +1,23 @@
 @use '../abstracts/mixins' as v;
 
 // This is the one in the header
+$_hdr-img-width: 300px;
 
-#header .pagename a {
-  height: 42px;
-  width: 320px;
-  background-image: v.getImage("title");
-  background-repeat: no-repeat;
-  background-size: auto 42px;
-  text-indent: -9999px;
+#header .pagename {
+  position: absolute;
+  width: 100vw;
+  left: 0;
+  a {
+    height: 65px;
+    width: $_hdr-img-width;
+    position: relative;
+    top: -15px;
+    left: calc(50% - #{$_hdr-img-width / 2});
+    background-image: v.getImage("title");
+    background-size: contain;
+    background-repeat: no-repeat;
+    text-indent: -9999px;
+  }
 }
 
 // This is the one in the sidebar
