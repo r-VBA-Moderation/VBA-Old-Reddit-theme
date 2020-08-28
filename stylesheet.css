@@ -319,12 +319,12 @@ a {
 }
 
 #mail.havemail:before {
-  animation-name: u9vtdod;
+  animation-name: u98w1lp;
   animation-duration: 8s;
   animation-iteration-count: 1;
   animation-timing-function: ease;
 }
-@keyframes u9vtdod {
+@keyframes u98w1lp {
   0% {
     transform: translateY(76px);
     opacity: 0;
@@ -1811,7 +1811,7 @@ body:not(.subscriber) .content {
   content: " ";
   background: #ff4500 ;
   border-radius: 28px;
-  animation-name: u9vtdp3;
+  animation-name: u98w1m2;
   animation-duration: 0.35s;
   animation-timing-function: ease-out;
   animation-fill-mode: forwards;
@@ -1821,7 +1821,7 @@ body:not(.subscriber) .content {
     background: #ff4500 ;
   }
 }
-@keyframes u9vtdp3 {
+@keyframes u98w1m2 {
   0% {
     transform: scale(0, 0);
     opacity: 1;
@@ -2170,6 +2170,7 @@ body .next-button a:active {
   margin: 16px 16px 16px 0;
 }
 
+.crosspost-preview,
 .crossposting-modal .modal-body,
 .post-sharing,
 .flairselector,
@@ -2203,7 +2204,8 @@ body .next-button a:active {
   padding: 16px;
 }
 @media (prefers-color-scheme: dark) {
-  .crossposting-modal .modal-body,
+  .crosspost-preview,
+.crossposting-modal .modal-body,
 .post-sharing,
 .flairselector,
 .comments-page .link,
@@ -2231,7 +2233,8 @@ body .next-button a:active {
   }
 }
 @media (prefers-color-scheme: dark) {
-  .crossposting-modal .modal-body,
+  .crosspost-preview,
+.crossposting-modal .modal-body,
 .post-sharing,
 .flairselector,
 .comments-page .link,
@@ -2259,7 +2262,8 @@ body .next-button a:active {
   }
 }
 @media (prefers-color-scheme: dark) {
-  .crossposting-modal .modal-body,
+  .crosspost-preview,
+.crossposting-modal .modal-body,
 .post-sharing,
 .flairselector,
 .comments-page .link,
@@ -2717,7 +2721,7 @@ body > .content .link.compressed .midcol {
 
 .expando-button,
 .res-nightmode .expando-button,
-.thing.link.stickied .expando-button:hover {
+.thing.link.stickied .expando-button {
   border: solid 1px #878a8c ;
   border-radius: 4px;
   margin: 5px 8px 0 0 !important;
@@ -2726,31 +2730,84 @@ body > .content .link.compressed .midcol {
 @media (prefers-color-scheme: dark) {
   .expando-button,
 .res-nightmode .expando-button,
-.thing.link.stickied .expando-button:hover {
+.thing.link.stickied .expando-button {
     border: solid 1px #818384 ;
   }
 }
-
-.expando-button.video.collapsed,
-.expando-button.video-muted.collapsed,
-.expando-button.selftext.collapsed,
-.expando-button.image.collapsed,
-.expando-button.video.collapsed:hover,
-.expando-button.video-muted.collapsed:hover,
-.expando-button.selftext.collapsed:hover,
-.thing.link.stickied .expando-button:hover,
-.expando-button.image.collapsed:hover,
-.expando-button.video.expanded,
-.expando-button.video-muted.expanded,
-.expando-button.selftext.expanded,
-.expando-button.image.expanded,
-.expando-button.video.expanded:hover,
-.expando-button.video-muted.expanded:hover,
-.expando-button.selftext.expanded:hover,
-.expando-button.image.expanded:hover {
+.expando-button.crosspost.expanded, .expando-button.crosspost.collapsed, .expando-button.video.expanded, .expando-button.video.collapsed, .expando-button.video-muted.expanded, .expando-button.video-muted.collapsed, .expando-button.selftext.expanded, .expando-button.selftext.collapsed, .expando-button.image.expanded, .expando-button.image.collapsed,
+.res-nightmode .expando-button.crosspost.expanded,
+.res-nightmode .expando-button.crosspost.collapsed,
+.res-nightmode .expando-button.video.expanded,
+.res-nightmode .expando-button.video.collapsed,
+.res-nightmode .expando-button.video-muted.expanded,
+.res-nightmode .expando-button.video-muted.collapsed,
+.res-nightmode .expando-button.selftext.expanded,
+.res-nightmode .expando-button.selftext.collapsed,
+.res-nightmode .expando-button.image.expanded,
+.res-nightmode .expando-button.image.collapsed,
+.thing.link.stickied .expando-button.crosspost.expanded,
+.thing.link.stickied .expando-button.crosspost.collapsed,
+.thing.link.stickied .expando-button.video.expanded,
+.thing.link.stickied .expando-button.video.collapsed,
+.thing.link.stickied .expando-button.video-muted.expanded,
+.thing.link.stickied .expando-button.video-muted.collapsed,
+.thing.link.stickied .expando-button.selftext.expanded,
+.thing.link.stickied .expando-button.selftext.collapsed,
+.thing.link.stickied .expando-button.image.expanded,
+.thing.link.stickied .expando-button.image.collapsed {
   background: transparent;
   height: 30px;
   width: 30px;
+}
+.expando-button.crosspost.expanded:hover, .expando-button.crosspost.collapsed:hover, .expando-button.video.expanded:hover, .expando-button.video.collapsed:hover, .expando-button.video-muted.expanded:hover, .expando-button.video-muted.collapsed:hover, .expando-button.selftext.expanded:hover, .expando-button.selftext.collapsed:hover, .expando-button.image.expanded:hover, .expando-button.image.collapsed:hover,
+.res-nightmode .expando-button.crosspost.expanded:hover,
+.res-nightmode .expando-button.crosspost.collapsed:hover,
+.res-nightmode .expando-button.video.expanded:hover,
+.res-nightmode .expando-button.video.collapsed:hover,
+.res-nightmode .expando-button.video-muted.expanded:hover,
+.res-nightmode .expando-button.video-muted.collapsed:hover,
+.res-nightmode .expando-button.selftext.expanded:hover,
+.res-nightmode .expando-button.selftext.collapsed:hover,
+.res-nightmode .expando-button.image.expanded:hover,
+.res-nightmode .expando-button.image.collapsed:hover,
+.thing.link.stickied .expando-button.crosspost.expanded:hover,
+.thing.link.stickied .expando-button.crosspost.collapsed:hover,
+.thing.link.stickied .expando-button.video.expanded:hover,
+.thing.link.stickied .expando-button.video.collapsed:hover,
+.thing.link.stickied .expando-button.video-muted.expanded:hover,
+.thing.link.stickied .expando-button.video-muted.collapsed:hover,
+.thing.link.stickied .expando-button.selftext.expanded:hover,
+.thing.link.stickied .expando-button.selftext.collapsed:hover,
+.thing.link.stickied .expando-button.image.expanded:hover,
+.thing.link.stickied .expando-button.image.collapsed:hover {
+  background: #fbe6e8 ;
+  height: 30px;
+  width: 30px;
+}
+@media (prefers-color-scheme: dark) {
+  .expando-button.crosspost.expanded:hover, .expando-button.crosspost.collapsed:hover, .expando-button.video.expanded:hover, .expando-button.video.collapsed:hover, .expando-button.video-muted.expanded:hover, .expando-button.video-muted.collapsed:hover, .expando-button.selftext.expanded:hover, .expando-button.selftext.collapsed:hover, .expando-button.image.expanded:hover, .expando-button.image.collapsed:hover,
+.res-nightmode .expando-button.crosspost.expanded:hover,
+.res-nightmode .expando-button.crosspost.collapsed:hover,
+.res-nightmode .expando-button.video.expanded:hover,
+.res-nightmode .expando-button.video.collapsed:hover,
+.res-nightmode .expando-button.video-muted.expanded:hover,
+.res-nightmode .expando-button.video-muted.collapsed:hover,
+.res-nightmode .expando-button.selftext.expanded:hover,
+.res-nightmode .expando-button.selftext.collapsed:hover,
+.res-nightmode .expando-button.image.expanded:hover,
+.res-nightmode .expando-button.image.collapsed:hover,
+.thing.link.stickied .expando-button.crosspost.expanded:hover,
+.thing.link.stickied .expando-button.crosspost.collapsed:hover,
+.thing.link.stickied .expando-button.video.expanded:hover,
+.thing.link.stickied .expando-button.video.collapsed:hover,
+.thing.link.stickied .expando-button.video-muted.expanded:hover,
+.thing.link.stickied .expando-button.video-muted.collapsed:hover,
+.thing.link.stickied .expando-button.selftext.expanded:hover,
+.thing.link.stickied .expando-button.selftext.collapsed:hover,
+.thing.link.stickied .expando-button.image.expanded:hover,
+.thing.link.stickied .expando-button.image.collapsed:hover {
+    background: #17232d ;
+  }
 }
 
 .expando-button:before,
@@ -4702,8 +4759,8 @@ table tbody tr td label {
 }
 .thumbnail img {
   position: relative;
-  transform: translateY(-50%);
-  top: 50%;
+  width: 56px;
+  height: 56px;
 }
 .thumbnail.default {
   background: #d2dbe0 url(%%spritesheet%%) -152px -50px;
