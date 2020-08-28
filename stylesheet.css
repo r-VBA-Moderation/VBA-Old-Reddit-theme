@@ -74,6 +74,10 @@ a {
   }
 }
 
+.separator {
+  border-radius: 0px;
+}
+
 .footer-parent {
   position: relative;
   margin-top: 60px;
@@ -137,7 +141,7 @@ a {
   content: "Apps & Tools ";
 }
 .footer.rounded .col:nth-of-type(4):before {
-  content: "<3 ";
+  content: "❤️ ";
 }
 .footer.rounded .col:after {
   display: inline-block;
@@ -314,12 +318,12 @@ a {
 }
 
 #mail.havemail:before {
-  animation-name: ulu9p7m;
+  animation-name: u27he4y;
   animation-duration: 8s;
   animation-iteration-count: 1;
   animation-timing-function: ease;
 }
-@keyframes ulu9p7m {
+@keyframes u27he4y {
   0% {
     transform: translateY(76px);
     opacity: 0;
@@ -1780,7 +1784,7 @@ body:not(.subscriber) .content {
   content: " ";
   background: #ff4500 ;
   border-radius: 28px;
-  animation-name: ulu9p7t;
+  animation-name: u27he50;
   animation-duration: 0.35s;
   animation-timing-function: ease-out;
   animation-fill-mode: forwards;
@@ -1790,7 +1794,7 @@ body:not(.subscriber) .content {
     background: #ff4500 ;
   }
 }
-@keyframes ulu9p7t {
+@keyframes u27he50 {
   0% {
     transform: scale(0, 0);
     opacity: 1;
@@ -2140,6 +2144,10 @@ body .wiki-page .wiki-page-content .wiki_button:active,
 body .prev-button a:active,
 body .next-button a:active {
   margin: 16px 16px 16px 0;
+}
+
+.prev-button a {
+  margin-right: 0 !important;
 }
 
 .crosspost-preview,
@@ -4226,6 +4234,7 @@ body .content .sitetable .link .title a:hover {
 .read-next .read-next-header {
   border-bottom: 1px solid #edf1f3 ;
   color: #98abba ;
+  background-color: #ffffff ;
   padding: 8px 16px;
 }
 @media (prefers-color-scheme: dark) {
@@ -4236,6 +4245,11 @@ body .content .sitetable .link .title a:hover {
 @media (prefers-color-scheme: dark) {
   .read-next .read-next-header {
     color: #828282 ;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .read-next .read-next-header {
+    background-color: #1a1a1b ;
   }
 }
 .read-next .read-next-nav {
@@ -6627,6 +6641,7 @@ body:not(.subscriber) div.multi-selector.hover-bubble.anchor-right {
 }
 .commentarea .flair-points:hover::after {
   transform: scaleX(1);
+  z-index: 2;
 }
 .commentarea .flair-points::before {
   display: none;
