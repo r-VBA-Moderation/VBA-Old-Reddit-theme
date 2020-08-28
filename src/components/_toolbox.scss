@@ -6,6 +6,9 @@
   display: none;
 }
 
-#tb-context-menu * {
-  color: #696969 !important;
+#tb-page-overlay,
+#tb-context-menu {
+  * {
+    color: #696969 !important;
+  }
 }
