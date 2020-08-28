@@ -3,20 +3,26 @@
 // This is the one in the header
 $_hdr-img-width: 300px;
 
-#header .pagename {
-  position: absolute;
-  width: 100vw;
-  left: 0;
-  a {
-    height: 65px;
-    width: $_hdr-img-width;
+#header {
+  #header-img {
     position: relative;
-    top: -15px;
-    left: calc(50% - #{$_hdr-img-width / 2});
-    background-image: v.getImage("title");
-    background-size: contain;
-    background-repeat: no-repeat;
-    text-indent: -9999px;
+    z-index: 2;
+  }
+  .pagename {
+    position: absolute;
+    width: 100vw;
+    left: 0;
+    a {
+      height: 65px;
+      width: $_hdr-img-width;
+      position: relative;
+      top: -15px;
+      left: calc(50% - #{$_hdr-img-width / 2});
+      background-image: v.getImage("title");
+      background-size: contain;
+      background-repeat: no-repeat;
+      text-indent: -9999px;
+    }
   }
 }
 
