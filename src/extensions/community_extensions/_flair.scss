@@ -21,6 +21,7 @@
 
 .linkflair-protip .linkflairlabel {
   @include v.customButtonColors(v.getColor("linkflair", "protip"));
+  @include v.theme("color", v.$darkText);
 }
 
 .linkflair-codereview .linkflairlabel {

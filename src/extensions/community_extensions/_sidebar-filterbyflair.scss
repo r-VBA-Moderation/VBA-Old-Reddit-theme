@@ -60,6 +60,7 @@
                 @include v.customButtonColors(
                   v.getColor("linkflair", "protip")
                 );
+                @include v.theme("color", v.$darkText);
               }
               &:nth-child(5) > a {
                 @include v.customButtonColors(
