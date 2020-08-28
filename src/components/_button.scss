@@ -12,6 +12,6 @@ body {
 }
 
 .prev-button a {
-  margin-right: 0;
-  margin-left: v.$padding;
+  margin-right: 0 !important;
+  margin-left: v.$padding !important;
 }
