@@ -1,5 +1,5 @@
 
-This is a theme for the /r/Solid subreddit. See https://github.com/Senipah/Old-Reddit-Sass-Theme for the upstream.
+This is a theme for the /r/VBA subreddit. See https://github.com/Senipah/Old-Reddit-Sass-Theme for the upstream.
 
 To fetch upstream changes:
 `git fetch upstream`
