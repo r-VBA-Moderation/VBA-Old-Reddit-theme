@@ -1,10 +1,9 @@
 @use '../abstracts/mixins' as v;
 
 html {
-  .res-searchHelper-searchPageTabs
-    .combined-search-page
-    #previoussearch
-    .res-search-pane,
+  div.res-search-options.res-search-pane.res-search-pane-open {
+    @include v.theme("background-color", v.$body, $important: true);
+  }
   .RESMacroDropdown,
   .res-show-link {
     @include v.thing(true);
