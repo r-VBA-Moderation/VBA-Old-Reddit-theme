@@ -10,3 +10,8 @@ body {
     @include v.button;
   }
 }
+
+.prev-button {
+  margin-right: 0;
+  margin-left: v.$padding;
+}
