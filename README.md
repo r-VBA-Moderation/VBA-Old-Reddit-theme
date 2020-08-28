@@ -1,4 +1,22 @@
 
+This is a theme for the /r/Solid subreddit. See https://github.com/Senipah/Old-Reddit-Sass-Theme for the upstream.
+
+To fetch upstream changes:
+`git fetch upstream`
+
+To merge changes:
+`git merge upstream/master`
+
+**OR**
+
+To manually approve upstream changes:
+`git merge --no-commit --no-ff upstream/master`
+
+To undo a merge:
+`git reset --hard ORIG_HEAD`
+
+---
+
 # Modular Old Reddit Theme
 
 This is a [SASS](https://sass-lang.com/) theme for [Old Reddit ](old.reddit.com).
