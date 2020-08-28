@@ -314,12 +314,12 @@ a {
 }
 
 #mail.havemail:before {
-  animation-name: u48lvec;
+  animation-name: u329ivi;
   animation-duration: 8s;
   animation-iteration-count: 1;
   animation-timing-function: ease;
 }
-@keyframes u48lvec {
+@keyframes u329ivi {
   0% {
     transform: translateY(76px);
     opacity: 0;
@@ -1780,7 +1780,7 @@ body:not(.subscriber) .content {
   content: " ";
   background: #ff4500 ;
   border-radius: 28px;
-  animation-name: u48lvey;
+  animation-name: u329ivo;
   animation-duration: 0.35s;
   animation-timing-function: ease-out;
   animation-fill-mode: forwards;
@@ -1790,7 +1790,7 @@ body:not(.subscriber) .content {
     background: #ff4500 ;
   }
 }
-@keyframes u48lvey {
+@keyframes u329ivo {
   0% {
     transform: scale(0, 0);
     opacity: 1;
@@ -3245,6 +3245,7 @@ body input:hover {
   background: #27b062 url(%%spritesheet%%) -208px -104px;
 }
 
+html .res-searchHelper-searchPageTabs .combined-search-page #previoussearch .res-search-pane,
 html .RESMacroDropdown,
 html .res-show-link {
   background-color: #ffffff ;
@@ -3254,19 +3255,22 @@ html .res-show-link {
   border-color: #dadada ;
 }
 @media (prefers-color-scheme: dark) {
-  html .RESMacroDropdown,
+  html .res-searchHelper-searchPageTabs .combined-search-page #previoussearch .res-search-pane,
+html .RESMacroDropdown,
 html .res-show-link {
     background-color: #1a1a1b ;
   }
 }
 @media (prefers-color-scheme: dark) {
-  html .RESMacroDropdown,
+  html .res-searchHelper-searchPageTabs .combined-search-page #previoussearch .res-search-pane,
+html .RESMacroDropdown,
 html .res-show-link {
     color: #d7dadc ;
   }
 }
 @media (prefers-color-scheme: dark) {
-  html .RESMacroDropdown,
+  html .res-searchHelper-searchPageTabs .combined-search-page #previoussearch .res-search-pane,
+html .RESMacroDropdown,
 html .res-show-link {
     border-color: #343536 ;
   }
@@ -4099,21 +4103,6 @@ html #search #searchexpando label {
   padding-top: 0;
   padding-bottom: 0;
 }
-html body.mod-toolbox .tb-action-button {
-  height: 22px !important;
-  line-height: 0px;
-}
-html .link .entry .buttons li .redditSingleClick {
-  padding: 0 1px;
-  color: #98abba ;
-  font: normal 13px Lato, Arial, sans-serif;
-  transition: all 0.15s ease;
-}
-@media (prefers-color-scheme: dark) {
-  html .link .entry .buttons li .redditSingleClick {
-    color: #828282 ;
-  }
-}
 
 .link .entry {
   padding: 0;
@@ -4715,6 +4704,14 @@ table tbody tr td label {
 
 .thumbnail.spoiler {
   background: #f44336 url(%%spritesheet%%) -208px -148px;
+}
+
+#tb-footer-block {
+  display: none;
+}
+
+#tb-context-menu * {
+  color: #696969 !important;
 }
 
 .unvotable-message {
