@@ -10,33 +10,29 @@ $_top: $_margin-top + $_padding - ($_bar-thickness * 2);
 
 .expando-button,
 .res-nightmode .expando-button,
-.thing.link.stickied .expando-button:hover {
+.thing.link.stickied .expando-button {
   @include v.theme("border", v.$actionIcon, false, true, "solid 1px");
   border-radius: v.$radius;
   margin: $_margin-top 8px 0 0 !important;
   padding: $_padding !important;
-}
 
-.expando-button.video.collapsed,
-.expando-button.video-muted.collapsed,
-.expando-button.selftext.collapsed,
-.expando-button.image.collapsed,
-.expando-button.video.collapsed:hover,
-.expando-button.video-muted.collapsed:hover,
-.expando-button.selftext.collapsed:hover,
-.thing.link.stickied .expando-button:hover,
-.expando-button.image.collapsed:hover,
-.expando-button.video.expanded,
-.expando-button.video-muted.expanded,
-.expando-button.selftext.expanded,
-.expando-button.image.expanded,
-.expando-button.video.expanded:hover,
-.expando-button.video-muted.expanded:hover,
-.expando-button.selftext.expanded:hover,
-.expando-button.image.expanded:hover {
-  background: transparent;
-  height: $_icon-size;
-  width: $_icon-size;
+  &.crosspost,
+  &.video,
+  &.video-muted,
+  &.selftext,
+  &.image {
+    &.expanded,
+    &.collapsed {
+      background: transparent;
+      height: $_icon-size;
+      width: $_icon-size;
+      &:hover {
+        @include v.theme("background", v.$highlight);
+        height: $_icon-size;
+        width: $_icon-size;
+      }
+    }
+  }
 }
 
 .expando-button:before,
