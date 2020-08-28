@@ -1,6 +1,10 @@
 @use '../abstracts/mixins' as v;
 
 html {
+  .res-searchHelper-searchPageTabs
+    .combined-search-page
+    #previoussearch
+    .res-search-pane,
   .RESMacroDropdown,
   .res-show-link {
     @include v.thing(true);
@@ -714,21 +718,5 @@ html {
   #search #searchexpando label {
     padding-top: 0;
     padding-bottom: 0;
-  }
-
-  // Toolbox
-
-  body.mod-toolbox .tb-action-button {
-    height: 22px !important;
-    line-height: 0px;
-  }
-
-  // RES L+C
-
-  .link .entry .buttons li .redditSingleClick {
-    padding: 0 1px;
-    @include v.theme("color", v.$secondary-text);
-    font: normal 13px Lato, Arial, sans-serif;
-    transition: all 0.15s ease;
   }
 }
