@@ -2,6 +2,10 @@
 
 table {
   margin: v.$padding 0;
+  border-radius: v.$radius;
+  > * {
+    border-radius: 0px;
+  }
   thead {
     background-color: v.getColor("table", "header-background");
     color: v.getColor("table", "header-background");
