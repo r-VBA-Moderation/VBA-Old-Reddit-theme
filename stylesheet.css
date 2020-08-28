@@ -314,12 +314,12 @@ a {
 }
 
 #mail.havemail:before {
-  animation-name: ugyanev;
+  animation-name: up7rt1k;
   animation-duration: 8s;
   animation-iteration-count: 1;
   animation-timing-function: ease;
 }
-@keyframes ugyanev {
+@keyframes up7rt1k {
   0% {
     transform: translateY(76px);
     opacity: 0;
@@ -1780,7 +1780,7 @@ body:not(.subscriber) .content {
   content: " ";
   background: #ff4500 ;
   border-radius: 28px;
-  animation-name: ugyanfv;
+  animation-name: up7rt2a;
   animation-duration: 0.35s;
   animation-timing-function: ease-out;
   animation-fill-mode: forwards;
@@ -1790,7 +1790,7 @@ body:not(.subscriber) .content {
     background: #ff4500 ;
   }
 }
-@keyframes ugyanfv {
+@keyframes up7rt2a {
   0% {
     transform: scale(0, 0);
     opacity: 1;
@@ -4564,7 +4564,6 @@ table tbody tr td label {
 .entry .tagline {
   margin-top: 3px;
   color: #98abba ;
-  font: 12px Lato, Arial, sans-serif;
 }
 @media (prefers-color-scheme: dark) {
   .entry .tagline {
@@ -4585,18 +4584,6 @@ table tbody tr td label {
 }
 .link .entry .tagline time {
   cursor: help;
-}
-.link .entry .tagline a:hover {
-  color: #f50 ;
-  text-decoration: none;
-}
-@media (prefers-color-scheme: dark) {
-  .link .entry .tagline a:hover {
-    color: #f50 ;
-  }
-}
-.link .entry .tagline a.author {
-  margin-right: inherit;
 }
 
 .sidecontentbox .userattrs > a,
