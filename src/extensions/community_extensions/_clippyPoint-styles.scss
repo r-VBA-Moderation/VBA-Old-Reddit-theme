@@ -50,6 +50,7 @@ $_clippy-size: 50px;
       }
       &:hover::after {
         transform: scaleX(1);
+        z-index: 2;
       }
       &::before {
         display: none;
