@@ -18,9 +18,7 @@
   margin: 0;
   max-width: none;
   height: 51px;
-  // border: 0;
   @include v.theme("border", v.$line, false, true, "1px solid");
-  //   border-top: 1px solid #eee;
   border-radius: 0;
   padding: 0;
   text-align: center;
@@ -33,7 +31,6 @@
     -webkit-flex: none;
     flex: none;
     @include v.theme("color", v.$bodyText);
-    //   color: #999;
     &:before {
       height: 60px;
       line-height: 50px;
@@ -49,7 +46,7 @@
       content: "Apps & Tools ";
     }
     &:nth-of-type(4):before {
-      content: "<3 ";
+      content: "❤️ ";
     }
     &:after {
       display: inline-block;
@@ -66,16 +63,14 @@
       min-width: 100%;
       max-height: 0;
       @include v.theme("background", v.$body);
-      //   background: #f0f0f0;
       text-transform: capitalize;
-      transition: 0.5s;
+      transition: v.$transition;
       .flat-vert.title {
         display: none;
       }
       li {
         height: 20px;
         @include v.theme("border-bottom", v.$line, false, true, "1px solid");
-        //   border-bottom: 1px solid #e4e4e4;
         line-height: 20px;
         white-space: nowrap;
         font-size: 14px;
@@ -93,8 +88,6 @@
     }
     &:hover {
       @include v.thing;
-      //   background: #f0f0f0;
-      //   color: #666;
     }
     &:hover ul.flat-vert.hover,
     ul.flat-vert.hover:hover {
