@@ -3,7 +3,6 @@
 .entry .tagline {
   margin-top: 3px;
   @include v.theme("color", v.$secondary-text);
-  font: 12px Lato, Arial, sans-serif;
 }
 
 .link .entry .tagline {
@@ -17,17 +16,6 @@
 
   time {
     cursor: help;
-  }
-
-  a {
-    &:hover {
-      @include v.theme("color", v.$active);
-      text-decoration: none;
-    }
-
-    &.author {
-      margin-right: inherit;
-    }
   }
 }
 

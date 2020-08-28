@@ -350,13 +350,21 @@ a {
 }
 
 #mail.havemail:before {
+<<<<<<< HEAD
   animation-name: usst3hl;
+=======
+  animation-name: up7rt1k;
+>>>>>>> upstream/master
   animation-duration: 8s;
   animation-iteration-count: 1;
   animation-timing-function: ease;
 }
+<<<<<<< HEAD
 
 @keyframes usst3hl {
+=======
+@keyframes up7rt1k {
+>>>>>>> upstream/master
   0% {
     transform: translateY(76px);
     opacity: 0;
@@ -2094,7 +2102,11 @@ body:not(.subscriber) .content {
   content: " ";
   background: #ff4500;
   border-radius: 28px;
+<<<<<<< HEAD
   animation-name: usst3i8;
+=======
+  animation-name: up7rt2a;
+>>>>>>> upstream/master
   animation-duration: 0.35s;
   animation-timing-function: ease-out;
   animation-fill-mode: forwards;
@@ -2105,8 +2117,12 @@ body:not(.subscriber) .content {
     background: #ff4500;
   }
 }
+<<<<<<< HEAD
 
 @keyframes usst3i8 {
+=======
+@keyframes up7rt2a {
+>>>>>>> upstream/master
   0% {
     transform: scale(0, 0);
     opacity: 1;
@@ -5397,8 +5413,12 @@ table tbody tr td label {
 
 .entry .tagline {
   margin-top: 3px;
+<<<<<<< HEAD
   color: #98abba;
   font: 12px Lato, Arial, sans-serif;
+=======
+  color: #98abba ;
+>>>>>>> upstream/master
 }
 
 @media (prefers-color-scheme: dark) {
@@ -5424,6 +5444,7 @@ table tbody tr td label {
 .link .entry .tagline time {
   cursor: help;
 }
+<<<<<<< HEAD
 
 .link .entry .tagline a:hover {
   color: #f50;
@@ -5439,6 +5460,8 @@ table tbody tr td label {
 .link .entry .tagline a.author {
   margin-right: inherit;
 }
+=======
+>>>>>>> upstream/master
 
 .sidecontentbox .userattrs>a,
 .sidecontentbox .flair,
