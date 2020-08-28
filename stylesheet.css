@@ -271,7 +271,7 @@ a {
   z-index: 100;
   background: #ea4848 url(%%spritesheet%%) 269px -120px no-repeat;
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.24);
-  color: #ffffff ;
+  color: #d7dadc ;
   width: 300px;
   height: 48px;
   left: 32px;
@@ -282,11 +282,6 @@ a {
   -webkit-transform: translateY(112px);
   transform: translateY(112px);
   transition: background 0.25s ease, box-shadow 0.25s ease;
-}
-@media (prefers-color-scheme: dark) {
-  #mail.havemail:before {
-    color: #ffffff ;
-  }
 }
 #mail.havemail:hover:before {
   background-color: #ec5b5b;
@@ -319,12 +314,12 @@ a {
 }
 
 #mail.havemail:before {
-  animation-name: u3t7n9p;
+  animation-name: u7kho1c;
   animation-duration: 8s;
   animation-iteration-count: 1;
   animation-timing-function: ease;
 }
-@keyframes u3t7n9p {
+@keyframes u7kho1c {
   0% {
     transform: translateY(76px);
     opacity: 0;
@@ -895,17 +890,12 @@ body:not(.loggedin) #header-bottom-right {
 }
 .sidebox .morelink a:active {
   background: #331100 ;
-  color: #ffffff ;
+  color: #d7dadc ;
   border: 1px solid #f50 ;
 }
 @media (prefers-color-scheme: dark) {
   .sidebox .morelink a:active {
     background: #292c2e ;
-  }
-}
-@media (prefers-color-scheme: dark) {
-  .sidebox .morelink a:active {
-    color: #ffffff ;
   }
 }
 @media (prefers-color-scheme: dark) {
@@ -1145,17 +1135,12 @@ body:not(.loggedin) #header-bottom-right {
 }
 .titlebox .res-fancy-toggle-button.RESDashboardToggle:active, .titlebox .res-fancy-toggle-button.RESshortcutside:active {
   background: #331100 ;
-  color: #ffffff ;
+  color: #d7dadc ;
   border: 1px solid #f50 ;
 }
 @media (prefers-color-scheme: dark) {
   .titlebox .res-fancy-toggle-button.RESDashboardToggle:active, .titlebox .res-fancy-toggle-button.RESshortcutside:active {
     background: #292c2e ;
-  }
-}
-@media (prefers-color-scheme: dark) {
-  .titlebox .res-fancy-toggle-button.RESDashboardToggle:active, .titlebox .res-fancy-toggle-button.RESshortcutside:active {
-    color: #ffffff ;
   }
 }
 @media (prefers-color-scheme: dark) {
@@ -1185,7 +1170,7 @@ body:not(.loggedin) #header-bottom-right {
 }
 .titlebox .res-fancy-toggle-button.RESDashboardToggle.remove, .titlebox .res-fancy-toggle-button.RESshortcutside.remove {
   background: #331100 ;
-  color: #ffffff ;
+  color: #d7dadc ;
   border: 1px solid #f50 ;
   display: inline-block;
   margin: 0;
@@ -1206,11 +1191,6 @@ body:not(.loggedin) #header-bottom-right {
 @media (prefers-color-scheme: dark) {
   .titlebox .res-fancy-toggle-button.RESDashboardToggle.remove, .titlebox .res-fancy-toggle-button.RESshortcutside.remove {
     background: #292c2e ;
-  }
-}
-@media (prefers-color-scheme: dark) {
-  .titlebox .res-fancy-toggle-button.RESDashboardToggle.remove, .titlebox .res-fancy-toggle-button.RESshortcutside.remove {
-    color: #ffffff ;
   }
 }
 @media (prefers-color-scheme: dark) {
@@ -1263,7 +1243,7 @@ body:not(.loggedin) #header-bottom-right {
 }
 .titlebox .fancy-toggle-button .active {
   background: #331100 ;
-  color: #ffffff ;
+  color: #d7dadc ;
   border: 1px solid #f50 ;
   display: inline-block;
   margin: 0;
@@ -1276,16 +1256,11 @@ body:not(.loggedin) #header-bottom-right {
   height: 36px;
   line-height: 36px;
   padding: 0 16px;
-  margin: 16px 5px 0 0;
+  margin: 16px 5px 16px 0;
 }
 @media (prefers-color-scheme: dark) {
   .titlebox .fancy-toggle-button .active {
     background: #292c2e ;
-  }
-}
-@media (prefers-color-scheme: dark) {
-  .titlebox .fancy-toggle-button .active {
-    color: #ffffff ;
   }
 }
 @media (prefers-color-scheme: dark) {
@@ -1384,19 +1359,13 @@ body:not(.loggedin) #header-bottom-right {
 .titlebox .md h3 a:active,
 .titlebox .md h4 a:active {
   background: #331100 ;
-  color: #ffffff ;
+  color: #d7dadc ;
   border: 1px solid #f50 ;
 }
 @media (prefers-color-scheme: dark) {
   .titlebox .md h3 a:active,
 .titlebox .md h4 a:active {
     background: #292c2e ;
-  }
-}
-@media (prefers-color-scheme: dark) {
-  .titlebox .md h3 a:active,
-.titlebox .md h4 a:active {
-    color: #ffffff ;
   }
 }
 @media (prefers-color-scheme: dark) {
@@ -1811,7 +1780,7 @@ body:not(.subscriber) .content {
   content: " ";
   background: #ff4500 ;
   border-radius: 28px;
-  animation-name: u3t7na9;
+  animation-name: u7kho1i;
   animation-duration: 0.35s;
   animation-timing-function: ease-out;
   animation-fill-mode: forwards;
@@ -1821,7 +1790,7 @@ body:not(.subscriber) .content {
     background: #ff4500 ;
   }
 }
-@keyframes u3t7na9 {
+@keyframes u7kho1i {
   0% {
     transform: scale(0, 0);
     opacity: 1;
@@ -2096,7 +2065,7 @@ body .c-btn:active,
 body .wiki-page .wiki-page-content .wiki_button:active,
 body .next-button a:active {
   background: #331100 ;
-  color: #ffffff ;
+  color: #d7dadc ;
   border: 1px solid #f50 ;
 }
 @media (prefers-color-scheme: dark) {
@@ -2106,15 +2075,6 @@ body .c-btn:active,
 body .wiki-page .wiki-page-content .wiki_button:active,
 body .next-button a:active {
     background: #292c2e ;
-  }
-}
-@media (prefers-color-scheme: dark) {
-  body .btn:active,
-body button:active,
-body .c-btn:active,
-body .wiki-page .wiki-page-content .wiki_button:active,
-body .next-button a:active {
-    color: #ffffff ;
   }
 }
 @media (prefers-color-scheme: dark) {
@@ -2170,6 +2130,7 @@ body .next-button a:active {
   margin: 16px 16px 16px 0;
 }
 
+.crosspost-preview,
 .crossposting-modal .modal-body,
 .post-sharing,
 .flairselector,
@@ -2203,7 +2164,8 @@ body .next-button a:active {
   padding: 16px;
 }
 @media (prefers-color-scheme: dark) {
-  .crossposting-modal .modal-body,
+  .crosspost-preview,
+.crossposting-modal .modal-body,
 .post-sharing,
 .flairselector,
 .comments-page .link,
@@ -2231,7 +2193,8 @@ body .next-button a:active {
   }
 }
 @media (prefers-color-scheme: dark) {
-  .crossposting-modal .modal-body,
+  .crosspost-preview,
+.crossposting-modal .modal-body,
 .post-sharing,
 .flairselector,
 .comments-page .link,
@@ -2259,7 +2222,8 @@ body .next-button a:active {
   }
 }
 @media (prefers-color-scheme: dark) {
-  .crossposting-modal .modal-body,
+  .crosspost-preview,
+.crossposting-modal .modal-body,
 .post-sharing,
 .flairselector,
 .comments-page .link,
@@ -2717,7 +2681,7 @@ body > .content .link.compressed .midcol {
 
 .expando-button,
 .res-nightmode .expando-button,
-.thing.link.stickied .expando-button:hover {
+.thing.link.stickied .expando-button {
   border: solid 1px #878a8c ;
   border-radius: 4px;
   margin: 5px 8px 0 0 !important;
@@ -2726,31 +2690,84 @@ body > .content .link.compressed .midcol {
 @media (prefers-color-scheme: dark) {
   .expando-button,
 .res-nightmode .expando-button,
-.thing.link.stickied .expando-button:hover {
+.thing.link.stickied .expando-button {
     border: solid 1px #818384 ;
   }
 }
-
-.expando-button.video.collapsed,
-.expando-button.video-muted.collapsed,
-.expando-button.selftext.collapsed,
-.expando-button.image.collapsed,
-.expando-button.video.collapsed:hover,
-.expando-button.video-muted.collapsed:hover,
-.expando-button.selftext.collapsed:hover,
-.thing.link.stickied .expando-button:hover,
-.expando-button.image.collapsed:hover,
-.expando-button.video.expanded,
-.expando-button.video-muted.expanded,
-.expando-button.selftext.expanded,
-.expando-button.image.expanded,
-.expando-button.video.expanded:hover,
-.expando-button.video-muted.expanded:hover,
-.expando-button.selftext.expanded:hover,
-.expando-button.image.expanded:hover {
+.expando-button.crosspost.expanded, .expando-button.crosspost.collapsed, .expando-button.video.expanded, .expando-button.video.collapsed, .expando-button.video-muted.expanded, .expando-button.video-muted.collapsed, .expando-button.selftext.expanded, .expando-button.selftext.collapsed, .expando-button.image.expanded, .expando-button.image.collapsed,
+.res-nightmode .expando-button.crosspost.expanded,
+.res-nightmode .expando-button.crosspost.collapsed,
+.res-nightmode .expando-button.video.expanded,
+.res-nightmode .expando-button.video.collapsed,
+.res-nightmode .expando-button.video-muted.expanded,
+.res-nightmode .expando-button.video-muted.collapsed,
+.res-nightmode .expando-button.selftext.expanded,
+.res-nightmode .expando-button.selftext.collapsed,
+.res-nightmode .expando-button.image.expanded,
+.res-nightmode .expando-button.image.collapsed,
+.thing.link.stickied .expando-button.crosspost.expanded,
+.thing.link.stickied .expando-button.crosspost.collapsed,
+.thing.link.stickied .expando-button.video.expanded,
+.thing.link.stickied .expando-button.video.collapsed,
+.thing.link.stickied .expando-button.video-muted.expanded,
+.thing.link.stickied .expando-button.video-muted.collapsed,
+.thing.link.stickied .expando-button.selftext.expanded,
+.thing.link.stickied .expando-button.selftext.collapsed,
+.thing.link.stickied .expando-button.image.expanded,
+.thing.link.stickied .expando-button.image.collapsed {
   background: transparent;
   height: 30px;
   width: 30px;
+}
+.expando-button.crosspost.expanded:hover, .expando-button.crosspost.collapsed:hover, .expando-button.video.expanded:hover, .expando-button.video.collapsed:hover, .expando-button.video-muted.expanded:hover, .expando-button.video-muted.collapsed:hover, .expando-button.selftext.expanded:hover, .expando-button.selftext.collapsed:hover, .expando-button.image.expanded:hover, .expando-button.image.collapsed:hover,
+.res-nightmode .expando-button.crosspost.expanded:hover,
+.res-nightmode .expando-button.crosspost.collapsed:hover,
+.res-nightmode .expando-button.video.expanded:hover,
+.res-nightmode .expando-button.video.collapsed:hover,
+.res-nightmode .expando-button.video-muted.expanded:hover,
+.res-nightmode .expando-button.video-muted.collapsed:hover,
+.res-nightmode .expando-button.selftext.expanded:hover,
+.res-nightmode .expando-button.selftext.collapsed:hover,
+.res-nightmode .expando-button.image.expanded:hover,
+.res-nightmode .expando-button.image.collapsed:hover,
+.thing.link.stickied .expando-button.crosspost.expanded:hover,
+.thing.link.stickied .expando-button.crosspost.collapsed:hover,
+.thing.link.stickied .expando-button.video.expanded:hover,
+.thing.link.stickied .expando-button.video.collapsed:hover,
+.thing.link.stickied .expando-button.video-muted.expanded:hover,
+.thing.link.stickied .expando-button.video-muted.collapsed:hover,
+.thing.link.stickied .expando-button.selftext.expanded:hover,
+.thing.link.stickied .expando-button.selftext.collapsed:hover,
+.thing.link.stickied .expando-button.image.expanded:hover,
+.thing.link.stickied .expando-button.image.collapsed:hover {
+  background: #fbe6e8 ;
+  height: 30px;
+  width: 30px;
+}
+@media (prefers-color-scheme: dark) {
+  .expando-button.crosspost.expanded:hover, .expando-button.crosspost.collapsed:hover, .expando-button.video.expanded:hover, .expando-button.video.collapsed:hover, .expando-button.video-muted.expanded:hover, .expando-button.video-muted.collapsed:hover, .expando-button.selftext.expanded:hover, .expando-button.selftext.collapsed:hover, .expando-button.image.expanded:hover, .expando-button.image.collapsed:hover,
+.res-nightmode .expando-button.crosspost.expanded:hover,
+.res-nightmode .expando-button.crosspost.collapsed:hover,
+.res-nightmode .expando-button.video.expanded:hover,
+.res-nightmode .expando-button.video.collapsed:hover,
+.res-nightmode .expando-button.video-muted.expanded:hover,
+.res-nightmode .expando-button.video-muted.collapsed:hover,
+.res-nightmode .expando-button.selftext.expanded:hover,
+.res-nightmode .expando-button.selftext.collapsed:hover,
+.res-nightmode .expando-button.image.expanded:hover,
+.res-nightmode .expando-button.image.collapsed:hover,
+.thing.link.stickied .expando-button.crosspost.expanded:hover,
+.thing.link.stickied .expando-button.crosspost.collapsed:hover,
+.thing.link.stickied .expando-button.video.expanded:hover,
+.thing.link.stickied .expando-button.video.collapsed:hover,
+.thing.link.stickied .expando-button.video-muted.expanded:hover,
+.thing.link.stickied .expando-button.video-muted.collapsed:hover,
+.thing.link.stickied .expando-button.selftext.expanded:hover,
+.thing.link.stickied .expando-button.selftext.collapsed:hover,
+.thing.link.stickied .expando-button.image.expanded:hover,
+.thing.link.stickied .expando-button.image.collapsed:hover {
+    background: #17232d ;
+  }
 }
 
 .expando-button:before,
@@ -3096,12 +3113,7 @@ body > .content .link.compressed .midcol {
   background: #27b062;
 }
 .reddit-infobar.with-icon.locked-infobar .md {
-  color: #ffffff ;
-}
-@media (prefers-color-scheme: dark) {
-  .reddit-infobar.with-icon.locked-infobar .md {
-    color: #ffffff ;
-  }
+  color: #d7dadc ;
 }
 .reddit-infobar.with-icon.locked-infobar p:after {
   content: " Sort comments by new to find out more.";
@@ -3212,7 +3224,7 @@ body input:hover {
   height: 18px;
   border-radius: 20px;
   border: 0 solid;
-  color: #ffffff ;
+  color: #d7dadc ;
   font-size: 12px;
   font-weight: 500;
   line-height: 16px;
@@ -3225,11 +3237,6 @@ body input:hover {
   top: -2px;
   background: #738491;
 }
-@media (prefers-color-scheme: dark) {
-  .linkflairlabel {
-    color: #ffffff ;
-  }
-}
 
 .linkflair-mod .linkflairlabel {
   background: #27b062;
@@ -3238,6 +3245,14 @@ body input:hover {
   background: #27b062 url(%%spritesheet%%) -208px -104px;
 }
 
+html div.res-search-options.res-search-pane.res-search-pane-open {
+  background-color: #ffffff !important;
+}
+@media (prefers-color-scheme: dark) {
+  html div.res-search-options.res-search-pane.res-search-pane-open {
+    background-color: #1a1a1b !important;
+  }
+}
 html .RESMacroDropdown,
 html .res-show-link {
   background-color: #ffffff ;
@@ -3597,14 +3612,8 @@ html .res #header-bottom-right .user a {
 }
 html .res #sr-header-area a.RESShortcutsCurrentSub,
 html .res #RESSubredditGroupDropdown .RESShortcutsCurrentSub a {
-  color: #ffffff !important;
+  color: #d7dadc !important;
   border-bottom: #c8c6cc 2px solid;
-}
-@media (prefers-color-scheme: dark) {
-  html .res #sr-header-area a.RESShortcutsCurrentSub,
-html .res #RESSubredditGroupDropdown .RESShortcutsCurrentSub a {
-    color: #ffffff !important;
-  }
 }
 @media (prefers-color-scheme: dark) {
   html .res #sr-header-area a.RESShortcutsCurrentSub,
@@ -3964,18 +3973,10 @@ html .toggleButton:not(.enabled) .toggleOn,
 html .moduleToggle.enabled .toggleOff,
 html .toggleButton.enabled .toggleOff {
   background-color: transparent;
-  color: #ffffff ;
+  color: #d7dadc ;
   border: 1px solid #f50 ;
   transition: all 0.15s ease;
   border-radius: 4px;
-}
-@media (prefers-color-scheme: dark) {
-  html .moduleToggle:not(.enabled) .toggleOn,
-html .toggleButton:not(.enabled) .toggleOn,
-html .moduleToggle.enabled .toggleOff,
-html .toggleButton.enabled .toggleOff {
-    color: #ffffff ;
-  }
 }
 @media (prefers-color-scheme: dark) {
   html .moduleToggle:not(.enabled) .toggleOn,
@@ -4105,21 +4106,6 @@ html .comment .score:before {
 html #search #searchexpando label {
   padding-top: 0;
   padding-bottom: 0;
-}
-html body.mod-toolbox .tb-action-button {
-  height: 22px !important;
-  line-height: 0px;
-}
-html .link .entry .buttons li .redditSingleClick {
-  padding: 0 1px;
-  color: #98abba ;
-  font: normal 13px Lato, Arial, sans-serif;
-  transition: all 0.15s ease;
-}
-@media (prefers-color-scheme: dark) {
-  html .link .entry .buttons li .redditSingleClick {
-    color: #828282 ;
-  }
 }
 
 .link .entry {
@@ -4625,16 +4611,8 @@ table tbody tr td label {
   margin: 0 5px;
   padding: 2px 5px;
   font-size: 10px;
-  color: #ffffff ;
+  color: #d7dadc ;
   border: none;
-}
-@media (prefers-color-scheme: dark) {
-  .sidecontentbox .userattrs > a,
-.sidecontentbox .flair,
-.link .entry .tagline .userattrs > a,
-.link .entry .tagline .flair {
-    color: #ffffff ;
-  }
 }
 .sidecontentbox .userattrs > a:hover,
 .sidecontentbox .flair:hover,
@@ -4702,8 +4680,8 @@ table tbody tr td label {
 }
 .thumbnail img {
   position: relative;
-  transform: translateY(-50%);
-  top: 50%;
+  width: 56px;
+  height: 56px;
 }
 .thumbnail.default {
   background: #d2dbe0 url(%%spritesheet%%) -152px -50px;
@@ -4730,6 +4708,15 @@ table tbody tr td label {
 
 .thumbnail.spoiler {
   background: #f44336 url(%%spritesheet%%) -208px -148px;
+}
+
+#tb-footer-block {
+  display: none !important;
+}
+
+.tb-page-overlay *,
+#tb-context-menu * {
+  color: #696969 !important;
 }
 
 .unvotable-message {
@@ -5082,7 +5069,7 @@ body > .content .link .rank,
 .subreddit-rules-page .subreddit-rule-delete-confirmation button:active,
 .subreddit-rules-page .form-buttons button:active {
   background: #331100 ;
-  color: #ffffff ;
+  color: #d7dadc ;
   border: 1px solid #f50 ;
 }
 @media (prefers-color-scheme: dark) {
@@ -5091,14 +5078,6 @@ body > .content .link .rank,
 .subreddit-rules-page .subreddit-rule-delete-confirmation button:active,
 .subreddit-rules-page .form-buttons button:active {
     background: #292c2e ;
-  }
-}
-@media (prefers-color-scheme: dark) {
-  .subreddit-rules-page .subreddit-rule-buttons button:active,
-.subreddit-rules-page .subreddit-rule-add-form-buttons button:active,
-.subreddit-rules-page .subreddit-rule-delete-confirmation button:active,
-.subreddit-rules-page .form-buttons button:active {
-    color: #ffffff ;
   }
 }
 @media (prefers-color-scheme: dark) {
@@ -5243,17 +5222,12 @@ body > .content .link .rank,
 }
 .search-page .search-result-listing .search-result-group .search-expando-button.collapsed .search-expando-button-label-collapsed:active {
   background: #331100 ;
-  color: #ffffff ;
+  color: #d7dadc ;
   border: 1px solid #f50 ;
 }
 @media (prefers-color-scheme: dark) {
   .search-page .search-result-listing .search-result-group .search-expando-button.collapsed .search-expando-button-label-collapsed:active {
     background: #292c2e ;
-  }
-}
-@media (prefers-color-scheme: dark) {
-  .search-page .search-result-listing .search-result-group .search-expando-button.collapsed .search-expando-button-label-collapsed:active {
-    color: #ffffff ;
   }
 }
 @media (prefers-color-scheme: dark) {
@@ -5283,7 +5257,7 @@ body > .content .link .rank,
 }
 .search-page .search-result-listing .search-result-group .search-expando-button.expanded .search-expando-button-label-expanded {
   background: #331100 ;
-  color: #ffffff ;
+  color: #d7dadc ;
   border: 1px solid #f50 ;
   display: inline-block;
   margin: 0;
@@ -5303,11 +5277,6 @@ body > .content .link .rank,
 @media (prefers-color-scheme: dark) {
   .search-page .search-result-listing .search-result-group .search-expando-button.expanded .search-expando-button-label-expanded {
     background: #292c2e ;
-  }
-}
-@media (prefers-color-scheme: dark) {
-  .search-page .search-result-listing .search-result-group .search-expando-button.expanded .search-expando-button-label-expanded {
-    color: #ffffff ;
   }
 }
 @media (prefers-color-scheme: dark) {
@@ -5394,17 +5363,12 @@ body > .content .link .rank,
 }
 .search-page .search-result-listing .search-result-group .nav-buttons .nextprev a:active {
   background: #331100 ;
-  color: #ffffff ;
+  color: #d7dadc ;
   border: 1px solid #f50 ;
 }
 @media (prefers-color-scheme: dark) {
   .search-page .search-result-listing .search-result-group .nav-buttons .nextprev a:active {
     background: #292c2e ;
-  }
-}
-@media (prefers-color-scheme: dark) {
-  .search-page .search-result-listing .search-result-group .nav-buttons .nextprev a:active {
-    color: #ffffff ;
   }
 }
 @media (prefers-color-scheme: dark) {
@@ -5518,17 +5482,12 @@ body > .content .link .rank,
 }
 .combined-search-page .search-result-subreddit .search-subscribe-button .active.add:active {
   background: #331100 ;
-  color: #ffffff ;
+  color: #d7dadc ;
   border: 1px solid #f50 ;
 }
 @media (prefers-color-scheme: dark) {
   .combined-search-page .search-result-subreddit .search-subscribe-button .active.add:active {
     background: #292c2e ;
-  }
-}
-@media (prefers-color-scheme: dark) {
-  .combined-search-page .search-result-subreddit .search-subscribe-button .active.add:active {
-    color: #ffffff ;
   }
 }
 @media (prefers-color-scheme: dark) {
@@ -5558,7 +5517,7 @@ body > .content .link .rank,
 }
 .combined-search-page .search-result-subreddit .search-subscribe-button .active.remove {
   background: #331100 ;
-  color: #ffffff ;
+  color: #d7dadc ;
   border: 1px solid #f50 ;
   display: inline-block;
   margin: 0;
@@ -5578,11 +5537,6 @@ body > .content .link .rank,
 @media (prefers-color-scheme: dark) {
   .combined-search-page .search-result-subreddit .search-subscribe-button .active.remove {
     background: #292c2e ;
-  }
-}
-@media (prefers-color-scheme: dark) {
-  .combined-search-page .search-result-subreddit .search-subscribe-button .active.remove {
-    color: #ffffff ;
   }
 }
 @media (prefers-color-scheme: dark) {
@@ -5990,17 +5944,12 @@ ul.image-preview-list li .description pre {
 }
 .content.submit ul.tabmenu li:not(.selected) a:active {
   background: #331100 ;
-  color: #ffffff ;
+  color: #d7dadc ;
   border: 1px solid #f50 ;
 }
 @media (prefers-color-scheme: dark) {
   .content.submit ul.tabmenu li:not(.selected) a:active {
     background: #292c2e ;
-  }
-}
-@media (prefers-color-scheme: dark) {
-  .content.submit ul.tabmenu li:not(.selected) a:active {
-    color: #ffffff ;
   }
 }
 @media (prefers-color-scheme: dark) {
@@ -6033,7 +5982,7 @@ ul.image-preview-list li .description pre {
 }
 .content.submit ul.tabmenu li.selected a {
   background: #331100 ;
-  color: #ffffff ;
+  color: #d7dadc ;
   border: 1px solid #f50 ;
   margin: 16px 16px 16px 0;
   font-size: 14px;
@@ -6048,11 +5997,6 @@ ul.image-preview-list li .description pre {
 @media (prefers-color-scheme: dark) {
   .content.submit ul.tabmenu li.selected a {
     background: #292c2e ;
-  }
-}
-@media (prefers-color-scheme: dark) {
-  .content.submit ul.tabmenu li.selected a {
-    color: #ffffff ;
   }
 }
 @media (prefers-color-scheme: dark) {
@@ -6178,17 +6122,12 @@ ul.image-preview-list li .description pre {
   font-size: 14px;
   line-height: 36px;
   background-color: #f50 ;
-  color: #ffffff ;
+  color: #d7dadc ;
   border-color: #f50 ;
 }
 @media (prefers-color-scheme: dark) {
   .content.submit .formtabs-content #newlink-with-image-upload .file-upload-button {
     background-color: #f50 ;
-  }
-}
-@media (prefers-color-scheme: dark) {
-  .content.submit .formtabs-content #newlink-with-image-upload .file-upload-button {
-    color: #ffffff ;
   }
 }
 @media (prefers-color-scheme: dark) {
@@ -6391,13 +6330,7 @@ ul.image-preview-list li .description pre {
 
 .side .titlebox h1.redditname a,
 .titlebox span.subscribers > span {
-  color: #ffffff ;
-}
-@media (prefers-color-scheme: dark) {
-  .side .titlebox h1.redditname a,
-.titlebox span.subscribers > span {
-    color: #ffffff ;
-  }
+  color: #d7dadc ;
 }
 
 body.wiki-page:not(.subscriber) div.content, body.comments-page:not(.subscriber) div.content, body.listing-page:not(.subscriber) div.content {
@@ -6591,6 +6524,54 @@ body.comments-page .side {
   .side .titlebox h1.redditname a {
     background-color: #f50 ;
   }
+}
+
+body:not(.subscriber) #header::after {
+  content: "You're not subscribed to r/vba yet! Subscribe now to get help with your vba code!";
+  position: absolute;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 17px;
+  height: 30px;
+  transition: all 0.2s ease;
+  text-align: center;
+  background-color: #ffdf84;
+  border-radius: 0;
+  color: #444444;
+  padding-left: 40px;
+  background-image: url(%%info-shield%%);
+  background-position: 10px center;
+  background-repeat: no-repeat;
+  top: 136px;
+  border: 1px solid #e0bc80;
+}
+body:not(.subscriber) span.fancy-toggle-button.subscribe-button.toggle {
+  position: absolute;
+  top: 136px;
+  left: 766px;
+  margin: 0;
+  padding-top: 4px;
+  z-index: 1;
+}
+body:not(.subscriber) span.fancy-toggle-button.subscribe-button.toggle a.add {
+  box-sizing: content-box;
+  margin: 0;
+  font-weight: normal;
+  width: 100px;
+  height: 20px;
+  border-radius: 0;
+  border: 1px solid #ababab;
+  background-color: #f0f0f0;
+  color: #444444;
+  text-align: center;
+  padding: 0;
+  line-height: 20px;
+}
+body:not(.subscriber) div.multi-selector.hover-bubble.anchor-right {
+  right: calc(100vw - 766px);
+  left: 561px;
+  margin-top: -40px;
 }
 
 /*# sourceMappingURL=stylesheet.css.map */

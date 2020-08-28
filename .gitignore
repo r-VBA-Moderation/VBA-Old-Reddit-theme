@@ -1,3 +1,5 @@
 node_modules
 stylesheets
 sample_pages
+.vscode
+misc

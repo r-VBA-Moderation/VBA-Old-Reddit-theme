@@ -2,6 +2,7 @@
 @use 'infobox-recolor';
 @use 'responsive-content';
 @use 'subreddit-title-image-replace';
+@use 'subscription-prompt';
 
 // import community specific themes last
 @use './community_extensions/all';

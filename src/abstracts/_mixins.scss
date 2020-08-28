@@ -4,8 +4,8 @@
 @forward 'variables';
 @use 'variables' as v;
 @use 'sass:map';
-@use "../theme/reddit-dark" as dark;
-@use "../theme/reddit-light" as light;
+@use "../themes/dark-theme.scss" as dark;
+@use "../themes/light-theme.scss" as light;
 @use 'sass:color';
 
 @mixin pargin($val) {
@@ -79,6 +79,15 @@ $_breakpoints: (
   @if ($important and ($additionalProperties != "!important")) {
     $imp: "!important";
   }
+  $color-val: "";
+  @if map-has-key($theme, $color) {
+    $color-val: map-get($theme, $color);
+  }
+  // If the key doesn't exist in the map
+  @else {
+    @warn "No value found for `#{$color}`. "
+        + "Available colors are: #{map-keys($theme)}.";
+  }
   @if $additionalPropertiesPositionIsFront {
     #{$property}: unquote(
       $additionalProperties + " " + map-get($theme, $color) + " " + $imp
@@ -100,36 +109,26 @@ $_breakpoints: (
   $additionalProperties: "",
   $important: false
 ) {
-  @if $forceDark {
+  @if #{$color} == "lightText" {
     @include themeProperty(
       dark.$theme,
       $property,
-      $color,
+      v.$bodyText,
+      $additionalPropertiesPositionIsFront,
+      $additionalProperties,
+      $important
+    );
+  } @else if $color == "darkText" {
+    @include themeProperty(
+      light.$theme,
+      $property,
+      v.$bodyText,
       $additionalPropertiesPositionIsFront,
       $additionalProperties,
       $important
     );
   } @else {
-    // @at-root .res-nightmode #{&} {
-    //   @include themeProperty(
-    //     dark.$theme,
-    //     $property,
-    //     $color,
-    //     $additionalPropertiesPositionIsFront,
-    //     $additionalProperties,
-    //     true
-    //   );
-    // }
-    @include themeProperty(
-      light.$theme,
-      $property,
-      $color,
-      $additionalPropertiesPositionIsFront,
-      $additionalProperties,
-      $important
-    );
-
-    @media (prefers-color-scheme: dark) {
+    @if $forceDark {
       @include themeProperty(
         dark.$theme,
         $property,
@@ -138,6 +137,25 @@ $_breakpoints: (
         $additionalProperties,
         $important
       );
+    } @else {
+      @include themeProperty(
+        light.$theme,
+        $property,
+        $color,
+        $additionalPropertiesPositionIsFront,
+        $additionalProperties,
+        $important
+      );
+      @media (prefers-color-scheme: dark) {
+        @include themeProperty(
+          dark.$theme,
+          $property,
+          $color,
+          $additionalPropertiesPositionIsFront,
+          $additionalProperties,
+          $important
+        );
+      }
     }
   }
 }

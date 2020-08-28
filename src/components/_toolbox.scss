@@ -1,0 +1,14 @@
+@use '../abstracts/mixins' as v;
+
+// resets for mod toolbox extension - /r/toolbox/
+
+#tb-footer-block {
+  display: none !important;
+}
+
+.tb-page-overlay,
+#tb-context-menu {
+  * {
+    color: #696969 !important;
+  }
+}

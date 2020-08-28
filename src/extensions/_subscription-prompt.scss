@@ -1,0 +1,57 @@
+@use '../abstracts/mixins' as v;
+
+$_background: #ffdf84;
+$_border: #e0bc80;
+$_btn-background: #f0f0f0;
+$_btn-border: #ababab;
+$_color: #444444;
+
+body:not(.subscriber) {
+  #header::after {
+    content: "You're not subscribed to r/vba yet! Subscribe now to get help with your vba code!";
+    position: absolute;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 17px;
+    height: 30px;
+    transition: all 0.2s ease;
+    text-align: center;
+    background-color: $_background;
+    border-radius: 0;
+    color: $_color;
+    padding-left: 40px;
+    background-image: v.getImage("info-shield");
+    background-position: 10px center;
+    background-repeat: no-repeat;
+    top: v.$header-height;
+    border: 1px solid $_border;
+  }
+  span.fancy-toggle-button.subscribe-button.toggle {
+    position: absolute;
+    top: v.$header-height;
+    left: 766px;
+    margin: 0;
+    padding-top: 4px;
+    z-index: 1;
+    a.add {
+      box-sizing: content-box;
+      margin: 0;
+      font-weight: normal;
+      width: 100px;
+      height: 20px;
+      border-radius: 0;
+      border: 1px solid $_btn-border;
+      background-color: $_btn-background;
+      color: $_color;
+      text-align: center;
+      padding: 0;
+      line-height: 20px;
+    }
+  }
+  div.multi-selector.hover-bubble.anchor-right {
+    right: calc(100vw - 766px);
+    left: 766px - 205px;
+    margin-top: -40px;
+  }
+}
