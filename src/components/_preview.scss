@@ -21,6 +21,7 @@
       "1px solid"
     );
     @include v.theme("color", v.$secondary-text);
+    @include v.theme("background-color", v.$body);
     padding: 8px v.$padding;
   }
 
