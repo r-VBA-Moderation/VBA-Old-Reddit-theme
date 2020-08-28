@@ -314,12 +314,12 @@ a {
 }
 
 #mail.havemail:before {
-  animation-name: uc931t5;
+  animation-name: ulu9p7m;
   animation-duration: 8s;
   animation-iteration-count: 1;
   animation-timing-function: ease;
 }
-@keyframes uc931t5 {
+@keyframes ulu9p7m {
   0% {
     transform: translateY(76px);
     opacity: 0;
@@ -1780,7 +1780,7 @@ body:not(.subscriber) .content {
   content: " ";
   background: #ff4500 ;
   border-radius: 28px;
-  animation-name: uc931tr;
+  animation-name: ulu9p7t;
   animation-duration: 0.35s;
   animation-timing-function: ease-out;
   animation-fill-mode: forwards;
@@ -1790,7 +1790,7 @@ body:not(.subscriber) .content {
     background: #ff4500 ;
   }
 }
-@keyframes uc931tr {
+@keyframes ulu9p7t {
   0% {
     transform: scale(0, 0);
     opacity: 1;
@@ -2018,6 +2018,7 @@ body .btn,
 body button,
 body .c-btn,
 body .wiki-page .wiki-page-content .wiki_button,
+body .prev-button a,
 body .next-button a {
   background: #f50 ;
   color: #ffffff ;
@@ -2037,6 +2038,7 @@ body .next-button a {
 body button,
 body .c-btn,
 body .wiki-page .wiki-page-content .wiki_button,
+body .prev-button a,
 body .next-button a {
     background: #d7dadc ;
   }
@@ -2046,6 +2048,7 @@ body .next-button a {
 body button,
 body .c-btn,
 body .wiki-page .wiki-page-content .wiki_button,
+body .prev-button a,
 body .next-button a {
     color: #1a1a1b ;
   }
@@ -2055,6 +2058,7 @@ body .next-button a {
 body button,
 body .c-btn,
 body .wiki-page .wiki-page-content .wiki_button,
+body .prev-button a,
 body .next-button a {
     border: 1px solid #d7dadc ;
   }
@@ -2063,6 +2067,7 @@ body .btn:active,
 body button:active,
 body .c-btn:active,
 body .wiki-page .wiki-page-content .wiki_button:active,
+body .prev-button a:active,
 body .next-button a:active {
   background: #331100 ;
   color: #d7dadc ;
@@ -2073,6 +2078,7 @@ body .next-button a:active {
 body button:active,
 body .c-btn:active,
 body .wiki-page .wiki-page-content .wiki_button:active,
+body .prev-button a:active,
 body .next-button a:active {
     background: #292c2e ;
   }
@@ -2082,6 +2088,7 @@ body .next-button a:active {
 body button:active,
 body .c-btn:active,
 body .wiki-page .wiki-page-content .wiki_button:active,
+body .prev-button a:active,
 body .next-button a:active {
     border: 1px solid #d7dadc ;
   }
@@ -2090,6 +2097,7 @@ body .btn:hover,
 body button:hover,
 body .c-btn:hover,
 body .wiki-page .wiki-page-content .wiki_button:hover,
+body .prev-button a:hover,
 body .next-button a:hover {
   background: #ffaa80 ;
   color: #ffffff ;
@@ -2100,6 +2108,7 @@ body .next-button a:hover {
 body button:hover,
 body .c-btn:hover,
 body .wiki-page .wiki-page-content .wiki_button:hover,
+body .prev-button a:hover,
 body .next-button a:hover {
     background: #ebedee ;
   }
@@ -2109,6 +2118,7 @@ body .next-button a:hover {
 body button:hover,
 body .c-btn:hover,
 body .wiki-page .wiki-page-content .wiki_button:hover,
+body .prev-button a:hover,
 body .next-button a:hover {
     color: #1a1a1b ;
   }
@@ -2118,6 +2128,7 @@ body .next-button a:hover {
 body button:hover,
 body .c-btn:hover,
 body .wiki-page .wiki-page-content .wiki_button:hover,
+body .prev-button a:hover,
 body .next-button a:hover {
     border: 1px solid #ebedee ;
   }
@@ -2126,6 +2137,7 @@ body .btn:active,
 body button:active,
 body .c-btn:active,
 body .wiki-page .wiki-page-content .wiki_button:active,
+body .prev-button a:active,
 body .next-button a:active {
   margin: 16px 16px 16px 0;
 }
@@ -4532,6 +4544,10 @@ select:disabled:hover, select[aria-disabled=true]:hover {
 
 table {
   margin: 16px 0;
+  border-radius: 4px;
+}
+table > * {
+  border-radius: 0px;
 }
 table thead {
   background-color: #4472c4;
