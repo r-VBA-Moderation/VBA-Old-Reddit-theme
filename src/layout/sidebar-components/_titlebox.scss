@@ -114,7 +114,7 @@
     margin: 0;
     .active {
       @include v.button(true, true);
-      margin: v.$padding 5px 0 0;
+      margin: v.$padding 5px v.$padding 0;
     }
   }
 
