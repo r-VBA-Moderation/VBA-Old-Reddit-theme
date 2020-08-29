@@ -318,12 +318,12 @@ a {
 }
 
 #mail.havemail:before {
-  animation-name: u27he4y;
+  animation-name: u14ia2k;
   animation-duration: 8s;
   animation-iteration-count: 1;
   animation-timing-function: ease;
 }
-@keyframes u27he4y {
+@keyframes u14ia2k {
   0% {
     transform: translateY(76px);
     opacity: 0;
@@ -1784,7 +1784,7 @@ body:not(.subscriber) .content {
   content: " ";
   background: #ff4500 ;
   border-radius: 28px;
-  animation-name: u27he50;
+  animation-name: u14ia2v;
   animation-duration: 0.35s;
   animation-timing-function: ease-out;
   animation-fill-mode: forwards;
@@ -1794,7 +1794,7 @@ body:not(.subscriber) .content {
     background: #ff4500 ;
   }
 }
-@keyframes u27he50 {
+@keyframes u14ia2v {
   0% {
     transform: scale(0, 0);
     opacity: 1;
@@ -2023,7 +2023,8 @@ body button,
 body .c-btn,
 body .wiki-page .wiki-page-content .wiki_button,
 body .prev-button a,
-body .next-button a {
+body .next-button a,
+body input[type=submit] {
   background: #f50 ;
   color: #ffffff ;
   border: 1px solid #f50 ;
@@ -2043,7 +2044,8 @@ body button,
 body .c-btn,
 body .wiki-page .wiki-page-content .wiki_button,
 body .prev-button a,
-body .next-button a {
+body .next-button a,
+body input[type=submit] {
     background: #d7dadc ;
   }
 }
@@ -2053,7 +2055,8 @@ body button,
 body .c-btn,
 body .wiki-page .wiki-page-content .wiki_button,
 body .prev-button a,
-body .next-button a {
+body .next-button a,
+body input[type=submit] {
     color: #1a1a1b ;
   }
 }
@@ -2063,7 +2066,8 @@ body button,
 body .c-btn,
 body .wiki-page .wiki-page-content .wiki_button,
 body .prev-button a,
-body .next-button a {
+body .next-button a,
+body input[type=submit] {
     border: 1px solid #d7dadc ;
   }
 }
@@ -2072,7 +2076,8 @@ body button:active,
 body .c-btn:active,
 body .wiki-page .wiki-page-content .wiki_button:active,
 body .prev-button a:active,
-body .next-button a:active {
+body .next-button a:active,
+body input[type=submit]:active {
   background: #331100 ;
   color: #d7dadc ;
   border: 1px solid #f50 ;
@@ -2083,7 +2088,8 @@ body button:active,
 body .c-btn:active,
 body .wiki-page .wiki-page-content .wiki_button:active,
 body .prev-button a:active,
-body .next-button a:active {
+body .next-button a:active,
+body input[type=submit]:active {
     background: #292c2e ;
   }
 }
@@ -2093,7 +2099,8 @@ body button:active,
 body .c-btn:active,
 body .wiki-page .wiki-page-content .wiki_button:active,
 body .prev-button a:active,
-body .next-button a:active {
+body .next-button a:active,
+body input[type=submit]:active {
     border: 1px solid #d7dadc ;
   }
 }
@@ -2102,7 +2109,8 @@ body button:hover,
 body .c-btn:hover,
 body .wiki-page .wiki-page-content .wiki_button:hover,
 body .prev-button a:hover,
-body .next-button a:hover {
+body .next-button a:hover,
+body input[type=submit]:hover {
   background: #ffaa80 ;
   color: #ffffff ;
   border: 1px solid #ffaa80 ;
@@ -2113,7 +2121,8 @@ body button:hover,
 body .c-btn:hover,
 body .wiki-page .wiki-page-content .wiki_button:hover,
 body .prev-button a:hover,
-body .next-button a:hover {
+body .next-button a:hover,
+body input[type=submit]:hover {
     background: #ebedee ;
   }
 }
@@ -2123,7 +2132,8 @@ body button:hover,
 body .c-btn:hover,
 body .wiki-page .wiki-page-content .wiki_button:hover,
 body .prev-button a:hover,
-body .next-button a:hover {
+body .next-button a:hover,
+body input[type=submit]:hover {
     color: #1a1a1b ;
   }
 }
@@ -2133,7 +2143,8 @@ body button:hover,
 body .c-btn:hover,
 body .wiki-page .wiki-page-content .wiki_button:hover,
 body .prev-button a:hover,
-body .next-button a:hover {
+body .next-button a:hover,
+body input[type=submit]:hover {
     border: 1px solid #ebedee ;
   }
 }
@@ -2142,7 +2153,8 @@ body button:active,
 body .c-btn:active,
 body .wiki-page .wiki-page-content .wiki_button:active,
 body .prev-button a:active,
-body .next-button a:active {
+body .next-button a:active,
+body input[type=submit]:active {
   margin: 16px 16px 16px 0;
 }
 
@@ -2271,6 +2283,7 @@ body .next-button a:active {
   }
 }
 
+.usertext.border .usertext-body,
 .thing {
   background-color: #ffffff ;
   color: #292f34 ;
@@ -2280,17 +2293,20 @@ body .next-button a:active {
   padding: 16px;
 }
 @media (prefers-color-scheme: dark) {
-  .thing {
+  .usertext.border .usertext-body,
+.thing {
     background-color: #1a1a1b ;
   }
 }
 @media (prefers-color-scheme: dark) {
-  .thing {
+  .usertext.border .usertext-body,
+.thing {
     color: #d7dadc ;
   }
 }
 @media (prefers-color-scheme: dark) {
-  .thing {
+  .usertext.border .usertext-body,
+.thing {
     border-color: #343536 ;
   }
 }
@@ -3065,6 +3081,36 @@ body > .content .link.compressed .midcol {
   }
 }
 
+.commentarea .infobar {
+  border-color: #dadada ;
+  background-color: #ffffff ;
+}
+@media (prefers-color-scheme: dark) {
+  .commentarea .infobar {
+    border-color: #343536 ;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .commentarea .infobar {
+    background-color: #1a1a1b ;
+  }
+}
+
+.reddit-infobar {
+  border-color: #dadada ;
+  background-color: #d7dfe7 ;
+}
+@media (prefers-color-scheme: dark) {
+  .reddit-infobar {
+    border-color: #343536 ;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .reddit-infobar {
+    background-color: #1e2931 ;
+  }
+}
+
 .listingsignupbar__cta-container {
   display: flex;
 }
@@ -3095,15 +3141,6 @@ body > .content .link.compressed .midcol {
   .content .infobar.welcome h1 {
     color: #818384 ;
   }
-}
-
-.commentarea .infobar {
-  line-height: 18px;
-  margin: 0 0 16px;
-}
-.commentarea .infobar a {
-  color: rgba(0, 0, 0, 0.64);
-  font-weight: 700;
 }
 
 .reddit-infobar.with-icon {
@@ -3144,10 +3181,10 @@ body .crosspost-field,
 body .text,
 body textarea,
 body input {
-  border: 1px solid #dadada !important;
+  border: 1px solid #dadada ;
   padding: 8px 16px;
-  background-color: #f6f7f8 !important;
-  color: #292f34 !important;
+  background-color: #f6f7f8 ;
+  color: #292f34 ;
   border-radius: 4px;
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
   transition: box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1), background 0.2s cubic-bezier(0.4, 0, 0.2, 1), color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
@@ -3157,7 +3194,7 @@ body input {
 body .text,
 body textarea,
 body input {
-    border: 1px solid #343536 !important;
+    border: 1px solid #343536 ;
   }
 }
 @media (prefers-color-scheme: dark) {
@@ -3165,7 +3202,7 @@ body input {
 body .text,
 body textarea,
 body input {
-    background-color: #272729 !important;
+    background-color: #272729 ;
   }
 }
 @media (prefers-color-scheme: dark) {
@@ -3173,7 +3210,7 @@ body input {
 body .text,
 body textarea,
 body input {
-    color: #d7dadc !important;
+    color: #d7dadc ;
   }
 }
 body .crosspost-field::-webkit-input-placeholder, body .crosspost-field:-moz-placeholder, body .crosspost-field::-moz-placeholder, body .crosspost-field:-ms-input-placeholder,
@@ -4862,6 +4899,13 @@ table tbody tr td label {
 .reddit-infobar.gold-accent p {
   line-height: 36px;
   margin: 0;
+}
+
+.commentarea .comment .midcol {
+  margin-top: 2px;
+  width: 32px;
+  margin-right: 6px;
+  overflow: visible;
 }
 
 .gilded-icon:before {
