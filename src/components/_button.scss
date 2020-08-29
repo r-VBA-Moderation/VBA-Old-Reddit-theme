@@ -6,7 +6,8 @@ body {
   .c-btn,
   .wiki-page .wiki-page-content .wiki_button,
   .prev-button a,
-  .next-button a {
+  .next-button a,
+  input[type="submit"] {
     @include v.button;
   }
 }

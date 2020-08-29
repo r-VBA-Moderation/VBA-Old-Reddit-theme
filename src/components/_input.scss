@@ -5,6 +5,6 @@ body {
   .text,
   textarea,
   input {
-    @include v.input(false, true);
+    @include v.input(false);
   }
 }

@@ -2,22 +2,34 @@
 
 // Infobar (Default yellow announcement bar)
 
-.content .infobar {
-  margin: 0 0 16px;
-  padding: v.$padding;
-  height: auto;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-  @include v.theme("border-bottom", v.$line, false, true, "1px solid");
-  @include v.theme("background-color", v.$navBar-backgroundColor);
-  @include v.theme("color", v.$bodyText);
+.content {
+  .infobar {
+    margin: 0 0 16px;
+    padding: v.$padding;
+    height: auto;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    @include v.theme("border-bottom", v.$line, false, true, "1px solid");
+    @include v.theme("background-color", v.$navBar-backgroundColor);
+    @include v.theme("color", v.$bodyText);
 
-  &.listingsignupbar,
-  .listingsignupbar__title,
-  a.listingsignupbar__container {
-    @include v.theme("background", v.$body, false, false, "!important");
-    @include v.theme("color", v.$bodyText, false, false, "!important");
+    &.listingsignupbar,
+    .listingsignupbar__title,
+    a.listingsignupbar__container {
+      @include v.theme("background", v.$body, false, false, "!important");
+      @include v.theme("color", v.$bodyText, false, false, "!important");
+    }
   }
+}
+
+.commentarea .infobar {
+  @include v.theme("border-color", v.$line);
+  @include v.theme("background-color", v.$body);
+}
+
+.reddit-infobar {
+  @include v.theme("border-color", v.$line);
+  @include v.theme("background-color", v.$highlight-background);
 }
 
 .listingsignupbar__cta-container {
@@ -44,18 +56,6 @@
     h1 {
       @include v.theme("color", v.$metaText);
     }
-  }
-}
-
-// Welcome Infobar
-
-.commentarea .infobar {
-  line-height: 18px;
-  margin: 0 0 16px;
-
-  a {
-    color: rgba(0, 0, 0, 0.64);
-    font-weight: 700;
   }
 }
 
