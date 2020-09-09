@@ -5,6 +5,7 @@ $_border: #e0bc80;
 $_btn-background: #f0f0f0;
 $_btn-border: #ababab;
 $_color: #444444;
+$_btn-left-offset: 666px;
 
 body:not(.subscriber) {
   #header::after {
@@ -30,7 +31,7 @@ body:not(.subscriber) {
   span.fancy-toggle-button.subscribe-button.toggle {
     position: absolute;
     top: v.$header-height;
-    left: 666px;
+    left: $_btn-left-offset;
     margin: 0;
     padding-top: 4px;
     z-index: 100;
@@ -52,7 +53,7 @@ body:not(.subscriber) {
   }
   div.multi-selector.hover-bubble.anchor-right {
     right: calc(100vw - 766px);
-    left: 766px - 205px;
+    left: $_btn-left-offset - 205px;
     margin-top: -40px;
   }
 }
