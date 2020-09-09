@@ -251,12 +251,12 @@ a {
 }
 
 #mail.havemail:before {
-  animation-name: u6ha1qk;
+  animation-name: u7zeawy;
   animation-duration: 8s;
   animation-iteration-count: 1;
   animation-timing-function: ease;
 }
-@keyframes u6ha1qk {
+@keyframes u7zeawy {
   0% {
     transform: translateY(76px);
     opacity: 0;
@@ -2667,31 +2667,31 @@ body > .content .link.compressed .midcol {
     background: #1a1a1b ;
   }
 }
-.hover-bubble .multi-selector strong {
+.hover-bubble.multi-selector strong {
   color: #292f34 ;
   background: #ffffff ;
 }
 @media (prefers-color-scheme: dark) {
-  .hover-bubble .multi-selector strong {
+  .hover-bubble.multi-selector strong {
     color: #d7dadc ;
   }
 }
 @media (prefers-color-scheme: dark) {
-  .hover-bubble .multi-selector strong {
+  .hover-bubble.multi-selector strong {
     background: #1a1a1b ;
   }
 }
-.hover-bubble .multi-selector .create-multi input[type=text] {
+.hover-bubble.multi-selector .create-multi input[type=text] {
   color: #292f34 ;
   background: #ffffff ;
 }
 @media (prefers-color-scheme: dark) {
-  .hover-bubble .multi-selector .create-multi input[type=text] {
+  .hover-bubble.multi-selector .create-multi input[type=text] {
     color: #d7dadc ;
   }
 }
 @media (prefers-color-scheme: dark) {
-  .hover-bubble .multi-selector .create-multi input[type=text] {
+  .hover-bubble.multi-selector .create-multi input[type=text] {
     background: #1a1a1b ;
   }
 }
@@ -6077,7 +6077,7 @@ body:not(.subscriber) span.fancy-toggle-button.subscribe-button.toggle a.add {
 }
 body:not(.subscriber) div.multi-selector.hover-bubble.anchor-right {
   right: calc(100vw - 766px);
-  left: 561px;
+  left: 461px;
   margin-top: -40px;
 }
 
