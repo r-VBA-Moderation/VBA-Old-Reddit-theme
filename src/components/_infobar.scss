@@ -31,7 +31,7 @@
   @include v.theme("border-color", v.$line);
   @include v.theme("background-color", v.$highlight-background);
   &.gold-accent {
-    @include v.theme("color", v.$darkText);
+    @include v.theme("color", v.$darkText, $important: true);
   }
 }
 
