@@ -12,7 +12,9 @@ $_hdr-img-width: 300px;
     position: absolute;
     width: 100vw;
     left: 0;
+    visibility: hidden;
     a {
+      visibility: visible;
       height: 65px;
       width: $_hdr-img-width;
       position: relative;
