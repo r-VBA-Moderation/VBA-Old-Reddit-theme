@@ -25,6 +25,13 @@ html {
       @include v.theme("color", v.$bodyText, $important: true);
     }
   }
+
+  .tb-jsapi-container {
+    th,
+    td {
+      color: #696969 !important;
+    }
+  }
   .tb-config-usernote-types thead th {
     @include v.theme("color", v.$lightText);
   }
