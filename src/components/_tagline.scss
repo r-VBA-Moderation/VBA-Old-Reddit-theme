@@ -5,7 +5,7 @@
 .link .entry .tagline {
   a {
     margin-top: 3px;
-    @include v.theme("color", v.$secondary-text);
+    @include v.theme("color", v.$bodyText);
     padding: 1px 4px;
     border-radius: v.$radius;
   }
@@ -17,38 +17,24 @@
     }
   }
   .moderator {
+    @include v.theme("color", v.$lightText, $important: true);
     background: v.getColor("role", "moderator") !important;
   }
 
   .admin {
+    @include v.theme("color", v.$lightText, $important: true);
     background: v.getColor("role", "admin");
   }
 
   .submitter,
   .submitter:hover {
+    @include v.theme("color", v.$lightText, $important: true);
     background: v.getColor("role", "submitter");
   }
 
   .friend {
+    @include v.theme("color", v.$lightText, $important: true);
     background: v.getColor("role", "friend");
-  }
-}
-
-.author.submitter .thing .tagline .author.moderator {
-  background-color: v.$moderator !important;
-  @include v.theme("color", v.$lightText);
-}
-.link .entry .tagline {
-  a {
-    @include v.theme("color", v.$bodyText);
-  }
-
-  &:first-letter {
-    text-transform: capitalize;
-  }
-
-  time {
-    cursor: help;
   }
 }
 
