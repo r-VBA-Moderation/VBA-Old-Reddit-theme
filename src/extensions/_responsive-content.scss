@@ -66,6 +66,7 @@ body {
           v.$container-margin-vert * 2;
       }
       .side {
+        margin-top: v.$subscription-prompt-height + v.$container-margin-vert;
         .sidebox.submit,
         #search {
           top: v.$header-height + v.$container-margin-vert +
