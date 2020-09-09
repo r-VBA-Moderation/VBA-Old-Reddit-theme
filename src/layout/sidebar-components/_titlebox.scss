@@ -68,14 +68,14 @@
       font-style: italic;
       cursor: text;
 
-      &:before {
-        content: "";
-        width: 16px;
-        height: 9px;
-        display: inline-block;
-        margin-right: 8px;
-        background: v.getImage("spritesheet") -64px -36px;
-      }
+      // &:before {
+      //   content: "";
+      //   width: 16px;
+      //   height: 9px;
+      //   display: inline-block;
+      //   margin-right: 8px;
+      //   background: v.getImage("spritesheet") -64px -36px;
+      // }
 
       &:after {
         content: " " + v.$users;

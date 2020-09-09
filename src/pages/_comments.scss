@@ -94,11 +94,11 @@
 }
 // Gilding
 
-.gilded-icon:before {
-  background: v.getImage("spritesheet") -112px -160px;
-  height: 16px;
-  width: 16px;
-}
+// .gilded-icon:before {
+//   background: v.getImage("spritesheet") -112px -160px;
+//   height: 16px;
+//   width: 16px;
+// }
 
 .user-gilded > .entry .gilded-icon:before {
   width: 16px;
