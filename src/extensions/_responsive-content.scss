@@ -50,13 +50,13 @@ $_submit-text-left-large: calc(
 );
 
 body {
-  // lol fuck it - cannot get this to work
-  // #sr-header-area .drop-choices.inuse {
-  //   position: relative;
-  //   z-index: 10000000 !important;
-  // }
+  // setting the header z-index fixes a stacking issue with the subreddits dropdown being
+  // hidden by the search form.
+  #header {
+    position: relative;
+    z-index: 100;
+  }
 
-  // only on comments, front and wiki pages
   &.wiki-page,
   &.comments-page,
   &.listing-page {
