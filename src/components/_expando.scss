@@ -2,19 +2,27 @@
 
 // // Expando Button
 
-$_bar-thickness: 1px;
-$_margin-top: 5px;
-$_padding: 5px;
+$_bar-thickness: 2px;
+$_bar-width: 80%;
 $_icon-size: 30px;
-$_top: $_margin-top + $_padding - ($_bar-thickness * 2);
+$_icon-size__excluding-border: $_icon-size - ($_bar-thickness * 2);
+$_center-offset: ($_icon-size__excluding-border / 2) - $_bar-thickness;
+$_before-offset: $_center-offset + ($_bar-thickness / 2);
+$_after-offset: $_center-offset - ($_bar-thickness / 2);
 
 .expando-button,
 .res-nightmode .expando-button,
 .thing.link.stickied .expando-button {
-  @include v.theme("border", v.$actionIcon, false, true, "solid 1px");
+  @include v.theme(
+    "border",
+    v.$actionIcon,
+    false,
+    true,
+    "solid #{$_bar-thickness}"
+  );
   border-radius: v.$radius;
-  margin: $_margin-top 8px 0 0 !important;
-  padding: $_padding !important;
+  height: $_icon-size;
+  width: $_icon-size;
 
   &.crosspost,
   &.video,
@@ -40,16 +48,19 @@ $_top: $_margin-top + $_padding - ($_bar-thickness * 2);
 .expando-button:after {
   position: relative !important;
   display: flex;
-  top: $_top;
-  width: 100%;
+  width: $_bar-width;
+  margin-left: (100% - $_bar-width) / 2;
   height: $_bar-thickness;
   @include v.theme("background", v.$actionIcon);
   content: "";
   transition: 0.3s;
 }
+.expando-button:before {
+  top: $_before-offset;
+}
 
 .expando-button:after {
-  top: $_top - 1px;
+  top: $_after-offset;
   transform: rotate(90deg);
 }
 
