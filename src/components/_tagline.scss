@@ -6,9 +6,9 @@
 }
 .thing .tagline .author.moderator {
   background-color: v.$moderator !important;
-  @include v.theme("color", v.$body);
+  @include v.theme("color", v.$lightText);
   padding: 1px 4px;
-  border-radius: 1px;
+  border-radius: v.$radius;
 }
 .link .entry .tagline {
   a {
