@@ -362,7 +362,7 @@ html {
         border-radius: v.$radius !important;
       }
       & > .sitetable > .comment {
-        border: 1px solid;
+        @include v.theme("border", v.$line, false, true, "1px solid", true);
       }
     }
 
