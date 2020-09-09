@@ -1,12 +1,8 @@
 @use '../abstracts/mixins' as v;
 
-// TODO: Make work with subscription prompt.
-
-// TODO: Make work with "Submissions Restricted"
-
 $_search-height: 58px;
 $_element-count: 3;
-$_breakpoint: "extra-large";
+$_breakpoint: "large";
 
 // IE11 doesnt support nested calcs.
 // sass interpolation strips meaningful whitespace
