@@ -16,9 +16,17 @@
   }
 }
 
+.tb-bracket-button,
 .tb-jsapi-author-container {
   * {
     border-radius: 0;
     @include v.theme("color", v.$bodyText);
   }
+}
+.tb-config-usernote-types thead th {
+  @include v.theme("color", v.$lightText);
+}
+
+.mod-toolbox-rd #tb-feedback-window .tb-feedback-text {
+  @include v.theme("background-color", v.$body);
 }
