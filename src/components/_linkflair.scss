@@ -27,10 +27,10 @@
     background: v.$moderator;
   }
 
-  .thumbnail {
-    &.default,
-    &.self {
-      background: v.$moderator v.getImage("spritesheet") -208px -104px;
-    }
-  }
+  // .thumbnail {
+  //   &.default,
+  //   &.self {
+  //     background: v.$moderator v.getImage("spritesheet") -208px -104px;
+  //   }
+  // }
 }
