@@ -281,7 +281,6 @@ a {
   left: 32px;
   content: "You have new messages!";
   text-indent: 0;
-  font: 14px Lato, Arial, sans-serif;
   line-height: 1;
   -webkit-transform: translateY(112px);
   transform: translateY(112px);
@@ -318,12 +317,12 @@ a {
 }
 
 #mail.havemail:before {
-  animation-name: u14ia2k;
+  animation-name: urm7ji6;
   animation-duration: 8s;
   animation-iteration-count: 1;
   animation-timing-function: ease;
 }
-@keyframes u14ia2k {
+@keyframes urm7ji6 {
   0% {
     transform: translateY(76px);
     opacity: 0;
@@ -364,7 +363,6 @@ a {
   display: inline-block;
   line-height: 42px;
   color: #292f34 ;
-  font: normal 700 42px/42px Lato, Arial, sans-serif;
   text-shadow: 0px 0px 0, -1px -1px 0, 1px -1px 0, -1px 1px 0, 1px 1px 0;
   text-transform: uppercase;
 }
@@ -620,7 +618,6 @@ a.random.choice {
   margin: 0 16px;
   padding: 0;
   text-transform: uppercase;
-  font: 400 14px/32px Lato, Arial, sans-serif;
   color: #7a797c ;
   display: inline-block;
 }
@@ -695,6 +692,7 @@ body:not(.loggedin) #header-bottom-right {
 }
 
 .user a {
+  vertical-align: middle;
   max-width: 120px;
   overflow: hidden;
   display: inline-block;
@@ -742,7 +740,6 @@ body:not(.loggedin) #header-bottom-right {
 .leavemoderator a {
   background: #ffffff ;
   color: #98abba ;
-  font: bold 11px Lato, Arial, sans-serif;
   padding: 2px 8px;
   position: absolute;
   right: 32px;
@@ -999,7 +996,6 @@ body:not(.loggedin) #header-bottom-right {
   width: 100%;
   text-align: center;
   color: #292f34 ;
-  font: 18px/24px Lato, Arial, sans-serif;
   margin-bottom: 8px;
 }
 @media (prefers-color-scheme: dark) {
@@ -1784,7 +1780,7 @@ body:not(.subscriber) .content {
   content: " ";
   background: #ff4500 ;
   border-radius: 28px;
-  animation-name: u14ia2v;
+  animation-name: urm7jit;
   animation-duration: 0.35s;
   animation-timing-function: ease-out;
   animation-fill-mode: forwards;
@@ -1794,7 +1790,7 @@ body:not(.subscriber) .content {
     background: #ff4500 ;
   }
 }
-@keyframes u14ia2v {
+@keyframes urm7jit {
   0% {
     transform: scale(0, 0);
     opacity: 1;
@@ -2453,15 +2449,15 @@ body input[type=submit]:active {
   line-height: normal;
   padding: 0 1px;
   color: #98abba ;
-  font-weight: 400;
-  font: 13px Lato, Arial, sans-serif;
+  font-weight: normal;
+  font-size: small;
   transition: all 0.15s ease;
 }
 .entry .buttons li a {
   padding: 0 1px;
   color: #98abba ;
   font-weight: 400;
-  font: 13px Lato, Arial, sans-serif;
+  font-size: 12px;
   transition: all 0.15s ease;
 }
 @media (prefers-color-scheme: dark) {
@@ -2748,6 +2744,7 @@ body > .content .link.compressed .midcol {
 .thing.link.stickied .expando-button.selftext.collapsed,
 .thing.link.stickied .expando-button.image.expanded,
 .thing.link.stickied .expando-button.image.collapsed {
+  background-image: none !important;
   background: transparent;
   height: 30px;
   width: 30px;
@@ -3110,6 +3107,9 @@ body > .content .link.compressed .midcol {
     background-color: #1e2931 ;
   }
 }
+.reddit-infobar.gold-accent {
+  color: #292f34 ;
+}
 
 .listingsignupbar__cta-container {
   display: flex;
@@ -3464,17 +3464,12 @@ html .entry.res-selected .md-container {
   }
 }
 html .res .RES-keyNav-activeElement {
-  outline: 0 dashed #eee !important;
   outline-color: #dadada !important;
-  transition: all 0.15s ease;
 }
 @media (prefers-color-scheme: dark) {
   html .res .RES-keyNav-activeElement {
     outline-color: #343536 !important;
   }
-}
-html .res .entry {
-  transition: all 0.1s ease;
 }
 html div.RES-keyNav-activeElement {
   border-left: 3px solid #c8c6cc ;
@@ -3484,22 +3479,11 @@ html div.RES-keyNav-activeElement {
     border-left: 3px solid #343536 ;
   }
 }
-html .userTagLink.hasTag,
-html #userTaggerPreview {
-  font-size: 11px !important;
-  border-radius: 0 !important;
-  border: 0 solid !important;
-  margin-top: 0 !important;
-  margin-left: 4px !important;
-}
 html .RESDialogSmall {
   background-color: #ffffff ;
   color: #292f34 ;
   border-radius: 4px;
   border-color: #dadada ;
-  border: none;
-  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.12);
-  margin-top: 8px;
 }
 @media (prefers-color-scheme: dark) {
   html .RESDialogSmall {
@@ -3521,9 +3505,6 @@ html .RESDialogSmall > h3 {
   background-color: #ffffff ;
   border-left: 3px solid #c8c6cc ;
   border-bottom: 1px solid #dadada ;
-  height: 36px;
-  padding: 8px;
-  margin: 0;
 }
 @media (prefers-color-scheme: dark) {
   html .RESDialogSmall > h3 {
@@ -3545,15 +3526,6 @@ html .RESDialogSmall > h3 {
     border-bottom: 1px solid #343536 ;
   }
 }
-html .livePreview .md {
-  padding: 8px 12px;
-}
-html .RESCloseButton {
-  line-height: 19px;
-  height: 22px;
-  width: 22px;
-  transition: all 0.15s ease;
-}
 html .RESCloseButton:hover {
   border: 1px solid #f50 ;
 }
@@ -3564,9 +3536,6 @@ html .RESCloseButton:hover {
 }
 html #userTaggerToolTip input[type=text],
 html #userTaggerToolTip select {
-  line-height: 22px;
-  padding-left: 4px;
-  border: 1px solid #e5e5e5 !important;
   border-color: #dadada !important;
 }
 @media (prefers-color-scheme: dark) {
@@ -3575,15 +3544,10 @@ html #userTaggerToolTip select {
     border-color: #343536 !important;
   }
 }
-html .toggleButton {
-  line-height: 0.8;
-}
 html .toggleButton .toggleOn {
-  border-radius: 0;
   border: 1px solid #4f8ef7;
   background-color: #f50 ;
   color: #ffffff ;
-  text-transform: capitalize;
 }
 @media (prefers-color-scheme: dark) {
   html .toggleButton .toggleOn {
@@ -3596,32 +3560,21 @@ html .toggleButton .toggleOn {
   }
 }
 html .toggleButton .toggleOff {
-  border-radius: 0;
+  border-radius: 4px;
   border: 1px solid #c8c6cc ;
   background-color: transparent;
-  text-transform: capitalize;
 }
 @media (prefers-color-scheme: dark) {
   html .toggleButton .toggleOff {
     border: 1px solid #343536 ;
   }
 }
-html #userTaggerToolTip input[type=submit] {
-  bottom: 10px !important;
-}
-html .res #userbarToggle {
-  color: rgba(255, 255, 255, 0.45) !important;
-}
 html .res .thing .tagline .author {
   border-radius: 4px !important;
 }
 html .res .thing .tagline .author.submitter {
-  padding: 1px 4px;
-  border-radius: 1px;
   background-color: #24a0ed !important;
   color: #ffffff ;
-  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
-  transition: all 0.15s ease;
 }
 @media (prefers-color-scheme: dark) {
   html .res .thing .tagline .author.submitter {
@@ -3632,37 +3585,17 @@ html .res .thing .tagline .author.submitter:hover {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   background-color: #24a0ed !important;
 }
-html .res.search-page #header .tabmenu {
-  display: none !important;
-}
 html .res #header-bottom-right {
-  top: 1px;
-  border-radius: 0;
-  height: 18px;
-  padding: 0 8px 0 0;
+  top: 0px;
 }
 html .res #userbarToggle {
   background-color: transparent;
   color: #98abba ;
-  border-radius: 0;
-  border: none;
-  left: -32px;
 }
 @media (prefers-color-scheme: dark) {
   html .res #userbarToggle {
     color: #828282 ;
   }
-}
-html .res a.beta-link {
-  left: -10px;
-  top: 4px;
-}
-html .res #header-bottom-right .user {
-  font-size: 0 !important;
-}
-html .res #header-bottom-right .user a {
-  font-size: 11px;
-  line-height: 9px;
 }
 html .res #sr-header-area a.RESShortcutsCurrentSub,
 html .res #RESSubredditGroupDropdown .RESShortcutsCurrentSub a {
@@ -3675,16 +3608,8 @@ html .res #RESSubredditGroupDropdown .RESShortcutsCurrentSub a {
     border-bottom: #343536 2px solid;
   }
 }
-html #RESAccountSwitcherIcon {
-  position: relative;
-  top: -4px;
-}
 html .res #REScommentNavToggle {
-  max-width: 98px;
-  overflow: hidden;
-  max-height: 15px;
   background-color: #ffffff ;
-  transition: all 0.35s ease;
 }
 @media (prefers-color-scheme: dark) {
   html .res #REScommentNavToggle {
@@ -3694,51 +3619,17 @@ html .res #REScommentNavToggle {
 html .res #REScommentNavToggle:hover {
   max-width: 100%;
 }
-html .res .commentarea > .usertext {
-  margin-top: -76px;
-  padding-top: 80px !important;
-}
 html .res .content .RESBigEditorPop {
-  background-color: rgba(0, 0, 0, 0);
-  line-height: inherit;
-  font: 11px Lato, Arial, sans-serif;
-  box-shadow: none;
-  font-weight: 400;
   color: #98abba ;
-  border: none;
-  padding: 0;
-  height: inherit;
-  margin-left: 4px;
-  margin-top: 5px;
 }
 @media (prefers-color-scheme: dark) {
   html .res .content .RESBigEditorPop {
     color: #828282 ;
   }
 }
-html html.res-commentBoxes .comment {
-  margin-left: 0 !important;
-  margin-right: 0 !important;
-}
 html .res .commentarea .thing {
   border: none !important;
   border-radius: 4px !important;
-}
-html .res .titlebox .tagline {
-  margin-top: 6px;
-}
-html .res .RESshortcutside,
-html .res .RESDashboardToggle {
-  background-image: none !important;
-  border: none;
-  color: #4d5763;
-  text-transform: uppercase;
-  text-decoration: none;
-  border-radius: 0;
-  padding: 4px 6px 4px 0;
-  margin: 2px 6px 2px -4px;
-  text-align: left;
-  width: auto;
 }
 html .res .RESshortcutside:hover,
 html .res .RESDashboardToggle:hover {
@@ -3752,14 +3643,8 @@ html .res .RESDashboardToggle:hover {
   }
 }
 html .res #progressIndicator {
-  width: inherit;
-  border-radius: 0;
-  border: none;
-  padding: 16px;
-  margin: 16px 0;
   color: #d2d0d6 ;
   background-color: #ffffff ;
-  height: inherit;
 }
 @media (prefers-color-scheme: dark) {
   html .res #progressIndicator {
@@ -3780,41 +3665,12 @@ html .res #progressIndicator h2 {
   }
 }
 html .res .NERPageMarker {
-  border-radius: 0;
-  border: none;
   background-color: #ffffff ;
-  padding: 16px 0;
-  margin: 0;
 }
 @media (prefers-color-scheme: dark) {
   html .res .NERPageMarker {
     background-color: #1a1a1b ;
   }
-}
-html .res .sitetable .sitetable {
-  margin-right: 0;
-}
-html .res #search #searchexpando {
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-  height: auto;
-}
-html .res #search #searchexpando label {
-  padding-top: 13px;
-  padding-bottom: 13px;
-}
-html .res #searchexpando .searchexpando-submit {
-  display: none;
-}
-html .res h1.hover.redditname {
-  overflow: visible !important;
-}
-html .res .commentarea .panestack-title {
-  margin-top: 0;
-  padding-top: 12px;
-  padding-bottom: 8px;
-}
-html .res .comment.collapsed a.expand:after {
-  display: none;
 }
 html .res .link .tagline a.voteWeight {
   background-color: transparent !important;
@@ -4160,17 +4016,6 @@ html .comment .score:before {
 html #search #searchexpando label {
   padding-top: 0;
   padding-bottom: 0;
-}
-
-.link .entry {
-  padding: 0;
-  margin: 0;
-}
-.link .title {
-  margin: 0;
-  font: 13.5pt Lato, Arial, sans-serif;
-  transition: all 0.15s ease;
-  overflow: visible;
 }
 
 body .content .sitetable .link .title a:hover {
@@ -4940,7 +4785,6 @@ table tbody tr td label {
 }
 .comment .entry .tagline {
   color: #98abba ;
-  font: 12px Lato, Arial, sans-serif;
 }
 @media (prefers-color-scheme: dark) {
   .comment .entry .tagline {
@@ -5038,7 +4882,7 @@ body.listing-page > .content, body.other-discussions-page > .content {
   border-bottom: thin solid #c8c6cc ;
   border-radius: 0;
   margin: 0;
-  padding: 16px;
+  padding-bottom: 0;
   position: relative;
 }
 @media (prefers-color-scheme: dark) {
@@ -6230,7 +6074,6 @@ ul.image-preview-list li .description pre {
   background: #ffffff ;
   padding: 9px 16px 10px;
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.16);
-  font: 16px Lato, Arial, sans-serif;
   margin: 0;
 }
 @media (prefers-color-scheme: dark) {
@@ -6387,6 +6230,9 @@ ul.image-preview-list li .description pre {
 body.wiki-page:not(.subscriber) div.content, body.comments-page:not(.subscriber) div.content, body.listing-page:not(.subscriber) div.content {
   margin-top: 128px;
 }
+body.wiki-page:not(.subscriber) .side, body.comments-page:not(.subscriber) .side, body.listing-page:not(.subscriber) .side {
+  margin-top: 50px;
+}
 body.wiki-page:not(.subscriber) .side .sidebox.submit,
 body.wiki-page:not(.subscriber) .side #search, body.comments-page:not(.subscriber) .side .sidebox.submit,
 body.comments-page:not(.subscriber) .side #search, body.listing-page:not(.subscriber) .side .sidebox.submit,
@@ -6406,7 +6252,7 @@ body.wiki-page div.content, body.comments-page div.content, body.listing-page di
   overflow: hidden;
   margin-top: 98px;
 }
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 992px) {
   body.wiki-page div.content, body.comments-page div.content, body.listing-page div.content {
     max-width: calc( 100vw - 416px );
   }
@@ -6418,7 +6264,7 @@ body.wiki-page .side, body.comments-page .side, body.listing-page .side {
   margin: 0;
   padding: 0;
 }
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 992px) {
   body.wiki-page .side, body.comments-page .side, body.listing-page .side {
     visibility: visible;
     width: 320px;
@@ -6460,7 +6306,7 @@ body.wiki-page .side #search, body.comments-page .side #search, body.listing-pag
     border-color: #343536 ;
   }
 }
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 992px) {
   body.wiki-page .side #search, body.comments-page .side #search, body.listing-page .side #search {
     width: calc( 100vw - 416px );
   }
@@ -6468,7 +6314,7 @@ body.wiki-page .side #search, body.comments-page .side #search, body.listing-pag
 body.wiki-page .side #search input, body.comments-page .side #search input, body.listing-page .side #search input {
   width: calc( ((100vw - 72px) - 80px) / 3 );
 }
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 992px) {
   body.wiki-page .side #search input, body.comments-page .side #search input, body.listing-page .side #search input {
     width: calc( ( (100vw - 416px) - 80px ) / 3 );
   }
@@ -6495,7 +6341,7 @@ body.wiki-page .side #search #searchexpando, body.comments-page .side #search #s
   height: auto;
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
 }
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 992px) {
   body.wiki-page .side #search #searchexpando, body.comments-page .side #search #searchexpando, body.listing-page .side #search #searchexpando {
     width: calc( ( (100vw - 416px) - 80px ) / 3 );
   }
@@ -6526,7 +6372,7 @@ body.wiki-page .side .sidebox.submit, body.comments-page .side .sidebox.submit, 
   align-items: center;
   -ms-flex-align: center;
 }
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 992px) {
   body.wiki-page .side .sidebox.submit, body.comments-page .side .sidebox.submit, body.listing-page .side .sidebox.submit {
     width: calc( ( (100vw - 416px) - 80px ) / 3 );
   }
@@ -6534,7 +6380,7 @@ body.wiki-page .side .sidebox.submit, body.comments-page .side .sidebox.submit, 
 body.wiki-page .side .sidebox.submit-link, body.comments-page .side .sidebox.submit-link, body.listing-page .side .sidebox.submit-link {
   left: calc( ((100vw - 72px) / 3) - ((16px - -32px) * -1) );
 }
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 992px) {
   body.wiki-page .side .sidebox.submit-link, body.comments-page .side .sidebox.submit-link, body.listing-page .side .sidebox.submit-link {
     left: calc( ( ((100vw - 416px)) / 3 ) - ((16px - -32px) * -1) );
   }
@@ -6542,7 +6388,7 @@ body.wiki-page .side .sidebox.submit-link, body.comments-page .side .sidebox.sub
 body.wiki-page .side .sidebox.submit.disabled, body.wiki-page .side .sidebox.submit-text, body.comments-page .side .sidebox.submit.disabled, body.comments-page .side .sidebox.submit-text, body.listing-page .side .sidebox.submit.disabled, body.listing-page .side .sidebox.submit-text {
   left: calc( (((100vw - 72px)) / 3) * 2 - (16px * 3 * -1) );
 }
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 992px) {
   body.wiki-page .side .sidebox.submit.disabled, body.wiki-page .side .sidebox.submit-text, body.comments-page .side .sidebox.submit.disabled, body.comments-page .side .sidebox.submit-text, body.listing-page .side .sidebox.submit.disabled, body.listing-page .side .sidebox.submit-text {
     left: calc( ( (100vw - 416px) / 3 ) * 2 - (16px * 3 * -1) );
   }
@@ -6595,7 +6441,7 @@ body:not(.subscriber) #header::after {
   width: 100%;
   display: flex;
   align-items: center;
-  font-size: 17px;
+  font-size: 15px;
   height: 30px;
   transition: all 0.2s ease;
   text-align: center;
@@ -6612,12 +6458,13 @@ body:not(.subscriber) #header::after {
 body:not(.subscriber) span.fancy-toggle-button.subscribe-button.toggle {
   position: absolute;
   top: 136px;
-  left: 766px;
+  left: 666px;
   margin: 0;
   padding-top: 4px;
   z-index: 1;
 }
 body:not(.subscriber) span.fancy-toggle-button.subscribe-button.toggle a.add {
+  visibility: visible;
   box-sizing: content-box;
   margin: 0;
   font-weight: normal;
@@ -7174,54 +7021,6 @@ html.res-commentBoxes.res-commentBoxes-rounded .comment {
   .side ol:nth-of-type(1) {
     border: 1px solid #d7dadc ;
   }
-}
-
-body:not(.subscriber) #header::after {
-  content: "You're not subscribed to r/vba yet! Subscribe now to get help with your vba code!";
-  position: absolute;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  font-size: 17px;
-  height: 30px;
-  transition: all 0.2s ease;
-  text-align: center;
-  background-color: #ffdf84;
-  border-radius: 0;
-  color: #444444;
-  padding-left: 40px;
-  background-image: url(%%info-shield%%);
-  background-position: 10px center;
-  background-repeat: no-repeat;
-  top: 136px;
-  border: 1px solid #e0bc80;
-}
-body:not(.subscriber) span.fancy-toggle-button.subscribe-button.toggle {
-  position: absolute;
-  top: 136px;
-  left: 766px;
-  margin: 0;
-  padding-top: 4px;
-  z-index: 1;
-}
-body:not(.subscriber) span.fancy-toggle-button.subscribe-button.toggle a.add {
-  box-sizing: content-box;
-  margin: 0;
-  font-weight: normal;
-  width: 100px;
-  height: 20px;
-  border-radius: 0;
-  border: 1px solid #ababab;
-  background-color: #f0f0f0;
-  color: #444444;
-  text-align: center;
-  padding: 0;
-  line-height: 20px;
-}
-body:not(.subscriber) div.multi-selector.hover-bubble.anchor-right {
-  right: calc(100vw - 766px);
-  left: 561px;
-  margin-top: -40px;
 }
 
 /*# sourceMappingURL=stylesheet.css.map */
