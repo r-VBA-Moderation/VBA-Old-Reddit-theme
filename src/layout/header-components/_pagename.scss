@@ -9,7 +9,6 @@
     display: inline-block;
     line-height: 42px;
     @include v.theme("color", v.$bodyText);
-    font: normal 700 42px/42px Lato, Arial, sans-serif;
     @include v.theme-stroke(v.$body);
     text-transform: v.$title-case;
   }

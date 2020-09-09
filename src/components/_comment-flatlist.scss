@@ -14,14 +14,14 @@
     padding: 0 1px;
     @include v.theme("color", v.$secondary-text);
     font-weight: 400;
-    font: 13px Lato, Arial, sans-serif;
+    font-size: 12px;
     transition: all 0.15s ease;
   }
 
   padding: 0 1px;
   @include v.theme("color", v.$secondary-text);
-  font-weight: 400;
-  font: 13px Lato, Arial, sans-serif;
+  font-weight: normal;
+  font-size: small;
   transition: all 0.15s ease;
 }
 

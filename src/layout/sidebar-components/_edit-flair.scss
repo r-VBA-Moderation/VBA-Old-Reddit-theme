@@ -6,7 +6,6 @@
 .leavemoderator a {
   @include v.theme("background", v.$body);
   @include v.theme("color", v.$secondary-text);
-  font: bold 11px Lato, Arial, sans-serif;
   padding: 2px 8px;
   position: absolute;
   right: 32px;

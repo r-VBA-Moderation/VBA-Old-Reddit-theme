@@ -48,7 +48,6 @@ $side-margin-top: ($side-image-height / 2) + v.$header-height;
       position: absolute;
       top: 308px;
       z-index: 1;
-      font-family: Lato, Arial, sans-serif;
 
       a {
         @include v.theme("color", v.$widgetColors-sidebarWidgetTextColor);

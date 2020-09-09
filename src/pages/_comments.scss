@@ -126,7 +126,6 @@
 
   .entry .tagline {
     @include v.theme("color", v.$secondary-text);
-    font: 12px Lato, Arial, sans-serif;
   }
 
   .expand {
