@@ -3,12 +3,12 @@
 .hover-bubble {
   @include v.theme("color", v.$bodyText);
   @include v.theme("background", v.$body);
-  .multi-selector {
+  &.multi-selector {
     strong {
       @include v.theme("color", v.$bodyText);
       @include v.theme("background", v.$body);
     }
-    & .create-multi input[type="text"] {
+    .create-multi input[type="text"] {
       @include v.theme("color", v.$bodyText);
       @include v.theme("background", v.$body);
     }
