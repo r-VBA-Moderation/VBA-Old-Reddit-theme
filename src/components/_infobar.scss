@@ -30,7 +30,7 @@
 .reddit-infobar {
   @include v.theme("border-color", v.$line);
   @include v.theme("background-color", v.$highlight-background);
-  &.gold-accent {
+  &.gold-accent div.md p {
     @include v.theme("color", v.$darkText, $important: true);
   }
 }
