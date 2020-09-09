@@ -37,7 +37,6 @@ html {
 body {
   overflow-x: hidden;
   @include v.theme("background", v.$canvas);
-  min-width: 920px;
 }
 
 /**

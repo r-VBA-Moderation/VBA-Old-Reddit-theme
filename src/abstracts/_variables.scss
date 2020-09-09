@@ -1,14 +1,15 @@
 @use 'sass:map';
 @use 'sass:string';
 @use 'functions' as f;
+@forward 'functions';
 
 $_dev: false;
 
 $base-font: Arial, Helvetica, sans-serif;
 $mono-font: Consolas, "Lucida Console", "DejaVu Sans Mono", monospace;
 
-$readers: "Developers";
-$users: "users currently online";
+$readers: "Readers";
+$users: "Users currently online";
 $downvote-hover-text: "Consider posting constructive criticism or an explanation when you downvote something.";
 
 $moderator: #27b062;
@@ -19,9 +20,11 @@ $title-case: uppercase;
 
 $radius: 4px;
 // $header-height: 196px;
+$subreddits-bar-height: 24px;
 $header-height: 136px;
 $header-bottom-left-height: 96px;
 $header-bottom-left: $header-height - $header-bottom-left-height;
+$tabmenu-height: 42px;
 
 $sidebar-width: 320px;
 $container-margin-vert: 20px;
@@ -48,9 +51,10 @@ $_images: (
   "footer": "footer",
   "headerimg": "headerimg",
   "noresults": "noresults",
-  "spritesheet": "spritesheet",
   "title": "title",
   "info-shield": "info-shield",
+  "snoo": "snoo",
+  "snoo-wink": "snoo-wink",
 );
 
 @function getImage($name) {

@@ -7,20 +7,20 @@
   border: none;
   border-radius: 0px;
   transition: all 0.15s ease;
-  height: 24px;
-  line-height: 23px;
+  height: v.$subreddits-bar-height;
+  line-height: v.$subreddits-bar-height - 1px;
 
-  .width-clip {
-    right: 300px;
-  }
+  // .width-clip {
+  //   right: v.$sidebar-width + v.$container-margin-hor + v.$container-margin-hor;
+  // }
   .redesign-beta-optin {
     margin-top: 3px;
   }
 }
 
-body:not(.loggedin) #sr-header-area .width-clip {
-  right: 340px;
-}
+// body:not(.loggedin) #sr-header-area .width-clip {
+//   right: 340px;
+// }
 
 #sr-header-area {
   .sr-list {

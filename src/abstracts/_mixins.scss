@@ -47,8 +47,8 @@ $_breakpoints: (
   }
 }
 
-@mixin stroke($color, $shadow: 0px) {
-  $color: map-get(light.$theme, $color);
+@mixin _stroke($color, $shadow: 1px) {
+  // $color: v.try-map-get(light.$theme, $color);
   $size: 1px;
   $blur: 0;
   text-shadow: $shadow $shadow $blur $color, $size * -1 $size * -1 $blur $color,
@@ -56,14 +56,14 @@ $_breakpoints: (
     $size $size $blur $color;
 }
 
-@mixin theme-stroke($key, $shadow: 0px) {
-  $val: map-get(light.$theme, $key);
+@mixin theme-stroke($key, $shadow: 1px) {
+  $val: v.try-map-get(light.$theme, $key);
   $size: 1px;
   $blur: 0;
-  @include stroke($val, $shadow);
+  @include _stroke($val, $shadow);
   @media (prefers-color-scheme: dark) {
-    $val: map-get(dark.$theme, $key);
-    @include stroke($val, $shadow);
+    $val: v.try-map-get(dark.$theme, $key);
+    @include _stroke($val, $shadow);
   }
 }
 

@@ -531,12 +531,12 @@ html {
 
   // Gear Dropdown
 
-  .gearIcon {
-    background: v.getImage("spritesheet") -64px 0 !important;
-    position: relative;
-    top: 2px;
-    transition: all 0.25s ease;
-  }
+  // .gearIcon {
+  //   background: v.getImage("spritesheet") -64px 0 !important;
+  //   position: relative;
+  //   top: 2px;
+  //   transition: all 0.25s ease;
+  // }
 
   #RESMainGearOverlay {
     @include v.theme("background-color", v.$menu);

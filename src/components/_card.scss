@@ -35,6 +35,8 @@
 .thing {
   @include v.thing;
   @include v.container;
+  padding: v.$padding (v.$padding / 2);
+  // padding-top: v.$padding;
 }
 
 .report-modal,

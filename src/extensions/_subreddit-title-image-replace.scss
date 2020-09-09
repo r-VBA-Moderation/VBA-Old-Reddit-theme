@@ -16,7 +16,6 @@ $_hdr-img-width: 300px;
       height: 65px;
       width: $_hdr-img-width;
       position: relative;
-      top: -15px;
       left: calc(50% - #{$_hdr-img-width / 2});
       background-image: v.getImage("title");
       background-size: contain;
