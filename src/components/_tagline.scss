@@ -3,7 +3,7 @@
 .res .thing .tagline,
 .thing .tagline,
 .link .entry .tagline {
-  a {
+  .author {
     margin-top: 3px;
     @include v.theme("color", v.$bodyText);
     padding: 1px 4px;
