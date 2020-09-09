@@ -8,7 +8,6 @@
   padding: 10px 0;
   @include v.theme("color", v.$linkText);
   content: "Subreddit CSS Theme by /r/Naut";
-  font: 16px Lato, Arial, sans-serif;
   position: absolute;
   width: 320px;
   border: 1px solid rgba(0, 0, 0, 0.06);

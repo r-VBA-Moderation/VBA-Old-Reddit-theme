@@ -34,7 +34,6 @@
       margin: 0 16px;
       padding: 0;
       text-transform: uppercase;
-      font: 400 14px/32px Lato, Arial, sans-serif;
       @include v.theme("color", v.$metaText);
       // color: rgba(255, 255, 255, 0.7);
       display: inline-block;
