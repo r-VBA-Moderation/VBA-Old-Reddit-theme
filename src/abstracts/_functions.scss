@@ -5,15 +5,20 @@
 
 @function map-deep-get($map, $keys...) {
   @each $key in $keys {
-    @if map-has-key($map, $key) {
-      // Prints a media query based on the value
-      $map: map.get($map, $key);
-    }
-    // If the key doesn't exist in the map
-    @else {
-      @warn "Unfortunately, no value could be retrieved from `#{$map}`. "
-          + "Available keys are: #{map-keys($map)}.";
-    }
+    $map: try-map-get($map, $key);
   }
   @return $map;
+}
+
+@function try-map-get($map, $key) {
+  $val: "";
+  @if map-has-key($map, $key) {
+    $val: map.get($map, $key);
+  }
+  // If the key doesn't exist in the map
+  @else {
+    @warn "`#{$key}` not found in specified map. "
+        + "Available keys are: #{map-keys($map)}.";
+  }
+  @return $val;
 }
