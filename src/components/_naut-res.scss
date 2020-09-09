@@ -119,14 +119,14 @@ html {
   }
   .res {
     .RES-keyNav-activeElement {
-      outline: 0 dashed #eee !important;
+      // outline: 0 dashed #eee !important;
       @include v.theme("outline-color", v.$line, false, false, "!important");
-      transition: all 0.15s ease;
+      // transition: all 0.15s ease;
     }
 
-    .entry {
-      transition: all 0.1s ease;
-    }
+    // .entry {
+    //   transition: all 0.1s ease;
+    // }
   }
 
   div {
@@ -170,41 +170,41 @@ html {
 
   // RES Tag Dialog + RES Tag
 
-  .userTagLink.hasTag,
-  #userTaggerPreview {
-    font-size: 11px !important;
-    border-radius: 0 !important;
-    border: 0 solid !important;
-    margin-top: 0 !important;
-    margin-left: 4px !important;
-  }
+  // .userTagLink.hasTag,
+  // #userTaggerPreview {
+  //   font-size: 11px !important;
+  //   border-radius: 0 !important;
+  //   border: 0 solid !important;
+  //   margin-top: 0 !important;
+  //   margin-left: 4px !important;
+  // }
 
   .RESDialogSmall {
     @include v.thing;
-    border: none;
-    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.12);
-    margin-top: 8px;
+    // border: none;
+    // box-shadow: 0 2px 3px rgba(0, 0, 0, 0.12);
+    // margin-top: 8px;
 
     > h3 {
       @include v.theme("color", v.$primary);
       @include v.theme("background-color", v.$body);
       @include v.theme("border-left", v.$separator, false, true, "3px solid");
       @include v.theme("border-bottom", v.$line, false, true, "1px solid");
-      height: 36px;
-      padding: 8px;
-      margin: 0;
+      // height: 36px;
+      // padding: 8px;
+      // margin: 0;
     }
   }
 
-  .livePreview .md {
-    padding: 8px 12px;
-  }
+  // .livePreview .md {
+  //   padding: 8px 12px;
+  // }
 
   .RESCloseButton {
-    line-height: 19px;
-    height: 22px;
-    width: 22px;
-    transition: all 0.15s ease;
+    // line-height: 19px;
+    // height: 22px;
+    // width: 22px;
+    // transition: all 0.15s ease;
 
     &:hover {
       @include v.theme("border", v.$active, false, true, "1px solid");
@@ -214,39 +214,39 @@ html {
   #userTaggerToolTip {
     input[type="text"],
     select {
-      line-height: 22px;
-      padding-left: 4px;
-      border: 1px solid #e5e5e5 !important;
+      // line-height: 22px;
+      // padding-left: 4px;
+      // border: 1px solid #e5e5e5 !important;
       @include v.theme("border-color", v.$line, false, false, "!important");
     }
   }
 
   .toggleButton {
-    line-height: 0.8;
+    // line-height: 0.8;
 
     .toggleOn {
-      border-radius: 0;
+      // border-radius: 0;
       border: 1px solid #4f8ef7;
       @include v.theme("background-color", v.$primary);
       @include v.theme("color", v.$body);
-      text-transform: capitalize;
+      // text-transform: capitalize;
     }
 
     .toggleOff {
-      border-radius: 0;
+      border-radius: v.$radius;
       @include v.theme("border", v.$separator, false, true, "1px solid");
       background-color: transparent;
-      text-transform: capitalize;
+      // text-transform: capitalize;
     }
   }
 
-  #userTaggerToolTip input[type="submit"] {
-    bottom: 10px !important;
-  }
+  // #userTaggerToolTip input[type="submit"] {
+  //   bottom: 10px !important;
+  // }
 
-  .res #userbarToggle {
-    color: rgba(255, 255, 255, 0.45) !important;
-  }
+  // .res #userbarToggle {
+  //   color: rgba(255, 255, 255, 0.45) !important;
+  // }
 
   // Input Fields
 
@@ -257,12 +257,12 @@ html {
   }
 
   .res .thing .tagline .author.submitter {
-    padding: 1px 4px;
-    border-radius: 1px;
+    // padding: 1px 4px;
+    // border-radius: 1px;
     background-color: v.getColor("role", "submitter") !important;
     @include v.theme("color", v.$body);
-    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
-    transition: all 0.15s ease;
+    // box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    // transition: all 0.15s ease;
 
     &:hover {
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
@@ -271,42 +271,42 @@ html {
   }
 
   .res {
-    &.search-page #header .tabmenu {
-      display: none !important;
-    }
+    // &.search-page #header .tabmenu {
+    //   display: none !important;
+    // }
 
-    #header-bottom-right {
-      top: 1px;
-      border-radius: 0;
-      height: 18px;
-      padding: 0 8px 0 0;
-    }
+    // #header-bottom-right {
+    //   top: 1px;
+    //   border-radius: 0;
+    //   height: 18px;
+    //   padding: 0 8px 0 0;
+    // }
 
     #userbarToggle {
       background-color: transparent;
       @include v.theme("color", v.$secondary-text);
-      border-radius: 0;
-      border: none;
-      left: -32px;
+      // border-radius: 0;
+      // border: none;
+      // left: -32px;
     }
 
-    a.beta-link {
-      left: -10px;
-      top: 4px;
-    }
+    // a.beta-link {
+    //   left: -10px;
+    //   top: 4px;
+    // }
 
-    #header-bottom-right .user {
-      // .userkarma {
-      //   display: none;
-      // }
+    // #header-bottom-right .user {
+    //   // .userkarma {
+    //   //   display: none;
+    //   // }
 
-      font-size: 0 !important;
+    //   font-size: 0 !important;
 
-      a {
-        font-size: 11px;
-        line-height: 9px;
-      }
-    }
+    //   a {
+    //     font-size: 11px;
+    //     line-height: 9px;
+    //   }
+    // }
 
     #sr-header-area a.RESShortcutsCurrentSub,
     #RESSubredditGroupDropdown .RESShortcutsCurrentSub a {
@@ -321,48 +321,43 @@ html {
     }
   }
 
-  #RESAccountSwitcherIcon {
-    position: relative;
-    top: -4px;
-  }
+  // #RESAccountSwitcherIcon {
+  //   position: relative;
+  //   top: -4px;
+  // }
 
   .res {
     #REScommentNavToggle {
-      max-width: 98px;
-      overflow: hidden;
-      max-height: 15px;
+      // max-width: 98px;
+      // overflow: hidden;
+      // max-height: 15px;
       @include v.theme("background-color", v.$body);
-      transition: all 0.35s ease;
+      // transition: all 0.35s ease;
 
       &:hover {
         max-width: 100%;
       }
     }
 
-    .commentarea > .usertext {
-      margin-top: -76px;
-      padding-top: 80px !important;
-    }
-
     .content .RESBigEditorPop {
-      background-color: rgba(0, 0, 0, 0);
-      line-height: inherit;
-      font: 11px Lato, Arial, sans-serif;
-      box-shadow: none;
-      font-weight: 400;
+      // background-color: rgba(0, 0, 0, 0);
+      // line-height: inherit;
+      // font: 11px Lato, Arial, sans-serif;
+      // box-shadow: none;
+      // font-weight: 400;
       @include v.theme("color", v.$secondary-text);
-      border: none;
-      padding: 0;
-      height: inherit;
-      margin-left: 4px;
-      margin-top: 5px;
+      // border: none;
+      // padding: 0;
+      // height: inherit;
+      // margin-left: 4px;
+      // margin-top: 5px;
     }
   }
 
-  html.res-commentBoxes .comment {
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-  }
+  // html.res-commentBoxes .comment {
+  //   margin-left: 0 !important;
+  //   margin-right: 0 !important;
+  // }
 
   .res {
     .commentarea .thing {
@@ -370,23 +365,23 @@ html {
       border-radius: v.$radius !important;
     }
 
-    .titlebox .tagline {
-      margin-top: 6px;
-    }
+    // .titlebox .tagline {
+    //   margin-top: 6px;
+    // }
 
-    .RESshortcutside,
-    .RESDashboardToggle {
-      background-image: none !important;
-      border: none;
-      color: #4d5763;
-      text-transform: uppercase;
-      text-decoration: none;
-      border-radius: 0;
-      padding: 4px 6px 4px 0;
-      margin: 2px 6px 2px -4px;
-      text-align: left;
-      width: auto;
-    }
+    // .RESshortcutside,
+    // .RESDashboardToggle {
+    //   background-image: none !important;
+    //   border: none;
+    //   color: #4d5763;
+    //   text-transform: uppercase;
+    //   text-decoration: none;
+    //   border-radius: 0;
+    //   padding: 4px 6px 4px 0;
+    //   margin: 2px 6px 2px -4px;
+    //   text-align: left;
+    //   width: auto;
+    // }
 
     .RESshortcutside:hover,
     .RESDashboardToggle:hover {
@@ -395,14 +390,14 @@ html {
     }
 
     #progressIndicator {
-      width: inherit;
-      border-radius: 0;
-      border: none;
-      padding: v.$padding;
-      margin: 16px 0;
+      // width: inherit;
+      // border-radius: 0;
+      // border: none;
+      // padding: v.$padding;
+      // margin: 16px 0;
       @include v.theme("color", v.$placeholder);
       @include v.theme("background-color", v.$body);
-      height: inherit;
+      // height: inherit;
 
       h2 {
         @include v.theme("color", v.$metaText);
@@ -410,44 +405,44 @@ html {
     }
 
     .NERPageMarker {
-      border-radius: 0;
-      border: none;
+      // border-radius: 0;
+      // border: none;
       @include v.theme("background-color", v.$body);
-      padding: v.$padding 0;
-      margin: 0;
+      // padding: v.$padding 0;
+      // margin: 0;
     }
 
-    .sitetable .sitetable {
-      margin-right: 0;
-    }
+    // .sitetable .sitetable {
+    //   margin-right: 0;
+    // }
 
-    #search #searchexpando {
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-      height: auto;
+    // #search #searchexpando {
+    //   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    //   height: auto;
 
-      label {
-        padding-top: 13px;
-        padding-bottom: 13px;
-      }
-    }
+    //   label {
+    //     padding-top: 13px;
+    //     padding-bottom: 13px;
+    //   }
+    // }
 
-    #searchexpando .searchexpando-submit {
-      display: none;
-    }
+    // #searchexpando .searchexpando-submit {
+    //   display: none;
+    // }
 
-    h1.hover.redditname {
-      overflow: visible !important;
-    }
+    // h1.hover.redditname {
+    //   overflow: visible !important;
+    // }
 
-    .commentarea .panestack-title {
-      margin-top: 0;
-      padding-top: 12px;
-      padding-bottom: 8px;
-    }
+    // .commentarea .panestack-title {
+    //   margin-top: 0;
+    //   padding-top: 12px;
+    //   padding-bottom: 8px;
+    // }
 
-    .comment.collapsed a.expand:after {
-      display: none;
-    }
+    // .comment.collapsed a.expand:after {
+    //   display: none;
+    // }
   }
 
   // More RES Fixes
