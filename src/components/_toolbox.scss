@@ -16,13 +16,12 @@ html {
     }
   }
 
-  body.mod-toolbox-rd .tb-general-button,
-  body.mod-toolbox-rd li a.tb-general-button,
-  body.mod-toolbox-rd .tb-bracket-button,
+  .tb-general-button,
+  .tb-bracket-button,
   .tb-jsapi-author-container {
     * {
       border-radius: 0;
-      @include v.theme("color", v.$bodyText);
+      @include v.theme("color", v.$bodyText, $important: true);
     }
   }
   .tb-config-usernote-types thead th {
