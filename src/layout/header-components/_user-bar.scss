@@ -3,56 +3,63 @@
 // User Bar
 
 #header-bottom-right {
-  position: absolute;
-  top: 4px;
-  right: 0;
-  width: auto;
-  max-width: 340px;
-  height: 24px;
-  background: none;
-  font-size: 11px;
-  padding: 0px 8px 4px 2px;
+  z-index: 101;
+  // position: absolute;
+  // top: 0px;
+  // right: 0;
+  // width: auto;
+  // max-width: 340px;
+  // height: 24px;
+  @include v.theme("background", v.$sr-header);
+  bottom: auto;
+  border-radius: 0;
+  border-bottom-left-radius: v.$radius;
+  // border-radius: 0;
+  // z-index: 10;
+  // overflow: visible;
+  // font-size: 11px;
+  // padding: 0px 8px 4px 2px;
 }
 
-body:not(.loggedin) #header-bottom-right {
-  max-width: 340px;
-}
+// body:not(.loggedin) #header-bottom-right {
+//   max-width: 340px;
+// }
 
-#header-bottom-right a {
-  @include v.theme("color", v.$linkText);
+// #header-bottom-right a {
+//   // @include v.theme("color", v.$linkText);
 
-  &:hover {
-    text-decoration: underline;
-  }
-}
+//   // &:hover {
+//   //   text-decoration: underline;
+//   // }
+// }
 
-.beta-hint a {
-  margin-left: -16px;
-  width: 16px;
-  height: 16px;
-  background: v.getImage("spritesheet") -48px -32px no-repeat;
-}
+// .beta-hint a {
+//   margin-left: -16px;
+//   width: 16px;
+//   height: 16px;
+//   background: v.getImage("spritesheet") -48px -32px no-repeat;
+// }
 
-.user {
-  display: inline-block;
-  a {
-    vertical-align: middle;
-    max-width: 120px;
-    overflow: hidden;
-    display: inline-block;
-    text-overflow: ellipsis;
-  }
+// .user {
+//   display: inline-block;
+//   a {
+//     vertical-align: middle;
+//     max-width: 120px;
+//     overflow: hidden;
+//     display: inline-block;
+//     text-overflow: ellipsis;
+//   }
 
-  .userkarma {
-    font-weight: 400;
-    @include v.theme("color", v.$inactiveText);
-    border: none;
-    font-size: 9px;
-    transition: all 0.15s ease;
-  }
-}
+//   .userkarma {
+//     font-weight: 400;
+//     @include v.theme("color", v.$inactiveText);
+//     border: none;
+//     font-size: 9px;
+//     transition: all 0.15s ease;
+//   }
+// }
 
-.separator,
-.user {
-  @include v.theme("color", v.$inactiveText);
-}
+// .separator,
+// .user {
+//   @include v.theme("color", v.$inactiveText);
+// }

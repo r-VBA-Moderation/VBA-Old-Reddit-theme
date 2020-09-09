@@ -4,30 +4,38 @@
 
 #header-bottom-left {
   position: absolute;
-  top: v.$header-bottom-left;
-  left: 16px;
-  right: 384px;
+  // top: v.$header-bottom-left;
+  // left: 16px;
+  // right: 384px;
+  height: v.$header-height - v.$subreddits-bar-height;
+  overflow: hidden;
+  width: 100%;
 }
 
 #header .tabmenu {
-  margin: 12px 0 0;
+  // margin: 12px 0 0;
   display: block;
-  height: 42px;
-  line-height: 42px;
+  position: absolute;
+  top: v.$header-height - v.$subreddits-bar-height - v.$tabmenu-height;
+  height: v.$tabmenu-height;
+  line-height: v.$tabmenu-height;
   border: none;
+  width: 100%;
+  @include v.theme("background", v.$body);
+  padding: 0 v.$container-margin-hor;
 
-  &:before {
-    content: "";
-    border-radius: 0px;
-    display: block;
-    position: absolute;
-    left: -16px;
-    right: -384px;
-    @include v.theme("background", v.$body);
-    // background: rgba(0, 0, 0, 0.24);
-    height: 42px;
-    z-index: -1;
-  }
+  // &:before {
+  //   content: "";
+  //   border-radius: 0px;
+  //   display: block;
+  //   position: absolute;
+  //   left: -16px;
+  //   right: -384px;
+  //   @include v.theme("background", v.$body);
+  //   // background: rgba(0, 0, 0, 0.24);
+  //   height: v.$tabmenu-height;
+  //   z-index: -1;
+  // }
 
   li {
     a {
@@ -36,6 +44,8 @@
       text-transform: uppercase;
       @include v.theme("color", v.$metaText);
       // color: rgba(255, 255, 255, 0.7);
+      font-weight: normal;
+      line-height: 32px;
       display: inline-block;
 
       &:hover {
@@ -48,7 +58,7 @@
     }
 
     &.selected a {
-      padding-bottom: 4px;
+      font-weight: bold;
       @include v.theme("color", v.$bodyText);
       border-bottom: 2px solid;
       border-radius: 0;

@@ -4,6 +4,9 @@
 
 // Header
 
+$_inner-height: v.$header-height - v.$subreddits-bar-height - v.$tabmenu-height;
+$_snoo-width: 42px;
+
 #header {
   margin: 0;
   height: v.$header-height;
@@ -12,4 +15,34 @@
   background: v.getImage("headerimg") 50% (50% / cover) no-repeat;
   z-index: 1;
   box-shadow: 0 2px 1.5px 0 rgba(0, 0, 0, 0.12), 0 0 4px 0 rgba(0, 0, 0, 0.12);
+
+  .pagename {
+    height: $_inner-height;
+    font-size: 2rem;
+
+    a {
+      display: inline-block;
+      line-height: $_inner-height;
+      @include v.theme("color", v.$bodyText);
+      @include v.theme-stroke(v.$canvas);
+
+      text-transform: v.$title-case;
+    }
+  }
+}
+
+#header-img.default-header {
+  margin-left: v.$container-margin-hor;
+  z-index: 99;
+  width: $_snoo-width;
+  height: $_inner-height;
+  background-image: v.getImage("snoo");
+  background-position: center;
+  vertical-align: top;
+  font-size: 0;
+
+  &:hover {
+    background-image: v.getImage("snoo-wink");
+    background-position: center;
+  }
 }

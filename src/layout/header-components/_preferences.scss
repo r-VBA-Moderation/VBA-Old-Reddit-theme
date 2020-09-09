@@ -2,29 +2,29 @@
 
 // Preferences & Logout Icons
 
-#header-bottom-right a.pref-lang {
-  background-position: -32px 0;
-  background-image: v.getImage("spritesheet");
-  width: 16px;
-  height: 14px;
-  display: inline-block;
-  text-indent: -9999px;
-  margin: 0;
-  position: relative;
-  top: -1px;
-  transition: all 0.25s ease;
-}
+// #header-bottom-right a.pref-lang {
+//   background-position: -32px 0;
+//   background-image: v.getImage("spritesheet");
+//   width: 16px;
+//   height: 14px;
+//   display: inline-block;
+//   text-indent: -9999px;
+//   margin: 0;
+//   position: relative;
+//   top: -1px;
+//   transition: all 0.25s ease;
+// }
 
-.loggedin .logout a {
-  background-position: -32px 0;
-  background-image: v.getImage("spritesheet");
-  width: 16px;
-  height: 14px;
-  display: inline-block;
-  text-indent: -9999px;
-  margin: 0;
-  position: relative;
-  top: -1px;
-  transition: all 0.25s ease;
-  background-position: -48px 0;
-}
+// .loggedin .logout a {
+//   background-position: -32px 0;
+//   background-image: v.getImage("spritesheet");
+//   width: 16px;
+//   height: 14px;
+//   display: inline-block;
+//   text-indent: -9999px;
+//   margin: 0;
+//   position: relative;
+//   top: -1px;
+//   transition: all 0.25s ease;
+//   background-position: -48px 0;
+// }
