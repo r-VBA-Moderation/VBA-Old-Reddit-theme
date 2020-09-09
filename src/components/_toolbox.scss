@@ -1,32 +1,35 @@
 @use '../abstracts/mixins' as v;
 
 // resets for mod toolbox extension - /r/toolbox/
-
-#tb-footer-block {
-  display: none !important;
-}
-
-.tb-popup,
-.tb-jsapi-container,
-.tb-page-overlay,
-#tb-context-menu {
-  * {
-    border-radius: 0;
-    color: #696969 !important;
+html {
+  #tb-footer-block {
+    display: none !important;
   }
-}
 
-.tb-bracket-button,
-.tb-jsapi-author-container {
-  * {
-    border-radius: 0;
-    @include v.theme("color", v.$bodyText);
+  .tb-popup,
+  .tb-jsapi-container,
+  .tb-page-overlay,
+  #tb-context-menu {
+    * {
+      border-radius: 0;
+      color: #696969 !important;
+    }
   }
-}
-.tb-config-usernote-types thead th {
-  @include v.theme("color", v.$lightText);
-}
 
-.mod-toolbox-rd #tb-feedback-window .tb-feedback-text {
-  @include v.theme("background-color", v.$body);
+  body.mod-toolbox-rd .tb-general-button,
+  body.mod-toolbox-rd li a.tb-general-button,
+  body.mod-toolbox-rd .tb-bracket-button,
+  .tb-jsapi-author-container {
+    * {
+      border-radius: 0;
+      @include v.theme("color", v.$bodyText);
+    }
+  }
+  .tb-config-usernote-types thead th {
+    @include v.theme("color", v.$lightText);
+  }
+
+  .mod-toolbox-rd #tb-feedback-window .tb-feedback-text {
+    @include v.theme("background-color", v.$body);
+  }
 }
