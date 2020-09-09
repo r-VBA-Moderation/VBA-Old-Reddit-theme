@@ -20,10 +20,8 @@ html {
   .tb-bracket-button,
   .tb-jsapi-container .tb-action-details,
   .tb-jsapi-author-container {
-    * {
-      border-radius: 0;
-      @include v.theme("color", v.$bodyText, $important: true);
-    }
+    border-radius: 0;
+    @include v.theme("color", v.$bodyText, $important: true);
   }
 
   .tb-jsapi-container {
