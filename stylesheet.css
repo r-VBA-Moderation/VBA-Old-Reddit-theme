@@ -317,12 +317,12 @@ a {
 }
 
 #mail.havemail:before {
-  animation-name: urm7ji6;
+  animation-name: uvtg3qw;
   animation-duration: 8s;
   animation-iteration-count: 1;
   animation-timing-function: ease;
 }
-@keyframes urm7ji6 {
+@keyframes uvtg3qw {
   0% {
     transform: translateY(76px);
     opacity: 0;
@@ -1780,7 +1780,7 @@ body:not(.subscriber) .content {
   content: " ";
   background: #ff4500 ;
   border-radius: 28px;
-  animation-name: urm7jit;
+  animation-name: uvtg3qy;
   animation-duration: 0.35s;
   animation-timing-function: ease-out;
   animation-fill-mode: forwards;
@@ -1790,7 +1790,7 @@ body:not(.subscriber) .content {
     background: #ff4500 ;
   }
 }
-@keyframes urm7jit {
+@keyframes uvtg3qy {
   0% {
     transform: scale(0, 0);
     opacity: 1;
@@ -3631,6 +3631,9 @@ html .res .commentarea .thing {
   border: none !important;
   border-radius: 4px !important;
 }
+html .res .commentarea > .sitetable > .comment {
+  border: 1px solid;
+}
 html .res .RESshortcutside:hover,
 html .res .RESDashboardToggle:hover {
   background-color: transparent;
@@ -3674,17 +3677,6 @@ html .res .NERPageMarker {
 }
 html .res .link .tagline a.voteWeight {
   background-color: transparent !important;
-}
-html .res .thing .tagline .author.moderator {
-  background-color: #27b062 !important;
-  color: #ffffff ;
-  padding: 1px 4px;
-  border-radius: 1px;
-}
-@media (prefers-color-scheme: dark) {
-  html .res .thing .tagline .author.moderator {
-    color: #1a1a1b ;
-  }
 }
 html #header-bottom-right #userbarToggle + * {
   margin-left: 0 !important;
@@ -4480,6 +4472,18 @@ table tbody tr td label {
 @media (prefers-color-scheme: dark) {
   .entry .tagline {
     color: #828282 ;
+  }
+}
+
+.thing .tagline .author.moderator {
+  background-color: #27b062 !important;
+  color: #ffffff ;
+  padding: 1px 4px;
+  border-radius: 1px;
+}
+@media (prefers-color-scheme: dark) {
+  .thing .tagline .author.moderator {
+    color: #1a1a1b ;
   }
 }
 
