@@ -11,9 +11,10 @@ table {
     color: v.getColor("table", "header-background");
     tr {
       th {
+        color: v.getColor("table", "header-color") !important;
         border: 1px solid v.getColor("table", "header-background") !important;
         label {
-          color: #fff;
+          color: v.getColor("table", "header-color") !important;
         }
       }
     }
