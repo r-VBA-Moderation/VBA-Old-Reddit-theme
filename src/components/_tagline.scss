@@ -17,7 +17,7 @@
     }
   }
   .moderator {
-    background: v.getColor("role", "moderator");
+    background: v.getColor("role", "moderator") !important;
   }
 
   .admin {
