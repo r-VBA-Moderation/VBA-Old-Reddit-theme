@@ -1,48 +1,54 @@
-@use '../abstracts/mixins' as v;
+// @use '../abstracts/mixins' as v;
 
-// Thumbnails
-//  Todo - fix this
-.thumbnail {
-  width: 56px;
-  height: 56px;
-  margin: 0 16px 0 0;
-  border-radius: v.$radius;
-
-  img {
-    position: relative;
-    width: 56px;
-    height: 56px;
-  }
-
-  &.default {
-    background: v.getColor("thumbnail", "default") v.getImage("spritesheet") -152px -50px;
-  }
-
-  &.self {
-    background: v.getColor("thumbnail", "default") v.getImage("spritesheet") -96px -50px;
-  }
-
-  &.image {
-    background: v.getColor("thumbnail", "default") v.getImage("spritesheet") -208px -50px;
-  }
-
-  &.nsfw {
-    background: v.getColor("thumbnail", "nsfw") v.getImage("spritesheet") -96px -104px;
-  }
-
-  &[data-href-url*="reddit.com"] {
-    background: v.getColor("thumbnail", "link") v.getImage("spritesheet") -152px -104px;
-
-    img {
-      display: none;
-    }
-  }
+.thumbnail > img {
+  margin-left: 10px;
+  width: 50px;
+  height: auto;
+  border-radius: 50%;
 }
 
-.stickied .thumbnail {
-  background-color: v.getColor("thumbnail", "stickied");
-}
+// // Thumbnails
+// .thumbnail {
+//   width: 56px;
+//   height: 56px;
+//   margin: 0 16px 0 0;
+//   border-radius: v.$radius;
 
-.thumbnail.spoiler {
-  background: v.getColor("thumbnail", "spoiler") v.getImage("spritesheet") -208px -148px;
-}
+//   img {
+//     position: relative;
+//     width: 56px;
+//     height: 56px;
+//   }
+
+//   // &.default {
+//   //   background: v.getColor("thumbnail", "default") v.getImage("spritesheet") -152px -50px;
+//   // }
+
+//   // &.self {
+//   //   background: v.getColor("thumbnail", "default") v.getImage("spritesheet") -96px -50px;
+//   // }
+
+//   // &.image {
+//   //   background: v.getColor("thumbnail", "default") v.getImage("spritesheet") -208px -50px;
+//   // }
+
+//   // &.nsfw {
+//   //   background: v.getColor("thumbnail", "nsfw") v.getImage("spritesheet") -96px -104px;
+//   // }
+
+//   &[data-href-url*="reddit.com"] {
+//     // background: v.getColor("thumbnail", "link") v.getImage("spritesheet") -152px -104px;
+
+//     img {
+//       display: none;
+//     }
+//   }
+// }
+
+// .stickied .thumbnail {
+//   background-color: v.getColor("thumbnail", "stickied");
+// }
+
+// .thumbnail.spoiler {
+//   background: v.getColor("thumbnail", "spoiler") v.getImage("spritesheet") -208px -148px;
+// }
