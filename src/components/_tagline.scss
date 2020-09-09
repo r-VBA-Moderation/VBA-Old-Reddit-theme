@@ -3,10 +3,12 @@
 .res .thing .tagline,
 .thing .tagline,
 .link .entry .tagline {
-  margin-top: 3px;
-  @include v.theme("color", v.$secondary-text);
-  padding: 1px 4px;
-  border-radius: v.$radius;
+  a {
+    margin-top: 3px;
+    @include v.theme("color", v.$secondary-text);
+    padding: 1px 4px;
+    border-radius: v.$radius;
+  }
 
   .userattrs {
     font-size: 0;
@@ -22,7 +24,8 @@
     background: v.getColor("role", "admin");
   }
 
-  .submitter {
+  .submitter,
+  .submitter:hover {
     background: v.getColor("role", "submitter");
   }
 
