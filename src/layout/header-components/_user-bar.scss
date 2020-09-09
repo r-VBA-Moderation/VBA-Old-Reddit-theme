@@ -4,14 +4,14 @@
 
 #header-bottom-right {
   position: absolute;
-  top: 0;
+  top: 4px;
   right: 0;
   width: auto;
   max-width: 340px;
   height: 24px;
   background: none;
   font-size: 11px;
-  padding: 5px 8px 4px 2px;
+  padding: 0px 8px 4px 2px;
 }
 
 body:not(.loggedin) #header-bottom-right {
@@ -34,6 +34,7 @@ body:not(.loggedin) #header-bottom-right {
 }
 
 .user {
+  display: inline-block;
   a {
     vertical-align: middle;
     max-width: 120px;
