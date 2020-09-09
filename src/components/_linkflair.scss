@@ -9,7 +9,7 @@
   border: 0 solid;
   @include v.theme("color", v.$lightText);
   font-size: 12px;
-  font-weight: 500;
+  font-weight: bold;
   line-height: 16px;
   margin-right: 5px;
   overflow: hidden;
@@ -18,7 +18,6 @@
   cursor: default;
   vertical-align: middle;
   position: relative;
-  top: -2px;
   background: v.getColor("linkflair", "default");
 }
 
