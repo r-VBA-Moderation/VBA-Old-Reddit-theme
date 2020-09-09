@@ -11,6 +11,14 @@
 .tb-page-overlay,
 #tb-context-menu {
   * {
+    border-radius: 0;
     color: #696969 !important;
+  }
+}
+
+.tb-jsapi-author-container {
+  * {
+    border-radius: 0;
+    @include v.theme("color", v.$bodyText);
   }
 }
