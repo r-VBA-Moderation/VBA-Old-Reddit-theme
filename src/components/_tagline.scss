@@ -4,7 +4,12 @@
   margin-top: 3px;
   @include v.theme("color", v.$secondary-text);
 }
-
+.thing .tagline .author.moderator {
+  background-color: v.$moderator !important;
+  @include v.theme("color", v.$body);
+  padding: 1px 4px;
+  border-radius: 1px;
+}
 .link .entry .tagline {
   a {
     @include v.theme("color", v.$bodyText);
