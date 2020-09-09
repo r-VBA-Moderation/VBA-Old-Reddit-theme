@@ -23,6 +23,7 @@ $_top: $_margin-top + $_padding - ($_bar-thickness * 2);
   &.image {
     &.expanded,
     &.collapsed {
+      background-image: none !important;
       background: transparent;
       height: $_icon-size;
       width: $_icon-size;
