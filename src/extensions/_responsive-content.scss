@@ -211,6 +211,14 @@ body {
   }
 
   &.comments-page {
+    &:not(.subscriber) {
+      .side {
+        #login_login-main {
+          margin-top: v.$subscription-prompt-height + v.$linkinfo-height;
+        }
+      }
+    }
+
     .side {
       margin-top: v.$container-margin-vert + v.$linkinfo-height;
     }
