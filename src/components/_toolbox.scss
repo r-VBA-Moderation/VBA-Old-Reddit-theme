@@ -39,6 +39,6 @@ html {
   }
 
   .mod-toolbox-rd .menuarea.modtools {
-    @include v.theme("background-color", v.$$highlight-background);
+    @include v.theme("background-color", v.$highlight-background);
   }
 }
