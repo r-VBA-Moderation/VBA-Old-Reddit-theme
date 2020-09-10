@@ -27,25 +27,17 @@
 }
 
 .arrow {
-  margin: 0;
-  background-image: v.getImage("spritesheet") !important;
-  width: 32px;
-  border-radius: 2px;
-  transition: background-color 0.25s ease;
-
   &:hover {
     background-color: rgba(0, 0, 0, 0.05);
   }
 
   &.up {
     height: 20px;
-    background-position: 0 -80px;
     transition: background-color 0.25s ease;
   }
 
   &.upmod {
     height: 20px;
-    background-position: -32px -80px;
     position: relative;
 
     &:focus:after {
@@ -88,7 +80,6 @@
 
   &.down {
     height: 20px;
-    background-position: -64px -80px;
     transition: background-color 0.25s ease;
   }
 
