@@ -37,4 +37,8 @@ html {
   .mod-toolbox-rd #tb-feedback-window .tb-feedback-text {
     @include v.theme("background-color", v.$body);
   }
+
+  .mod-toolbox-rd .menuarea.modtools {
+    @include v.theme("background-color", v.$highlight-background);
+  }
 }
