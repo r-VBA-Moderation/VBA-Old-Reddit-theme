@@ -3,6 +3,9 @@
 .res .thing .tagline,
 .thing .tagline,
 .link .entry .tagline {
+  .score {
+    @include v.theme("color", v.$bodyText);
+  }
   .author {
     margin-top: 3px;
     @include v.theme("color", v.$bodyText);
