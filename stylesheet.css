@@ -251,12 +251,12 @@ a {
 }
 
 #mail.havemail:before {
-  animation-name: uuiygc7;
+  animation-name: uy1e57d;
   animation-duration: 8s;
   animation-iteration-count: 1;
   animation-timing-function: ease;
 }
-@keyframes uuiygc7 {
+@keyframes uy1e57d {
   0% {
     transform: translateY(76px);
     opacity: 0;
@@ -1585,7 +1585,7 @@ body:not(.subscriber) .content {
   content: " ";
   background: #ff4500 ;
   border-radius: 28px;
-  animation-name: uuiygd5;
+  animation-name: uy1e57j;
   animation-duration: 0.35s;
   animation-timing-function: ease-out;
   animation-fill-mode: forwards;
@@ -1595,7 +1595,7 @@ body:not(.subscriber) .content {
     background: #ff4500 ;
   }
 }
-@keyframes uuiygd5 {
+@keyframes uy1e57j {
   0% {
     transform: scale(0, 0);
     opacity: 1;
@@ -1619,27 +1619,28 @@ body:not(.subscriber) .content {
   height: 20px;
 }
 .arrow.down:after {
-  display: block;
-  visibility: hidden;
-  position: absolute;
-  z-index: 2;
-  left: -4px;
-  bottom: 4px;
-  padding: 12px;
-  background: #878589 ;
-  border-radius: 2px;
-  color: #292f34 ;
-  content: "Consider posting constructive criticism or an explanation when you downvote something.";
+  display: inline-block;
+  position: relative;
+  width: 500px;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 12px;
+  font-weight: normal;
+  padding: 4px;
   text-align: center;
-  letter-spacing: 1px;
-  font-weight: 400;
-  font-size: 13px;
-  transition: all 0.25s ease;
-  pointer-events: none;
+  left: 24px;
+  top: -4px;
+  background: #7193ff ;
+  color: #ffffff ;
+  border-radius: 4px;
+  content: "Consider posting constructive criticism or an explanation when you downvote something.";
+  transform: scaleX(0);
+  transition: transform 0.5s ease;
+  transform-origin: left center;
 }
 @media (prefers-color-scheme: dark) {
   .arrow.down:after {
-    background: #818384 ;
+    background: #7193ff ;
   }
 }
 @media (prefers-color-scheme: dark) {
@@ -1648,10 +1649,10 @@ body:not(.subscriber) .content {
   }
 }
 .arrow.down:hover:after {
-  visibility: visible;
+  transform: scaleX(1);
+  z-index: 2;
   background: #7193ff ;
   color: #ffffff ;
-  margin-left: 48px;
 }
 @media (prefers-color-scheme: dark) {
   .arrow.down:hover:after {
@@ -6000,9 +6001,6 @@ body.comments-page:not(.subscriber) .side #search, body.listing-page:not(.subscr
 body.listing-page:not(.subscriber) .side #search {
   top: 186px;
 }
-body.wiki-page:not(.subscriber) .side #login_login-main, body.comments-page:not(.subscriber) .side #login_login-main, body.listing-page:not(.subscriber) .side #login_login-main {
-  margin-top: 30px;
-}
 body.wiki-page div.content, body.comments-page div.content, body.listing-page div.content {
   position: relative;
   z-index: 0;
@@ -6146,6 +6144,9 @@ body.wiki-page .side .sidebox.submit.disabled, body.wiki-page .side .sidebox.sub
     left: calc( ( (100vw - 416px) / 3 ) * 2 - (16px * 3 * -1) );
   }
 }
+body.comments-page:not(.subscriber) .side #login_login-main {
+  margin-top: 118px;
+}
 body.comments-page .side {
   margin-top: 118px;
 }
@@ -6273,7 +6274,7 @@ body:not(.subscriber) div.multi-selector.hover-bubble.anchor-right {
   margin-top: -2px;
   padding: 6px 6px;
   background-color: #f50 ;
-  color: #d7dadc ;
+  color: #ffffff ;
   text-shadow: 0px 1px 0px #333333;
   border-radius: 4px;
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
@@ -6285,6 +6286,11 @@ body:not(.subscriber) div.multi-selector.hover-bubble.anchor-right {
 @media (prefers-color-scheme: dark) {
   .commentarea .flair-points::after {
     background-color: #f50 ;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .commentarea .flair-points::after {
+    color: #d7dadc ;
   }
 }
 .commentarea .flair-points:hover::after {
@@ -6362,7 +6368,15 @@ html.res-commentBoxes.res-commentBoxes-rounded .comment {
 .link .entry .tagline .flair-points:hover,
 .sidecontentbox .flair-points:hover,
 .linkflair .flair-points:hover {
-  color: #d7dadc ;
+  color: #ffffff ;
+}
+@media (prefers-color-scheme: dark) {
+  .titlebox .flair-points:hover,
+.link .entry .tagline .flair-points:hover,
+.sidecontentbox .flair-points:hover,
+.linkflair .flair-points:hover {
+    color: #d7dadc ;
+  }
 }
 .titlebox .flair-points:hover::before,
 .link .entry .tagline .flair-points:hover::before,
