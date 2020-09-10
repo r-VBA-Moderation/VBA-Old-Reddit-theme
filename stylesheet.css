@@ -251,12 +251,12 @@ a {
 }
 
 #mail.havemail:before {
-  animation-name: uy1e57d;
+  animation-name: udt9357;
   animation-duration: 8s;
   animation-iteration-count: 1;
   animation-timing-function: ease;
 }
-@keyframes uy1e57d {
+@keyframes udt9357 {
   0% {
     transform: translateY(76px);
     opacity: 0;
@@ -1585,7 +1585,7 @@ body:not(.subscriber) .content {
   content: " ";
   background: #ff4500 ;
   border-radius: 28px;
-  animation-name: uy1e57j;
+  animation-name: udt935h;
   animation-duration: 0.35s;
   animation-timing-function: ease-out;
   animation-fill-mode: forwards;
@@ -1595,7 +1595,7 @@ body:not(.subscriber) .content {
     background: #ff4500 ;
   }
 }
-@keyframes uy1e57j {
+@keyframes udt935h {
   0% {
     transform: scale(0, 0);
     opacity: 1;
@@ -4374,6 +4374,14 @@ html .mod-toolbox-rd #tb-feedback-window .tb-feedback-text {
 @media (prefers-color-scheme: dark) {
   html .mod-toolbox-rd #tb-feedback-window .tb-feedback-text {
     background-color: #1a1a1b ;
+  }
+}
+html .mod-toolbox-rd .menuarea.modtools {
+  background-color: #d7dfe7 ;
+}
+@media (prefers-color-scheme: dark) {
+  html .mod-toolbox-rd .menuarea.modtools {
+    background-color: #1e2931 ;
   }
 }
 
