@@ -38,9 +38,9 @@
     }
   }
 
-  h1.redditname {
+  h1 {
     a {
-      @include v.theme("color", v.$bodyText);
+      @include v.theme("color", v.$metaText);
     }
   }
   form.toggle,
