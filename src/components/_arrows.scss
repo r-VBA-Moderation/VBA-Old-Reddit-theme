@@ -42,8 +42,8 @@
 
     &:focus:after {
       position: absolute;
-      left: 2px;
-      bottom: -3px;
+      left: -6px;
+      bottom: 0px;
       width: 28px;
       height: 28px;
       opacity: 1;
@@ -93,7 +93,8 @@
       visibility: hidden;
       position: absolute;
       z-index: 2;
-      margin: -6px 0 0 32px;
+      left: -4px;
+      bottom: 4px;
       padding: 12px;
       @include v.theme("background", v.$voteText-base);
       border-radius: 2px;
