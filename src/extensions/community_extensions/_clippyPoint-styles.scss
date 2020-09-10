@@ -2,13 +2,14 @@
 
 $_css-class: "points";
 $_desc: "ClippyPoints Awarded:  ";
-$_margin: 80px;
-$_offset: 25px;
-$_left-pad: 5px;
 
 //Clippy Point Flair styling - Comments
 
-$_clippy-size: 50px;
+$_clippy-height: 50px;
+$_clippy-width: 35px;
+$_arrow-width: 15px;
+$_left-pad: 10px;
+$_margin: $_arrow-width + $_clippy-width + $_left-pad;
 
 .commentarea {
   .entry {
@@ -20,27 +21,31 @@ $_clippy-size: 50px;
       background-color: transparent;
       border: none;
       background-image: v.getImage("clippyflair");
+      background-position: center;
       position: absolute;
-      width: $_clippy-size;
-      height: $_clippy-size;
-      left: ($_offset + $_left-pad);
+      width: $_clippy-width;
+      height: $_clippy-height;
+      left: ($_arrow-width + $_left-pad);
       border-radius: v.$radius;
       @include v.theme("color", v.$primary);
       text-shadow: 0px 1px 0px #333333;
       font-size: 150%;
       font-weight: bold;
       text-align: center;
-      line-height: $_clippy-size;
+      line-height: $_clippy-height;
       &::after {
         content: $_desc attr(title);
         position: absolute;
-        left: $_clippy-size;
+        top: 0;
+        left: $_clippy-width;
         font-size: 90%;
         line-height: 15px;
         margin-top: -2px;
         padding: 6px 6px;
         @include v.theme("background-color", v.$banner-backgroundColor);
         @include v.theme("color", v.$lightText);
+        // @include v.theme-stroke(v.$darkText);
+        text-shadow: 0px 1px 0px #333333;
         border-radius: v.$radius;
         box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
         white-space: nowrap;
