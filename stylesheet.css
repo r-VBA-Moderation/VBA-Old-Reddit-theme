@@ -251,12 +251,12 @@ a {
 }
 
 #mail.havemail:before {
-  animation-name: udt9357;
+  animation-name: uomzotq;
   animation-duration: 8s;
   animation-iteration-count: 1;
   animation-timing-function: ease;
 }
-@keyframes udt9357 {
+@keyframes uomzotq {
   0% {
     transform: translateY(76px);
     opacity: 0;
@@ -1585,7 +1585,7 @@ body:not(.subscriber) .content {
   content: " ";
   background: #ff4500 ;
   border-radius: 28px;
-  animation-name: udt935h;
+  animation-name: uomzou2;
   animation-duration: 0.35s;
   animation-timing-function: ease-out;
   animation-fill-mode: forwards;
@@ -1595,7 +1595,7 @@ body:not(.subscriber) .content {
     background: #ff4500 ;
   }
 }
-@keyframes udt935h {
+@keyframes uomzou2 {
   0% {
     transform: scale(0, 0);
     opacity: 1;
@@ -2362,7 +2362,12 @@ body input[type=submit]:active {
   }
 }
 .md a:visited {
-  color: #7d5d8a;
+  color: #aaaab0 ;
+}
+@media (prefers-color-scheme: dark) {
+  .md a:visited {
+    color: #6f7071 ;
+  }
 }
 .md blockquote {
   border-left: 4px solid #292f34 ;
