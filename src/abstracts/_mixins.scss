@@ -56,14 +56,20 @@ $_breakpoints: (
     $size $size $blur $color;
 }
 
-@mixin theme-stroke($key, $shadow: 1px) {
-  $val: v.try-map-get(light.$theme, $key);
-  $size: 1px;
-  $blur: 0;
-  @include _stroke($val, $shadow);
-  @media (prefers-color-scheme: dark) {
-    $val: v.try-map-get(dark.$theme, $key);
+@mixin theme-stroke($key, $shadow: 0px) {
+  @if $key == "lightText" {
+    $val: v.try-map-get(dark.$theme, v.$bodyText);
     @include _stroke($val, $shadow);
+  } @else if $key == "darkText" {
+    $val: v.try-map-get(light.$theme, v.$bodyText);
+    @include _stroke($val, $shadow);
+  } @else {
+    $val: v.try-map-get(light.$theme, $key);
+    @include _stroke($val, $shadow);
+    @media (prefers-color-scheme: dark) {
+      $val: v.try-map-get(dark.$theme, $key);
+      @include _stroke($val, $shadow);
+    }
   }
 }
 
@@ -109,7 +115,7 @@ $_breakpoints: (
   $additionalProperties: "",
   $important: false
 ) {
-  @if #{$color} == "lightText" {
+  @if $color == "lightText" {
     @include themeProperty(
       dark.$theme,
       $property,
