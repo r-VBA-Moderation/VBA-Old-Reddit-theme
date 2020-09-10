@@ -214,7 +214,7 @@ body {
     &:not(.subscriber) {
       .side {
         #login_login-main {
-          margin-top: v.$subscription-prompt-height + v.$linkinfo-height;
+          margin-top: v.$subscription-prompt-height + v.$linkinfo-height !important;
         }
       }
     }
