@@ -5,7 +5,7 @@
     @include v.theme("color", v.$linkText);
 
     &:visited {
-      color: #7d5d8a;
+      @include v.theme("color", v.$postTitleLink-VisitedLinkColor);
     }
   }
   blockquote {
