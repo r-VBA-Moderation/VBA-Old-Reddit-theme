@@ -43,7 +43,7 @@ $_margin: $_arrow-width + $_clippy-width + $_left-pad;
         margin-top: -2px;
         padding: 6px 6px;
         @include v.theme("background-color", v.$banner-backgroundColor);
-        @include v.theme("color", v.$lightText);
+        @include v.theme("color", v.$menuActiveText);
         // @include v.theme-stroke(v.$darkText);
         text-shadow: 0px 1px 0px #333333;
         border-radius: v.$radius;
@@ -108,7 +108,7 @@ html.res-commentBoxes.res-commentBoxes-rounded .comment {
         transition-timing-function: ease;
       }
       &:hover {
-        @include v.theme("color", v.$lightText);
+        @include v.theme("color", v.$menuActiveText);
         &::before {
           width: 115px !important;
           transform: scaleX(1);
