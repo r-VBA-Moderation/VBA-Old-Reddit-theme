@@ -72,9 +72,6 @@ body {
           top: v.$header-height + v.$container-margin-vert +
             v.$subscription-prompt-height;
         }
-        #login_login-main {
-          margin-top: v.$subscription-prompt-height;
-        }
       }
     }
 
@@ -210,11 +207,22 @@ body {
     }
   }
 
+  // &.wiki-page,
+  // &.listing-page {
+  //   &:not(.subscriber) {
+  //     .side {
+  //       #login_login-main {
+  //         margin-top: v.$container-margin-vert;
+  //       }
+  //     }
+  //   }
+  // }
+
   &.comments-page {
     &:not(.subscriber) {
       .side {
         #login_login-main {
-          margin-top: v.$subscription-prompt-height + v.$linkinfo-height !important;
+          margin-top: v.$container-margin-vert + v.$linkinfo-height;
         }
       }
     }
