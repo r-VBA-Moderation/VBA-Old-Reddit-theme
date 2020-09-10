@@ -89,30 +89,31 @@
 
   &.down {
     &:after {
-      display: block;
-      visibility: hidden;
-      position: absolute;
-      z-index: 2;
-      left: -4px;
-      bottom: 4px;
-      padding: 12px;
-      @include v.theme("background", v.$voteText-base);
-      border-radius: 2px;
-      @include v.theme("color", v.$bodyText);
-      content: v.$downvote-hover-text;
+      display: inline-block;
+      position: relative;
+      width: 500px;
+      white-space: nowrap;
+      overflow: hidden;
+      font-size: 12px;
+      font-weight: normal;
+      padding: 4px;
       text-align: center;
-      letter-spacing: 1px;
-      font-weight: 400;
-      font-size: 13px;
-      transition: all 0.25s ease;
-      pointer-events: none;
+      left: 24px;
+      top: -4px;
+      @include v.theme("background", v.$voteText-downvote);
+      @include v.theme("color", v.$menuActiveText);
+      border-radius: v.$radius;
+      content: v.$downvote-hover-text;
+      transform: scaleX(0);
+      transition: transform v.$transition ease;
+      transform-origin: left center;
     }
 
     &:hover:after {
-      visibility: visible;
+      transform: scaleX(1);
+      z-index: 2;
       @include v.theme("background", v.$voteText-downvote);
       @include v.theme("color", v.$menuActiveText);
-      margin-left: 48px;
     }
   }
 }
