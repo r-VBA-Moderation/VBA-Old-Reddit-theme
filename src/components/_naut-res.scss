@@ -28,6 +28,7 @@ html {
     padding-right: v.$padding !important;
   }
 
+  .res-filterline,
   .subredditInfoToolTip {
     @include v.theme("background-color", v.$body);
   }
