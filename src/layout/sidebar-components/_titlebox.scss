@@ -38,7 +38,7 @@
     }
   }
 
-  h1.redditname {
+  h1 {
     a {
       @include v.theme("color", v.$bodyText);
     }
