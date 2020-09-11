@@ -38,6 +38,7 @@ html {
     @include v.theme("background-color", v.$body);
   }
 
+  .action-reason,
   .mod-toolbox-rd .menuarea.modtools {
     @include v.theme("background-color", v.$highlight-background);
   }
