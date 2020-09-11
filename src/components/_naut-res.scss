@@ -468,7 +468,7 @@ html {
 
   .res {
     .srSep {
-      @include v.theme("color", v.$separator);
+      @include v.theme("color", v.$bodyText);
     }
 
     #RESShortcutsViewport {

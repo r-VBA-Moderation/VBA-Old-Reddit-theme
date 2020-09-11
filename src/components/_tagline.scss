@@ -42,6 +42,10 @@
   }
 }
 
+.flair {
+  @include v.theme("background", v.$field);
+}
+
 .sidecontentbox,
 .link .entry .tagline {
   .userattrs > a,
