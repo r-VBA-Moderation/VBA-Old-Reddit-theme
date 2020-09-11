@@ -7,100 +7,29 @@
   border-radius: 0;
 }
 
-// #mail,
-// #modmail {
-//   width: 16px;
-//   height: 14px;
-//   background-image: v.getImage("spritesheet") !important;
-//   background-repeat: no-repeat !important;
-//   background-color: transparent;
-//   transition: all 0.25s ease;
-// }
-
-// #mail {
-//   top: -2px;
-//   overflow: visible;
-
-//   &.nohavemail {
-//     background-position: 0 0;
-//   }
-
-//   &.havemail {
-//     background-position: 0 -32px;
-//     opacity: 1;
-//   }
-// }
-
-// .message-count {
-//   background: v.getColor("mail", "background");
-//   position: relative;
-//   top: -1px;
-//   color: v.getColor("mail", "text") !important;
-// }
-
-// #mail.havemail {
-//   &:before {
-//     position: fixed;
-//     padding: v.$padding 24px;
-//     bottom: 24px;
-//     z-index: 100;
-//     background: v.getColor("mail", "havemail") v.getImage("spritesheet") 269px -120px
-//       no-repeat;
-//     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.24);
-//     @include v.theme("color", v.$lightText);
-//     width: 300px;
-//     height: 48px;
-//     left: 32px;
-//     content: "You have new messages!";
-//     text-indent: 0;
-//     line-height: 1;
-//     -webkit-transform: translateY(112px);
-//     transform: translateY(112px);
-//     transition: background 0.25s ease, box-shadow 0.25s ease;
-//   }
-
-//   &:hover:before {
-//     background-color: v.getColor("mail", "havemail-hover");
-//     box-shadow: 0 3px 12px rgba(0, 0, 0, 0.48);
-//   }
-
-//   &:active:before {
-//     background-color: v.getColor("mail", "havemail-active");
-//     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.76);
-//   }
-// }
-
-// Fix comments page sorting options being on top of the havemail element
-
-.commentarea {
-  .panestack-title,
-  .menuarea {
-    z-index: 0;
-  }
-}
-
-// #modmail {
-//   top: -3px;
-
-//   &.nohavemail {
-//     background-position: -16px 0;
-//   }
-
-//   &.havemail {
-//     background-position: -16px -32px;
-//     opacity: 1;
-//   }
-// }
-
-// #new_modmail,
-// #chat {
-//   transform: scale(0.85);
-// }
-
-// New Mail Toast Animation
+// New mail notification
 
 #mail.havemail {
   &:before {
+    position: fixed;
+    padding: v.$padding 24px;
+    bottom: 24px;
+    z-index: 100;
+    font-size: medium;
+    background: v.getColor("mail", "havemail");
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.24);
+    @include v.theme("color", v.$lightText);
+    width: 250px;
+    height: 48px;
+    left: 32px;
+    content: "You have new messages!";
+    text-indent: 0;
+    line-height: 1;
+    -webkit-transform: translateY(112px);
+    transform: translateY(112px);
+    transition: background 0.25s ease, box-shadow 0.25s ease;
+
+    //  Toast animation
     @include v.animation-keyframes {
       0% {
         transform: translateY(76px);
@@ -143,6 +72,22 @@
   }
 
   &:hover:before {
+    background-color: v.getColor("mail", "havemail-hover");
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.48);
     animation-play-state: paused;
+  }
+
+  &:active:before {
+    background-color: v.getColor("mail", "havemail-active");
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.76);
+  }
+}
+
+// Fix comments page sorting options being on top of the havemail element
+
+.commentarea {
+  .panestack-title,
+  .menuarea {
+    z-index: 0;
   }
 }
