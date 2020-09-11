@@ -5,7 +5,9 @@
 // Header
 
 $_inner-height: v.$header-height - v.$subreddits-bar-height - v.$tabmenu-height;
+$_snoo-height: 40px;
 $_snoo-width: 42px;
+$_snoo-margin-top: ($_inner-height - $_snoo-height) / 2;
 
 #header {
   margin: 0;
@@ -32,17 +34,17 @@ $_snoo-width: 42px;
 }
 
 #header-img.default-header {
+  margin-top: $_snoo-margin-top;
   margin-left: v.$container-margin-hor;
   z-index: 99;
-  width: $_snoo-width;
-  height: $_inner-height;
-  background-image: v.getImage("snoo");
-  background-position: center;
+  width: 42px;
+  height: 40px;
+  background-image: v.getImage("snoo-sprite");
+  background-position: -0 -0;
   vertical-align: top;
   font-size: 0;
 
   &:hover {
-    background-image: v.getImage("snoo-wink");
-    background-position: center;
+    background-position: -42px -0;
   }
 }
