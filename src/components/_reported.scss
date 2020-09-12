@@ -3,11 +3,17 @@
 // Reported & Spam / Remove / Approved
 
 body .content .thing.spam {
-  @include v.theme("background", v.$canvas);
+  background-color: transparent;
+  border-left: 4px solid v.$removed;
+  li[title~="removed"] {
+    b {
+      color: v.$removed;
+    }
+  }
 }
 
 .entry .buttons li.reported-stamp {
-  background-color: transparent;
+  background-color: inherit;
   border: none !important;
   text-transform: uppercase;
   color: #f44336;
