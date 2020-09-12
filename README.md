@@ -3,6 +3,7 @@
 This is a theme for the /r/VBA subreddit. See https://github.com/Senipah/Old-Reddit-Sass-Theme for the upstream.
 
 To merge changes from upstream:
+
 `git pull upstream master`
 
 **OR**
@@ -10,9 +11,11 @@ To merge changes from upstream:
 If you want to manually approve changes:
 
 `git fetch upstream`
+
 `git merge --no-commit --no-ff upstream/master`
 
 To undo a merge:
+
 `git reset --hard ORIG_HEAD`
 
 ---
