@@ -78,7 +78,7 @@
   &.locked-infobar {
     background: v.$moderator;
 
-    .md {
+    .md p {
       @include v.theme("color", v.$lightText);
     }
 
