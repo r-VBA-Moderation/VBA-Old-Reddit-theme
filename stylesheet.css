@@ -284,12 +284,12 @@ a {
   -webkit-transform: translateY(112px);
   transform: translateY(112px);
   transition: background 0.25s ease, box-shadow 0.25s ease;
-  animation-name: upratln;
+  animation-name: u58vbah;
   animation-duration: 8s;
   animation-iteration-count: 1;
   animation-timing-function: ease;
 }
-@keyframes upratln {
+@keyframes u58vbah {
   0% {
     transform: translateY(76px);
     opacity: 0;
@@ -1616,7 +1616,7 @@ body:not(.subscriber) .content {
   content: " ";
   background: #ff4500 ;
   border-radius: 28px;
-  animation-name: upratlz;
+  animation-name: u58vban;
   animation-duration: 0.35s;
   animation-timing-function: ease-out;
   animation-fill-mode: forwards;
@@ -1626,7 +1626,7 @@ body:not(.subscriber) .content {
     background: #ff4500 ;
   }
 }
-@keyframes upratlz {
+@keyframes u58vban {
   0% {
     transform: scale(0, 0);
     opacity: 1;
@@ -3364,11 +3364,6 @@ html .RESDialogSmall > h3 {
 }
 @media (prefers-color-scheme: dark) {
   html .RESDialogSmall > h3 {
-    color: #f50 ;
-  }
-}
-@media (prefers-color-scheme: dark) {
-  html .RESDialogSmall > h3 {
     background-color: #1a1a1b ;
   }
 }
@@ -3404,11 +3399,6 @@ html .toggleButton .toggleOn {
   border: 1px solid #4f8ef7;
   background-color: #f50 ;
   color: #ffffff ;
-}
-@media (prefers-color-scheme: dark) {
-  html .toggleButton .toggleOn {
-    background-color: #f50 ;
-  }
 }
 @media (prefers-color-scheme: dark) {
   html .toggleButton .toggleOn {
@@ -3785,11 +3775,6 @@ html .guider {
 }
 html .guider_content h1 {
   color: #f50 ;
-}
-@media (prefers-color-scheme: dark) {
-  html .guider_content h1 {
-    color: #f50 ;
-  }
 }
 html .guider_button {
   font-size: 11px;
@@ -4203,11 +4188,6 @@ select:disabled:hover, select[aria-disabled=true]:hover {
 }
 .dropdown.lightdrop .selected:hover {
   color: #f50 ;
-}
-@media (prefers-color-scheme: dark) {
-  .dropdown.lightdrop .selected:hover {
-    color: #f50 ;
-  }
 }
 
 .drop-choices.lightdrop {
@@ -5880,16 +5860,6 @@ ul.image-preview-list li .description pre {
   color: #d7dadc ;
   border-color: #f50 ;
 }
-@media (prefers-color-scheme: dark) {
-  .content.submit .formtabs-content #newlink-with-image-upload .file-upload-button {
-    background-color: #f50 ;
-  }
-}
-@media (prefers-color-scheme: dark) {
-  .content.submit .formtabs-content #newlink-with-image-upload .file-upload-button {
-    border-color: #f50 ;
-  }
-}
 .content.submit .info-notice,
 .content.submit .infobar {
   background-color: #fbe6e8 ;
@@ -5923,11 +5893,6 @@ ul.image-preview-list li .description pre {
 .submit_text h1 span {
   text-transform: uppercase;
   color: #f50 ;
-}
-@media (prefers-color-scheme: dark) {
-  .submit_text h1 span {
-    color: #f50 ;
-  }
 }
 
 .wiki-page .wikititle {
@@ -6286,11 +6251,6 @@ body.comments-page .side {
   background-size: auto 100%;
   text-indent: -9999px;
 }
-@media (prefers-color-scheme: dark) {
-  .side .titlebox h1.redditname a {
-    background-color: #f50 ;
-  }
-}
 
 body:not(.subscriber) #header::after {
   content: "You're not subscribed to r/vba yet! Subscribe now to get help with your vba code!";
@@ -6361,11 +6321,6 @@ body:not(.subscriber) div.multi-selector.hover-bubble.anchor-right {
   text-align: center;
   line-height: 50px;
 }
-@media (prefers-color-scheme: dark) {
-  .commentarea .flair-points {
-    color: #f50 ;
-  }
-}
 .commentarea .flair-points::after {
   content: "ClippyPoints Awarded:  " attr(title);
   position: absolute;
@@ -6431,14 +6386,6 @@ html.res-commentBoxes.res-commentBoxes-rounded .comment {
 .sidecontentbox .flair-points,
 .linkflair .flair-points {
     border-color: #d7dadc ;
-  }
-}
-@media (prefers-color-scheme: dark) {
-  .titlebox .flair-points,
-.link .entry .tagline .flair-points,
-.sidecontentbox .flair-points,
-.linkflair .flair-points {
-    background: #f50 ;
   }
 }
 .titlebox .flair-points::before,
