@@ -284,12 +284,12 @@ a {
   -webkit-transform: translateY(112px);
   transform: translateY(112px);
   transition: background 0.25s ease, box-shadow 0.25s ease;
-  animation-name: u58vbah;
+  animation-name: uwqme2k;
   animation-duration: 8s;
   animation-iteration-count: 1;
   animation-timing-function: ease;
 }
-@keyframes u58vbah {
+@keyframes uwqme2k {
   0% {
     transform: translateY(76px);
     opacity: 0;
@@ -1576,22 +1576,13 @@ body:not(.subscriber) .content {
   font-size: 12px;
   text-align: center;
   margin: 1px -100%;
+  color: #878589;
 }
 .link .score.likes {
-  color: #ff4500 ;
-}
-@media (prefers-color-scheme: dark) {
-  .link .score.likes {
-    color: #ff4500 ;
-  }
+  color: #ff4500;
 }
 .link .score.dislikes {
-  color: #7193ff ;
-}
-@media (prefers-color-scheme: dark) {
-  .link .score.dislikes {
-    color: #7193ff ;
-  }
+  color: #7193ff;
 }
 
 .arrow:hover {
@@ -1614,19 +1605,14 @@ body:not(.subscriber) .content {
   opacity: 1;
   z-index: 1;
   content: " ";
-  background: #ff4500 ;
+  color: #ff4500;
   border-radius: 28px;
-  animation-name: u58vban;
+  animation-name: uwqme33;
   animation-duration: 0.35s;
   animation-timing-function: ease-out;
   animation-fill-mode: forwards;
 }
-@media (prefers-color-scheme: dark) {
-  .arrow.upmod:focus:after {
-    background: #ff4500 ;
-  }
-}
-@keyframes u58vban {
+@keyframes uwqme33 {
   0% {
     transform: scale(0, 0);
     opacity: 1;
@@ -1661,7 +1647,7 @@ body:not(.subscriber) .content {
   text-align: center;
   left: 24px;
   top: -4px;
-  background: #7193ff ;
+  background: #7193ff;
   color: #ffffff ;
   border-radius: 4px;
   content: "Consider posting constructive criticism or an explanation when you downvote something.";
@@ -1671,29 +1657,12 @@ body:not(.subscriber) .content {
 }
 @media (prefers-color-scheme: dark) {
   .arrow.down:after {
-    background: #7193ff ;
-  }
-}
-@media (prefers-color-scheme: dark) {
-  .arrow.down:after {
     color: #d7dadc ;
   }
 }
 .arrow.down:hover:after {
   transform: scaleX(1);
   z-index: 2;
-  background: #7193ff ;
-  color: #ffffff ;
-}
-@media (prefers-color-scheme: dark) {
-  .arrow.down:hover:after {
-    background: #7193ff ;
-  }
-}
-@media (prefers-color-scheme: dark) {
-  .arrow.down:hover:after {
-    color: #d7dadc ;
-  }
 }
 
 .green {
