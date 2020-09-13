@@ -284,12 +284,12 @@ a {
   -webkit-transform: translateY(112px);
   transform: translateY(112px);
   transition: background 0.25s ease, box-shadow 0.25s ease;
-  animation-name: u8gzruz;
+  animation-name: upratln;
   animation-duration: 8s;
   animation-iteration-count: 1;
   animation-timing-function: ease;
 }
-@keyframes u8gzruz {
+@keyframes upratln {
   0% {
     transform: translateY(76px);
     opacity: 0;
@@ -1616,7 +1616,7 @@ body:not(.subscriber) .content {
   content: " ";
   background: #ff4500 ;
   border-radius: 28px;
-  animation-name: u8gzrv8;
+  animation-name: upratlz;
   animation-duration: 0.35s;
   animation-timing-function: ease-out;
   animation-fill-mode: forwards;
@@ -1626,7 +1626,7 @@ body:not(.subscriber) .content {
     background: #ff4500 ;
   }
 }
-@keyframes u8gzrv8 {
+@keyframes upratlz {
   0% {
     transform: scale(0, 0);
     opacity: 1;
@@ -2520,6 +2520,37 @@ body input[type=submit]:active {
   }
 }
 
+html .nestedlisting .comment .comment .comment,
+html .nestedlisting .comment .comment .comment .comment .comment,
+html .nestedlisting .comment .comment .comment .comment .comment .comment .comment,
+html .nestedlisting .comment .comment .comment .comment .comment .comment .comment .comment .comment {
+  background-color: #ffffff !important;
+}
+@media (prefers-color-scheme: dark) {
+  html .nestedlisting .comment .comment .comment,
+html .nestedlisting .comment .comment .comment .comment .comment,
+html .nestedlisting .comment .comment .comment .comment .comment .comment .comment,
+html .nestedlisting .comment .comment .comment .comment .comment .comment .comment .comment .comment {
+    background-color: #1a1a1b !important;
+  }
+}
+html .nestedlisting .comment .comment,
+html .nestedlisting .comment .comment .comment .comment,
+html .nestedlisting .comment .comment .comment .comment .comment .comment,
+html .nestedlisting .comment .comment .comment .comment .comment .comment .comment .comment,
+html .nestedlisting .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment {
+  background-color: #ededed !important;
+}
+@media (prefers-color-scheme: dark) {
+  html .nestedlisting .comment .comment,
+html .nestedlisting .comment .comment .comment .comment,
+html .nestedlisting .comment .comment .comment .comment .comment .comment,
+html .nestedlisting .comment .comment .comment .comment .comment .comment .comment .comment,
+html .nestedlisting .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment {
+    background-color: #2c2c2d !important;
+  }
+}
+
 .link.compressed {
   margin-bottom: 0;
   padding-top: 0;
@@ -3253,36 +3284,6 @@ html #srList {
     border-color: #343536 ;
   }
 }
-html .res-commentBoxes .comment .comment .comment,
-html .res-commentBoxes .comment .comment .comment .comment .comment,
-html .res-commentBoxes .comment .comment .comment .comment .comment .comment .comment,
-html .res-commentBoxes .comment .comment .comment .comment .comment .comment .comment .comment .comment {
-  background-color: #ffffff !important;
-}
-@media (prefers-color-scheme: dark) {
-  html .res-commentBoxes .comment .comment .comment,
-html .res-commentBoxes .comment .comment .comment .comment .comment,
-html .res-commentBoxes .comment .comment .comment .comment .comment .comment .comment,
-html .res-commentBoxes .comment .comment .comment .comment .comment .comment .comment .comment .comment {
-    background-color: #1a1a1b !important;
-  }
-}
-html .res-commentBoxes .comment .comment,
-html .res-commentBoxes .comment .comment .comment .comment,
-html .res-commentBoxes .comment .comment .comment .comment .comment .comment,
-html .res-commentBoxes .comment .comment .comment .comment .comment .comment .comment .comment,
-html .res-commentBoxes .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment {
-  background-color: #ededed !important;
-}
-@media (prefers-color-scheme: dark) {
-  html .res-commentBoxes .comment .comment,
-html .res-commentBoxes .comment .comment .comment .comment,
-html .res-commentBoxes .comment .comment .comment .comment .comment .comment,
-html .res-commentBoxes .comment .comment .comment .comment .comment .comment .comment .comment,
-html .res-commentBoxes .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment {
-    background-color: #2c2c2d !important;
-  }
-}
 html #RESStyleSheetTipPane {
   border: 1px solid #dadada ;
 }
@@ -3481,6 +3482,10 @@ html .res .commentarea > .sitetable > .comment {
   html .res .commentarea > .sitetable > .comment {
     border: 1px solid #343536 !important;
   }
+}
+html .res .commentarea > .sitetable > .comment.spam {
+  background-image: none;
+  border-left: 4px solid #ff585b !important;
 }
 html .res .RESshortcutside:hover,
 html .res .RESDashboardToggle:hover {
