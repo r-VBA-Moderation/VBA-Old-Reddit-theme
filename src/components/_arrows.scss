@@ -15,13 +15,13 @@
     font-size: 12px;
     text-align: center;
     margin: 1px -100%;
-
+    color: v.getColor("vote", "base");
     &.likes {
-      @include v.theme("color", v.$voteText-upvote);
+      color: v.getColor("vote", "upvote");
     }
 
     &.dislikes {
-      @include v.theme("color", v.$voteText-downvote);
+      color: v.getColor("vote", "downvote");
     }
   }
 }
@@ -49,7 +49,7 @@
       opacity: 1;
       z-index: 1;
       content: " ";
-      @include v.theme("background", v.$voteText-upvote);
+      color: v.getColor("vote", "upvote");
       border-radius: 28px;
 
       @include v.animation-keyframes {
@@ -100,7 +100,7 @@
       text-align: center;
       left: 24px;
       top: -4px;
-      @include v.theme("background", v.$voteText-downvote);
+      background: v.getColor("vote", "downvote");
       @include v.theme("color", v.$menuActiveText);
       border-radius: v.$radius;
       content: v.$downvote-hover-text;
@@ -112,8 +112,6 @@
     &:hover:after {
       transform: scaleX(1);
       z-index: 2;
-      @include v.theme("background", v.$voteText-downvote);
-      @include v.theme("color", v.$menuActiveText);
     }
   }
 }
@@ -121,7 +119,7 @@
 // Voting Arrows
 
 .green {
-  color: v.$moderator !important;
+  color: v.getColor("moderator") !important;
   font-weight: 700;
 }
 

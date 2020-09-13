@@ -373,7 +373,7 @@ html {
         @include v.theme("border", v.$line, false, true, "1px solid", true);
         &.spam {
           background-image: none;
-          border-left: 4px solid v.$removed !important;
+          border-left: 4px solid v.getColor("removed") !important;
         }
       }
     }

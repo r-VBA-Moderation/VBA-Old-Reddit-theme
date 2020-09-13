@@ -27,12 +27,12 @@ body > .content .link .rank,
   a.title,
   li a,
   .entry li .comments {
-    color: v.$moderator !important;
+    color: v.getColor("moderator") !important;
   }
 
   .expando-button:hover {
-    background-color: v.$moderator !important;
-    border-color: v.$moderator !important;
+    background-color: v.getColor("moderator") !important;
+    border-color: v.getColor("moderator") !important;
   }
 }
 

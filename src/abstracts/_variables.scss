@@ -11,16 +11,9 @@ $mono-font: Consolas, "Lucida Console", "DejaVu Sans Mono", monospace;
 $readers: "Readers";
 $users: "Users currently online";
 $downvote-hover-text: "Consider posting constructive criticism or an explanation when you downvote something.";
-
-$moderator: #27b062;
-$orangered: #f50;
-$gold: #ffd54f;
 $title-case: uppercase;
-$removed: #ff585b;
-// $clippy: #008e00;
 
 $radius: 4px;
-// $header-height: 196px;
 $subreddits-bar-height: 24px;
 $header-height: 136px;
 $header-bottom-left-height: 96px;
@@ -43,7 +36,6 @@ $side-start-vert: $container-margin-vert + $header-height;
 $linkinfo-height: 98px;
 
 $search-height: 42px;
-
 $transition: 0.5s;
 
 $_images: (
@@ -58,26 +50,29 @@ $_images: (
 
 @function getImage($name) {
   $result: "";
-
-  @if map-has-key($_images, $name) {
-    $img: map.get($_images, $name);
-    @if $_dev {
-      $img-root: "../images/";
-      $result: url($img-root + $img + ".png");
-    } @else {
-      $result: url(string.unquote("%%" + $img + "%%"));
-    }
-  }
-  // If the key doesn't exist in the map
-  @else {
-    @warn "No image found for `#{$name}`. "
-        + "Available images are: #{map-keys($_images)}.";
+  $img: f.try-map-get($_images, $name);
+  @if $_dev {
+    $img-root: "../images/";
+    $result: url($img-root + $img + ".png");
+  } @else {
+    $result: url(string.unquote("%%" + $img + "%%"));
   }
 
   @return $result;
 }
 
+$_moderator: #27b062;
+$_orangered: #f50;
+
 $_colors: (
+  "moderator": #27b062,
+  "gold": #ffd54f,
+  "removed": #ff585b,
+  "vote": (
+    "base": #878589,
+    "downvote": #7193ff,
+    "upvote": #ff4500,
+  ),
   "table": (
     "header-background": #4472c4,
     "header-color": #fff,
@@ -88,7 +83,7 @@ $_colors: (
     "link": #0563c1,
   ),
   "mail": (
-    "background": $orangered,
+    "background": $_orangered,
     "text": #fff,
     "havemail": #ea4848,
     "havemail-hover": #ec5b5b,
@@ -96,11 +91,10 @@ $_colors: (
   ),
   "selection": (
     "background": #7dbcff99,
-    // #0079d3,
     "color": #fff,
   ),
   "role": (
-    "moderator": $moderator,
+    "moderator": $_moderator,
     "admin": #f44336,
     "submitter": #24a0ed,
     "friend": #ff4500,
@@ -114,13 +108,13 @@ $_colors: (
   ),
   "linkflair": (
     "default": #738491,
-    "unsolved": $orangered,
+    "unsolved": $_orangered,
     "solved": #738491,
     "discussion": #007acc,
     "challenge": #007acc,
     "protip": #e0d400,
     "codereview": #800080,
-    "modpost": $moderator,
+    "modpost": $_moderator,
     "advertisement": #333333,
     "showntell": #000,
   ),
@@ -174,8 +168,5 @@ $secondary-text: "secondary-text";
 $separator: "separator";
 $sr-header: "sr-header";
 $titleText: "titleText";
-$voteText-base: "voteText-base";
-$voteText-downvote: "voteText-downvote";
-$voteText-upvote: "voteText-upvote";
 $widgetColors-sidebarWidgetBorderColor: "widgetColors-sidebarWidgetBorderColor";
 $widgetColors-sidebarWidgetTextColor: "widgetColors-sidebarWidgetTextColor";

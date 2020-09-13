@@ -23,13 +23,13 @@
 
 .linkflair-mod {
   .linkflairlabel {
-    background: v.$moderator;
+    background: v.getColor("moderator");
   }
 
   // .thumbnail {
   //   &.default,
   //   &.self {
-  //     background: v.$moderator v.getImage("spritesheet") -208px -104px;
+  //     background: v.getColor("moderator") v.getImage("spritesheet") -208px -104px;
   //   }
   // }
 }
