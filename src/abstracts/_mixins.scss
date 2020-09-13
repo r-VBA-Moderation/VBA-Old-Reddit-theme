@@ -115,7 +115,7 @@ $_breakpoints: (
   $additionalProperties: "",
   $important: false
 ) {
-  @if $color == "lightText" {
+  @if $color == v.$lightText {
     @include themeProperty(
       dark.$theme,
       $property,
@@ -124,11 +124,20 @@ $_breakpoints: (
       $additionalProperties,
       $important
     );
-  } @else if $color == "darkText" {
+  } @else if $color == v.$darkText {
     @include themeProperty(
       light.$theme,
       $property,
       v.$bodyText,
+      $additionalPropertiesPositionIsFront,
+      $additionalProperties,
+      $important
+    );
+  } @else if $color == v.$primary {
+    @include themeProperty(
+      light.$theme,
+      $property,
+      v.$primary,
       $additionalPropertiesPositionIsFront,
       $additionalProperties,
       $important
