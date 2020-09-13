@@ -12,7 +12,12 @@ html {
   #tb-context-menu {
     * {
       border-radius: 0;
-      color: #696969 !important;
+      color: #696969;
+      select,
+      textarea,
+      input {
+        @include v.theme("color", v.$bodyText);
+      }
     }
   }
 
