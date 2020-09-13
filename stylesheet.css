@@ -284,12 +284,12 @@ a {
   -webkit-transform: translateY(112px);
   transform: translateY(112px);
   transition: background 0.25s ease, box-shadow 0.25s ease;
-  animation-name: ure5i11;
+  animation-name: u8gzruz;
   animation-duration: 8s;
   animation-iteration-count: 1;
   animation-timing-function: ease;
 }
-@keyframes ure5i11 {
+@keyframes u8gzruz {
   0% {
     transform: translateY(76px);
     opacity: 0;
@@ -465,19 +465,7 @@ a.random.choice {
   visibility: visible;
 }
 #sr-header-area .drop-choices a.choice {
-  border: 0;
-  color: #777;
   padding: 3px 12px;
-  transition: none;
-}
-#sr-header-area .drop-choices a.choice:hover {
-  background: #edeff1 ;
-  color: #222;
-}
-@media (prefers-color-scheme: dark) {
-  #sr-header-area .drop-choices a.choice:hover {
-    background: #030303 ;
-  }
 }
 
 #header-bottom-left {
@@ -1628,7 +1616,7 @@ body:not(.subscriber) .content {
   content: " ";
   background: #ff4500 ;
   border-radius: 28px;
-  animation-name: ure5i1b;
+  animation-name: u8gzrv8;
   animation-duration: 0.35s;
   animation-timing-function: ease-out;
   animation-fill-mode: forwards;
@@ -1638,7 +1626,7 @@ body:not(.subscriber) .content {
     background: #ff4500 ;
   }
 }
-@keyframes ure5i1b {
+@keyframes u8gzrv8 {
   0% {
     transform: scale(0, 0);
     opacity: 1;
@@ -3825,7 +3813,7 @@ html .x_button {
 html .x_button:hover {
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
 }
-html .drop-choices a.choice {
+html .res-nightmode .drop-choices a.choice {
   color: #d7dadc !important;
 }
 html .comment .score {
