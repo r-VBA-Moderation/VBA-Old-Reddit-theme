@@ -284,12 +284,12 @@ a {
   -webkit-transform: translateY(112px);
   transform: translateY(112px);
   transition: background 0.25s ease, box-shadow 0.25s ease;
-  animation-name: uoifuxv;
+  animation-name: ure5i11;
   animation-duration: 8s;
   animation-iteration-count: 1;
   animation-timing-function: ease;
 }
-@keyframes uoifuxv {
+@keyframes ure5i11 {
   0% {
     transform: translateY(76px);
     opacity: 0;
@@ -1580,7 +1580,6 @@ body:not(.subscriber) .content {
 
 .link .midcol {
   width: 32px !important;
-  margin: 0 16px 0 0;
   overflow: visible;
   height: 56px;
 }
@@ -1629,7 +1628,7 @@ body:not(.subscriber) .content {
   content: " ";
   background: #ff4500 ;
   border-radius: 28px;
-  animation-name: uoifuya;
+  animation-name: ure5i1b;
   animation-duration: 0.35s;
   animation-timing-function: ease-out;
   animation-fill-mode: forwards;
@@ -1639,7 +1638,7 @@ body:not(.subscriber) .content {
     background: #ff4500 ;
   }
 }
-@keyframes uoifuya {
+@keyframes ure5i1b {
   0% {
     transform: scale(0, 0);
     opacity: 1;
