@@ -668,33 +668,13 @@ html {
     }
   }
 
-  // .res-nightmode {
-  //   .arrow {
-  //     background-image: v.getImage("spritesheet") !important;
-
-  //     &.up {
-  //       background-position: 0px -80px !important;
-  //     }
-
-  //     &.upmod {
-  //       background-position: -32px -80px !important;
-  //     }
-
-  //     &.down {
-  //       background-position: -64px -80px !important;
-  //     }
-
-  //     &.downmod {
-  //       background-position: 0 -100px !important;
-  //     }
-  //   }
-  // }
+  .res-nightmode {
+    .drop-choices a.choice {
+      @include v.theme("color", v.$bodyText, true, false, "!important");
+    }
+  }
   // RES Fixes / RES Nightmode
   // Voting Arrows
-
-  .drop-choices a.choice {
-    @include v.theme("color", v.$bodyText, true, false, "!important");
-  }
 
   // Pure White
 
