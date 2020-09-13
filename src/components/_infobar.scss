@@ -76,7 +76,7 @@
   }
 
   &.locked-infobar {
-    background: v.$moderator;
+    background: v.getColor("moderator");
 
     .md p {
       @include v.theme("color", v.$lightText);
@@ -87,7 +87,7 @@
     }
 
     &:before {
-      background-color: v.$moderator;
+      background-color: v.getColor("moderator");
       border-right: 1px solid rgba(0, 0, 0, 0.08);
     }
   }

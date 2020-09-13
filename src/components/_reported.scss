@@ -4,10 +4,10 @@
 
 body .content .thing.spam {
   background-color: transparent;
-  border-left: 4px solid v.$removed;
+  border-left: 4px solid v.getColor("removed");
   li[title~="removed"] {
     b {
-      color: v.$removed;
+      color: v.getColor("removed");
     }
   }
 }
