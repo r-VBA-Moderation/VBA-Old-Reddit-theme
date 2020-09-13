@@ -45,61 +45,61 @@ html {
     @include v.thing(true);
   }
 
-  // comments
-  .res-commentBoxes .comment .comment .comment,
-  .res-commentBoxes .comment .comment .comment .comment .comment,
-  .res-commentBoxes
-    .comment
-    .comment
-    .comment
-    .comment
-    .comment
-    .comment
-    .comment,
-  .res-commentBoxes
-    .comment
-    .comment
-    .comment
-    .comment
-    .comment
-    .comment
-    .comment
-    .comment
-    .comment {
-    @include v.theme("background-color", v.$body, false, false, "!important");
-  }
+  // // comments - see comment.scss component
+  // .res-commentBoxes .comment .comment .comment,
+  // .res-commentBoxes .comment .comment .comment .comment .comment,
+  // .res-commentBoxes
+  //   .comment
+  //   .comment
+  //   .comment
+  //   .comment
+  //   .comment
+  //   .comment
+  //   .comment,
+  // .res-commentBoxes
+  //   .comment
+  //   .comment
+  //   .comment
+  //   .comment
+  //   .comment
+  //   .comment
+  //   .comment
+  //   .comment
+  //   .comment {
+  //   @include v.theme("background-color", v.$body, false, false, "!important");
+  // }
 
-  .res-commentBoxes .comment .comment,
-  .res-commentBoxes .comment .comment .comment .comment,
-  .res-commentBoxes .comment .comment .comment .comment .comment .comment,
-  .res-commentBoxes
-    .comment
-    .comment
-    .comment
-    .comment
-    .comment
-    .comment
-    .comment
-    .comment,
-  .res-commentBoxes
-    .comment
-    .comment
-    .comment
-    .comment
-    .comment
-    .comment
-    .comment
-    .comment
-    .comment
-    .comment {
-    @include v.theme(
-      "background-color",
-      v.$bodyFade,
-      false,
-      false,
-      "!important"
-    );
-  }
+  // .res-commentBoxes .comment .comment,
+  // .res-commentBoxes .comment .comment .comment .comment,
+  // .res-commentBoxes .comment .comment .comment .comment .comment .comment,
+  // .res-commentBoxes
+  //   .comment
+  //   .comment
+  //   .comment
+  //   .comment
+  //   .comment
+  //   .comment
+  //   .comment
+  //   .comment,
+  // .res-commentBoxes
+  //   .comment
+  //   .comment
+  //   .comment
+  //   .comment
+  //   .comment
+  //   .comment
+  //   .comment
+  //   .comment
+  //   .comment
+  //   .comment {
+  //   @include v.theme(
+  //     "background-color",
+  //     v.$bodyFade,
+  //     false,
+  //     false,
+  //     "!important"
+  //   );
+  // }
 
   #RESStyleSheetTipPane {
     @include v.theme("border", v.$line, false, true, "1px solid");
@@ -371,6 +371,10 @@ html {
       }
       & > .sitetable > .comment {
         @include v.theme("border", v.$line, false, true, "1px solid", true);
+        &.spam {
+          background-image: none;
+          border-left: 4px solid v.$removed !important;
+        }
       }
     }
 

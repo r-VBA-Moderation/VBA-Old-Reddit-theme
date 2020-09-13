@@ -89,3 +89,44 @@
 .morecomments a {
   @include v.theme("color", v.$secondary-text);
 }
+
+// Alternate nested bg color
+html .nestedlisting {
+  .comment .comment .comment,
+  .comment .comment .comment .comment .comment,
+  .comment .comment .comment .comment .comment .comment .comment,
+  .comment
+    .comment
+    .comment
+    .comment
+    .comment
+    .comment
+    .comment
+    .comment
+    .comment {
+    @include v.theme("background-color", v.$body, false, false, "!important");
+  }
+
+  .comment .comment,
+  .comment .comment .comment .comment,
+  .comment .comment .comment .comment .comment .comment,
+  .comment .comment .comment .comment .comment .comment .comment .comment,
+  .comment
+    .comment
+    .comment
+    .comment
+    .comment
+    .comment
+    .comment
+    .comment
+    .comment
+    .comment {
+    @include v.theme(
+      "background-color",
+      v.$bodyFade,
+      false,
+      false,
+      "!important"
+    );
+  }
+}
