@@ -25,6 +25,7 @@ body > .content .link .rank,
 // Sticky Post
 
 .thing.link.stickied {
+  border-left: 4px solid v.getColor("moderator");
   a.title,
   li a,
   .entry li .comments {
