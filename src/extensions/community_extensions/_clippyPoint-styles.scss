@@ -9,7 +9,8 @@ $_clippy-height: 50px;
 $_clippy-width: 35px;
 $_arrow-width: 15px;
 $_left-pad: 10px;
-$_margin: $_arrow-width + $_clippy-width + $_left-pad;
+$_arrow-margin-left: 8.5px;
+$_margin: $_arrow-width + $_clippy-width + $_left-pad + $_arrow-margin-left;
 
 .commentarea {
   .entry {
@@ -25,7 +26,7 @@ $_margin: $_arrow-width + $_clippy-width + $_left-pad;
       position: absolute;
       width: $_clippy-width;
       height: $_clippy-height;
-      left: ($_arrow-width + $_left-pad);
+      left: ($_arrow-width + $_left-pad + $_arrow-margin-left);
       border-radius: v.$radius;
       @include v.theme("color", v.$primary);
       text-shadow: 0px 1px 0px #333333;
