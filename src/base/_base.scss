@@ -4,21 +4,18 @@
 
 @use '../abstracts/mixins' as v;
 
-/**
- * Set up a decent box model on the root element
- */
+//  Set up a decent box model on the root element
 
 html {
   box-sizing: border-box;
   border-radius: v.$radius;
 }
 
-/**
- * Make all elements from the DOM inherit from the parent box-sizing
- * Since `*` has a specificity of 0, it does not override the `html` value
- * making all elements inheriting from the root box-sizing value
- * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
- */
+// Make all elements from the DOM inherit from the parent box-sizing
+// Since `*` has a specificity of 0, it does not override the `html` value
+// making all elements inheriting from the root box-sizing value
+// See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+
 *,
 *::before,
 *::after {
@@ -39,9 +36,7 @@ body {
   @include v.theme("background", v.$canvas);
 }
 
-/**
- * Basic styles for links
- */
+// Basic styles for links
 a {
   @include v.theme("color", v.$linkText);
   transition: color 0.15s ease;

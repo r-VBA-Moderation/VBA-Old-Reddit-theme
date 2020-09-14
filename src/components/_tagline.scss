@@ -43,6 +43,7 @@
 }
 
 .flair {
+  @include v.theme("color", v.$bodyText);
   @include v.theme("background", v.$field);
 }
 
