@@ -114,15 +114,15 @@
     margin-left: 20px;
   }
 
-  .midcol {
-    width: 24px;
-    margin-right: 0;
+  // .midcol {
+  //   width: 24px;
+  //   margin-right: 0;
 
-    .arrow {
-      margin-left: 0;
-      margin-bottom: 4px;
-    }
-  }
+  //   .arrow {
+  //     margin-left: 0;
+  //     margin-bottom: 4px;
+  //   }
+  // }
 
   .entry .tagline {
     @include v.theme("color", v.$secondary-text);
