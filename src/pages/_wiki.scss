@@ -79,9 +79,5 @@
     em {
       @include v.theme("color", v.$secondary-text);
     }
-
-    .wikirevisionlisting table tr:hover {
-      background-color: rgba(0, 0, 0, 0.1) !important;
-    }
   }
 }
