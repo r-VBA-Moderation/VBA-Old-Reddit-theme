@@ -1,18 +1,9 @@
 @charset "UTF-8";
-/**
- * Set up a decent box model on the root element
- */
 html {
   box-sizing: border-box;
   border-radius: 4px;
 }
 
-/**
- * Make all elements from the DOM inherit from the parent box-sizing
- * Since `*` has a specificity of 0, it does not override the `html` value
- * making all elements inheriting from the root box-sizing value
- * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
- */
 *,
 *::before,
 *::after {
@@ -40,9 +31,6 @@ body {
   }
 }
 
-/**
- * Basic styles for links
- */
 a {
   color: #24a0ed ;
   transition: color 0.15s ease;
@@ -284,12 +272,12 @@ a {
   -webkit-transform: translateY(112px);
   transform: translateY(112px);
   transition: background 0.25s ease, box-shadow 0.25s ease;
-  animation-name: ueq8o93;
+  animation-name: ux8awfu;
   animation-duration: 8s;
   animation-iteration-count: 1;
   animation-timing-function: ease;
 }
-@keyframes ueq8o93 {
+@keyframes ux8awfu {
   0% {
     transform: translateY(76px);
     opacity: 0;
@@ -1607,12 +1595,12 @@ body:not(.subscriber) .content {
   content: " ";
   color: #ff4500;
   border-radius: 28px;
-  animation-name: ueq8o9z;
+  animation-name: ux8awgq;
   animation-duration: 0.35s;
   animation-timing-function: ease-out;
   animation-fill-mode: forwards;
 }
-@keyframes ueq8o9z {
+@keyframes ux8awgq {
   0% {
     transform: scale(0, 0);
     opacity: 1;
@@ -4313,7 +4301,13 @@ table tbody tr td label {
 }
 
 .flair {
+  color: #292f34 ;
   background: #f6f7f8 ;
+}
+@media (prefers-color-scheme: dark) {
+  .flair {
+    color: #d7dadc ;
+  }
 }
 @media (prefers-color-scheme: dark) {
   .flair {
@@ -4584,14 +4578,6 @@ html .mod-toolbox-rd .menuarea.modtools {
 .comment .showreplies {
     border-left: 1px solid #272727 ;
   }
-}
-.comment .midcol {
-  width: 24px;
-  margin-right: 0;
-}
-.comment .midcol .arrow {
-  margin-left: 0;
-  margin-bottom: 4px;
 }
 .comment .entry .tagline {
   color: #98abba ;
@@ -6268,7 +6254,7 @@ body:not(.subscriber) div.multi-selector.hover-bubble.anchor-right {
 }
 
 .commentarea .entry {
-  margin-left: 60px;
+  margin-left: 68.5px;
 }
 .commentarea .flair-points {
   background-color: transparent;
@@ -6278,7 +6264,7 @@ body:not(.subscriber) div.multi-selector.hover-bubble.anchor-right {
   position: absolute;
   width: 35px;
   height: 50px;
-  left: 25px;
+  left: 33.5px;
   border-radius: 4px;
   color: #f50 ;
   text-shadow: 0px 1px 0px #333333;
@@ -6324,7 +6310,7 @@ body:not(.subscriber) div.multi-selector.hover-bubble.anchor-right {
   display: none;
 }
 .commentarea form.usertext.cloneable.warn-on-unload {
-  margin-left: 36px;
+  margin-left: 44.5px;
 }
 
 .commentarea .thing,
