@@ -272,12 +272,12 @@ a {
   -webkit-transform: translateY(112px);
   transform: translateY(112px);
   transition: background 0.25s ease, box-shadow 0.25s ease;
-  animation-name: ux8awfu;
+  animation-name: uxpkbk9;
   animation-duration: 8s;
   animation-iteration-count: 1;
   animation-timing-function: ease;
 }
-@keyframes ux8awfu {
+@keyframes uxpkbk9 {
   0% {
     transform: translateY(76px);
     opacity: 0;
@@ -1595,12 +1595,12 @@ body:not(.subscriber) .content {
   content: " ";
   color: #ff4500;
   border-radius: 28px;
-  animation-name: ux8awgq;
+  animation-name: uxpkbl7;
   animation-duration: 0.35s;
   animation-timing-function: ease-out;
   animation-fill-mode: forwards;
 }
-@keyframes ux8awgq {
+@keyframes uxpkbl7 {
   0% {
     transform: scale(0, 0);
     opacity: 1;
@@ -4679,6 +4679,7 @@ body.listing-page > .content, body.other-discussions-page > .content {
   border-radius: 0;
   margin: 0;
   position: relative;
+  border-left: 4px solid transparent;
 }
 @media (prefers-color-scheme: dark) {
   .link {
@@ -4691,6 +4692,9 @@ body > .content .link .rank,
   display: none;
 }
 
+.thing.link.stickied {
+  border-left: 4px solid #27b062;
+}
 .thing.link.stickied a.title,
 .thing.link.stickied li a,
 .thing.link.stickied .entry li .comments {
