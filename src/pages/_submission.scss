@@ -10,6 +10,9 @@
       @include v.button(true);
     }
   }
+  span.little.gray.roundfield-description {
+    display: none;
+  }
   .formtabs-content {
     // 4px solid #5f99cf
     @include v.theme("border-top", v.$separator, false, true, "4px solid");
