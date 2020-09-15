@@ -42,14 +42,14 @@
 
     &:focus:after {
       position: absolute;
-      left: -6px;
-      bottom: 0px;
+      left: -7px;
+      top: -7px;
       width: 28px;
       height: 28px;
       opacity: 1;
       z-index: 1;
       content: " ";
-      color: v.getColor("vote", "upvote");
+      background-color: v.getColor("vote", "upvote");
       border-radius: 28px;
 
       @include v.animation-keyframes {
