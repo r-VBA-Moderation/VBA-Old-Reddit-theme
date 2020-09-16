@@ -25,7 +25,8 @@ table {
       &:nth-child(odd) {
         background-color: v.getColor("table", "odd-row");
       }
-      td {
+      td,
+      th {
         color: #000;
         border: 1px solid v.getColor("table", "border") !important;
         a {
