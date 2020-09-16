@@ -29,7 +29,8 @@ html {
   }
 
   .res-filterline,
-  .subredditInfoToolTip {
+  .subredditInfoToolTip,
+  .commentarea .res-expando-box div.usertext-body .md {
     @include v.theme("background-color", v.$body);
   }
 
