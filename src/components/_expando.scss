@@ -31,6 +31,7 @@ $_after-offset: $_center-offset - ($_bar-thickness / 2);
   &.image {
     &.expanded,
     &.collapsed {
+      margin-top: 6px;
       background-image: none !important;
       background: transparent;
       height: $_icon-size;
