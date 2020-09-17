@@ -2,6 +2,9 @@
 
 // This is the one in the header
 $_hdr-img-width: 300px;
+$_img-pad: 5px;
+$_hdr-img-height: v.$header-inner-height - ($_img-pad * 2);
+$_img-margin-top: (v.$header-inner-height - $_hdr-img-height) / 2;
 
 #header {
   #header-img {
@@ -15,7 +18,8 @@ $_hdr-img-width: 300px;
     visibility: hidden;
     a {
       visibility: visible;
-      height: 65px;
+      margin-top: $_img-margin-top;
+      height: $_hdr-img-height;
       width: $_hdr-img-width;
       position: relative;
       left: calc(50% - #{$_hdr-img-width / 2});
