@@ -2,11 +2,10 @@
 
 // Tabmenu - Hot / New / Top
 
+$_selected-underline-size: 2px;
+
 #header-bottom-left {
   position: absolute;
-  // top: v.$header-bottom-left;
-  // left: 16px;
-  // right: 384px;
   height: v.$header-height - v.$subreddits-bar-height;
   overflow: hidden;
   width: 100%;
@@ -24,28 +23,14 @@
   @include v.theme("background", v.$body);
   padding: 0 v.$container-margin-hor;
 
-  // &:before {
-  //   content: "";
-  //   border-radius: 0px;
-  //   display: block;
-  //   position: absolute;
-  //   left: -16px;
-  //   right: -384px;
-  //   @include v.theme("background", v.$body);
-  //   // background: rgba(0, 0, 0, 0.24);
-  //   height: v.$tabmenu-height;
-  //   z-index: -1;
-  // }
-
   li {
     a {
       margin: 0 16px;
       padding: 0;
       text-transform: uppercase;
       @include v.theme("color", v.$metaText);
-      // color: rgba(255, 255, 255, 0.7);
       font-weight: normal;
-      line-height: 32px;
+      line-height: v.$tabmenu-height - $_selected-underline-size;
       display: inline-block;
 
       &:hover {
@@ -60,7 +45,7 @@
     &.selected a {
       font-weight: bold;
       @include v.theme("color", v.$primary);
-      border-bottom: 2px solid;
+      border-bottom: $_selected-underline-size solid;
       border-radius: 0;
       @media (prefers-color-scheme: dark) {
         color: #fff;
