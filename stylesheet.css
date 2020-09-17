@@ -272,12 +272,12 @@ a {
   -webkit-transform: translateY(112px);
   transform: translateY(112px);
   transition: background 0.25s ease, box-shadow 0.25s ease;
-  animation-name: uv7qyc8;
+  animation-name: uybhlh4;
   animation-duration: 8s;
   animation-iteration-count: 1;
   animation-timing-function: ease;
 }
-@keyframes uv7qyc8 {
+@keyframes uybhlh4 {
   0% {
     transform: translateY(76px);
     opacity: 0;
@@ -1595,12 +1595,12 @@ body:not(.subscriber) .content {
   content: " ";
   background-color: #ff4500;
   border-radius: 28px;
-  animation-name: uv7qyd0;
+  animation-name: uybhlhp;
   animation-duration: 0.35s;
   animation-timing-function: ease-out;
   animation-fill-mode: forwards;
 }
-@keyframes uv7qyd0 {
+@keyframes uybhlhp {
   0% {
     transform: scale(0, 0);
     opacity: 1;
@@ -2179,6 +2179,15 @@ body input[type=submit]:active {
   .crossposting-modal .crosspost-warning,
 .crossposting-modal .crosspost-label {
     color: #d7dadc ;
+  }
+}
+
+#autocomplete_dropdown {
+  background-color: #ffffff ;
+}
+@media (prefers-color-scheme: dark) {
+  #autocomplete_dropdown {
+    background-color: #1a1a1b ;
   }
 }
 
@@ -3195,12 +3204,14 @@ html.res-commentBoxes body > .content {
   padding-right: 16px !important;
 }
 html .res-filterline,
-html .subredditInfoToolTip {
+html .subredditInfoToolTip,
+html .commentarea .res-expando-box div.usertext-body .md {
   background-color: #ffffff ;
 }
 @media (prefers-color-scheme: dark) {
   html .res-filterline,
-html .subredditInfoToolTip {
+html .subredditInfoToolTip,
+html .commentarea .res-expando-box div.usertext-body .md {
     background-color: #1a1a1b ;
   }
 }
@@ -4222,15 +4233,19 @@ table tbody tr {
 table tbody tr:nth-child(odd) {
   background-color: #d9e1f2;
 }
-table tbody tr td {
+table tbody tr td,
+table tbody tr th {
   color: #000;
   border: 1px solid #8ea9db !important;
 }
-table tbody tr td a {
+table tbody tr td a,
+table tbody tr th a {
   color: #0563c1 !important;
 }
 table tbody tr td span,
-table tbody tr td label {
+table tbody tr td label,
+table tbody tr th span,
+table tbody tr th label {
   color: #000;
 }
 
