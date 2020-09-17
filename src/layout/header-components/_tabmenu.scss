@@ -59,9 +59,12 @@
 
     &.selected a {
       font-weight: bold;
-      @include v.theme("color", v.$bodyText);
+      @include v.theme("color", v.$primary);
       border-bottom: 2px solid;
       border-radius: 0;
+      @media (prefers-color-scheme: dark) {
+        color: #fff;
+      }
     }
   }
 }
