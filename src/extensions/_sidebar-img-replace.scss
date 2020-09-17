@@ -1,0 +1,17 @@
+@use '../abstracts/mixins' as v;
+
+// This is the one in the sidebar
+
+.side .titlebox h1.redditname a {
+  display: block;
+  height: 50px;
+  width: 100%;
+  @include v.theme("background-color", v.$primary);
+  background-image: v.getImage("title");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto 100%;
+  text-indent: -9999px;
+}
+
+// End Addon
