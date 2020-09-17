@@ -4,10 +4,9 @@
 
 // Header
 
-$_inner-height: v.$header-height - v.$subreddits-bar-height - v.$tabmenu-height;
 $_snoo-height: 40px;
 $_snoo-width: 42px;
-$_snoo-margin-top: ($_inner-height - $_snoo-height) / 2;
+$_snoo-margin-top: (v.$header-inner-height - $_snoo-height) / 2;
 
 #header {
   margin: 0;
@@ -19,12 +18,12 @@ $_snoo-margin-top: ($_inner-height - $_snoo-height) / 2;
   box-shadow: 0 2px 1.5px 0 rgba(0, 0, 0, 0.12), 0 0 4px 0 rgba(0, 0, 0, 0.12);
 
   .pagename {
-    height: $_inner-height;
+    height: v.$header-inner-height;
     font-size: 2rem;
 
     a {
       display: inline-block;
-      line-height: $_inner-height;
+      line-height: v.$header-inner-height;
       @include v.theme("color", v.$bodyText);
       @include v.theme-stroke(v.$canvas);
 
