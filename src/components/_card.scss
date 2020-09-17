@@ -60,3 +60,7 @@
 .crossposting-modal .crosspost-label {
   @include v.theme("color", v.$bodyText);
 }
+
+#autocomplete_dropdown {
+  @include v.theme("background-color", v.$body);
+}
