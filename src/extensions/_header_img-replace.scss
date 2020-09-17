@@ -2,7 +2,8 @@
 
 // This is the one in the header
 $_hdr-img-width: 300px;
-$_hdr-img-height: 65px;
+$_img-pad: 5px;
+$_hdr-img-height: v.$header-inner-height - ($_img-pad * 2);
 $_img-margin-top: (v.$header-inner-height - $_hdr-img-height) / 2;
 
 #header {
