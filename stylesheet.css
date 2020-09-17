@@ -272,12 +272,12 @@ a {
   -webkit-transform: translateY(112px);
   transform: translateY(112px);
   transition: background 0.25s ease, box-shadow 0.25s ease;
-  animation-name: uybhlh4;
+  animation-name: u1qgtml;
   animation-duration: 8s;
   animation-iteration-count: 1;
   animation-timing-function: ease;
 }
-@keyframes uybhlh4 {
+@keyframes u1qgtml {
   0% {
     transform: translateY(76px);
     opacity: 0;
@@ -464,11 +464,12 @@ a.random.choice {
 }
 
 #header .tabmenu {
+  margin-top: 0;
   display: block;
   position: absolute;
-  top: 70px;
-  height: 42px;
-  line-height: 42px;
+  top: 77px;
+  height: 35px;
+  line-height: 35px;
   border: none;
   width: 100%;
   background: #ffffff ;
@@ -485,7 +486,7 @@ a.random.choice {
   text-transform: uppercase;
   color: #7a797c ;
   font-weight: normal;
-  line-height: 32px;
+  line-height: 33px;
   display: inline-block;
 }
 @media (prefers-color-scheme: dark) {
@@ -506,13 +507,13 @@ a.random.choice {
 }
 #header .tabmenu li.selected a {
   font-weight: bold;
-  color: #292f34 ;
+  color: #f50 ;
   border-bottom: 2px solid;
   border-radius: 0;
 }
 @media (prefers-color-scheme: dark) {
   #header .tabmenu li.selected a {
-    color: #d7dadc ;
+    color: #fff;
   }
 }
 
@@ -546,12 +547,12 @@ a.random.choice {
   box-shadow: 0 2px 1.5px 0 rgba(0, 0, 0, 0.12), 0 0 4px 0 rgba(0, 0, 0, 0.12);
 }
 #header .pagename {
-  height: 70px;
+  height: 77px;
   font-size: 2rem;
 }
 #header .pagename a {
   display: inline-block;
-  line-height: 70px;
+  line-height: 77px;
   color: #292f34 ;
   text-shadow: 0px 0px 0 #edeff1, -1px -1px 0 #edeff1, 1px -1px 0 #edeff1, -1px 1px 0 #edeff1, 1px 1px 0 #edeff1;
   text-transform: uppercase;
@@ -568,7 +569,7 @@ a.random.choice {
 }
 
 #header-img.default-header {
-  margin-top: 15px;
+  margin-top: 18.5px;
   margin-left: 24px;
   z-index: 99;
   width: 42px;
@@ -1595,12 +1596,12 @@ body:not(.subscriber) .content {
   content: " ";
   background-color: #ff4500;
   border-radius: 28px;
-  animation-name: uybhlhp;
+  animation-name: u1qgtnd;
   animation-duration: 0.35s;
   animation-timing-function: ease-out;
   animation-fill-mode: forwards;
 }
-@keyframes uybhlhp {
+@keyframes u1qgtnd {
   0% {
     transform: scale(0, 0);
     opacity: 1;
@@ -6204,7 +6205,8 @@ body.comments-page .side {
 }
 #header .pagename a {
   visibility: visible;
-  height: 65px;
+  margin-top: 5px;
+  height: 67px;
   width: 300px;
   position: relative;
   left: calc(50% - 150px);
