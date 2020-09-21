@@ -272,12 +272,12 @@ a {
   -webkit-transform: translateY(112px);
   transform: translateY(112px);
   transition: background 0.25s ease, box-shadow 0.25s ease;
-  animation-name: u1qgtml;
+  animation-name: u2fypf5;
   animation-duration: 8s;
   animation-iteration-count: 1;
   animation-timing-function: ease;
 }
-@keyframes u1qgtml {
+@keyframes u2fypf5 {
   0% {
     transform: translateY(76px);
     opacity: 0;
@@ -1596,12 +1596,12 @@ body:not(.subscriber) .content {
   content: " ";
   background-color: #ff4500;
   border-radius: 28px;
-  animation-name: u1qgtnd;
+  animation-name: u2fypfv;
   animation-duration: 0.35s;
   animation-timing-function: ease-out;
   animation-fill-mode: forwards;
 }
-@keyframes u1qgtnd {
+@keyframes u2fypfv {
   0% {
     transform: scale(0, 0);
     opacity: 1;
@@ -2584,6 +2584,7 @@ body > .content .link.compressed .midcol {
 .thing.link.stickied .expando-button.selftext.collapsed,
 .thing.link.stickied .expando-button.image.expanded,
 .thing.link.stickied .expando-button.image.collapsed {
+  margin-top: 6px;
   background-image: none !important;
   background: transparent;
   height: 30px;
@@ -3139,6 +3140,14 @@ body input:hover {
   background: #27b062;
 }
 
+html .RESUserTag {
+  color: #292f34 ;
+}
+@media (prefers-color-scheme: dark) {
+  html .RESUserTag {
+    color: #d7dadc ;
+  }
+}
 html div.res-search-options.res-search-pane.res-search-pane-open {
   background-color: #ffffff !important;
 }
@@ -4396,6 +4405,9 @@ html #tb-context-menu * textarea,
 html #tb-context-menu * input {
     color: #d7dadc ;
   }
+}
+html .reason-popup-content * {
+  color: #696969;
 }
 html .tb-general-button,
 html .tb-bracket-button,
