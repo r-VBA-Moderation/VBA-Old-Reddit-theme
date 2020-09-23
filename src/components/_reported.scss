@@ -26,7 +26,7 @@ a.pretty-button {
     @include v.theme("color", v.$body);
     line-height: 16px;
     transition: background-color 0.25s ease;
-    border-radius: 0;
+    border-radius: v.$radius;
     text-transform: uppercase;
   }
 

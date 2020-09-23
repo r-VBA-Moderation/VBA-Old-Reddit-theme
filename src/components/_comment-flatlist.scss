@@ -60,7 +60,7 @@
 
 .link .entry {
   .buttons li a.comments {
-    @include v.theme("color", v.$active);
+    @include v.theme("color", v.$bodyText);
     font-weight: 700 !important;
     transition: all 0.25s ease-in-out !important;
   }
