@@ -4,7 +4,7 @@
 
 $_bar-thickness: 2px;
 $_bar-width: 80%;
-$_icon-size: 30px;
+$_icon-size: 25px;
 $_icon-size__excluding-border: $_icon-size - ($_bar-thickness * 2);
 $_center-offset: ($_icon-size__excluding-border / 2) - $_bar-thickness;
 $_before-offset: $_center-offset + ($_bar-thickness / 2);
