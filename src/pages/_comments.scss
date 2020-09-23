@@ -2,19 +2,19 @@
 
 // Comments Page
 
-// .entry {
-//   margin-bottom: v.$padding;
-// }
+.entry {
+  border-left: 3px solid transparent;
+}
 
-.commentarea form.usertext.cloneable.warn-on-unload {
-  margin: 0 0 16px;
-  padding: v.$padding 0;
-}
-.content .commentarea > .sitetable > .comment,
-.child .thing {
-  margin: 0 0 8px 10px;
-  padding: 5px 8px 5px 5px;
-}
+// .commentarea form.usertext.cloneable.warn-on-unload {
+//   margin: 0 0 16px;
+//   padding: v.$padding 0;
+// }
+// .content .commentarea > .sitetable > .comment,
+// .child .thing {
+//   margin: 0 0 8px 10px;
+//   padding: 5px 8px 5px 5px;
+// }
 
 .panestack-title {
   margin: 0;
@@ -23,11 +23,11 @@
   margin-top: 16px;
 }
 
-.commentarea > .usertext {
-  overflow: visible;
-  -ms-flex-order: -1;
-  order: -1;
-}
+// .commentarea > .usertext {
+//   overflow: visible;
+//   -ms-flex-order: -1;
+//   order: -1;
+// }
 
 .usertext button {
   margin: v.$padding v.$padding v.$padding 0;

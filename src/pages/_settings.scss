@@ -47,11 +47,11 @@
 
 .fancy-settings h1,
 .create-promotion h1 {
-  color: rgba(255, 255, 255, 0.8);
+  @include v.theme("color", v.$secondary-text);
 }
 
 .fancy-settings h1 strong {
-  color: rgba(255, 255, 255, 1);
+  @include v.theme("color", v.$metaText);
 }
 
 .tabmenu {
@@ -97,10 +97,10 @@
   }
 
   h1 {
-    color: rgba(0, 0, 0, 0.87);
+    @include v.theme("color", v.$bodyText);
 
     strong {
-      color: rgba(0, 0, 0, 0.87);
+      @include v.theme("color", v.$metaText);
     }
   }
 }
