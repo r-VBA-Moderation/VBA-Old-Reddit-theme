@@ -2,10 +2,12 @@
 
 // User Bar
 
+html .res-navTop #header-bottom-right,
 #header-bottom-right {
   z-index: 101;
   @include v.theme("background", v.$sr-header);
   bottom: auto;
   border-radius: 0;
   border-bottom-left-radius: v.$radius;
+  top: initial;
 }
