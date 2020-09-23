@@ -272,12 +272,12 @@ a {
   -webkit-transform: translateY(112px);
   transform: translateY(112px);
   transition: background 0.25s ease, box-shadow 0.25s ease;
-  animation-name: u2fypf5;
+  animation-name: upgc49k;
   animation-duration: 8s;
   animation-iteration-count: 1;
   animation-timing-function: ease;
 }
-@keyframes u2fypf5 {
+@keyframes upgc49k {
   0% {
     transform: translateY(76px);
     opacity: 0;
@@ -524,15 +524,18 @@ a.random.choice {
   display: none !important;
 }
 
+html .res-navTop #header-bottom-right,
 #header-bottom-right {
   z-index: 101;
   background: #ffffff ;
   bottom: auto;
   border-radius: 0;
   border-bottom-left-radius: 4px;
+  top: initial;
 }
 @media (prefers-color-scheme: dark) {
-  #header-bottom-right {
+  html .res-navTop #header-bottom-right,
+#header-bottom-right {
     background: #1a1a1b ;
   }
 }
@@ -1596,12 +1599,12 @@ body:not(.subscriber) .content {
   content: " ";
   background-color: #ff4500;
   border-radius: 28px;
-  animation-name: u2fypfv;
+  animation-name: upgc49w;
   animation-duration: 0.35s;
   animation-timing-function: ease-out;
   animation-fill-mode: forwards;
 }
-@keyframes u2fypfv {
+@keyframes upgc49w {
   0% {
     transform: scale(0, 0);
     opacity: 1;
@@ -2246,7 +2249,6 @@ body input[type=submit]:active {
 
 .link .flat-list {
   padding: 0;
-  margin-top: 3px;
 }
 
 .entry .buttons li {
@@ -2318,13 +2320,13 @@ body input[type=submit]:active {
 }
 
 .link .entry .buttons li a.comments {
-  color: #f50 ;
+  color: #292f34 ;
   font-weight: 700 !important;
   transition: all 0.25s ease-in-out !important;
 }
 @media (prefers-color-scheme: dark) {
   .link .entry .buttons li a.comments {
-    color: #f50 ;
+    color: #d7dadc ;
   }
 }
 .link .entry li .comments:hover {
@@ -2553,8 +2555,8 @@ body > .content .link.compressed .midcol {
 .thing.link.stickied .expando-button {
   border: solid 2px #878a8c ;
   border-radius: 4px;
-  height: 30px;
-  width: 30px;
+  height: 25px;
+  width: 25px;
 }
 @media (prefers-color-scheme: dark) {
   .expando-button,
@@ -2587,8 +2589,8 @@ body > .content .link.compressed .midcol {
   margin-top: 6px;
   background-image: none !important;
   background: transparent;
-  height: 30px;
-  width: 30px;
+  height: 25px;
+  width: 25px;
 }
 .expando-button.crosspost.expanded:hover, .expando-button.crosspost.collapsed:hover, .expando-button.video.expanded:hover, .expando-button.video.collapsed:hover, .expando-button.video-muted.expanded:hover, .expando-button.video-muted.collapsed:hover, .expando-button.selftext.expanded:hover, .expando-button.selftext.collapsed:hover, .expando-button.image.expanded:hover, .expando-button.image.collapsed:hover,
 .res-nightmode .expando-button.crosspost.expanded:hover,
@@ -2612,8 +2614,8 @@ body > .content .link.compressed .midcol {
 .thing.link.stickied .expando-button.image.expanded:hover,
 .thing.link.stickied .expando-button.image.collapsed:hover {
   background: #fbe6e8 ;
-  height: 30px;
-  width: 30px;
+  height: 25px;
+  width: 25px;
 }
 @media (prefers-color-scheme: dark) {
   .expando-button.crosspost.expanded:hover, .expando-button.crosspost.collapsed:hover, .expando-button.video.expanded:hover, .expando-button.video.collapsed:hover, .expando-button.video-muted.expanded:hover, .expando-button.video-muted.collapsed:hover, .expando-button.selftext.expanded:hover, .expando-button.selftext.collapsed:hover, .expando-button.image.expanded:hover, .expando-button.image.collapsed:hover,
@@ -2660,11 +2662,11 @@ body > .content .link.compressed .midcol {
 }
 
 .expando-button:before {
-  top: 12px;
+  top: 9.5px;
 }
 
 .expando-button:after {
-  top: 10px;
+  top: 7.5px;
   transform: rotate(90deg);
 }
 
@@ -3999,7 +4001,7 @@ a.pretty-button[class] {
   color: #ffffff ;
   line-height: 16px;
   transition: background-color 0.25s ease;
-  border-radius: 0;
+  border-radius: 4px;
   text-transform: uppercase;
 }
 @media (prefers-color-scheme: dark) {
@@ -4259,6 +4261,11 @@ table tbody tr th label {
   color: #000;
 }
 
+.res .thing .tagline,
+.thing .tagline,
+.link .entry .tagline {
+  margin-top: 2px;
+}
 .res .thing .tagline .score,
 .thing .tagline .score,
 .link .entry .tagline .score {
@@ -4461,37 +4468,6 @@ html .mod-toolbox-rd .menuarea.modtools {
 }
 .unvotable-message:first-letter {
   text-transform: capitalize;
-}
-
-.pinnable-content.pinned .link {
-  display: flex;
-}
-.pinnable-content.pinned .link .midcol {
-  align-self: center;
-}
-.pinnable-content.pinned .link .entry {
-  display: flex;
-  max-width: initial;
-}
-.pinnable-content.pinned .midcol,
-.pinnable-content.pinned .top-matter,
-.pinnable-content.pinned .reddit-video-player-root {
-  position: initial;
-}
-.pinnable-content.pinned .top-matter {
-  order: 1;
-  width: initial;
-  align-self: center;
-}
-.pinnable-content.pinned .expando {
-  margin: 0 20px 0 0;
-}
-.pinnable-content.pinned .invisible-when-pinned {
-  display: none;
-}
-
-#newlink-with-image-upload #new-link-video-preview {
-  box-shadow: none !important;
 }
 
 .commentarea form.usertext.cloneable.warn-on-unload {
