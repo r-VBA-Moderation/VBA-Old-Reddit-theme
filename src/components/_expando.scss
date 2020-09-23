@@ -20,7 +20,8 @@ $_after-offset: $_center-offset - ($_bar-thickness / 2);
     true,
     "solid #{$_bar-thickness}"
   );
-  border-radius: v.$radius;
+  // border-radius: v.$radius;
+  border-radius: 50%;
   height: $_icon-size;
   width: $_icon-size;
 

@@ -10,14 +10,12 @@
   line-height: normal;
 
   a {
-    padding: 0 1px;
     @include v.theme("color", v.$secondary-text);
     font-weight: 400;
     font-size: 12px;
     transition: all 0.15s ease;
   }
 
-  padding: 0 1px;
   @include v.theme("color", v.$secondary-text);
   font-weight: normal;
   font-size: small;
