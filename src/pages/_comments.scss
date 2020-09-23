@@ -2,9 +2,9 @@
 
 // Comments Page
 
-// .entry {
-//   margin-bottom: v.$padding;
-// }
+.entry {
+  border-left: 3px solid transparent;
+}
 
 .commentarea form.usertext.cloneable.warn-on-unload {
   margin: 0 0 16px;
