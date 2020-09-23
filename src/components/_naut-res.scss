@@ -3,6 +3,9 @@
 html {
   .RESUserTag {
     @include v.theme("color", v.$bodyText);
+    .voteWeight {
+      @include v.thing();
+    }
   }
 
   div.res-search-options.res-search-pane.res-search-pane-open {
