@@ -272,12 +272,12 @@ a {
   -webkit-transform: translateY(112px);
   transform: translateY(112px);
   transition: background 0.25s ease, box-shadow 0.25s ease;
-  animation-name: upgc49k;
+  animation-name: u6si4uu;
   animation-duration: 8s;
   animation-iteration-count: 1;
   animation-timing-function: ease;
 }
-@keyframes upgc49k {
+@keyframes u6si4uu {
   0% {
     transform: translateY(76px);
     opacity: 0;
@@ -1599,12 +1599,12 @@ body:not(.subscriber) .content {
   content: " ";
   background-color: #ff4500;
   border-radius: 28px;
-  animation-name: upgc49w;
+  animation-name: u6si4v3;
   animation-duration: 0.35s;
   animation-timing-function: ease-out;
   animation-fill-mode: forwards;
 }
-@keyframes upgc49w {
+@keyframes u6si4v3 {
   0% {
     transform: scale(0, 0);
     opacity: 1;
@@ -2253,14 +2253,12 @@ body input[type=submit]:active {
 
 .entry .buttons li {
   line-height: normal;
-  padding: 0 1px;
   color: #98abba ;
   font-weight: normal;
   font-size: small;
   transition: all 0.15s ease;
 }
 .entry .buttons li a {
-  padding: 0 1px;
   color: #98abba ;
   font-weight: 400;
   font-size: 12px;
@@ -2554,7 +2552,7 @@ body > .content .link.compressed .midcol {
 .res-nightmode .expando-button,
 .thing.link.stickied .expando-button {
   border: solid 2px #878a8c ;
-  border-radius: 4px;
+  border-radius: 50%;
   height: 25px;
   width: 25px;
 }
@@ -2646,6 +2644,7 @@ body > .content .link.compressed .midcol {
 .expando-button:before,
 .expando-button:after {
   position: relative !important;
+  border-radius: 4px;
   display: flex;
   width: 80%;
   margin-left: 10%;
@@ -3432,14 +3431,6 @@ html .res #REScommentNavToggle {
 }
 html .res #REScommentNavToggle:hover {
   max-width: 100%;
-}
-html .res .content .RESBigEditorPop {
-  color: #98abba ;
-}
-@media (prefers-color-scheme: dark) {
-  html .res .content .RESBigEditorPop {
-    color: #828282 ;
-  }
 }
 html .res .commentarea .thing {
   border: none !important;
@@ -4282,7 +4273,7 @@ table tbody tr th label {
 .thing .tagline .author,
 .link .entry .tagline .author {
   margin-top: 3px;
-  color: #292f34 ;
+  color: #24a0ed ;
   padding: 1px 4px;
   border-radius: 4px;
   font-size: 12px;
@@ -4291,7 +4282,7 @@ table tbody tr th label {
   .res .thing .tagline .author,
 .thing .tagline .author,
 .link .entry .tagline .author {
-    color: #d7dadc ;
+    color: #4fbcff ;
   }
 }
 .res .thing .tagline .userattrs,
@@ -4470,15 +4461,8 @@ html .mod-toolbox-rd .menuarea.modtools {
   text-transform: capitalize;
 }
 
-.commentarea form.usertext.cloneable.warn-on-unload {
-  margin: 0 0 16px;
-  padding: 16px 0;
-}
-
-.content .commentarea > .sitetable > .comment,
-.child .thing {
-  margin: 0 0 8px 10px;
-  padding: 5px 8px 5px 5px;
+.entry {
+  border-left: 3px solid transparent;
 }
 
 .panestack-title {
@@ -4486,12 +4470,6 @@ html .mod-toolbox-rd .menuarea.modtools {
   border-bottom: 0;
   padding-left: 16px;
   margin-top: 16px;
-}
-
-.commentarea > .usertext {
-  overflow: visible;
-  -ms-flex-order: -1;
-  order: -1;
 }
 
 .usertext button {
@@ -5451,11 +5429,22 @@ body > .content .link .rank,
 
 .fancy-settings h1,
 .create-promotion h1 {
-  color: rgba(255, 255, 255, 0.8);
+  color: #98abba ;
+}
+@media (prefers-color-scheme: dark) {
+  .fancy-settings h1,
+.create-promotion h1 {
+    color: #828282 ;
+  }
 }
 
 .fancy-settings h1 strong {
-  color: white;
+  color: #7a797c ;
+}
+@media (prefers-color-scheme: dark) {
+  .fancy-settings h1 strong {
+    color: #818384 ;
+  }
 }
 
 .tabmenu {
@@ -5518,10 +5507,20 @@ body > .content .link .rank,
   padding-top: 0;
 }
 .fancy-settings h1 {
-  color: rgba(0, 0, 0, 0.87);
+  color: #292f34 ;
+}
+@media (prefers-color-scheme: dark) {
+  .fancy-settings h1 {
+    color: #d7dadc ;
+  }
 }
 .fancy-settings h1 strong {
-  color: rgba(0, 0, 0, 0.87);
+  color: #7a797c ;
+}
+@media (prefers-color-scheme: dark) {
+  .fancy-settings h1 strong {
+    color: #818384 ;
+  }
 }
 
 .stylesheet-customize-container .pretty-form {
@@ -6397,6 +6396,10 @@ html.res-commentBoxes.res-commentBoxes-rounded .comment {
 .linkflair .flair-points:hover::before {
   width: 115px !important;
   transform: scaleX(1);
+}
+
+.sidecontentbox li {
+  white-space: nowrap;
 }
 
 .linkflair-unsolved .linkflairlabel {
