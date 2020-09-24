@@ -91,6 +91,7 @@ body {
     .side {
       visibility: hidden;
       width: 0;
+      height: 0;
       border: none;
       @include v.pargin(0);
       @include v.respond-to($_breakpoint) {
