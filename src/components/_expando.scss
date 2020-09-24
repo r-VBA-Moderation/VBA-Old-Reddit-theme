@@ -49,6 +49,7 @@ $_after-offset: $_center-offset - ($_bar-thickness / 2);
 .expando-button:before,
 .expando-button:after {
   position: relative !important;
+  border-radius: v.$radius;
   display: flex;
   width: $_bar-width;
   margin-left: (100% - $_bar-width) / 2;
