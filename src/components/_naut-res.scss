@@ -10,7 +10,7 @@ html {
     box-sizing: content-box;
   }
 
-  .RESUserTag .voteWeight {
+  .voteWeight {
     @include v.theme("background-color", v.$body, $important: true);
     @include v.theme("color", v.$secondary-text, $important: true);
   }
