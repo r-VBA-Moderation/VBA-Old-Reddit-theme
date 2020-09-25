@@ -5,8 +5,8 @@ html {
     @include v.theme("color", v.$bodyText);
   }
 
-  .userTaggerVotesDown,
-  .userTaggerVotesUp {
+  #userTaggerVotesDown,
+  #userTaggerVotesUp {
     box-sizing: content-box;
   }
 
