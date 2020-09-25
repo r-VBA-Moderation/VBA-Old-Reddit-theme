@@ -5,6 +5,16 @@ html {
     @include v.theme("color", v.$bodyText);
   }
 
+  #userTaggerVotesDown,
+  #userTaggerVotesUp {
+    box-sizing: content-box;
+  }
+
+  .voteWeight {
+    @include v.theme("background-color", v.$body, $important: true);
+    @include v.theme("color", v.$secondary-text, $important: true);
+  }
+
   div.res-search-options.res-search-pane.res-search-pane-open {
     @include v.theme("background-color", v.$body, $important: true);
   }

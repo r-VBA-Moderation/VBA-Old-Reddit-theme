@@ -91,10 +91,12 @@ body {
     .side {
       visibility: hidden;
       width: 0;
+      height: 0;
       border: none;
       @include v.pargin(0);
       @include v.respond-to($_breakpoint) {
         visibility: visible;
+        height: 100%;
         width: v.$sidebar-width;
         margin: v.$container-margin-vert v.$container-margin-hor 108px 0;
         // @include v.container;
