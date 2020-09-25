@@ -272,12 +272,12 @@ a {
   -webkit-transform: translateY(112px);
   transform: translateY(112px);
   transition: background 0.25s ease, box-shadow 0.25s ease;
-  animation-name: u6si4uu;
+  animation-name: uduom1o;
   animation-duration: 8s;
   animation-iteration-count: 1;
   animation-timing-function: ease;
 }
-@keyframes u6si4uu {
+@keyframes uduom1o {
   0% {
     transform: translateY(76px);
     opacity: 0;
@@ -1599,12 +1599,12 @@ body:not(.subscriber) .content {
   content: " ";
   background-color: #ff4500;
   border-radius: 28px;
-  animation-name: u6si4v3;
+  animation-name: uduom2b;
   animation-duration: 0.35s;
   animation-timing-function: ease-out;
   animation-fill-mode: forwards;
 }
-@keyframes u6si4v3 {
+@keyframes uduom2b {
   0% {
     transform: scale(0, 0);
     opacity: 1;
@@ -3147,6 +3147,24 @@ html .RESUserTag {
 @media (prefers-color-scheme: dark) {
   html .RESUserTag {
     color: #d7dadc ;
+  }
+}
+html #userTaggerVotesDown,
+html #userTaggerVotesUp {
+  box-sizing: content-box;
+}
+html .voteWeight {
+  background-color: #ffffff !important;
+  color: #98abba !important;
+}
+@media (prefers-color-scheme: dark) {
+  html .voteWeight {
+    background-color: #1a1a1b !important;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  html .voteWeight {
+    color: #828282 !important;
   }
 }
 html div.res-search-options.res-search-pane.res-search-pane-open {
@@ -6048,6 +6066,7 @@ body.wiki-page div.content, body.comments-page div.content, body.listing-page di
 body.wiki-page .side, body.comments-page .side, body.listing-page .side {
   visibility: hidden;
   width: 0;
+  height: 0;
   border: none;
   margin: 0;
   padding: 0;
@@ -6055,6 +6074,7 @@ body.wiki-page .side, body.comments-page .side, body.listing-page .side {
 @media only screen and (min-width: 992px) {
   body.wiki-page .side, body.comments-page .side, body.listing-page .side {
     visibility: visible;
+    height: 100%;
     width: 320px;
     margin: 20px 24px 108px 0;
   }
