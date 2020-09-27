@@ -40,4 +40,8 @@
   @include v.customButtonColors(v.getColor("linkflair", "showntell"));
 }
 
+.linkflair-recap .linkflairlabel {
+  @include v.customButtonColors(v.getColor("linkflair", "recap"));
+}
+
 //End Custom post-flair formatting

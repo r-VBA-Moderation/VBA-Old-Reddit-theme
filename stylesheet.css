@@ -272,12 +272,12 @@ a {
   -webkit-transform: translateY(112px);
   transform: translateY(112px);
   transition: background 0.25s ease, box-shadow 0.25s ease;
-  animation-name: uduom1o;
+  animation-name: u5p1l45;
   animation-duration: 8s;
   animation-iteration-count: 1;
   animation-timing-function: ease;
 }
-@keyframes uduom1o {
+@keyframes u5p1l45 {
   0% {
     transform: translateY(76px);
     opacity: 0;
@@ -1599,12 +1599,12 @@ body:not(.subscriber) .content {
   content: " ";
   background-color: #ff4500;
   border-radius: 28px;
-  animation-name: uduom2b;
+  animation-name: u5p1l4n;
   animation-duration: 0.35s;
   animation-timing-function: ease-out;
   animation-fill-mode: forwards;
 }
-@keyframes uduom2b {
+@keyframes u5p1l4n {
   0% {
     transform: scale(0, 0);
     opacity: 1;
@@ -6529,6 +6529,19 @@ html.res-commentBoxes.res-commentBoxes-rounded .comment {
 .linkflair-showntell .linkflairlabel:hover {
   background: gray;
   border: 1px solid gray;
+}
+
+.linkflair-recap .linkflairlabel {
+  background: #7193ff;
+  color: #d7dadc ;
+  border: 1px solid #7193ff;
+}
+.linkflair-recap .linkflairlabel:active {
+  background: #00124a;
+}
+.linkflair-recap .linkflairlabel:hover {
+  background: #b8c9ff;
+  border: 1px solid #b8c9ff;
 }
 
 .side .titlebox .md ul {
