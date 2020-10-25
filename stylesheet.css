@@ -272,12 +272,12 @@ a {
   -webkit-transform: translateY(112px);
   transform: translateY(112px);
   transition: background 0.25s ease, box-shadow 0.25s ease;
-  animation-name: uizx8vf;
+  animation-name: upb509g;
   animation-duration: 8s;
   animation-iteration-count: 1;
   animation-timing-function: ease;
 }
-@keyframes uizx8vf {
+@keyframes upb509g {
   0% {
     transform: translateY(76px);
     opacity: 0;
@@ -1599,12 +1599,12 @@ body:not(.subscriber) .content {
   content: " ";
   background-color: #ff4500;
   border-radius: 28px;
-  animation-name: uizx8vy;
+  animation-name: upb509w;
   animation-duration: 0.35s;
   animation-timing-function: ease-out;
   animation-fill-mode: forwards;
 }
-@keyframes uizx8vy {
+@keyframes upb509w {
   0% {
     transform: scale(0, 0);
     opacity: 1;
@@ -6439,16 +6439,16 @@ html.res-commentBoxes.res-commentBoxes-rounded .comment {
 }
 
 .linkflair-waitingonop .linkflairlabel {
-  background: #77bafe;
+  background: #5382b1;
   color: #d7dadc ;
-  border: 1px solid #77bafe;
+  border: 1px solid #5382b1;
 }
 .linkflair-waitingonop .linkflairlabel:active {
-  background: #01254a;
+  background: #101a24;
 }
 .linkflair-waitingonop .linkflairlabel:hover {
-  background: #bbddff;
-  border: 1px solid #bbddff;
+  background: #a9c1d8;
+  border: 1px solid #a9c1d8;
 }
 
 .linkflair-solved .linkflairlabel {
