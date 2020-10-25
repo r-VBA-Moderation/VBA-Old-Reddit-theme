@@ -272,12 +272,12 @@ a {
   -webkit-transform: translateY(112px);
   transform: translateY(112px);
   transition: background 0.25s ease, box-shadow 0.25s ease;
-  animation-name: upb509g;
+  animation-name: up9h51c;
   animation-duration: 8s;
   animation-iteration-count: 1;
   animation-timing-function: ease;
 }
-@keyframes upb509g {
+@keyframes up9h51c {
   0% {
     transform: translateY(76px);
     opacity: 0;
@@ -1599,12 +1599,12 @@ body:not(.subscriber) .content {
   content: " ";
   background-color: #ff4500;
   border-radius: 28px;
-  animation-name: upb509w;
+  animation-name: up9h51n;
   animation-duration: 0.35s;
   animation-timing-function: ease-out;
   animation-fill-mode: forwards;
 }
-@keyframes upb509w {
+@keyframes up9h51n {
   0% {
     transform: scale(0, 0);
     opacity: 1;
@@ -6548,16 +6548,16 @@ html.res-commentBoxes.res-commentBoxes-rounded .comment {
 }
 
 .linkflair-recap .linkflairlabel {
-  background: #7193ff;
+  background: #11c600;
   color: #d7dadc ;
-  border: 1px solid #7193ff;
+  border: 1px solid #11c600;
 }
 .linkflair-recap .linkflairlabel:active {
-  background: #00124a;
+  background: #032800;
 }
 .linkflair-recap .linkflairlabel:hover {
-  background: #b8c9ff;
-  border: 1px solid #b8c9ff;
+  background: #70ff63;
+  border: 1px solid #70ff63;
 }
 
 .side .titlebox .md ul {
