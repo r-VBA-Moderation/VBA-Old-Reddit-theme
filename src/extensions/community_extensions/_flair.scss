@@ -3,9 +3,13 @@
 // don't forget to update the _sidebar-filterbyflair.scss file if you're using that extension...
 
 //Custom post-flair formatting
-
+.linkflair-unsolved1 .linkflairlabel,
 .linkflair-unsolved .linkflairlabel {
   @include v.customButtonColors(v.getColor("linkflair", "unsolved"));
+}
+
+.linkflair-waitingonop .linkflairlabel {
+  @include v.customButtonColors(v.getColor("linkflair", "waitingonop"));
 }
 
 .linkflair-solved .linkflairlabel {

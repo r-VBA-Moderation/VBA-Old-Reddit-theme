@@ -272,12 +272,12 @@ a {
   -webkit-transform: translateY(112px);
   transform: translateY(112px);
   transition: background 0.25s ease, box-shadow 0.25s ease;
-  animation-name: u5p1l45;
+  animation-name: uizx8vf;
   animation-duration: 8s;
   animation-iteration-count: 1;
   animation-timing-function: ease;
 }
-@keyframes u5p1l45 {
+@keyframes uizx8vf {
   0% {
     transform: translateY(76px);
     opacity: 0;
@@ -1599,12 +1599,12 @@ body:not(.subscriber) .content {
   content: " ";
   background-color: #ff4500;
   border-radius: 28px;
-  animation-name: u5p1l4n;
+  animation-name: uizx8vy;
   animation-duration: 0.35s;
   animation-timing-function: ease-out;
   animation-fill-mode: forwards;
 }
-@keyframes u5p1l4n {
+@keyframes uizx8vy {
   0% {
     transform: scale(0, 0);
     opacity: 1;
@@ -6422,17 +6422,33 @@ html.res-commentBoxes.res-commentBoxes-rounded .comment {
   white-space: nowrap;
 }
 
+.linkflair-unsolved1 .linkflairlabel,
 .linkflair-unsolved .linkflairlabel {
   background: #f50;
   color: #d7dadc ;
   border: 1px solid #f50;
 }
+.linkflair-unsolved1 .linkflairlabel:active,
 .linkflair-unsolved .linkflairlabel:active {
   background: #331100;
 }
+.linkflair-unsolved1 .linkflairlabel:hover,
 .linkflair-unsolved .linkflairlabel:hover {
   background: #ffaa80;
   border: 1px solid #ffaa80;
+}
+
+.linkflair-waitingonop .linkflairlabel {
+  background: #77bafe;
+  color: #d7dadc ;
+  border: 1px solid #77bafe;
+}
+.linkflair-waitingonop .linkflairlabel:active {
+  background: #01254a;
+}
+.linkflair-waitingonop .linkflairlabel:hover {
+  background: #bbddff;
+  border: 1px solid #bbddff;
 }
 
 .linkflair-solved .linkflairlabel {
