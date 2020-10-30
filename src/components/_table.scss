@@ -28,6 +28,9 @@ table {
       td,
       th {
         color: #000;
+        * {
+          color: #000 !important;
+        }
         border: 1px solid v.getColor("table", "border") !important;
         a {
           color: v.getColor("table", "link") !important;
