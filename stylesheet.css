@@ -272,12 +272,12 @@ a {
   -webkit-transform: translateY(112px);
   transform: translateY(112px);
   transition: background 0.25s ease, box-shadow 0.25s ease;
-  animation-name: up9h51c;
+  animation-name: uqvno9d;
   animation-duration: 8s;
   animation-iteration-count: 1;
   animation-timing-function: ease;
 }
-@keyframes up9h51c {
+@keyframes uqvno9d {
   0% {
     transform: translateY(76px);
     opacity: 0;
@@ -1599,12 +1599,12 @@ body:not(.subscriber) .content {
   content: " ";
   background-color: #ff4500;
   border-radius: 28px;
-  animation-name: up9h51n;
+  animation-name: uqvnoa8;
   animation-duration: 0.35s;
   animation-timing-function: ease-out;
   animation-fill-mode: forwards;
 }
-@keyframes up9h51n {
+@keyframes uqvnoa8 {
   0% {
     transform: scale(0, 0);
     opacity: 1;
@@ -4258,6 +4258,10 @@ table tbody tr td,
 table tbody tr th {
   color: #000;
   border: 1px solid #8ea9db !important;
+}
+table tbody tr td *,
+table tbody tr th * {
+  color: #000 !important;
 }
 table tbody tr td a,
 table tbody tr th a {
