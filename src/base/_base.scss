@@ -8,7 +8,7 @@
 
 html {
   box-sizing: border-box;
-  border-radius: v.$radius;
+  // border-radius: v.$radius;
 }
 
 // Make all elements from the DOM inherit from the parent box-sizing
@@ -26,7 +26,6 @@ html {
 // Apply top level theme properties
 
 * {
-  @include v.theme("color", v.$bodyText);
   font-family: v.$base-font;
   // @include theme("background", $body);
 }
@@ -63,6 +62,8 @@ a {
   border-radius: 0px;
 }
 
+.md,
+.md p,
 .md .-headers,
 .md h1,
 .md h2,

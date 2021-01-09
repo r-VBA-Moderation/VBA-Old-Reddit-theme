@@ -31,7 +31,6 @@
   &.nsfw-stamp,
   &.spoiler-stamp {
     padding: 0;
-    border-radius: 0;
     border: none !important;
   }
 }
@@ -39,7 +38,6 @@
 .nsfw-stamp,
 .spoiler-stamp {
   padding: 0;
-  border-radius: 0;
   border: 0;
 }
 
@@ -50,7 +48,6 @@
   top: -1px;
   padding: 2px 3px;
   background: v.getColor("thumbnail", "spoiler");
-  border-radius: 0;
   @include v.theme("color", v.$body);
   cursor: help;
 }

@@ -73,40 +73,94 @@ $_breakpoints: (
   }
 }
 
-@mixin themeProperty(
-  $theme,
+// @mixin themeProperty(
+//   $theme,
+//   $property,
+//   $color,
+//   $additionalPropertiesPositionIsFront,
+//   $additionalProperties,
+//   $important: false
+// ) {
+//   $imp: "";
+//   @if ($important and ($additionalProperties != "!important")) {
+//     $imp: "!important";
+//   }
+//   $color-val: "";
+//   @if map-has-key($theme, $color) {
+//     $color-val: map-get($theme, $color);
+//   }
+//   // If the key doesn't exist in the map
+//   @else {
+//     @warn "No value found for `#{$color}`. "
+//         + "Available colors are: #{map-keys($theme)}.";
+//   }
+//   @if $additionalPropertiesPositionIsFront {
+//     #{$property}: unquote(
+//       $additionalProperties + " " + map-get($theme, $color) + " " + $imp
+//     );
+//   } @else {
+//     #{$property}: unquote(
+//       map-get($theme, $color) + " " + $additionalProperties + $imp
+//     );
+//   }
+// }
+
+@mixin propertyFactory(
   $property,
-  $color,
+  $value,
   $additionalPropertiesPositionIsFront,
   $additionalProperties,
-  $important: false
+  $important
 ) {
   $imp: "";
   @if ($important and ($additionalProperties != "!important")) {
     $imp: "!important";
   }
-  $color-val: "";
+  @if $additionalPropertiesPositionIsFront {
+    #{$property}: unquote($additionalProperties + " " + $value + " " + $imp);
+  } @else {
+    #{$property}: unquote($value + " " + $additionalProperties + $imp);
+  }
+}
+
+@mixin colorSchemeQuery(
+  $property,
+  $lightValue,
+  $darkValue,
+  $additionalPropertiesPositionIsFront: false,
+  $additionalProperties: "",
+  $important: false
+) {
+  @include propertyFactory(
+    $property,
+    $lightValue,
+    $additionalPropertiesPositionIsFront,
+    $additionalProperties,
+    $important
+  );
+  @media (prefers-color-scheme: dark) {
+    @include propertyFactory(
+      $property,
+      $darkValue,
+      $additionalPropertiesPositionIsFront,
+      $additionalProperties,
+      $important
+    );
+  }
+}
+
+@function get-theme-color($theme, $color) {
   @if map-has-key($theme, $color) {
-    $color-val: map-get($theme, $color);
+    @return map-get($theme, $color);
   }
   // If the key doesn't exist in the map
   @else {
     @warn "No value found for `#{$color}`. "
         + "Available colors are: #{map-keys($theme)}.";
   }
-  @if $additionalPropertiesPositionIsFront {
-    #{$property}: unquote(
-      $additionalProperties + " " + map-get($theme, $color) + " " + $imp
-    );
-  } @else {
-    #{$property}: unquote(
-      map-get($theme, $color) + " " + $additionalProperties + $imp
-    );
-  }
 }
 
 // use like: @include theme('color', $secondary-text-color);
-
 @mixin theme(
   $property,
   $color,
@@ -115,63 +169,40 @@ $_breakpoints: (
   $additionalProperties: "",
   $important: false
 ) {
+  $isQuery: true;
+  $value: "";
   @if $color == v.$lightText {
-    @include themeProperty(
-      dark.$theme,
-      $property,
-      v.$bodyText,
-      $additionalPropertiesPositionIsFront,
-      $additionalProperties,
-      $important
-    );
+    $value: get-theme-color(dark.$theme, v.$bodyText);
+    $isQuery: false;
   } @else if $color == v.$darkText {
-    @include themeProperty(
-      light.$theme,
-      $property,
-      v.$bodyText,
-      $additionalPropertiesPositionIsFront,
-      $additionalProperties,
-      $important
-    );
+    $value: get-theme-color(light.$theme, v.$bodyText);
+    $isQuery: false;
   } @else if $color == v.$primary {
-    @include themeProperty(
-      light.$theme,
+    $value: get-theme-color(light.$theme, v.$primary);
+    $isQuery: false;
+  } @else if $forceDark {
+    $value: get-theme-color(dark.$theme, $color);
+    $isQuery: false;
+  }
+  @if $isQuery {
+    $lightValue: get-theme-color(light.$theme, $color);
+    $darkValue: get-theme-color(dark.$theme, $color);
+    @include colorSchemeQuery(
       $property,
-      v.$primary,
+      $lightValue,
+      $darkValue,
       $additionalPropertiesPositionIsFront,
       $additionalProperties,
       $important
     );
   } @else {
-    @if $forceDark {
-      @include themeProperty(
-        dark.$theme,
-        $property,
-        $color,
-        $additionalPropertiesPositionIsFront,
-        $additionalProperties,
-        $important
-      );
-    } @else {
-      @include themeProperty(
-        light.$theme,
-        $property,
-        $color,
-        $additionalPropertiesPositionIsFront,
-        $additionalProperties,
-        $important
-      );
-      @media (prefers-color-scheme: dark) {
-        @include themeProperty(
-          dark.$theme,
-          $property,
-          $color,
-          $additionalPropertiesPositionIsFront,
-          $additionalProperties,
-          $important
-        );
-      }
-    }
+    @include propertyFactory(
+      $property,
+      $value,
+      $additionalPropertiesPositionIsFront,
+      $additionalProperties,
+      $important
+    );
   }
 }
 

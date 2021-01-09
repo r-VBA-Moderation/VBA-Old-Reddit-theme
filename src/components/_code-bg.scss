@@ -1,0 +1,17 @@
+@use '../abstracts/mixins' as v;
+
+.new-comment .md :not(pre) > code,
+.link .md :not(pre) > code,
+.usertext.border .md :not(pre) > code,
+.new-comment .md pre,
+.link .md pre,
+.usertext.border .md pre,
+.md pre,
+.res-nightmode .content .md pre {
+  @include v.colorSchemeQuery(
+    background-image,
+    v.getImage("light-code-bg"),
+    v.getImage("dark-code-bg")
+  );
+  background-repeat: repeat;
+}

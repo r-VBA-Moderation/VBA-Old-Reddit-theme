@@ -48,6 +48,8 @@ $_images: (
   "title": "title",
   "info-shield": "info-shield",
   "snoo-sprite": "snoo-sprite",
+  "dark-code-bg": "dark-code-bg",
+  "light-code-bg": "light-code-bg",
 );
 
 @function getImage($name) {
@@ -122,13 +124,6 @@ $_colors: (
     "recap": #11c600,
     "waitingonop": #5382b1,
   ),
-  "code": (
-    "background": #1e1e1e,
-    "color": #d4d4d4,
-    "border": #007acc,
-    "line-nums": #858585,
-    "separator": #404040,
-  ),
 );
 
 @function getColor($keys...) {
@@ -149,6 +144,11 @@ $button: "button";
 $buttonTinted50: "buttonTinted50";
 $buttonShaded80: "buttonShaded80";
 $canvas: "canvas";
+$codeBackground: "codeBackground";
+$codeColor: "codeColor";
+$codeBorder: "codeBorder";
+$codeLineNums: "codeLineNums";
+$codeSeparator: "codeSeparator";
 $darkText: "darkText"; // not present in theme maps - used by mixin
 $field: "field";
 $highlight: "highlight";
