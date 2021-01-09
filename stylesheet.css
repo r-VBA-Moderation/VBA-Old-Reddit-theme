@@ -269,12 +269,12 @@ a {
   -webkit-transform: translateY(112px);
   transform: translateY(112px);
   transition: background 0.25s ease, box-shadow 0.25s ease;
-  animation-name: ug2nols;
+  animation-name: u68pvl4;
   animation-duration: 8s;
   animation-iteration-count: 1;
   animation-timing-function: ease;
 }
-@keyframes ug2nols {
+@keyframes u68pvl4 {
   0% {
     transform: translateY(76px);
     opacity: 0;
@@ -1596,12 +1596,12 @@ body:not(.subscriber) .content {
   content: " ";
   background-color: #ff4500;
   border-radius: 28px;
-  animation-name: ug2nom1;
+  animation-name: u68pvl7;
   animation-duration: 0.35s;
   animation-timing-function: ease-out;
   animation-fill-mode: forwards;
 }
-@keyframes ug2nom1 {
+@keyframes u68pvl7 {
   0% {
     transform: scale(0, 0);
     opacity: 1;
