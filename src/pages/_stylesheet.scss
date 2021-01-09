@@ -72,7 +72,7 @@ ul.image-preview-list {
         padding-left: 0;
       }
       pre {
-        color: v.getColor("code", "color");
+        @include v.theme("color", v.$codeColor);
         margin: 0.25rem;
       }
     }

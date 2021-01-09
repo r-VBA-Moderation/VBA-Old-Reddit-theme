@@ -1,30 +1,36 @@
 @use '../abstracts/mixins' as v;
 
-// Code Block formatting
+// default style overrides
 
-.usertext-body > .md,
-.wiki-page-content > .md pre {
-  max-width: 100%;
-  display: inline-block;
+.new-comment .md :not(pre) > code,
+.link .md :not(pre) > code,
+.usertext.border .md :not(pre) > code,
+.new-comment .md pre,
+.link .md pre,
+.usertext.border .md pre,
+.md code,
+.md pre {
+  @include v.theme("background", v.$codeBackground);
+  @include v.theme("color", v.$codeColor);
+  @include v.theme("border", v.$codeBorder, false, true, "2px solid");
+  font-family: v.$mono-font;
 }
 
-.md pre,
-.res-nightmode .content .md pre {
-  background: v.getColor("code", "background") !important;
-  padding-top: 3px;
-  padding-bottom: 3px;
+// code block styles
+
+.res-nightmode .content .md pre,
+.md pre {
+  padding-top: 0px;
+  padding-bottom: 0px;
   overflow: hidden;
-  border: 2px solid v.getColor("code", "border");
   position: relative;
   padding-left: 10px;
-  font-family: v.$mono-font;
   > code {
-    background: v.getColor("code", "background");
-    color: v.getColor("code", "color");
+    background-color: transparent;
     overflow: auto;
     display: block;
     margin-left: 45px;
-    border-left: 1px solid v.getColor("code", "separator");
+    // @include v.theme("border-left", v.$codeSeparator, false, true, "1px solid");
     padding-left: 10px;
     font-family: v.$mono-font;
     &:before {
@@ -32,9 +38,8 @@
       overflow-wrap: normal;
       // word-wrap: normal;
       // End Chrome Fix
-      background: v.getColor("code", "background");
       height: 100%;
-      color: v.getColor("code", "line-nums");
+      @include v.theme("color", v.$codeLineNums);
       position: absolute;
       left: 2px;
       width: 30px;
@@ -49,15 +54,10 @@
   }
 }
 
-//End code block formatting
+// Misc fixes
 
-//Inline code formatting
-.md code,
-.md p > code {
-  background: v.getColor("code", "background") !important;
-  color: v.getColor("code", "color");
-  border-color: v.getColor("code", "border");
-  font-family: v.$mono-font;
+.usertext-body > .md,
+.wiki-page-content > .md pre {
+  max-width: 100%;
+  display: inline-block;
 }
-
-//End inline code formatting
