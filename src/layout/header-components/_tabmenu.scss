@@ -27,9 +27,10 @@ $_selected-underline-size: 2px;
     a {
       margin: 0 16px;
       padding: 0;
-      text-transform: uppercase;
+      text-transform: capitalize;
       @include v.theme("color", v.$metaText);
-      font-weight: normal;
+      font-weight: 600;
+      font-size: 16px;
       line-height: v.$tabmenu-height - $_selected-underline-size;
       display: inline-block;
 
@@ -38,8 +39,54 @@ $_selected-underline-size: 2px;
       }
     }
 
+    // hot
     &:first-of-type a {
       margin-left: 0;
+      &::after {
+        content: " 🔥 ";
+      }
+    }
+
+    // new
+    & > a[href$="/new/"] {
+      &::after {
+        content: " 🌱 ";
+      }
+    }
+
+    // rising
+    & > a[href$="/rising/"] {
+      &::after {
+        content: " 📈 ";
+      }
+    }
+
+    // controversial
+    & > a[href$="/controversial/"] {
+      &::after {
+        content: " 📉 ";
+      }
+    }
+
+    // top
+    & > a[href$="/top/"] {
+      &::after {
+        content: " 🥇 ";
+      }
+    }
+
+    // gilded
+    & > a[href$="/gilded/"] {
+      &::after {
+        content: " 🏵️ ";
+      }
+    }
+
+    // wiki
+    & > a[href$="/wiki/"] {
+      &::after {
+        content: " 📚 ";
+      }
     }
 
     &.selected a {
@@ -54,6 +101,7 @@ $_selected-underline-size: 2px;
   }
 }
 
+// Hide controversial and ads tabs
 .listing-page .tabmenu li > a[href$="/controversial/"],
 .wiki-page .tabmenu li > a[href$="/controversial/"],
 .listing-page .tabmenu li > a[href$="/ads/"],
