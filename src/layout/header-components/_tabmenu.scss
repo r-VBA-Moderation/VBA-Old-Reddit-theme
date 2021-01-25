@@ -43,57 +43,6 @@ $_selected-underline-size: 2px;
       margin-left: 0;
     }
 
-    // Emojis inteerpreted as control chars
-    // // hot
-    // &:first-of-type a {
-    //   margin-left: 0;
-    //   &::after {
-    //     content: " 🔥 ";
-    //   }
-    // }
-
-    // // new
-    // & > a[href$="/new/"] {
-    //   &::after {
-    //     content: " 🌱 ";
-    //   }
-    // }
-
-    // // rising
-    // & > a[href$="/rising/"] {
-    //   &::after {
-    //     content: " 📈 ";
-    //   }
-    // }
-
-    // // controversial
-    // & > a[href$="/controversial/"] {
-    //   &::after {
-    //     content: " 📉 ";
-    //   }
-    // }
-
-    // // top
-    // & > a[href$="/top/"] {
-    //   &::after {
-    //     content: " 🥇 ";
-    //   }
-    // }
-
-    // // gilded
-    // & > a[href$="/gilded/"] {
-    //   &::after {
-    //     content: " 🏵️ ";
-    //   }
-    // }
-
-    // // wiki
-    // & > a[href$="/wiki/"] {
-    //   &::after {
-    //     content: " 📚 ";
-    //   }
-    // }
-
     &.selected a {
       font-weight: bold;
       @include v.theme("color", v.$button);
