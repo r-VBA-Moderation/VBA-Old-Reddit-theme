@@ -1,14 +1,14 @@
 @use '../../abstracts/mixins' as v;
 
 .titlebox {
-  &:before {
-    content: "Subreddit Info";
-    display: inline-block;
-    width: 100%;
-    text-align: center;
-    @include v.theme("color", v.$bodyText);
-    margin-bottom: 8px;
-  }
+  // &:before {
+  //   content: "Subreddit Info";
+  //   display: inline-block;
+  //   width: 100%;
+  //   text-align: center;
+  //   @include v.theme("color", v.$bodyText);
+  //   margin-bottom: 8px;
+  // }
   .tagline {
     margin: 0;
 
@@ -48,47 +48,85 @@
     @include v.thing;
   }
 
-  .subscribers {
-    font-size: 12px;
-    // hide "readers" - replace with user var in pseudo element
-    .word {
-      display: none;
-    }
-    .number {
-      @include v.theme("color", v.$bodyText);
-      cursor: text;
-      &:after {
-        content: " " + v.$readers;
-      }
-    }
-  }
-
+  .subscribers,
   .users-online {
-    .number {
-      font-style: italic;
-      cursor: text;
-
-      // &:before {
-      //   content: "";
-      //   width: 16px;
-      //   height: 9px;
-      //   display: inline-block;
-      //   margin-right: 8px;
-      //   background: v.getImage("spritesheet") -64px -36px;
-      // }
-
-      &:after {
-        content: " " + v.$users;
-      }
-    }
-    .word {
-      display: none;
-    }
-
-    &:before {
-      display: none;
-    }
+    display: block;
+    width: 100%;
+    text-align: center;
+    @include v.theme("color", v.$bodyText);
+    // box-shadow: inset 2px 5px 20px #555;
+    padding: 5px;
+    @include v.theme("border", v.$button, false, true, "2px solid");
+    border-radius: v.$radius;
+    margin-top: 8px;
+    // height: 37px;
   }
+  .subscribers .number,
+  .users-online .number {
+    font-size: 1.3em;
+    font-weight: bold;
+  }
+  .subscribers::after {
+    content: " " + v.$readers;
+  }
+  .users-online::after {
+    content: " " + v.$users;
+  }
+  .subscribers::after,
+  .users-online::after {
+    display: block;
+    font-size: 0.9em;
+    font-weight: normal;
+    text-transform: uppercase;
+  }
+  .subscribers .word,
+  .users-online .word {
+    display: none;
+  }
+
+  .users-online::before {
+    display: none;
+  }
+
+  // .subscribers {
+  //   display: block;
+  //   font-size: 12px;
+  //   // hide "readers" - replace with user var in pseudo element
+  //   .word {
+  //     display: none;
+  //   }
+  //   .number {
+  //     @include v.theme("color", v.$bodyText);
+  //     cursor: text;
+  //     &:after {
+  //       content: " " + v.$readers;
+  //     }
+  //   }
+  // }
+
+  // .users-online {
+  //   display: block;
+  //   min-width: 100%;
+  //   border: 1px solid yellow;
+
+  //   .number {
+  //     min-width: 100%;
+  //     cursor: text;
+  //     border: 1px solid gray;
+  //     &:after {
+  //       text-align: right;
+  //       border: 1px solid white;
+  //       content: " " + v.$users;
+  //     }
+  //   }
+  //   .word {
+  //     display: none;
+  //   }
+
+  //   &:before {
+  //     display: none;
+  //   }
+  // }
 
   .res-fancy-toggle-button {
     &.RESDashboardToggle,

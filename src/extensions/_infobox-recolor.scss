@@ -4,7 +4,6 @@
   @include v.theme("background-color", v.$banner-backgroundColor);
 }
 
-.side .titlebox h1.redditname a,
-.titlebox span.subscribers > span {
+.side .titlebox h1.redditname a {
   @include v.theme("color", v.$lightText);
 }
