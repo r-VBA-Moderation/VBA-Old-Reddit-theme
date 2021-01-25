@@ -96,12 +96,9 @@ $_selected-underline-size: 2px;
 
     &.selected a {
       font-weight: bold;
-      @include v.theme("color", v.$primary);
+      @include v.theme("color", v.$button);
       border-bottom: $_selected-underline-size solid;
       border-radius: 0;
-      @media (prefers-color-scheme: dark) {
-        color: #fff;
-      }
     }
   }
 }
