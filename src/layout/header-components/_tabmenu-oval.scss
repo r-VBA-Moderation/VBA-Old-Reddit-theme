@@ -1,0 +1,132 @@
+@use '../../abstracts/mixins' as v;
+
+// Tabmenu - Hot / New / Top
+
+$_selected-underline-size: 10px;
+
+#header-bottom-left {
+  position: absolute;
+  height: v.$header-height - v.$subreddits-bar-height;
+  overflow: hidden;
+  width: 100%;
+}
+
+#header .tabmenu {
+  margin-top: 0;
+  display: block;
+  position: absolute;
+  top: v.$header-height - v.$subreddits-bar-height - v.$tabmenu-height;
+  height: v.$tabmenu-height;
+  line-height: v.$tabmenu-height;
+  border: none;
+  width: 100%;
+  @include v.theme("background", v.$body);
+  padding: 0 v.$container-margin-hor;
+
+  li {
+    a {
+      margin: ($_selected-underline-size / 2) (v.$padding / 2);
+      padding: 0 v.$padding;
+      text-transform: capitalize;
+      @include v.theme("color", v.$metaText);
+      font-weight: 600;
+      font-size: 16px;
+      line-height: v.$tabmenu-height - $_selected-underline-size;
+      display: inline-block;
+
+      &:hover {
+        @include v.theme("color", v.$navBar-hoverLink);
+      }
+    }
+    &:first-of-type a {
+      margin-left: 0;
+    }
+
+    &:first-of-type a,
+    & > a[href$="/new/"],
+    & > a[href$="/rising/"],
+    & > a[href$="/top/"] {
+      &::before {
+        content: "";
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+
+        @include v.colorSchemeQuery(
+          "background-image",
+          v.getImage("tabmenu-inactive-dark"),
+          v.getImage("tabmenu-inactive-light")
+        );
+
+        background-repeat: no-repeat;
+        margin-right: (v.$padding / 2);
+      }
+    }
+
+    // // hot
+    &:first-of-type a {
+      &::before {
+        width: 15px;
+        height: 18px;
+        background-position: 0px 0px;
+      }
+    }
+
+    // new
+    & > a[href$="/new/"] {
+      &::before {
+        width: 18px;
+        height: 19px;
+        background-position: -25px 0px;
+      }
+    }
+
+    // rising
+    & > a[href$="/rising/"] {
+      &::before {
+        width: 18px;
+        height: 13px;
+        background-position: -0px -25px;
+      }
+    }
+
+    // top
+    & > a[href$="/top/"] {
+      &::before {
+        width: 18px;
+        height: 17px;
+        background-position: -50px -0px;
+      }
+    }
+
+    &.selected {
+      a {
+        font-weight: bold;
+        @include v.theme("color", v.$button);
+        // border-bottom: $_selected-underline-size solid;
+        @include v.theme("background-color", v.$field);
+        border-radius: 9999px;
+      }
+      &:first-of-type a,
+      & > a[href$="/new/"],
+      & > a[href$="/rising/"],
+      & > a[href$="/top/"] {
+        &::before {
+          @include v.colorSchemeQuery(
+            "background-image",
+            v.getImage("tabmenu-active-light"),
+            v.getImage("tabmenu-active-dark")
+          );
+        }
+      }
+    }
+  }
+}
+
+// Hide controversial and ads tabs
+.listing-page .tabmenu li > a[href$="/controversial/"],
+.wiki-page .tabmenu li > a[href$="/controversial/"],
+.listing-page .tabmenu li > a[href$="/ads/"],
+.wiki-page .tabmenu li > a[href$="/ads/"] {
+  display: none !important;
+}
