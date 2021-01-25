@@ -54,8 +54,11 @@
     width: 100%;
     text-align: center;
     @include v.theme("color", v.$bodyText);
-    box-shadow: inset 2px 5px 20px #555;
+    // box-shadow: inset 2px 5px 20px #555;
     padding: 5px;
+    @include v.theme("border", v.$button, false, true, "2px solid");
+    border-radius: v.$radius;
+    margin-top: 8px;
     // height: 37px;
   }
   .subscribers .number,
