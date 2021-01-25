@@ -269,12 +269,12 @@ a {
   -webkit-transform: translateY(112px);
   transform: translateY(112px);
   transition: background 0.25s ease, box-shadow 0.25s ease;
-  animation-name: uj106nc;
+  animation-name: usuns47;
   animation-duration: 8s;
   animation-iteration-count: 1;
   animation-timing-function: ease;
 }
-@keyframes uj106nc {
+@keyframes usuns47 {
   0% {
     transform: translateY(76px);
     opacity: 0;
@@ -555,6 +555,7 @@ a.random.choice {
 }
 #header .tabmenu li.selected > a[href$="/vba/"]::before, #header .tabmenu li.selected > a[href$="/new/"]::before, #header .tabmenu li.selected > a[href$="/rising/"]::before, #header .tabmenu li.selected > a[href$="/top/"]::before {
   background-image: url(%%tabmenu-active-light%%) ;
+  border-radius: 0;
 }
 @media (prefers-color-scheme: dark) {
   #header .tabmenu li.selected > a[href$="/vba/"]::before, #header .tabmenu li.selected > a[href$="/new/"]::before, #header .tabmenu li.selected > a[href$="/rising/"]::before, #header .tabmenu li.selected > a[href$="/top/"]::before {
@@ -1648,12 +1649,12 @@ body:not(.subscriber) .content {
   content: " ";
   background-color: #ff4500;
   border-radius: 28px;
-  animation-name: uj106nr;
+  animation-name: usuns4p;
   animation-duration: 0.35s;
   animation-timing-function: ease-out;
   animation-fill-mode: forwards;
 }
-@keyframes uj106nr {
+@keyframes usuns4p {
   0% {
     transform: scale(0, 0);
     opacity: 1;
