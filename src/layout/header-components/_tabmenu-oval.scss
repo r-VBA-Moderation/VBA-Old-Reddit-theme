@@ -117,6 +117,7 @@ $_selected-underline-size: 10px;
             v.getImage("tabmenu-active-light"),
             v.getImage("tabmenu-active-dark")
           );
+          border-radius: 0;
         }
       }
     }
