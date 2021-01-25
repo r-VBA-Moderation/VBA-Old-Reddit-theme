@@ -269,12 +269,12 @@ a {
   -webkit-transform: translateY(112px);
   transform: translateY(112px);
   transition: background 0.25s ease, box-shadow 0.25s ease;
-  animation-name: ufjcc2t;
+  animation-name: uj106nc;
   animation-duration: 8s;
   animation-iteration-count: 1;
   animation-timing-function: ease;
 }
-@keyframes ufjcc2t {
+@keyframes uj106nc {
   0% {
     transform: translateY(76px);
     opacity: 0;
@@ -503,7 +503,7 @@ a.random.choice {
 #header .tabmenu li:first-of-type a {
   margin-left: 0;
 }
-#header .tabmenu li:first-of-type a::before, #header .tabmenu li > a[href$="/new/"]::before, #header .tabmenu li > a[href$="/rising/"]::before, #header .tabmenu li > a[href$="/top/"]::before {
+#header .tabmenu li > a[href$="/vba/"]::before, #header .tabmenu li > a[href$="/new/"]::before, #header .tabmenu li > a[href$="/rising/"]::before, #header .tabmenu li > a[href$="/top/"]::before {
   content: "";
   display: inline-block;
   width: 20px;
@@ -513,11 +513,11 @@ a.random.choice {
   margin-right: 8px;
 }
 @media (prefers-color-scheme: dark) {
-  #header .tabmenu li:first-of-type a::before, #header .tabmenu li > a[href$="/new/"]::before, #header .tabmenu li > a[href$="/rising/"]::before, #header .tabmenu li > a[href$="/top/"]::before {
+  #header .tabmenu li > a[href$="/vba/"]::before, #header .tabmenu li > a[href$="/new/"]::before, #header .tabmenu li > a[href$="/rising/"]::before, #header .tabmenu li > a[href$="/top/"]::before {
     background-image: url(%%tabmenu-inactive-light%%) ;
   }
 }
-#header .tabmenu li:first-of-type a::before {
+#header .tabmenu li > a[href$="/vba/"]::before {
   width: 15px;
   height: 18px;
   background-position: 0px 0px;
@@ -553,11 +553,11 @@ a.random.choice {
     background-color: #272729 ;
   }
 }
-#header .tabmenu li.selected:first-of-type a::before, #header .tabmenu li.selected > a[href$="/new/"]::before, #header .tabmenu li.selected > a[href$="/rising/"]::before, #header .tabmenu li.selected > a[href$="/top/"]::before {
+#header .tabmenu li.selected > a[href$="/vba/"]::before, #header .tabmenu li.selected > a[href$="/new/"]::before, #header .tabmenu li.selected > a[href$="/rising/"]::before, #header .tabmenu li.selected > a[href$="/top/"]::before {
   background-image: url(%%tabmenu-active-light%%) ;
 }
 @media (prefers-color-scheme: dark) {
-  #header .tabmenu li.selected:first-of-type a::before, #header .tabmenu li.selected > a[href$="/new/"]::before, #header .tabmenu li.selected > a[href$="/rising/"]::before, #header .tabmenu li.selected > a[href$="/top/"]::before {
+  #header .tabmenu li.selected > a[href$="/vba/"]::before, #header .tabmenu li.selected > a[href$="/new/"]::before, #header .tabmenu li.selected > a[href$="/rising/"]::before, #header .tabmenu li.selected > a[href$="/top/"]::before {
     background-image: url(%%tabmenu-active-dark%%) ;
   }
 }
@@ -1648,12 +1648,12 @@ body:not(.subscriber) .content {
   content: " ";
   background-color: #ff4500;
   border-radius: 28px;
-  animation-name: ufjcc37;
+  animation-name: uj106nr;
   animation-duration: 0.35s;
   animation-timing-function: ease-out;
   animation-fill-mode: forwards;
 }
-@keyframes ufjcc37 {
+@keyframes uj106nr {
   0% {
     transform: scale(0, 0);
     opacity: 1;
