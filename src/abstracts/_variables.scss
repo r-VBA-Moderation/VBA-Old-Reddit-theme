@@ -3,8 +3,8 @@
 @use 'functions' as f;
 @forward 'functions';
 
-$_dev: true;
-$subreddit-name: vba;
+$_dev: false;
+$subreddit-name: "vba";
 
 $base-font: Arial, Helvetica, sans-serif;
 $mono-font: Consolas, "Lucida Console", "DejaVu Sans Mono", monospace;
