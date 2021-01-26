@@ -9,7 +9,8 @@
   }
   .author {
     margin-top: 3px;
-    @include v.theme("color", v.$linkText);
+    // @include v.theme("color", v.$linkText);
+    @include v.theme("color", v.$secondary-text);
     padding: 1px 4px;
     border-radius: v.$radius;
     font-size: 12px;
