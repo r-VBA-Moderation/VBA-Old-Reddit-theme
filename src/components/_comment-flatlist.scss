@@ -22,6 +22,11 @@
   transition: all 0.15s ease;
 }
 
+// remove reddit highlighting of "give award"
+.buttons .give-gold.gold-give-gold {
+  @include v.theme("color", v.$secondary-text);
+}
+
 .link .entry .buttons li a:hover {
   @include v.theme("color", v.$active);
   text-decoration: none;
