@@ -14,5 +14,8 @@
   background: v.getColor("vote", "downvote");
   @include v.theme("color", v.$menuActiveText);
   font-size: 1.1rem;
-  display: block;
+  display: inline-block;
+  // animate entry - remove if low on space
+  max-height: 35px;
+  @include v.animation-grow("width");
 }
