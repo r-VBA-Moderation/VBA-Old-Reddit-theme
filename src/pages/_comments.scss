@@ -6,28 +6,12 @@
   border-left: 3px solid transparent;
 }
 
-// .commentarea form.usertext.cloneable.warn-on-unload {
-//   margin: 0 0 16px;
-//   padding: v.$padding 0;
-// }
-// .content .commentarea > .sitetable > .comment,
-// .child .thing {
-//   margin: 0 0 8px 10px;
-//   padding: 5px 8px 5px 5px;
-// }
-
 .panestack-title {
   margin: 0;
   border-bottom: 0;
   padding-left: v.$padding;
   margin-top: 16px;
 }
-
-// .commentarea > .usertext {
-//   overflow: visible;
-//   -ms-flex-order: -1;
-//   order: -1;
-// }
 
 .usertext button {
   margin: v.$padding v.$padding v.$padding 0;
@@ -92,38 +76,22 @@
   margin-right: 6px;
   overflow: visible;
 }
-// Gilding
-
-// .gilded-icon:before {
-//   background: v.getImage("spritesheet") -112px -160px;
-//   height: 16px;
-//   width: 16px;
-// }
 
 .user-gilded > .entry .gilded-icon:before {
   width: 16px;
 }
 
 // Comment Stack Behind Parent
-
+.child .comment {
+  margin-top: 5px;
+}
 .comment {
   .child,
   .showreplies {
-    @include v.theme("border-left", v.$bodySecondary, false, true, "1px solid");
-    margin-top: 0;
-    margin-left: 20px;
+    // @include v.theme("border-left", v.$bodySecondary, false, true, "1px solid");
+    margin-top: 5px;
+    border-left: none;
   }
-
-  // .midcol {
-  //   width: 24px;
-  //   margin-right: 0;
-
-  //   .arrow {
-  //     margin-left: 0;
-  //     margin-bottom: 4px;
-  //   }
-  // }
-
   .entry .tagline {
     @include v.theme("color", v.$secondary-text);
   }
