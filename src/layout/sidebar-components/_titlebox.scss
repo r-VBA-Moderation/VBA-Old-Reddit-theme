@@ -51,6 +51,7 @@
       font-size: 11px;
       &.remove {
         @include v.button(true, true);
+        margin: v.$padding 5px 0 0;
         max-width: 33%;
         padding: 0;
         padding: 0 8px;
@@ -60,6 +61,7 @@
   }
 
   .fancy-toggle-button {
+    margin: 0;
     .active {
       @include v.button(true, true);
       margin: v.$padding 5px v.$padding 0;
