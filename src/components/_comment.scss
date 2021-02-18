@@ -67,8 +67,11 @@
 
   // Spam Comment
   &.spam > .child {
+    // padding-left: 0;
+    // margin-left: 22px;
     padding-left: 0;
-    margin-left: 16px;
+    margin-left: 22px;
+    background-color: inherit;
   }
 
   .flat-list li a {
