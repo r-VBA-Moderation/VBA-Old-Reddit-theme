@@ -269,12 +269,12 @@ a {
   -webkit-transform: translateY(112px);
   transform: translateY(112px);
   transition: background 0.25s ease, box-shadow 0.25s ease;
-  animation-name: uiv02wg;
+  animation-name: ufkyqd7;
   animation-duration: 8s;
   animation-iteration-count: 1;
   animation-timing-function: ease;
 }
-@keyframes uiv02wg {
+@keyframes ufkyqd7 {
   0% {
     transform: translateY(76px);
     opacity: 0;
@@ -740,9 +740,6 @@ html .res-navTop #header-bottom-right,
   background: none;
 }
 
-.gadget .midcol {
-  width: 38px;
-}
 .gadget .reddit-entry .linkflairlabel {
   display: none;
 }
@@ -1676,12 +1673,12 @@ body:not(.subscriber) .content {
   content: " ";
   background-color: #ff4500;
   border-radius: 28px;
-  animation-name: uiv02xf;
+  animation-name: ufkyqe5;
   animation-duration: 0.35s;
   animation-timing-function: ease-out;
   animation-fill-mode: forwards;
 }
-@keyframes uiv02xf {
+@keyframes ufkyqe5 {
   0% {
     transform: scale(0, 0);
     opacity: 1;
@@ -2596,7 +2593,8 @@ body input[type=submit]:active {
 }
 .comment.spam > .child {
   padding-left: 0;
-  margin-left: 16px;
+  margin-left: 22px;
+  background-color: inherit;
 }
 .comment .flat-list li a {
   color: #98abba ;
@@ -4755,12 +4753,6 @@ html #tb-footer-block {
   margin-left: 0;
   padding: 16px 16px 16px 8px;
 }
-.listing-page .comment .midcol {
-  width: 36px;
-  margin-right: 2px;
-  margin-top: 4px;
-  overflow: visible;
-}
 .listing-page .comment .parent {
   margin-bottom: 4px;
 }
@@ -6131,7 +6123,7 @@ ul.image-preview-list li .description pre {
   font-size: 1.1rem;
   display: inline-block;
   max-height: 35px;
-  animation-name: uiv02y0;
+  animation-name: ufkyqe7;
   animation-delay: 0s;
   animation-duration: 0.5s;
   animation-timing-function: ease;
@@ -6149,7 +6141,7 @@ ul.image-preview-list li .description pre {
     color: #d7dadc ;
   }
 }
-@keyframes uiv02y0 {
+@keyframes ufkyqe7 {
   0% {
     width: 0;
   }
