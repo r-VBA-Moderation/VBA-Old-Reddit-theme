@@ -1,0 +1,18 @@
+@use '../abstracts/mixins' as v;
+
+.comment .arrow.down:hover:before,
+.comment .arrow.downmod:before {
+  position: fixed;
+  z-index: 1000;
+  padding: v.$padding / 2;
+  @include v.theme("border-top", v.$line, false, true, "1px solid");
+  content: v.$downvote-hover-text;
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  background: v.getColor("vote", "downvote");
+  @include v.theme("color", v.$menuActiveText);
+  font-size: 1.1rem;
+  display: block;
+}
