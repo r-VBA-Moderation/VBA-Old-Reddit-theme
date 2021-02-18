@@ -269,12 +269,12 @@ a {
   -webkit-transform: translateY(112px);
   transform: translateY(112px);
   transition: background 0.25s ease, box-shadow 0.25s ease;
-  animation-name: uxrjwwx;
+  animation-name: uv6d6rc;
   animation-duration: 8s;
   animation-iteration-count: 1;
   animation-timing-function: ease;
 }
-@keyframes uxrjwwx {
+@keyframes uv6d6rc {
   0% {
     transform: translateY(76px);
     opacity: 0;
@@ -865,6 +865,74 @@ html .res-navTop #header-bottom-right,
   display: none;
 }
 
+.subscribers,
+.users-online {
+  display: block;
+  width: 100%;
+  text-align: center;
+  color: #292f34 ;
+  padding: 5px;
+  background: rgba(0, 0, 0, 0.14);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.6), inset 0 1px 1px rgba(0, 0, 0, 0.2);
+  background: #e6e6e6 ;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.6), inset 0 1px 1px rgba(0, 0, 0, 0.2) ;
+  text-shadow: -1px -1px 1px rgba(255, 255, 255, 0.6), 1px 1px 1px rgba(0, 0, 0, 0.2) ;
+  border-radius: 4px;
+  margin-top: 8px;
+}
+@media (prefers-color-scheme: dark) {
+  .subscribers,
+.users-online {
+    color: #d7dadc ;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .subscribers,
+.users-online {
+    background: #171718 ;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .subscribers,
+.users-online {
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2), inset 0 1px 1px rgba(0, 0, 0, 0.6) ;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .subscribers,
+.users-online {
+    text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.6), 1px 1px 1px rgba(255, 255, 255, 0.2) ;
+  }
+}
+.subscribers .number,
+.users-online .number {
+  font-size: 1.3em;
+  font-weight: bold;
+}
+.subscribers .word,
+.users-online .word {
+  display: none;
+}
+.subscribers::after,
+.users-online::after {
+  display: block;
+  font-size: 0.9em;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+.subscribers::after {
+  content: " Developers";
+}
+
+.users-online::after {
+  content: " Users currently online";
+}
+
+.users-online::before {
+  display: none;
+}
+
 .hover-bubble.multi-selector {
   right: 346px;
   margin-top: -56px;
@@ -951,53 +1019,9 @@ html .res-navTop #header-bottom-right,
     border-color: #343536 ;
   }
 }
-.titlebox .subscribers,
-.titlebox .users-online {
-  display: block;
-  width: 100%;
-  text-align: center;
-  color: #292f34 ;
-  padding: 5px;
-  border: 2px solid #f50 ;
-  border-radius: 4px;
-  margin-top: 8px;
-}
-@media (prefers-color-scheme: dark) {
-  .titlebox .subscribers,
-.titlebox .users-online {
-    color: #d7dadc ;
-  }
-}
-@media (prefers-color-scheme: dark) {
-  .titlebox .subscribers,
-.titlebox .users-online {
-    border: 2px solid #d7dadc ;
-  }
-}
-.titlebox .subscribers .number,
-.titlebox .users-online .number {
-  font-size: 1.3em;
-  font-weight: bold;
-}
-.titlebox .subscribers::after {
-  content: " Developers";
-}
-.titlebox .users-online::after {
-  content: " Users currently online";
-}
-.titlebox .subscribers::after,
-.titlebox .users-online::after {
-  display: block;
-  font-size: 0.9em;
-  font-weight: normal;
-  text-transform: uppercase;
-}
-.titlebox .subscribers .word,
-.titlebox .users-online .word {
-  display: none;
-}
-.titlebox .users-online::before {
-  display: none;
+.titlebox .res-fancy-toggle-button {
+  display: inline-block;
+  vertical-align: middle;
 }
 .titlebox .res-fancy-toggle-button.RESDashboardToggle, .titlebox .res-fancy-toggle-button.RESshortcutside {
   background: #f50 ;
@@ -1141,6 +1165,8 @@ html .res-navTop #header-bottom-right,
   }
 }
 .titlebox .fancy-toggle-button {
+  display: inline-block;
+  vertical-align: middle;
   margin: 0;
 }
 .titlebox .fancy-toggle-button .active {
@@ -1655,12 +1681,12 @@ body:not(.subscriber) .content {
   content: " ";
   background-color: #ff4500;
   border-radius: 28px;
-  animation-name: uxrjwxh;
+  animation-name: uv6d6rx;
   animation-duration: 0.35s;
   animation-timing-function: ease-out;
   animation-fill-mode: forwards;
 }
-@keyframes uxrjwxh {
+@keyframes uv6d6rx {
   0% {
     transform: scale(0, 0);
     opacity: 1;
@@ -4515,6 +4541,10 @@ table tbody tr th label {
   border-radius: 50%;
 }
 
+html #tb-footer-block {
+  display: none !important;
+}
+
 .unvotable-message {
   border: 0 solid;
   color: #98abba ;
@@ -6062,6 +6092,35 @@ ul.image-preview-list li .description pre {
 @media (prefers-color-scheme: dark) {
   .wiki-page .wiki-page-content em {
     color: #828282 ;
+  }
+}
+
+.comment .arrow.down:hover:before,
+.comment .arrow.downmod:before {
+  position: fixed;
+  z-index: 1000;
+  padding: 8px;
+  border-top: 1px solid #dadada ;
+  content: "Consider posting constructive criticism or an explanation when you downvote something.";
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  background: #7193ff;
+  color: #ffffff ;
+  font-size: 1.1rem;
+  display: block;
+}
+@media (prefers-color-scheme: dark) {
+  .comment .arrow.down:hover:before,
+.comment .arrow.downmod:before {
+    border-top: 1px solid #343536 ;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .comment .arrow.down:hover:before,
+.comment .arrow.downmod:before {
+    color: #d7dadc ;
   }
 }
 
