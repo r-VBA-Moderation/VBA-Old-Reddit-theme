@@ -56,6 +56,9 @@
 
 .comment {
   margin-top: 5px;
+  .midcol {
+    margin-left: 8.5px;
+  }
 
   // Spam Comment
   &.spam > .child {
