@@ -269,12 +269,12 @@ a {
   -webkit-transform: translateY(112px);
   transform: translateY(112px);
   transition: background 0.25s ease, box-shadow 0.25s ease;
-  animation-name: uz2p2c2;
+  animation-name: u5lz32k;
   animation-duration: 8s;
   animation-iteration-count: 1;
   animation-timing-function: ease;
 }
-@keyframes uz2p2c2 {
+@keyframes u5lz32k {
   0% {
     transform: translateY(76px);
     opacity: 0;
@@ -1676,12 +1676,12 @@ body:not(.subscriber) .content {
   content: " ";
   background-color: #ff4500;
   border-radius: 28px;
-  animation-name: uz2p2cs;
+  animation-name: u5lz32o;
   animation-duration: 0.35s;
   animation-timing-function: ease-out;
   animation-fill-mode: forwards;
 }
-@keyframes uz2p2cs {
+@keyframes u5lz32o {
   0% {
     transform: scale(0, 0);
     opacity: 1;
@@ -2041,8 +2041,7 @@ body input[type=submit]:active {
 .post-sharing,
 .flairselector,
 .comments-page .link,
-.commentarea > .sitetable > .comment,
-#bottom-comments:not(.child) > .sitetable > .comment,
+.comment,
 #images,
 .sponsorshipbox,
 .stylesheet-customize-container .pretty-form,
@@ -2075,8 +2074,7 @@ body input[type=submit]:active {
 .post-sharing,
 .flairselector,
 .comments-page .link,
-.commentarea > .sitetable > .comment,
-#bottom-comments:not(.child) > .sitetable > .comment,
+.comment,
 #images,
 .sponsorshipbox,
 .stylesheet-customize-container .pretty-form,
@@ -2104,8 +2102,7 @@ body input[type=submit]:active {
 .post-sharing,
 .flairselector,
 .comments-page .link,
-.commentarea > .sitetable > .comment,
-#bottom-comments:not(.child) > .sitetable > .comment,
+.comment,
 #images,
 .sponsorshipbox,
 .stylesheet-customize-container .pretty-form,
@@ -2133,8 +2130,7 @@ body input[type=submit]:active {
 .post-sharing,
 .flairselector,
 .comments-page .link,
-.commentarea > .sitetable > .comment,
-#bottom-comments:not(.child) > .sitetable > .comment,
+.comment,
 #images,
 .sponsorshipbox,
 .stylesheet-customize-container .pretty-form,
@@ -2588,6 +2584,13 @@ body input[type=submit]:active {
   padding: 0;
 }
 
+.comment {
+  padding-left: 8px;
+  margin-top: 5px;
+}
+.comment .midcol {
+  margin-left: 8.5px;
+}
 .comment.spam > .child {
   padding-left: 0;
   margin-left: 16px;
@@ -2669,6 +2672,28 @@ html .nestedlisting .comment .comment .comment .comment .comment .comment .comme
 html .nestedlisting .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment {
     background-color: #2c2c2d !important;
   }
+}
+
+/*COMMENT EXPANDOS*/
+.commentarea .comment a.expand {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  padding: 5px 5px 0;
+  height: 100%;
+  box-sizing: border-box;
+  transition: 200ms;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.commentarea .comment a.expand:hover {
+  background-color: #f50 ;
+}
+
+.commentarea .thing,
+.midcol {
+  position: relative;
 }
 
 .link.compressed {
@@ -4641,17 +4666,14 @@ html #tb-footer-block {
   width: 16px;
 }
 
+.child .comment {
+  margin-top: 5px;
+}
+
 .comment .child,
 .comment .showreplies {
-  border-left: 1px solid #edf1f3 ;
-  margin-top: 0;
-  margin-left: 20px;
-}
-@media (prefers-color-scheme: dark) {
-  .comment .child,
-.comment .showreplies {
-    border-left: 1px solid #272727 ;
-  }
+  margin-top: 5px;
+  border-left: none;
 }
 .comment .entry .tagline {
   color: #98abba ;
@@ -6106,7 +6128,7 @@ ul.image-preview-list li .description pre {
   font-size: 1.1rem;
   display: inline-block;
   max-height: 35px;
-  animation-name: uz2p2db;
+  animation-name: u5lz334;
   animation-delay: 0s;
   animation-duration: 0.5s;
   animation-timing-function: ease;
@@ -6124,7 +6146,7 @@ ul.image-preview-list li .description pre {
     color: #d7dadc ;
   }
 }
-@keyframes uz2p2db {
+@keyframes u5lz334 {
   0% {
     width: 0;
   }
@@ -6406,7 +6428,7 @@ body:not(.subscriber) div.multi-selector.hover-bubble.anchor-right {
 }
 
 .commentarea .entry {
-  margin-left: 68.5px;
+  margin-left: 67.5px;
 }
 .commentarea .flair-points {
   background-color: transparent;
@@ -6414,9 +6436,9 @@ body:not(.subscriber) div.multi-selector.hover-bubble.anchor-right {
   background-image: url(%%clippyflair%%);
   background-position: center;
   position: absolute;
-  width: 35px;
+  width: 26px;
   height: 50px;
-  left: 33.5px;
+  left: 44.5px;
   border-radius: 4px;
   color: #f50 ;
   text-shadow: 0px 1px 0px #333333;
@@ -6424,12 +6446,13 @@ body:not(.subscriber) div.multi-selector.hover-bubble.anchor-right {
   font-weight: bold;
   text-align: center;
   line-height: 50px;
+  margin-right: 0;
 }
 .commentarea .flair-points::after {
   content: "ClippyPoints Awarded:  " attr(title);
   position: absolute;
   top: 0;
-  left: 35px;
+  left: 26px;
   font-size: 90%;
   line-height: 15px;
   margin-top: -2px;
@@ -6462,7 +6485,7 @@ body:not(.subscriber) div.multi-selector.hover-bubble.anchor-right {
   display: none;
 }
 .commentarea form.usertext.cloneable.warn-on-unload {
-  margin-left: 44.5px;
+  margin-left: 43.5px;
 }
 
 .commentarea .thing,

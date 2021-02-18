@@ -5,12 +5,19 @@ $_desc: "ClippyPoints Awarded:  ";
 
 //Clippy Point Flair styling - Comments
 
+$_entry-margin: -3px;
+$_collapse-width: 22px;
+
 $_clippy-height: 50px;
-$_clippy-width: 35px;
+$_clippy-width: 26px;
 $_arrow-width: 15px;
-$_left-pad: 10px;
+$_left-pad: 7.5px;
 $_arrow-margin-left: 8.5px;
-$_margin: $_arrow-width + $_clippy-width + $_left-pad + $_arrow-margin-left;
+// $_margin: $_arrow-width + $_clippy-width + $_left-pad + $_arrow-margin-left -
+// 5px;
+
+$_margin: $_entry-margin + $_collapse-width + $_arrow-width + $_clippy-width +
+  $_left-pad;
 
 .commentarea {
   .entry {
@@ -26,7 +33,7 @@ $_margin: $_arrow-width + $_clippy-width + $_left-pad + $_arrow-margin-left;
       position: absolute;
       width: $_clippy-width;
       height: $_clippy-height;
-      left: ($_arrow-width + $_left-pad + $_arrow-margin-left);
+      left: ($_collapse-width + $_arrow-width + $_left-pad);
       border-radius: v.$radius;
       @include v.theme("color", v.$primary);
       text-shadow: 0px 1px 0px #333333;
@@ -34,6 +41,7 @@ $_margin: $_arrow-width + $_clippy-width + $_left-pad + $_arrow-margin-left;
       font-weight: bold;
       text-align: center;
       line-height: $_clippy-height;
+      margin-right: 0;
       &::after {
         content: $_desc attr(title);
         position: absolute;
