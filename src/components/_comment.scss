@@ -54,9 +54,10 @@
   padding: 0;
 }
 
-// Spam Comment
-
 .comment {
+  margin-top: 5px;
+
+  // Spam Comment
   &.spam > .child {
     padding-left: 0;
     margin-left: 16px;
