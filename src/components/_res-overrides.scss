@@ -60,62 +60,6 @@ html {
     @include v.thing(true);
   }
 
-  // // comments - see comment.scss component
-  // .res-commentBoxes .comment .comment .comment,
-  // .res-commentBoxes .comment .comment .comment .comment .comment,
-  // .res-commentBoxes
-  //   .comment
-  //   .comment
-  //   .comment
-  //   .comment
-  //   .comment
-  //   .comment
-  //   .comment,
-  // .res-commentBoxes
-  //   .comment
-  //   .comment
-  //   .comment
-  //   .comment
-  //   .comment
-  //   .comment
-  //   .comment
-  //   .comment
-  //   .comment {
-  //   @include v.theme("background-color", v.$body, false, false, "!important");
-  // }
-
-  // .res-commentBoxes .comment .comment,
-  // .res-commentBoxes .comment .comment .comment .comment,
-  // .res-commentBoxes .comment .comment .comment .comment .comment .comment,
-  // .res-commentBoxes
-  //   .comment
-  //   .comment
-  //   .comment
-  //   .comment
-  //   .comment
-  //   .comment
-  //   .comment
-  //   .comment,
-  // .res-commentBoxes
-  //   .comment
-  //   .comment
-  //   .comment
-  //   .comment
-  //   .comment
-  //   .comment
-  //   .comment
-  //   .comment
-  //   .comment
-  //   .comment {
-  //   @include v.theme(
-  //     "background-color",
-  //     v.$bodyFade,
-  //     false,
-  //     false,
-  //     "!important"
-  //   );
-  // }
-
   #RESStyleSheetTipPane {
     @include v.theme("border", v.$line, false, true, "1px solid");
   }
@@ -142,14 +86,8 @@ html {
   }
   .res {
     .RES-keyNav-activeElement {
-      // outline: 0 dashed #eee !important;
       @include v.theme("outline-color", v.$line, false, false, "!important");
-      // transition: all 0.15s ease;
     }
-
-    // .entry {
-    //   transition: all 0.1s ease;
-    // }
   }
 
   div {
@@ -157,78 +95,22 @@ html {
       // background-color: transparent !important;
       @include v.theme("border-left", v.$separator, false, true, "3px solid");
     }
-
-    // &.commentarea div.RES-keyNav-activeElement {
-    //   &.entry div.noncollapsed {
-    //     // background-color: transparent !important;
-    //     @include v.theme("border-left", v.$separator, false, true, "3px solid");
-    //   }
-
-    //   .md {
-    //     background-color: transparent !important;
-    //   }
-    // }
   }
-
-  // .res {
-  //   .commentarea {
-  //     .thing {
-  //       padding: 14px v.$padding 8px 8px !important;
-
-  //       &.collapsed {
-  //         padding-bottom: v.$padding !important;
-  //       }
-  //     }
-
-  //     .entry .flat-list {
-  //       margin-bottom: 0;
-  //       padding-bottom: 0;
-  //     }
-  //   }
-
-  //   .comment .entry {
-  //     margin-bottom: 16px;
-  //   }
-  // }
 
   // RES Tag Dialog + RES Tag
 
-  // .userTagLink.hasTag,
-  // #userTaggerPreview {
-  //   font-size: 11px !important;
-  //   border-radius: 0 !important;
-  //   border: 0 solid !important;
-  //   margin-top: 0 !important;
-  //   margin-left: 4px !important;
-  // }
-
   .RESDialogSmall {
     @include v.thing;
-    // border: none;
-    // box-shadow: 0 2px 3px rgba(0, 0, 0, 0.12);
-    // margin-top: 8px;
 
     > h3 {
       @include v.theme("color", v.$primary);
       @include v.theme("background-color", v.$body);
       @include v.theme("border-left", v.$separator, false, true, "3px solid");
       @include v.theme("border-bottom", v.$line, false, true, "1px solid");
-      // height: 36px;
-      // padding: 8px;
-      // margin: 0;
     }
   }
 
-  // .livePreview .md {
-  //   padding: 8px 12px;
-  // }
-
   .RESCloseButton {
-    // line-height: 19px;
-    // height: 22px;
-    // width: 22px;
-    // transition: all 0.15s ease;
-
     &:hover {
       @include v.theme("border", v.$active, false, true, "1px solid");
     }
@@ -237,9 +119,6 @@ html {
   #userTaggerToolTip {
     input[type="text"],
     select {
-      // line-height: 22px;
-      // padding-left: 4px;
-      // border: 1px solid #e5e5e5 !important;
       @include v.theme("border-color", v.$line, false, false, "!important");
     }
   }
@@ -263,14 +142,6 @@ html {
     }
   }
 
-  // #userTaggerToolTip input[type="submit"] {
-  //   bottom: 10px !important;
-  // }
-
-  // .res #userbarToggle {
-  //   color: rgba(255, 255, 255, 0.45) !important;
-  // }
-
   // Input Fields
 
   // Misc. Fixes
@@ -279,55 +150,16 @@ html {
     border-radius: v.$radius !important;
   }
 
-  // .res .thing .tagline .author.submitter {
-  //   // padding: 1px 4px;
-  //   // border-radius: 1px;
-  //   background-color: v.getColor("role", "submitter") !important;
-  //   @include v.theme("color", v.$body);
-  //   // box-shadow: 0 0 0 rgba(0, 0, 0, 0);
-  //   // transition: all 0.15s ease;
-
   &:hover {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     background-color: v.getColor("role", "submitter") !important;
   }
-  // }
 
   .res {
-    // &.search-page #header .tabmenu {
-    //   display: none !important;
-    // }
-
-    // #header-bottom-right {
-    //   top: 0px;
-    // }
-
     #userbarToggle {
       background-color: transparent;
       @include v.theme("color", v.$secondary-text);
-      // border-radius: 0;
-      // border: none;
-      // left: -32px;
     }
-
-    // a.beta-link {
-    //   left: -10px;
-    //   top: 4px;
-    // }
-
-    // #header-bottom-right .user {
-    //   // .userkarma {
-    //   //   display: none;
-    //   // }
-
-    //   font-size: 0 !important;
-
-    //   a {
-    //     font-size: 11px;
-    //     line-height: 9px;
-    //   }
-    // }
-
     #sr-header-area a.RESShortcutsCurrentSub,
     #RESSubredditGroupDropdown .RESShortcutsCurrentSub a {
       @include v.theme("color", v.$lightText, false, false, "!important");
@@ -340,19 +172,9 @@ html {
       );
     }
   }
-
-  // #RESAccountSwitcherIcon {
-  //   position: relative;
-  //   top: -4px;
-  // }
-
   .res {
     #REScommentNavToggle {
-      // max-width: 98px;
-      // overflow: hidden;
-      // max-height: 15px;
       @include v.theme("background-color", v.$body);
-      // transition: all 0.35s ease;
 
       &:hover {
         max-width: 100%;
@@ -360,10 +182,9 @@ html {
     }
   }
 
-  // html.res-commentBoxes .comment {
-  //   margin-left: 0 !important;
-  //   margin-right: 0 !important;
-  // }
+  .res-commentBoxes .comment.spam {
+    background-image: none;
+  }
   .res {
     .commentarea {
       .thing {
@@ -379,24 +200,6 @@ html {
       }
     }
 
-    // .titlebox .tagline {
-    //   margin-top: 6px;
-    // }
-
-    // .RESshortcutside,
-    // .RESDashboardToggle {
-    //   background-image: none !important;
-    //   border: none;
-    //   color: #4d5763;
-    //   text-transform: uppercase;
-    //   text-decoration: none;
-    //   border-radius: 0;
-    //   padding: 4px 6px 4px 0;
-    //   margin: 2px 6px 2px -4px;
-    //   text-align: left;
-    //   width: auto;
-    // }
-
     .RESshortcutside:hover,
     .RESDashboardToggle:hover {
       background-color: transparent;
@@ -404,59 +207,16 @@ html {
     }
 
     #progressIndicator {
-      // width: inherit;
-      // border-radius: 0;
-      // border: none;
-      // padding: v.$padding;
-      // margin: 16px 0;
       @include v.theme("color", v.$placeholder);
       @include v.theme("background-color", v.$body);
-      // height: inherit;
-
       h2 {
         @include v.theme("color", v.$metaText);
       }
     }
 
     .NERPageMarker {
-      // border-radius: 0;
-      // border: none;
       @include v.theme("background-color", v.$body);
-      // padding: v.$padding 0;
-      // margin: 0;
     }
-
-    // .sitetable .sitetable {
-    //   margin-right: 0;
-    // }
-
-    // #search #searchexpando {
-    //   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-    //   height: auto;
-
-    //   label {
-    //     padding-top: 13px;
-    //     padding-bottom: 13px;
-    //   }
-    // }
-
-    // #searchexpando .searchexpando-submit {
-    //   display: none;
-    // }
-
-    // h1.hover.redditname {
-    //   overflow: visible !important;
-    // }
-
-    // .commentarea .panestack-title {
-    //   margin-top: 0;
-    //   padding-top: 12px;
-    //   padding-bottom: 8px;
-    // }
-
-    // .comment.collapsed a.expand:after {
-    //   display: none;
-    // }
   }
 
   // More RES Fixes
