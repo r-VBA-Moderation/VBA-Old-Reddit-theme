@@ -1,0 +1,41 @@
+@use '../../abstracts/mixins' as v;
+
+.subscribers,
+.users-online {
+  display: block;
+  width: 100%;
+  text-align: center;
+  @include v.theme("color", v.$bodyText);
+  // box-shadow: inset 2px 5px 20px #555;
+  padding: 5px;
+  // @include v.theme("border", v.$button, false, true, "2px solid");
+  @include v.sunken(v.$body);
+  @include v.emboss-text;
+  border-radius: v.$radius;
+  margin-top: 8px;
+  // height: 37px;
+  .number {
+    font-size: 1.3em;
+    font-weight: bold;
+  }
+  .word {
+    display: none;
+  }
+  &::after {
+    display: block;
+    font-size: 0.9em;
+    font-weight: normal;
+    text-transform: uppercase;
+  }
+}
+
+.subscribers::after {
+  content: " " + v.$readers;
+}
+.users-online::after {
+  content: " " + v.$users;
+}
+
+.users-online::before {
+  display: none;
+}

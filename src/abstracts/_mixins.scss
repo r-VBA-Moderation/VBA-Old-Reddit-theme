@@ -160,6 +160,32 @@ $_breakpoints: (
   }
 }
 
+@mixin sunken($theme-bg-color) {
+  background: rgba(0, 0, 0, 0.14);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.6),
+    inset 0 1px 1px rgba(0, 0, 0, 0.2);
+  $lightValue: get-theme-color(light.$theme, $theme-bg-color);
+  $darkValue: get-theme-color(dark.$theme, $theme-bg-color);
+  @include colorSchemeQuery(
+    "background",
+    color.scale($lightValue, $lightness: -10%),
+    color.scale($darkValue, $lightness: -10%)
+  );
+  @include colorSchemeQuery(
+    "box-shadow",
+    (0 1px 0 rgba(255, 255, 255, 0.6), inset 0 1px 1px rgba(0, 0, 0, 0.2)),
+    (0 1px 0 rgba(255, 255, 255, 0.2), inset 0 1px 1px rgba(0, 0, 0, 0.6))
+  );
+}
+
+@mixin emboss-text {
+  @include colorSchemeQuery(
+    "text-shadow",
+    (-1px -1px 1px rgba(255, 255, 255, 0.6), 1px 1px 1px rgba(0, 0, 0, 0.2)),
+    (-1px -1px 1px rgba(0, 0, 0, 0.6), 1px 1px 1px rgba(255, 255, 255, 0.2))
+  );
+}
+
 // use like: @include theme('color', $secondary-text-color);
 @mixin theme(
   $property,
