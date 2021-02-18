@@ -269,12 +269,12 @@ a {
   -webkit-transform: translateY(112px);
   transform: translateY(112px);
   transition: background 0.25s ease, box-shadow 0.25s ease;
-  animation-name: uv6d6rc;
+  animation-name: upzglu1;
   animation-duration: 8s;
   animation-iteration-count: 1;
   animation-timing-function: ease;
 }
-@keyframes uv6d6rc {
+@keyframes upzglu1 {
   0% {
     transform: translateY(76px);
     opacity: 0;
@@ -1681,12 +1681,12 @@ body:not(.subscriber) .content {
   content: " ";
   background-color: #ff4500;
   border-radius: 28px;
-  animation-name: uv6d6rx;
+  animation-name: upzgluh;
   animation-duration: 0.35s;
   animation-timing-function: ease-out;
   animation-fill-mode: forwards;
 }
-@keyframes uv6d6rx {
+@keyframes upzgluh {
   0% {
     transform: scale(0, 0);
     opacity: 1;
@@ -6109,7 +6109,13 @@ ul.image-preview-list li .description pre {
   background: #7193ff;
   color: #ffffff ;
   font-size: 1.1rem;
-  display: block;
+  display: inline-block;
+  max-height: 35px;
+  animation-name: upzglv4;
+  animation-delay: 0s;
+  animation-duration: 0.5s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
 }
 @media (prefers-color-scheme: dark) {
   .comment .arrow.down:hover:before,
@@ -6121,6 +6127,14 @@ ul.image-preview-list li .description pre {
   .comment .arrow.down:hover:before,
 .comment .arrow.downmod:before {
     color: #d7dadc ;
+  }
+}
+@keyframes upzglv4 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
   }
 }
 
