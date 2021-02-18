@@ -190,6 +190,7 @@ html {
       }
       & .comment {
         @include v.theme("border", v.$line, false, true, "1px solid", true);
+        margin-left: 0px !important;
         &.spam {
           background-image: none;
           border-left: 4px solid v.getColor("removed") !important;
