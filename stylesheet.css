@@ -269,12 +269,12 @@ a {
   -webkit-transform: translateY(112px);
   transform: translateY(112px);
   transition: background 0.25s ease, box-shadow 0.25s ease;
-  animation-name: u5lz32k;
+  animation-name: uiv02wg;
   animation-duration: 8s;
   animation-iteration-count: 1;
   animation-timing-function: ease;
 }
-@keyframes u5lz32k {
+@keyframes uiv02wg {
   0% {
     transform: translateY(76px);
     opacity: 0;
@@ -1676,12 +1676,12 @@ body:not(.subscriber) .content {
   content: " ";
   background-color: #ff4500;
   border-radius: 28px;
-  animation-name: u5lz32o;
+  animation-name: uiv02xf;
   animation-duration: 0.35s;
   animation-timing-function: ease-out;
   animation-fill-mode: forwards;
 }
-@keyframes u5lz32o {
+@keyframes uiv02xf {
   0% {
     transform: scale(0, 0);
     opacity: 1;
@@ -2589,7 +2589,10 @@ body input[type=submit]:active {
   margin-top: 5px;
 }
 .comment .midcol {
-  margin-left: 8.5px;
+  margin-left: 10px;
+}
+.comment .child {
+  margin-left: 22px;
 }
 .comment.spam > .child {
   padding-left: 0;
@@ -6128,7 +6131,7 @@ ul.image-preview-list li .description pre {
   font-size: 1.1rem;
   display: inline-block;
   max-height: 35px;
-  animation-name: u5lz334;
+  animation-name: uiv02y0;
   animation-delay: 0s;
   animation-duration: 0.5s;
   animation-timing-function: ease;
@@ -6146,7 +6149,7 @@ ul.image-preview-list li .description pre {
     color: #d7dadc ;
   }
 }
-@keyframes u5lz334 {
+@keyframes uiv02y0 {
   0% {
     width: 0;
   }
