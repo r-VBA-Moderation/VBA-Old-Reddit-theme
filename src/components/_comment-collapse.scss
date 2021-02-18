@@ -1,0 +1,27 @@
+@use '../abstracts/mixins' as v;
+
+/*COMMENT EXPANDOS*/
+.child .comment .midcol {
+  margin-left: 8.5px;
+}
+
+.commentarea .comment a.expand {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  padding: 5px 5px 0;
+  height: 100%;
+  box-sizing: border-box;
+  transition: 200ms;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.commentarea .comment a.expand:hover {
+  @include v.theme("background-color", v.$primary);
+}
+
+.commentarea .thing,
+.midcol {
+  position: relative;
+}
