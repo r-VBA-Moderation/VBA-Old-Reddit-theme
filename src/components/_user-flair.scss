@@ -1,0 +1,13 @@
+@use '../abstracts/mixins' as v;
+
+.flair {
+  height: auto;
+  border-radius: v.$radius;
+  margin: 0 5px;
+  padding: 1px 3px;
+  font-size: 10px;
+  border: none;
+  font-weight: bold;
+  @include v.theme("background", v.$primary);
+  @include v.theme("color", v.$lightText);
+}
