@@ -11,11 +11,10 @@ $_clippy-height: 50px;
 $_clippy-width: 35px;
 $_arrow-width: 15px;
 $_arrow-margin-left: 8.5px;
-$_arrow-margin-right: 2px;
-$_clippy-start: $_collapse-width + $_arrow-margin-left + $_arrow-width +
-  $_arrow-margin-right;
+$_arrow-margin-right: 3px;
+$_clippy-start: $_collapse-width + $_arrow-width + $_arrow-margin-right;
 $_comment-start: $_clippy-start - $_arrow-margin-left + $_clippy-width +
-  $_arrow-margin-right;
+  $_arrow-margin-right + $_arrow-margin-right;
 
 .arrow {
   margin-left: $_arrow-margin-left;
