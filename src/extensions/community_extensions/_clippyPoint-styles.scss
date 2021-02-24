@@ -11,14 +11,6 @@ $_desc: "ClippyPoints Awarded:  ";
   .flair- {
     &#{$_css-class} {
       display: inline-flex;
-      font-weight: bold;
-      @include v.theme("background-color", v.$lightText);
-      border-width: 1px;
-      @include v.theme("border-color", v.$bodyText);
-      @include v.theme("background", v.$primary);
-      @include v.theme("color", v.$lightText);
-      border-style: none;
-
       &::before {
         content: $_desc;
         // display: inline;
