@@ -47,6 +47,14 @@ $_breakpoints: (
   }
 }
 
+@mixin dark-query() {
+  @if v.$include-dark {
+    @media (prefers-color-scheme: dark) {
+      @content;
+    }
+  }
+}
+
 @mixin _stroke($color, $shadow: 1px) {
   // $color: v.try-map-get(light.$theme, $color);
   $size: 1px;
@@ -66,44 +74,12 @@ $_breakpoints: (
   } @else {
     $val: v.try-map-get(light.$theme, $key);
     @include _stroke($val, $shadow);
-    @media (prefers-color-scheme: dark) {
+    @include dark-query {
       $val: v.try-map-get(dark.$theme, $key);
       @include _stroke($val, $shadow);
     }
   }
 }
-
-// @mixin themeProperty(
-//   $theme,
-//   $property,
-//   $color,
-//   $additionalPropertiesPositionIsFront,
-//   $additionalProperties,
-//   $important: false
-// ) {
-//   $imp: "";
-//   @if ($important and ($additionalProperties != "!important")) {
-//     $imp: "!important";
-//   }
-//   $color-val: "";
-//   @if map-has-key($theme, $color) {
-//     $color-val: map-get($theme, $color);
-//   }
-//   // If the key doesn't exist in the map
-//   @else {
-//     @warn "No value found for `#{$color}`. "
-//         + "Available colors are: #{map-keys($theme)}.";
-//   }
-//   @if $additionalPropertiesPositionIsFront {
-//     #{$property}: unquote(
-//       $additionalProperties + " " + map-get($theme, $color) + " " + $imp
-//     );
-//   } @else {
-//     #{$property}: unquote(
-//       map-get($theme, $color) + " " + $additionalProperties + $imp
-//     );
-//   }
-// }
 
 @mixin propertyFactory(
   $property,
@@ -138,7 +114,7 @@ $_breakpoints: (
     $additionalProperties,
     $important
   );
-  @media (prefers-color-scheme: dark) {
+  @include dark-query {
     @include propertyFactory(
       $property,
       $darkValue,
@@ -235,7 +211,7 @@ $_breakpoints: (
 @mixin theme-gradient-background($key) {
   $color: map-get(light.$theme, $key);
   background: linear-gradient(to bottom, rgba($color, 0) 0%, $color 100%);
-  @media (prefers-color-scheme: dark) {
+  @include dark-query {
     $color: map-get(dark.$theme, $key);
     background: linear-gradient(to bottom, rgba($color, 0) 0%, $color 100%);
   }
@@ -316,11 +292,6 @@ $_breakpoints: (
   @include theme("background", v.$buttonTinted50);
   @include theme("color", v.$body);
   @include theme("border", v.$buttonTinted50, false, true, "1px solid");
-  // color: #1b1b1c;
-  // border-color: #1b1b1c;
-  // @include theme("background", v.$buttonShaded80);
-  // @include theme("color", v.$lightText);
-  // @include theme("border", v.$button, false, true, "1px solid");
 }
 
 @mixin customButtonColors($baseColor) {
@@ -369,11 +340,6 @@ $_breakpoints: (
   height: v.$button-height;
   line-height: v.$button-height;
   padding: 0 v.$padding;
-
-  // box-shadow: 0 2px 1.5px 0 rgba(0, 0, 0, 0.12), 0 0 4px 0 rgba(0, 0, 0, 0.12);
-  // transition: box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1),
-  //   background 0.2s cubic-bezier(0.4, 0, 0.2, 1),
-  //   color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 // no need to use @at-root. SASS now automatically hoists keyframes.
