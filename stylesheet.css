@@ -269,12 +269,12 @@ a {
   -webkit-transform: translateY(112px);
   transform: translateY(112px);
   transition: background 0.25s ease, box-shadow 0.25s ease;
-  animation-name: ufkyqd7;
+  animation-name: ugrugb2;
   animation-duration: 8s;
   animation-iteration-count: 1;
   animation-timing-function: ease;
 }
-@keyframes ufkyqd7 {
+@keyframes ugrugb2 {
   0% {
     transform: translateY(76px);
     opacity: 0;
@@ -1673,12 +1673,12 @@ body:not(.subscriber) .content {
   content: " ";
   background-color: #ff4500;
   border-radius: 28px;
-  animation-name: ufkyqe5;
+  animation-name: ugrugb7;
   animation-duration: 0.35s;
   animation-timing-function: ease-out;
   animation-fill-mode: forwards;
 }
-@keyframes ufkyqe5 {
+@keyframes ugrugb7 {
   0% {
     transform: scale(0, 0);
     opacity: 1;
@@ -4521,40 +4521,6 @@ table tbody tr th label {
   background: #ff4500;
 }
 
-.flair {
-  color: #292f34 ;
-  background: #f6f7f8 ;
-}
-@media (prefers-color-scheme: dark) {
-  .flair {
-    color: #d7dadc ;
-  }
-}
-@media (prefers-color-scheme: dark) {
-  .flair {
-    background: #272729 ;
-  }
-}
-
-.sidecontentbox .userattrs > a,
-.sidecontentbox .flair,
-.link .entry .tagline .userattrs > a,
-.link .entry .tagline .flair {
-  height: auto;
-  border-radius: 4px;
-  margin: 0 5px;
-  padding: 2px 5px;
-  font-size: 10px;
-  color: #d7dadc ;
-  border: none;
-}
-.sidecontentbox .userattrs > a:hover,
-.sidecontentbox .flair:hover,
-.link .entry .tagline .userattrs > a:hover,
-.link .entry .tagline .flair:hover {
-  text-decoration: none;
-}
-
 .thumbnail > img {
   margin-left: 10px;
   width: 50px;
@@ -4577,6 +4543,18 @@ html #tb-footer-block {
 }
 .unvotable-message:first-letter {
   text-transform: capitalize;
+}
+
+.flair {
+  height: auto;
+  border-radius: 4px;
+  margin: 0 5px;
+  padding: 2px 5px;
+  font-size: 10px;
+  border: none;
+  font-weight: bold;
+  background: #f50 ;
+  color: #d7dadc ;
 }
 
 .entry {
@@ -6123,7 +6101,7 @@ ul.image-preview-list li .description pre {
   font-size: 1.1rem;
   display: inline-block;
   max-height: 35px;
-  animation-name: ufkyqe7;
+  animation-name: ugrugbz;
   animation-delay: 0s;
   animation-duration: 0.5s;
   animation-timing-function: ease;
@@ -6141,7 +6119,7 @@ ul.image-preview-list li .description pre {
     color: #d7dadc ;
   }
 }
-@keyframes ufkyqe7 {
+@keyframes ugrugbz {
   0% {
     width: 0;
   }
@@ -6422,93 +6400,11 @@ body:not(.subscriber) div.multi-selector.hover-bubble.anchor-right {
   margin-top: -40px;
 }
 
-.commentarea .entry {
-  margin-left: 67.5px;
-}
-.commentarea .flair-points {
-  background-color: transparent;
-  border: none;
-  background-image: url(%%clippyflair%%);
-  background-position: center;
-  position: absolute;
-  width: 26px;
-  height: 50px;
-  left: 44.5px;
-  border-radius: 4px;
-  color: #f50 ;
-  text-shadow: 0px 1px 0px #333333;
-  font-size: 150%;
-  font-weight: bold;
-  text-align: center;
-  line-height: 50px;
-  margin-right: 0;
-}
-.commentarea .flair-points::after {
-  content: "ClippyPoints Awarded:  " attr(title);
-  position: absolute;
-  top: 0;
-  left: 26px;
-  font-size: 90%;
-  line-height: 15px;
-  margin-top: -2px;
-  padding: 6px 6px;
-  background-color: #f50 ;
-  color: #ffffff ;
-  text-shadow: 0px 1px 0px #333333;
-  border-radius: 4px;
-  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
-  white-space: nowrap;
-  transform: scaleX(0);
-  transition: transform 0.5s ease;
-  transform-origin: left center;
-}
-@media (prefers-color-scheme: dark) {
-  .commentarea .flair-points::after {
-    background-color: #f50 ;
-  }
-}
-@media (prefers-color-scheme: dark) {
-  .commentarea .flair-points::after {
-    color: #d7dadc ;
-  }
-}
-.commentarea .flair-points:hover::after {
-  transform: scaleX(1);
-  z-index: 2;
-}
-.commentarea .flair-points::before {
-  display: none;
-}
-.commentarea form.usertext.cloneable.warn-on-unload {
-  margin-left: 43.5px;
-}
-
-.commentarea .thing,
-.res .commentarea .thing,
-html.res-commentBoxes.res-commentBoxes-rounded .comment {
-  position: relative;
-}
-
 .titlebox .flair-points,
 .link .entry .tagline .flair-points,
 .sidecontentbox .flair-points,
 .linkflair .flair-points {
   display: inline-flex;
-  font-weight: bold;
-  background-color: #d7dadc ;
-  border-width: 1px;
-  border-color: #292f34 ;
-  background: #f50 ;
-  color: #d7dadc ;
-  border-style: none;
-}
-@media (prefers-color-scheme: dark) {
-  .titlebox .flair-points,
-.link .entry .tagline .flair-points,
-.sidecontentbox .flair-points,
-.linkflair .flair-points {
-    border-color: #d7dadc ;
-  }
 }
 .titlebox .flair-points::before,
 .link .entry .tagline .flair-points::before,
@@ -6559,6 +6455,80 @@ html.res-commentBoxes.res-commentBoxes-rounded .comment {
 
 .sidecontentbox li {
   white-space: nowrap;
+}
+
+.arrow {
+  margin-left: 8.5px;
+  margin-right: 3px;
+}
+
+.commentarea .entry {
+  margin-left: 72.5px;
+}
+.commentarea .flair-points {
+  background-color: transparent;
+  border: none;
+  background-image: url(%%clippyflair%%);
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  padding: 0;
+  width: 35px;
+  height: 50px;
+  left: 40px;
+  border-radius: 4px;
+  color: #f50 ;
+  text-shadow: 0px 1px 0px #333333;
+  font-size: 150%;
+  font-weight: bold;
+  text-align: center;
+  line-height: 50px;
+  margin: 0;
+}
+.commentarea .flair-points::after {
+  content: "ClippyPoints Awarded:  " attr(title);
+  position: absolute;
+  top: 0;
+  left: 35px;
+  font-size: 90%;
+  line-height: 15px;
+  margin-top: -2px;
+  padding: 6px 6px;
+  background-color: #f50 ;
+  color: #ffffff ;
+  text-shadow: 0px 1px 0px #333333;
+  border-radius: 4px;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
+  white-space: nowrap;
+  transform: scaleX(0);
+  transition: transform 0.5s ease;
+  transform-origin: left center;
+}
+@media (prefers-color-scheme: dark) {
+  .commentarea .flair-points::after {
+    background-color: #f50 ;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .commentarea .flair-points::after {
+    color: #d7dadc ;
+  }
+}
+.commentarea .flair-points:hover::after {
+  transform: scaleX(1);
+  z-index: 2;
+}
+.commentarea .flair-points::before {
+  display: none;
+}
+.commentarea form.usertext.cloneable.warn-on-unload {
+  margin-left: 48.5px;
+}
+
+.commentarea .thing,
+.res .commentarea .thing,
+html.res-commentBoxes.res-commentBoxes-rounded .comment {
+  position: relative;
 }
 
 .linkflair-unsolved1 .linkflairlabel,
