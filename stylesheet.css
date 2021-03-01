@@ -269,12 +269,12 @@ a {
   -webkit-transform: translateY(112px);
   transform: translateY(112px);
   transition: background 0.25s ease, box-shadow 0.25s ease;
-  animation-name: ud0nvhk;
+  animation-name: utihjz8;
   animation-duration: 8s;
   animation-iteration-count: 1;
   animation-timing-function: ease;
 }
-@keyframes ud0nvhk {
+@keyframes utihjz8 {
   0% {
     transform: translateY(76px);
     opacity: 0;
@@ -1673,12 +1673,12 @@ body:not(.subscriber) .content {
   content: " ";
   background-color: #ff4500;
   border-radius: 28px;
-  animation-name: ud0nvik;
+  animation-name: utihjzy;
   animation-duration: 0.35s;
   animation-timing-function: ease-out;
   animation-fill-mode: forwards;
 }
-@keyframes ud0nvik {
+@keyframes utihjzy {
   0% {
     transform: scale(0, 0);
     opacity: 1;
@@ -6101,7 +6101,7 @@ ul.image-preview-list li .description pre {
   font-size: 1.1rem;
   display: inline-block;
   max-height: 35px;
-  animation-name: ud0nvj6;
+  animation-name: utihk0c;
   animation-delay: 0s;
   animation-duration: 0.5s;
   animation-timing-function: ease;
@@ -6119,7 +6119,7 @@ ul.image-preview-list li .description pre {
     color: #d7dadc ;
   }
 }
-@keyframes ud0nvj6 {
+@keyframes utihk0c {
   0% {
     width: 0;
   }
@@ -6961,6 +6961,19 @@ html.res-commentBoxes.res-commentBoxes-rounded .comment {
   .side ol:nth-of-type(1) {
     border: 1px solid #d7dadc ;
   }
+}
+
+#link-desc,
+#text-desc {
+  font-size: 0px;
+}
+
+#link-desc:after,
+#text-desc:after {
+  display: block;
+  font-weight: bold;
+  content: "PLEASE READ THE SUBMISSION GUIDELINES OR YOUR POST MAY BE REMOVED";
+  font-size: 16px;
 }
 
 /*# sourceMappingURL=stylesheet.css.map */
