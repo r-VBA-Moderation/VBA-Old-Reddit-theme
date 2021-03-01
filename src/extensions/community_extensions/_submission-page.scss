@@ -1,0 +1,13 @@
+// Hides default text - Adds text to the submission page
+#link-desc,
+#text-desc {
+  font-size: 0px;
+}
+
+#link-desc:after,
+#text-desc:after {
+  display: block;
+  font-weight: bold;
+  content: "PLEASE READ THE SUBMISSION GUIDELINES OR YOUR POST MAY BE REMOVED";
+  font-size: 16px;
+}
