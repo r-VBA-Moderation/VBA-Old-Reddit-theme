@@ -5,21 +5,16 @@ $_desc: "ClippyPoints Awarded:  ";
 
 //Clippy Point Flair styling - Comments
 
-$_collapse-width: 22px;
 $_clippy-height: 50px;
 // $_clippy-width: 26px;
 $_clippy-width: 35px;
-$_arrow-width: 15px;
-$_arrow-margin-left: 8.5px;
-$_arrow-margin-right: 3px;
-$_clippy-start: $_collapse-width + $_arrow-width + $_arrow-margin-right;
-$_comment-start: $_clippy-start - $_arrow-margin-left + $_clippy-width +
-  $_arrow-margin-right + $_arrow-margin-right;
-
-.arrow {
-  margin-left: $_arrow-margin-left;
-  margin-right: $_arrow-margin-right;
-}
+$_parent-padding: 8px;
+$_midcol-width: 42px;
+$_clippy-margin-right: 3px;
+$_clippy-before-tweak: -9px;
+$_clippy-after-tweak: -3px;
+$_clippy-start: $_parent-padding + $_midcol-width + $_clippy-before-tweak;
+$_comment-start: $_clippy-start + $_clippy-width + $_clippy-after-tweak;
 
 .commentarea {
   .entry {
