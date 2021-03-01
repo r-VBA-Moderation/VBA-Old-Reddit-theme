@@ -269,12 +269,12 @@ a {
   -webkit-transform: translateY(112px);
   transform: translateY(112px);
   transition: background 0.25s ease, box-shadow 0.25s ease;
-  animation-name: ugrugb2;
+  animation-name: ud0nvhk;
   animation-duration: 8s;
   animation-iteration-count: 1;
   animation-timing-function: ease;
 }
-@keyframes ugrugb2 {
+@keyframes ud0nvhk {
   0% {
     transform: translateY(76px);
     opacity: 0;
@@ -1673,12 +1673,12 @@ body:not(.subscriber) .content {
   content: " ";
   background-color: #ff4500;
   border-radius: 28px;
-  animation-name: ugrugb7;
+  animation-name: ud0nvik;
   animation-duration: 0.35s;
   animation-timing-function: ease-out;
   animation-fill-mode: forwards;
 }
-@keyframes ugrugb7 {
+@keyframes ud0nvik {
   0% {
     transform: scale(0, 0);
     opacity: 1;
@@ -6101,7 +6101,7 @@ ul.image-preview-list li .description pre {
   font-size: 1.1rem;
   display: inline-block;
   max-height: 35px;
-  animation-name: ugrugbz;
+  animation-name: ud0nvj6;
   animation-delay: 0s;
   animation-duration: 0.5s;
   animation-timing-function: ease;
@@ -6119,7 +6119,7 @@ ul.image-preview-list li .description pre {
     color: #d7dadc ;
   }
 }
-@keyframes ugrugbz {
+@keyframes ud0nvj6 {
   0% {
     width: 0;
   }
@@ -6457,13 +6457,8 @@ body:not(.subscriber) div.multi-selector.hover-bubble.anchor-right {
   white-space: nowrap;
 }
 
-.arrow {
-  margin-left: 8.5px;
-  margin-right: 3px;
-}
-
 .commentarea .entry {
-  margin-left: 72.5px;
+  margin-left: 73px;
 }
 .commentarea .flair-points {
   background-color: transparent;
@@ -6475,7 +6470,7 @@ body:not(.subscriber) div.multi-selector.hover-bubble.anchor-right {
   padding: 0;
   width: 35px;
   height: 50px;
-  left: 40px;
+  left: 41px;
   border-radius: 4px;
   color: #f50 ;
   text-shadow: 0px 1px 0px #333333;
@@ -6522,7 +6517,7 @@ body:not(.subscriber) div.multi-selector.hover-bubble.anchor-right {
   display: none;
 }
 .commentarea form.usertext.cloneable.warn-on-unload {
-  margin-left: 48.5px;
+  margin-left: 49px;
 }
 
 .commentarea .thing,
