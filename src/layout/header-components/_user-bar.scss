@@ -5,7 +5,7 @@
 html .res-navTop #header-bottom-right,
 #header-bottom-right {
   z-index: 101;
-  @include v.theme("background", v.$sr-header);
+  @include v.theme("background", v.$body, $opacity: v.$header-menu-opacity);
   bottom: auto;
   border-radius: 0;
   border-bottom-left-radius: v.$radius;

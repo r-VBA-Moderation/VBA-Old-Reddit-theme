@@ -20,7 +20,7 @@ $_selected-underline-size: 2px;
   line-height: v.$tabmenu-height;
   border: none;
   width: 100%;
-  @include v.theme("background", v.$body);
+  @include v.theme("background", v.$body, $opacity: v.$header-menu-opacity);
   padding: 0 v.$container-margin-hor;
 
   li {
