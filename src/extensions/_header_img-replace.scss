@@ -1,7 +1,7 @@
 @use '../abstracts/mixins' as v;
 
 // This is the one in the header
-$_hdr-img-width: 300px;
+$_hdr-img-width: 263px;
 $_img-pad: 5px;
 $_hdr-img-height: v.$header-inner-height - ($_img-pad * 2);
 $_img-margin-top: (v.$header-inner-height - $_hdr-img-height) / 2;
@@ -26,6 +26,7 @@ $_img-margin-top: (v.$header-inner-height - $_hdr-img-height) / 2;
       background-image: v.getImage("title");
       background-size: contain;
       background-repeat: no-repeat;
+      background-position: center;
       text-indent: -9999px;
     }
   }
