@@ -1,3 +1,23 @@
 @use '../../abstracts/mixins' as v;
 
 // Snoo
+
+$_snoo-height: 40px;
+$_snoo-width: 42px;
+$_snoo-margin-top: (v.$header-inner-height - $_snoo-height) / 2;
+
+#header-img.default-header {
+  margin-top: $_snoo-margin-top;
+  margin-left: v.$container-margin-hor;
+  z-index: 99;
+  width: $_snoo-width;
+  height: $_snoo-height;
+  background-image: v.getImage("snoo-sprite");
+  background-position: -0 -0;
+  vertical-align: top;
+  font-size: 0;
+
+  &:hover {
+    background-position: -42px -0;
+  }
+}

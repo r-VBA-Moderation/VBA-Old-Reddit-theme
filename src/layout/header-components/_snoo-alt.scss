@@ -1,0 +1,39 @@
+@use '../../abstracts/mixins' as v;
+
+// Snoo
+
+$_snoo-height: 50px;
+$_snoo-width: 50px;
+$_snoo-margin-top: (v.$header-inner-height - $_snoo-height) / 2;
+$reddit-text-width: 84px;
+$reddit-text-height: 27px;
+
+#header-img.default-header {
+  margin-top: $_snoo-margin-top;
+  margin-left: v.$container-margin-hor;
+  z-index: 99;
+  width: $_snoo-width;
+  height: $_snoo-height;
+  background-image: v.getImage("reddit-roundel-with-shadow");
+  background-position: center;
+  vertical-align: top;
+  font-size: 0;
+  text-indent: unset;
+  &::after {
+    position: relative;
+    width: $reddit-text-width;
+    height: $reddit-text-height;
+    left: $_snoo-width;
+    top: $_snoo-margin-top;
+    content: "";
+    background-image: v.getImage("reddit-text-with-shadow");
+    display: inline-block;
+    transform: scaleX(0);
+    transition: transform v.$transition ease;
+    transform-origin: left;
+  }
+
+  &:hover::after {
+    transform: scaleX(1);
+  }
+}
