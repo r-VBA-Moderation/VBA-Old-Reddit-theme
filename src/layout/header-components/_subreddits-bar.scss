@@ -3,7 +3,7 @@
 // Subreddits Bar
 
 #sr-header-area {
-  @include v.theme("background", v.$sr-header);
+  @include v.theme("background", v.$body, $opacity: v.$header-menu-opacity);
   border: none;
   border-radius: 0px;
   transition: all 0.15s ease;

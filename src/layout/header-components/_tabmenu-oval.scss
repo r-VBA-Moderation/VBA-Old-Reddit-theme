@@ -20,7 +20,7 @@ $_selected-underline-size: 10px;
   line-height: v.$tabmenu-height;
   border: none;
   width: 100%;
-  @include v.theme("background", v.$body);
+  @include v.theme("background", v.$body, $opacity: v.$header-menu-opacity);
   padding: 0 v.$container-margin-hor;
 
   li {
@@ -104,7 +104,11 @@ $_selected-underline-size: 10px;
         font-weight: bold;
         @include v.theme("color", v.$button);
         // border-bottom: $_selected-underline-size solid;
-        @include v.theme("background-color", v.$field);
+        @include v.theme(
+          "background-color",
+          v.$field,
+          $opacity: v.$header-menu-opacity
+        );
         border-radius: 9999px;
       }
       & > a[href$="/#{v.$subreddit-name}/"],
