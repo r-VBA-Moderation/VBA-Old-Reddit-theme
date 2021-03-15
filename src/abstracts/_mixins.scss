@@ -169,7 +169,8 @@ $_breakpoints: (
   $forceDark: false,
   $additionalPropertiesPositionIsFront: false,
   $additionalProperties: "",
-  $important: false
+  $important: false,
+  $opacity: 0%
 ) {
   $isQuery: true;
   $value: "";
@@ -187,8 +188,14 @@ $_breakpoints: (
     $isQuery: false;
   }
   @if $isQuery {
-    $lightValue: get-theme-color(light.$theme, $color);
-    $darkValue: get-theme-color(dark.$theme, $color);
+    $lightValue: color.scale(
+      get-theme-color(light.$theme, $color),
+      $alpha: $opacity
+    );
+    $darkValue: color.scale(
+      get-theme-color(dark.$theme, $color),
+      $alpha: $opacity
+    );
     @include colorSchemeQuery(
       $property,
       $lightValue,
@@ -198,6 +205,7 @@ $_breakpoints: (
       $important
     );
   } @else {
+    $value: color.scale($value, $alpha: $opacity);
     @include propertyFactory(
       $property,
       $value,
