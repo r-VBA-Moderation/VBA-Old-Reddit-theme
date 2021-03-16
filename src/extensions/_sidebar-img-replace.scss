@@ -6,7 +6,6 @@
   display: block;
   height: 50px;
   width: 100%;
-  @include v.theme("background-color", v.$primary);
   background-image: v.getImage("sidebar-img");
   background-repeat: no-repeat;
   background-position: center;

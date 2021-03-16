@@ -6,6 +6,7 @@
 $_dev: false;
 $subreddit-name: "vba";
 $include-dark: true;
+$themed-hdr-footer-img: false;
 
 $base-font: Arial, Helvetica, sans-serif;
 $mono-font: Consolas, "Lucida Console", "DejaVu Sans Mono", monospace;
@@ -61,6 +62,8 @@ $_images: (
   "reddit-text-with-shadow": "reddit-text-with-shadow",
   "roundel-wink-sprite": "roundel-wink-sprite",
   "sidebar-img": "sidebar-img",
+  "footer-dark": "footer-dark",
+  "headerimg-dark": "headerimg-dark",
 );
 
 @function getImage($name) {
