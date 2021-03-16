@@ -15,7 +15,7 @@
     );
   } @else {
     // use if single header image for light and dark
-    background: v.getImage("footer");
+    background-image: v.getImage("footer");
   }
   background-size: cover;
   background-repeat: no-repeat;
