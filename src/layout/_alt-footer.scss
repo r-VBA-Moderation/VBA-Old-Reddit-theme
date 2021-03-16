@@ -5,6 +5,7 @@
   margin-top: 60px;
   height: 180px;
   @include v.theme("border-top", v.$body, false, true, "50px solid");
+  @include v.theme("background-color", v.$banner-backgroundColor);
   @if v.$themed-hdr-footer-img {
     // use if different images for light and dark
     @include v.colorSchemeQuery(
