@@ -9,7 +9,7 @@
   height: v.$header-height;
   border: none;
   border-radius: 0px;
-  @include v.theme("background-color", v.$body);
+  @include v.theme("background-color", v.$banner-backgroundColor);
   @if v.$themed-hdr-footer-img {
     // use if different images for light and dark
     @include v.colorSchemeQuery(
