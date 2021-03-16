@@ -5,7 +5,19 @@
   height: 800px;
   margin-top: 192px;
   padding: 528px 0 64px;
-  background: v.getImage("footer") 50% (0 / cover) no-repeat;
+  @if v.$themed-hdr-footer-img {
+    // use if different images for light and dark
+    @include v.colorSchemeQuery(
+      "background-image",
+      v.getImage("footer"),
+      v.getImage("footer-dark")
+    );
+  } @else {
+    // use if single header image for light and dark
+    background: v.getImage("footer");
+  }
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .footer {

@@ -3,9 +3,10 @@
 @use 'functions' as f;
 @forward 'functions';
 
-$_dev: false;
+$_dev: true;
 $include-dark: true;
 $subreddit-name: vba;
+$themed-hdr-footer-img: false;
 
 $base-font: Arial, Helvetica, sans-serif;
 $mono-font: Consolas, "Lucida Console", "DejaVu Sans Mono", monospace;
@@ -60,6 +61,8 @@ $_images: (
   "reddit-text-with-shadow": "reddit-text-with-shadow",
   "roundel-wink-sprite": "roundel-wink-sprite",
   "sidebar-img": "sidebar-img",
+  "footer-dark": "footer-dark",
+  "headerimg-dark": "headerimg-dark",
 );
 
 @function getImage($name) {

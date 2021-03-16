@@ -10,7 +10,21 @@
   border: none;
   border-radius: 0px;
   @include v.theme("background-color", v.$body);
-  background: v.getImage("headerimg") 50% (50% / cover) no-repeat;
+  @if v.$themed-hdr-footer-img {
+    // use if different images for light and dark
+    @include v.colorSchemeQuery(
+      "background-image",
+      v.getImage("headerimg"),
+      v.getImage("headerimg-dark")
+    );
+  } @else {
+    // use if single header image for light and dark
+    background-image: v.getImage("headerimg");
+  }
+
+  background-size: cover;
+  background-repeat: no-repeat;
+
   z-index: 1;
   box-shadow: 0 2px 1.5px 0 rgba(0, 0, 0, 0.12), 0 0 4px 0 rgba(0, 0, 0, 0.12);
 
