@@ -3,7 +3,7 @@
 @use 'functions' as f;
 @forward 'functions';
 
-$_dev: true;
+$_dev: false;
 $include-dark: true;
 $subreddit-name: vba;
 $themed-hdr-footer-img: false;
