@@ -277,12 +277,12 @@ a {
   -webkit-transform: translateY(112px);
   transform: translateY(112px);
   transition: background 0.25s ease, box-shadow 0.25s ease;
-  animation-name: uot0std;
+  animation-name: uu1zdge;
   animation-duration: 8s;
   animation-iteration-count: 1;
   animation-timing-function: ease;
 }
-@keyframes uot0std {
+@keyframes uu1zdge {
   0% {
     transform: translateY(76px);
     opacity: 0;
@@ -1700,12 +1700,12 @@ body:not(.subscriber) .content {
   content: " ";
   background-color: #ff4500;
   border-radius: 28px;
-  animation-name: uot0su6;
+  animation-name: uu1zdh7;
   animation-duration: 0.35s;
   animation-timing-function: ease-out;
   animation-fill-mode: forwards;
 }
-@keyframes uot0su6 {
+@keyframes uu1zdh7 {
   0% {
     transform: scale(0, 0);
     opacity: 1;
@@ -6128,7 +6128,7 @@ ul.image-preview-list li .description pre {
   font-size: 1.1rem;
   display: inline-block;
   max-height: 35px;
-  animation-name: uot0suv;
+  animation-name: uu1zdhm;
   animation-delay: 0s;
   animation-duration: 0.5s;
   animation-timing-function: ease;
@@ -6146,7 +6146,7 @@ ul.image-preview-list li .description pre {
     color: #d7dadc ;
   }
 }
-@keyframes uot0suv {
+@keyframes uu1zdhm {
   0% {
     width: 0;
   }
@@ -6450,14 +6450,6 @@ body:not(.subscriber) div.multi-selector.hover-bubble.anchor-right {
   transition-duration: 0.5s;
   transition-timing-function: ease;
 }
-@media (prefers-color-scheme: dark) {
-  .titlebox .flair-points::before,
-.link .entry .tagline .flair-points::before,
-.sidecontentbox .flair-points::before,
-.linkflair .flair-points::before {
-    background-color: #1a1a1b ;
-  }
-}
 .titlebox .flair-points:hover,
 .link .entry .tagline .flair-points:hover,
 .sidecontentbox .flair-points:hover,
@@ -6525,11 +6517,6 @@ body:not(.subscriber) div.multi-selector.hover-bubble.anchor-right {
   transform: scaleX(0);
   transition: transform 0.5s ease;
   transform-origin: left center;
-}
-@media (prefers-color-scheme: dark) {
-  .commentarea .flair-points::after {
-    background-color: #1a1a1b ;
-  }
 }
 @media (prefers-color-scheme: dark) {
   .commentarea .flair-points::after {
