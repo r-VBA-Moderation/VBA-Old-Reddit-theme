@@ -14,7 +14,7 @@ $_desc: "ClippyPoints Awarded:  ";
       &::before {
         content: $_desc;
         // display: inline;
-        @include v.theme("background-color", v.$banner-backgroundColor);
+        @include v.theme("background-color", v.$primary);
         white-space: nowrap;
         overflow: hidden;
         border: 0px solid;
