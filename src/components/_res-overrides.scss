@@ -431,12 +431,23 @@ html {
     }
   }
 
+  // RES Nightmode
   .res-nightmode {
     .drop-choices a.choice {
       @include v.theme("color", v.$bodyText, true, false, "!important");
     }
+    .sidebox {
+      background-color: transparent;
+    }
+    a {
+      @include v.theme("color", v.$linkText, true);
+    }
+    .morelink {
+      a {
+        @include v.theme("color", v.$inactiveText, true);
+      }
+    }
   }
-  // RES Fixes / RES Nightmode
   // Voting Arrows
 
   // Pure White
