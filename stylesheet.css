@@ -277,12 +277,12 @@ a {
   -webkit-transform: translateY(112px);
   transform: translateY(112px);
   transition: background 0.25s ease, box-shadow 0.25s ease;
-  animation-name: uu1zdge;
+  animation-name: ux7ss8s;
   animation-duration: 8s;
   animation-iteration-count: 1;
   animation-timing-function: ease;
 }
-@keyframes uu1zdge {
+@keyframes ux7ss8s {
   0% {
     transform: translateY(76px);
     opacity: 0;
@@ -526,6 +526,7 @@ a.random.choice {
   font-size: 16px;
   line-height: 30px;
   display: inline-block;
+  border-radius: 9999px;
 }
 @media (prefers-color-scheme: dark) {
   #header .tabmenu li a {
@@ -581,7 +582,6 @@ a.random.choice {
   font-weight: bold;
   color: #ff5500 ;
   background-color: #f6f7f8 ;
-  border-radius: 9999px;
 }
 @media (prefers-color-scheme: dark) {
   #header .tabmenu li.selected a {
@@ -1700,12 +1700,12 @@ body:not(.subscriber) .content {
   content: " ";
   background-color: #ff4500;
   border-radius: 28px;
-  animation-name: uu1zdh7;
+  animation-name: ux7ss91;
   animation-duration: 0.35s;
   animation-timing-function: ease-out;
   animation-fill-mode: forwards;
 }
-@keyframes uu1zdh7 {
+@keyframes ux7ss91 {
   0% {
     transform: scale(0, 0);
     opacity: 1;
@@ -6128,7 +6128,7 @@ ul.image-preview-list li .description pre {
   font-size: 1.1rem;
   display: inline-block;
   max-height: 35px;
-  animation-name: uu1zdhm;
+  animation-name: ux7ss9j;
   animation-delay: 0s;
   animation-duration: 0.5s;
   animation-timing-function: ease;
@@ -6146,7 +6146,7 @@ ul.image-preview-list li .description pre {
     color: #d7dadc ;
   }
 }
-@keyframes uu1zdhm {
+@keyframes ux7ss9j {
   0% {
     width: 0;
   }
