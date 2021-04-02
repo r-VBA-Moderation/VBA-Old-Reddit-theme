@@ -444,7 +444,7 @@ html {
     }
     .morelink {
       a {
-        @include v.theme("color", v.$inactiveText, true);
+        @include v.theme("color", v.$body, true);
       }
     }
   }
