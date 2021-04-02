@@ -277,12 +277,12 @@ a {
   -webkit-transform: translateY(112px);
   transform: translateY(112px);
   transition: background 0.25s ease, box-shadow 0.25s ease;
-  animation-name: uvjxsch;
+  animation-name: uj74j9x;
   animation-duration: 8s;
   animation-iteration-count: 1;
   animation-timing-function: ease;
 }
-@keyframes uvjxsch {
+@keyframes uj74j9x {
   0% {
     transform: translateY(76px);
     opacity: 0;
@@ -1703,12 +1703,12 @@ body:not(.subscriber) .content {
   content: " ";
   background-color: #ff4500;
   border-radius: 28px;
-  animation-name: uvjxscz;
+  animation-name: uj74jaq;
   animation-duration: 0.35s;
   animation-timing-function: ease-out;
   animation-fill-mode: forwards;
 }
-@keyframes uvjxscz {
+@keyframes uj74jaq {
   0% {
     transform: scale(0, 0);
     opacity: 1;
@@ -4267,6 +4267,15 @@ html .x_button:hover {
 html .res-nightmode .drop-choices a.choice {
   color: #d7dadc !important;
 }
+html .res-nightmode .sidebox {
+  background-color: transparent;
+}
+html .res-nightmode a {
+  color: #4db2ff ;
+}
+html .res-nightmode .morelink a {
+  color: #1a1a1b ;
+}
 html .comment .score {
   font-size: inherit;
   font-weight: 700;
@@ -6131,7 +6140,7 @@ ul.image-preview-list li .description pre {
   font-size: 1.1rem;
   display: inline-block;
   max-height: 35px;
-  animation-name: uvjxsdz;
+  animation-name: uj74jaz;
   animation-delay: 0s;
   animation-duration: 0.5s;
   animation-timing-function: ease;
@@ -6149,7 +6158,7 @@ ul.image-preview-list li .description pre {
     color: #d7dadc ;
   }
 }
-@keyframes uvjxsdz {
+@keyframes uj74jaz {
   0% {
     width: 0;
   }
